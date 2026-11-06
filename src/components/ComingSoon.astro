@@ -1,0 +1,17 @@
+---
+// Placeholder for pages whose content is not written yet.
+interface Props {
+  title: string;
+  text?: string;
+}
+
+const { title, text = 'This page is coming soon.' } = Astro.props;
+---
+
+<section>
+  <div class="container">
+    <span class="eyebrow">Coming soon</span>
+    <h1>{title}</h1>
+    <p class="muted">{text}</p>
+  </div>
+</section>

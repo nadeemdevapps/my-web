@@ -1,0 +1,85 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Nadeem Dev Apps — small, local-first apps.' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} — Nadeem Dev Apps</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script is:inline>
+      // Set the theme before first paint: saved choice, else system preference.
+      try {
+        const saved = localStorage.getItem('nda-theme');
+        const theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <header class="site-nav">
+      <div class="container">
+        <a class="wordmark" href={`${base}`}>Nadeem Dev Apps</a>
+        <nav aria-label="Main">
+          <a href={`${base}`}>Home</a>
+          <a href={`${base}products/`}>Products</a>
+          <a href={`${base}about/`}>About</a>
+          <a href={`${base}contact/`}>Contact</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <a class="wordmark" href={`${base}`} style="font-size: 18px;">Nadeem Dev Apps</a>
+        <a href={`${base}products/`}>Products</a>
+        <a href={`${base}products/tsumly/`}>Tsumly</a>
+        <a href={`${base}products/kaizenly/`}>Kaizenly</a>
+        <a href={`${base}privacy/`}>Privacy</a>
+        <a href={`${base}terms/`}>Terms</a>
+        <span class="foot-note">© 2026 Nadeem Dev Apps</span>
+      </div>
+    </footer>
+
+    <script is:inline>
+      // Theme toggle: light <-> dark, saved for the next visit.
+      (function () {
+        const btn = document.getElementById('theme-toggle');
+        if (!btn) return;
+        const sync = () => {
+          const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+          btn.textContent = dark ? 'Light' : 'Dark';
+        };
+        btn.addEventListener('click', () => {
+          const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          try { localStorage.setItem('nda-theme', next); } catch (e) {}
+          sync();
+        });
+        sync();
+      })();
+    </script>
+  </body>
+</html>

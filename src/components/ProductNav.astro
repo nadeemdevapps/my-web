@@ -1,0 +1,64 @@
+---
+// Product sub-navigation: sits below the main site nav on every page of a
+// product's dedicated sub-site. Keeps the product's pages together and links
+// back to the full product list.
+interface Props {
+  productName: string;
+  productBase: string; // e.g. `${base}products/tsumly/`
+}
+
+const { productName, productBase } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<div class="product-nav">
+  <div class="container">
+    <a class="product-nav-back" href={`${base}products/`}>← All Products</a>
+    <span class="product-nav-name">{productName}</span>
+    <nav aria-label={`${productName} pages`}>
+      <a href={productBase}>Overview</a>
+      <a href={`${productBase}privacy/`}>Privacy</a>
+      <a href={`${productBase}terms/`}>Terms</a>
+    </nav>
+  </div>
+</div>
+
+<style>
+  .product-nav {
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-hairline);
+  }
+  .product-nav .container {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    min-height: 52px;
+  }
+  .product-nav-back {
+    color: var(--color-ink-muted);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .product-nav-back:hover { color: var(--color-primary); text-decoration: none; }
+  .product-nav-name {
+    font-family: var(--font-display);
+    font-size: 18px;
+    color: var(--color-ink);
+  }
+  .product-nav nav {
+    display: flex;
+    gap: var(--space-lg);
+    margin-left: auto;
+  }
+  .product-nav nav a {
+    color: var(--color-ink);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .product-nav nav a:hover { color: var(--color-primary); text-decoration: none; }
+  @media (max-width: 840px) {
+    .product-nav nav { display: none; }
+  }
+</style>

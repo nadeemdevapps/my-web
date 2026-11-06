@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Products"
+  description="Products by Nadeem Dev Apps — Tsumly and Kaizenly."
+>
+  <section>
+    <div class="container">
+      <span class="eyebrow">Products</span>
+      <h1>What we make</h1>
+      <p class="muted" style="max-width: 560px;">
+        Small, local-first apps — each with its own dedicated site inside
+        this one. Pick a product to open its pages.
+      </p>
+      <div class="product-grid">
+        <article class="card">
+          <div class="product-icon" aria-hidden="true">T</div>
+          <h3>Tsumly</h3>
+          <p>Every amount adds up. A local-first personal expense and loan ledger, with a smart multi-loan repayment split and optional Google Drive backup.</p>
+          <a href={`${base}products/tsumly/`}>Open Tsumly's site →</a>
+        </article>
+        <article class="card">
+          <div class="product-icon" aria-hidden="true">K</div>
+          <h3>Kaizenly</h3>
+          <p>A strict, local-first focus guard — built from scratch to keep distracting apps shut when it matters.</p>
+          <a href={`${base}products/kaizenly/`}>Open Kaizenly's site →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

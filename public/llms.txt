@@ -1,0 +1,27 @@
+# Nadeem Dev Apps
+
+> Nadeem Dev Apps builds small, local-first apps. The website is a portfolio,
+> marketing, and product site. Products live as sub-pages.
+
+- [Home](https://nadeemdevapps.github.io/my-web/)
+- [Tsumly](https://nadeemdevapps.github.io/my-web/products/tsumly/): local-first personal expense and loan ledger. "Every amount adds up." Smart multi-loan repayment split, optional Google Drive backup.
+- [Kaizenly](https://nadeemdevapps.github.io/my-web/products/kaizenly/): a strict, local-first focus guard, built from scratch.
+
+## Pages
+
+- [Home](https://nadeemdevapps.github.io/my-web/)
+- [Products](https://nadeemdevapps.github.io/my-web/products/)
+- [Tsumly](https://nadeemdevapps.github.io/my-web/products/tsumly/)
+- [Kaizenly](https://nadeemdevapps.github.io/my-web/products/kaizenly/)
+- [About](https://nadeemdevapps.github.io/my-web/about/)
+- [Contact](https://nadeemdevapps.github.io/my-web/contact/)
+
+## Notes
+
+- The site is a static Astro site. Design tokens live in DESIGN.md in the repo root.
+- About, Contact, Privacy, and Terms pages are planned; the Privacy page will
+  carry the privacy-policy URL used by the Tsumly app's Google OAuth setup.
+
+## Optional
+
+- [Design system](https://github.com/nadeemdevapps/my-web/blob/main/DESIGN.md)

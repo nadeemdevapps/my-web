@@ -1,0 +1,18 @@
+---
+import ProductLayout from '../../../layouts/ProductLayout.astro';
+import ComingSoon from '../../../components/ComingSoon.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<ProductLayout
+  title="Tsumly Privacy Policy"
+  description="Privacy policy for the Tsumly app."
+  productName="Tsumly"
+  productBase={`${base}products/tsumly/`}
+>
+  <ComingSoon
+    title="Tsumly Privacy Policy"
+    text="Tsumly's privacy policy is coming soon."
+  />
+</ProductLayout>

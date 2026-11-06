@@ -593,9 +593,9 @@ The site uses almost no photography — it is a content-and-type site. Where a p
 
 ## Core Pages
 
-- **Home**: hero-band (ink, serif headline, sticker constellations, primary + secondary CTA), products grid (product-cards for Tsumly and the blocker app), an about strip, and the footer. One calm monochrome illustration, generous whitespace.
+- **Home**: hero-band (ink, serif headline, sticker constellations, primary + secondary CTA), products grid (product-cards for Tsumly and Kaizenly), an about strip, and the footer. One calm monochrome illustration, generous whitespace.
 - **Products** (index): product-card grid; each card links to its sub-page.
-- **Product sub-pages** (`/products/tsumly`, `/products/blocker`): hero (display headline + one-line description), feature cards, screenshots in rounded wells, download/store links, and a link back to Products. Product sub-pages inherit this system; a product's in-app brand does not recolour the page.
+- **Product sub-pages** (`/products/tsumly`, `/products/kaizenly`): hero (display headline + one-line description), feature cards, screenshots in rounded wells, download/store links, and a link back to Products. Product sub-pages inherit this system; a product's in-app brand does not recolour the page. Each product sub-site also has its own `/privacy/` and `/terms/` pages.
 - **About**: document-style long page on the warm canvas; serif section headlines, Inter body.
 - **Contact**: simple form (text-inputs + button-primary) on a card; errors via `{colors.danger}`, feedback via the toast bus.
 - **Privacy / Terms**: document pages — warm canvas, serif headlines, Inter body, generous line-height.

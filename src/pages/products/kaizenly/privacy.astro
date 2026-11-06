@@ -1,0 +1,18 @@
+---
+import ProductLayout from '../../../layouts/ProductLayout.astro';
+import ComingSoon from '../../../components/ComingSoon.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<ProductLayout
+  title="Kaizenly Privacy Policy"
+  description="Privacy policy for the Kaizenly app."
+  productName="Kaizenly"
+  productBase={`${base}products/kaizenly/`}
+>
+  <ComingSoon
+    title="Kaizenly Privacy Policy"
+    text="Kaizenly's privacy policy is coming soon."
+  />
+</ProductLayout>

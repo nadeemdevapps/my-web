@@ -1,0 +1,18 @@
+---
+import ProductLayout from '../../layouts/ProductLayout.astro';
+import ComingSoon from '../../components/ComingSoon.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<ProductLayout
+  title="Tsumly"
+  description="Tsumly — a local-first personal expense and loan ledger."
+  productName="Tsumly"
+  productBase={`${base}products/tsumly/`}
+>
+  <ComingSoon
+    title="Tsumly"
+    text="Tsumly's own site is coming soon — features, screenshots, downloads, and its privacy policy and terms."
+  />
+</ProductLayout>

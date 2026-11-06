@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Home"
+  description="Nadeem Dev Apps builds small, local-first apps — Tsumly, a personal expense and loan ledger, and Kaizenly, a strict focus guard."
+>
+  <section class="hero-band">
+    <div class="stickers" aria-hidden="true">
+      <i style="top: 18%; right: 12%; background: var(--sticker-pink);"></i>
+      <i style="top: 62%; right: 22%; background: var(--sticker-teal);"></i>
+      <i style="top: 30%; right: 30%; background: var(--sticker-orange);"></i>
+      <i style="top: 72%; right: 8%; background: var(--sticker-purple);"></i>
+      <i style="top: 14%; right: 38%; background: var(--sticker-green);"></i>
+    </div>
+    <div class="container">
+      <span class="eyebrow">Portfolio · Products · Notes</span>
+      <h1>Small apps,<br />built for real life.</h1>
+      <p>
+        Nadeem Dev Apps builds local-first tools that solve one problem well —
+        starting with money and focus.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href={`${base}products/tsumly/`}>Meet Tsumly</a>
+        <a class="btn btn-secondary--on-dark btn" href={`${base}products/kaizenly/`}>Kaizenly</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <span class="eyebrow">Products</span>
+      <h2>What we make</h2>
+      <div class="product-grid">
+        <article class="card">
+          <div class="product-icon" aria-hidden="true">T</div>
+          <h3>Tsumly</h3>
+          <p>Every amount adds up. A local-first personal expense and loan ledger, with a smart multi-loan repayment split and optional Google Drive backup.</p>
+          <a href={`${base}products/tsumly/`}>Learn more →</a>
+        </article>
+        <article class="card">
+          <div class="product-icon" aria-hidden="true">K</div>
+          <h3>Kaizenly</h3>
+          <p>A strict, local-first focus guard — built from scratch to keep distracting apps shut when it matters.</p>
+          <a href={`${base}products/kaizenly/`}>Learn more →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <span class="eyebrow">About</span>
+      <h2>Built by one developer, for himself first.</h2>
+      <p class="muted">
+        Every app here started as a personal problem — a ledger that never
+        added up, a phone that never stayed quiet. They ship when they work
+        in daily use, not before.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

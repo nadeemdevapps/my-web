@@ -1,0 +1,18 @@
+---
+import ProductLayout from '../../layouts/ProductLayout.astro';
+import ComingSoon from '../../components/ComingSoon.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<ProductLayout
+  title="Kaizenly"
+  description="Kaizenly — a strict, local-first focus guard."
+  productName="Kaizenly"
+  productBase={`${base}products/kaizenly/`}
+>
+  <ComingSoon
+    title="Kaizenly"
+    text="Kaizenly's own site is coming soon — features, screenshots, downloads, and its privacy policy and terms."
+  />
+</ProductLayout>

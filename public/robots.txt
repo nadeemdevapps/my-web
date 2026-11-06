@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# AI crawlers are welcome — the site is built to be read by them.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://nadeemdevapps.github.io/my-web/sitemap-index.xml
