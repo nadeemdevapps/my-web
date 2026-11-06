@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { title, description = 'Nadeem Dev Apps — small, local-first apps.' } = Astro.props;
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 
 <!doctype html>

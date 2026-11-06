@@ -2,7 +2,7 @@
 import ProductLayout from '../../../layouts/ProductLayout.astro';
 import ComingSoon from '../../../components/ComingSoon.astro';
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 
 <ProductLayout
