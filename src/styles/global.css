@@ -188,6 +188,9 @@ section { padding: var(--space-section) 0; }
   min-height: 60px;
 }
 .wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--font-display);
   font-size: 22px;
   font-weight: 400;

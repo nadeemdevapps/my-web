@@ -336,11 +336,15 @@ components:
     tint: "{colors.ink}"
     source: code-drawn (SVG), theme-reactive
   logo:
-    status: to be designed
+    status: decided
+    mark: "Stack in a pill" — three stacked bars inside a rounded frame
+      (14px corner radius); monochrome line mark, ink-tinted, theme-reactive
+      via currentColor; must read at 20–28px and as a favicon; no colour
+      except the sticker palette in decorative use only
+    files: src/components/Logo.astro (inline, theme-reactive),
+      public/logo.svg (standalone mark), public/favicon.svg (filled-tile
+      variant: ink tile, canvas bars)
     wordmark: "{components.wordmark}"
-    direction: monochrome line mark, ink-tinted;
-      must read at 20–28px and as a favicon; no colour except the sticker
-      palette in decorative use only
 ---
 
 
@@ -533,9 +537,9 @@ The site uses almost no photography — it is a content-and-type site. Where a p
 
 **`nav-bar`** — Top navigation. Slim sticky bar, `{colors.surface}` background, `{colors.ink}` link text at `{typography.nav-link}`, padding `{spacing.md}`. Left wordmark (`{components.wordmark}`), centre product/menu links, right theme toggle + `button-utility` CTA. Condenses to a hamburger below the tablet breakpoint.
 
-**`wordmark`** — The "Nadeem Dev Apps" text lockup until the logo mark is designed. EB Garamond 400, `{colors.ink}`, negative tracking −0.5px. Used in the nav bar, footer, and hero.
+**`wordmark`** — The "Nadeem Dev Apps" text lockup, used with the logo mark in the nav bar and footer. EB Garamond 400, `{colors.ink}`, negative tracking −0.5px.
 
-**`logo`** — Mark to be designed. Direction: a monochrome line mark, ink-tinted, reading at 20–28px and as a favicon. No colour except the sticker palette in decorative use only. The wordmark carries the brand until the mark ships.
+**`logo`** — "Stack in a pill": three stacked bars inside a rounded frame (14px corner radius). A monochrome line mark, ink-tinted and theme-reactive (currentColor), reading at 20–28px and as a favicon. No colour except the sticker palette in decorative use only. The favicon is a filled-tile variant: an ink tile with canvas bars. Files: `src/components/Logo.astro`, `public/logo.svg`, `public/favicon.svg`.
 
 ### Buttons
 
