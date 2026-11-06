@@ -4,16 +4,40 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Contact"
-  description="Contact Nadeem Dev Apps — email or GitHub."
+  description="Contact Nadeem Dev Apps — send a message, email, or GitHub."
 >
   <section>
     <div class="container">
       <span class="eyebrow">Contact</span>
       <h1>Talk to us.</h1>
       <p class="muted" style="max-width: 560px;">
-        Questions, bug reports, or ideas for the apps — email is the fastest
-        way to reach us.
+        Questions, bug reports, or ideas for the apps — send a message below
+        and it will open in your mail app, ready to send.
       </p>
+
+      <form id="contact-form" class="contact-form">
+        <div class="field">
+          <label for="contact-name">Your name</label>
+          <input id="contact-name" name="name" type="text" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="contact-email">Your email</label>
+          <input id="contact-email" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" required></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Send via email</button>
+        <p id="form-status" class="form-note" role="status"></p>
+        <noscript>
+          <p class="form-note">
+            The form needs JavaScript to open your mail app — or email us
+            directly at nadeem.devapps@gmail.com.
+          </p>
+        </noscript>
+      </form>
+
       <div class="product-grid">
         <article class="card">
           <h3>Email</h3>
@@ -28,4 +52,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </div>
   </section>
+
+  <script is:inline>
+    // No backend: the form composes a mailto link and opens the visitor's
+    // own mail app, with the message ready to send.
+    (function () {
+      var form = document.getElementById('contact-form');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name = document.getElementById('contact-name').value.trim();
+        var email = document.getElementById('contact-email').value.trim();
+        var message = document.getElementById('contact-message').value.trim();
+        var subject = 'Website contact from ' + name;
+        var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+        var status = document.getElementById('form-status');
+        if (status) status.textContent = 'Opening your mail app — press Send there to deliver your message.';
+        window.location.href =
+          'mailto:nadeem.devapps@gmail.com?subject=' + encodeURIComponent(subject) +
+          '&body=' + encodeURIComponent(body);
+      });
+    })();
+  </script>
 </BaseLayout>
