@@ -1,14 +1,44 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ComingSoon from '../components/ComingSoon.astro';
+import LegalDoc from '../components/LegalDoc.astro';
 ---
 
 <BaseLayout
   title="Terms of Use"
   description="Terms of use for the Nadeem Dev Apps website."
 >
-  <ComingSoon
+  <LegalDoc
     title="Terms of Use"
-    text="The terms of use for this website are coming soon."
+    intro="These terms cover the Nadeem Dev Apps website. The apps themselves have their own terms on their product pages."
+    sections={[
+      {
+        heading: 'Acceptance',
+        body: 'By using this website, you agree to these terms. If you do not agree with any part of them, please do not use the site.',
+      },
+      {
+        heading: 'What this site is',
+        body: 'This is the home of Nadeem Dev Apps: a portfolio and product site describing the apps we make, including Tsumly and Kaizenly, with links to their pages and downloads.',
+      },
+      {
+        heading: 'Content',
+        body: 'The text, design, and logo on this site belong to Nadeem Dev Apps. You may link to any page and quote it fairly, with credit. Please do not present our work as your own or copy the site wholesale.',
+      },
+      {
+        heading: 'No warranties',
+        body: 'This site is provided \u201cas is\u201d and \u201cas available\u201d, without warranties of any kind. We try to keep the information accurate and up to date, but we do not guarantee it.',
+      },
+      {
+        heading: 'External links',
+        body: 'This site links to other services, such as Google Play and GitHub. We are not responsible for the content or practices of those services.',
+      },
+      {
+        heading: 'Changes to these terms',
+        body: 'These terms may be updated from time to time. The version on this page is always the current one.',
+      },
+      {
+        heading: 'Contact',
+        body: 'Questions about these terms? Email nadeem.devapps@gmail.com.',
+      },
+    ]}
   />
 </BaseLayout>

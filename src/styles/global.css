@@ -283,6 +283,16 @@ section { padding: var(--space-section) 0; }
 .site-footer a { color: var(--color-ink-secondary); }
 .site-footer .foot-note { margin-left: auto; }
 
+/* Legal pages */
+.legal-intro {
+  font-size: 18px;
+  color: var(--color-ink-secondary);
+  max-width: 640px;
+}
+.legal-section { margin-top: 28px; }
+.legal-section h2 { font-size: 22px; margin: 0 0 8px; }
+.legal-section p { color: var(--color-ink-secondary); max-width: 640px; margin: 0; }
+
 @media (max-width: 840px) {
   h1 { font-size: 48px; }
   h2 { font-size: 30px; }

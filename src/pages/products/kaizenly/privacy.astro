@@ -1,6 +1,6 @@
 ---
 import ProductLayout from '../../../layouts/ProductLayout.astro';
-import ComingSoon from '../../../components/ComingSoon.astro';
+import LegalDoc from '../../../components/LegalDoc.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
@@ -11,8 +11,42 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   productName="Kaizenly"
   productBase={`${base}products/kaizenly/`}
 >
-  <ComingSoon
+  <LegalDoc
     title="Kaizenly Privacy Policy"
-    text="Kaizenly's privacy policy is coming soon."
+    intro="Kaizenly collects no personal data. Everything stays on your device."
+    sections={[
+      {
+        heading: 'The short version',
+        body: 'Kaizenly is private by design. It does not collect, track, profile, or upload personal data. No Kaizenly account or signup is required, and there are no analytics, advertising, or tracking SDKs. Your sessions, bags, routines, and stats stay on your device. The only network use is Google Play Billing, which handles premium purchases.',
+      },
+      {
+        heading: 'What stays on your device',
+        body: 'Your focus sessions, app usage, bags, routines, streaks, and settings are stored only in the app\u2019s local database on your phone. Uninstalling the app (or clearing its data) removes them. Android automatic backup is disabled for the app, so the operating system never silently copies your data to the cloud.',
+      },
+      {
+        heading: 'Permissions that stay on the device',
+        body: 'Kaizenly needs sensitive permissions to do its job, and all of them work locally. Usage access lets the app notice when a blocked app opens. The accessibility service and device admin enforce the block screen. The overlay draws the block screen and the floating session pill, notifications keep you informed, and exact alarms and boot restore keep sessions running. None of the information these permissions expose ever leaves your device. You grant each permission yourself, and you can revoke them at any time in your phone\u2019s settings \u2014 revoking them may stop blocking from working.',
+      },
+      {
+        heading: 'Premium purchases',
+        body: 'Premium features are sold through Google Play Billing. Payment information is handled by Google Play, not by us. We receive no payment details from your purchases.',
+      },
+      {
+        heading: 'Links you tap',
+        body: 'Links inside the app open in your browser. Those sites have their own privacy policies, which apply once you leave the app.',
+      },
+      {
+        heading: 'Your choices',
+        body: 'Your data is yours. You can delete your sessions and stats in the app, or uninstall the app at any time to remove its local data from the device.',
+      },
+      {
+        heading: 'Changes to this policy',
+        body: 'This policy may be updated from time to time; the version on this page is always the current one. If the app ever starts handling data in a new way, the policy will say so.',
+      },
+      {
+        heading: 'Contact',
+        body: 'Questions about privacy? Email nadeem.devapps@gmail.com.',
+      },
+    ]}
   />
 </ProductLayout>

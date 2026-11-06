@@ -1,14 +1,44 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ComingSoon from '../components/ComingSoon.astro';
+import LegalDoc from '../components/LegalDoc.astro';
 ---
 
 <BaseLayout
   title="Privacy Policy"
   description="Privacy policy for the Nadeem Dev Apps website."
 >
-  <ComingSoon
+  <LegalDoc
     title="Privacy Policy"
-    text="The privacy policy for this website is coming soon. The apps themselves collect nothing — see each product's own privacy page."
+    intro="This website collects no personal data. It is a static site with no analytics, no advertising, and no accounts."
+    sections={[
+      {
+        heading: 'The short version',
+        body: 'Nobody tracks you here. There are no analytics, no advertising, no tracking scripts, and no cookies set by this site. We do not record what you read or click. There is no account to create and nothing to sign in to.',
+      },
+      {
+        heading: 'Theme preference',
+        body: 'If you switch between the light and dark theme, your choice is saved in your own browser (local storage) so the site remembers it next time. It never leaves your device. Clearing your browser data for this site removes it.',
+      },
+      {
+        heading: 'Fonts',
+        body: 'This site loads the EB Garamond and Inter fonts from Google Fonts. When your browser fetches them, Google receives your IP address and browser information, under Google\u2019s own privacy policy. The fonts are the only third-party request this site makes.',
+      },
+      {
+        heading: 'Contacting us',
+        body: 'The contact page links to an email address. If you email us, we receive your email address and whatever you write, and we use it only to reply to you. We do not share it or add it to any list.',
+      },
+      {
+        heading: 'Links to other sites',
+        body: 'This site links to other services, such as Google Play, GitHub, and the products\u2019 own pages. Those sites have their own privacy policies, which apply once you leave this site.',
+      },
+      {
+        heading: 'Changes to this policy',
+        body: 'This policy may be updated from time to time. The version on this page is always the current one.',
+      },
+      {
+        heading: 'Contact',
+        body: 'Questions about privacy? Email nadeem.devapps@gmail.com.',
+      },
+    ]}
   />
 </BaseLayout>
