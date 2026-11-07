@@ -243,6 +243,11 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   margin-bottom: 8px;
 }
 
+/* Narrow centered column for prose — the text block sits in the middle of the page */
+.container.narrow { max-width: 760px; }
+/* Same centered 760px column for any block element */
+.narrow { max-width: 760px; margin-left: auto; margin-right: auto; }
+
 /* Lede — larger grey intro paragraph; bold phrases pull the eye in near-black */
 .lede {
   font-size: 18px;
