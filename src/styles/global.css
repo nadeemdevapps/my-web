@@ -134,6 +134,7 @@ section { padding: var(--space-section) 0; }
 }
 .btn:hover { text-decoration: none; }
 .btn:active { transform: scale(0.97); }
+.btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
 
 .btn-primary {
   background: var(--color-primary);

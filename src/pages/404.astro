@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<BaseLayout
+  title="Page not found"
+  description="This page doesn't exist — it may have moved, or the link is wrong."
+>
+  <section>
+    <div class="container">
+      <span class="eyebrow">404</span>
+      <h1>This page doesn't exist.</h1>
+      <p class="muted" style="max-width: 560px;">
+        The page you're looking for may have moved, or the link is wrong.
+        Start from the home page, or browse the products.
+      </p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a class="btn btn-primary" href={`${base}`}>Back home</a>
+        <a class="btn btn-secondary" href={`${base}products/`}>All products</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

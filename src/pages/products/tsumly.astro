@@ -1,6 +1,5 @@
 ---
 import ProductLayout from '../../layouts/ProductLayout.astro';
-import ComingSoon from '../../components/ComingSoon.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
@@ -11,8 +10,38 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   productName="Tsumly"
   productBase={`${base}products/tsumly/`}
 >
-  <ComingSoon
-    title="Tsumly"
-    text="Tsumly's own site is coming soon — features, screenshots, downloads, and its privacy policy and terms."
-  />
+  <section>
+    <div class="container">
+      <span class="eyebrow">Tsumly</span>
+      <h1>Every amount adds up.</h1>
+      <p class="muted" style="max-width: 560px;">
+        Tsumly is a local-first personal expense and loan ledger. Your money
+        stays on your device — no account, no cloud by default — with an
+        optional encrypted Google Drive backup when you want one.
+      </p>
+      <!-- TODO: wire the download link when the release is public -->
+      <p>
+        <button class="btn btn-primary" type="button" disabled>Download — coming soon</button>
+      </p>
+      <div class="product-grid">
+        <article class="card">
+          <h3>Smart multi-loan repayment split</h3>
+          <p>One repayment, split across several active loans in a single action. Tsumly pre-selects the loans it applies to, shows which will be fully paid and which partially, and never merges loans — a Rs. 3,000 loan repaid by Rs. 1,170 stays one loan with Rs. 1,830 left. A repayment recorded by mistake can be reversed in one step.</p>
+        </article>
+        <article class="card">
+          <h3>Loans that fit real life</h3>
+          <p>Lend or borrow, record partial repayments, and mark loans that started before the app — pre-app loans are recorded without moving your current balance. Every loan keeps its own due amount, fees, and history.</p>
+        </article>
+        <article class="card">
+          <h3>People, not just numbers</h3>
+          <p>Loans live on person profiles, so you always see who owes what. A person with an outstanding loan can't be archived by accident, and archived people can still be picked — and are restored automatically.</p>
+        </article>
+        <article class="card">
+          <h3>Private by design</h3>
+          <p>Offline-first and one-device-first. Nothing leaves the phone unless you turn on Drive backup, which is encrypted (AES-256-GCM) and stored in the app's own private Drive folder.</p>
+        </article>
+      </div>
+      <p class="muted">In daily use. Privacy and Terms are already live on this site — see the links above.</p>
+    </div>
+  </section>
 </ProductLayout>

@@ -1,6 +1,5 @@
 ---
 import ProductLayout from '../../layouts/ProductLayout.astro';
-import ComingSoon from '../../components/ComingSoon.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
@@ -11,8 +10,42 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   productName="Kaizenly"
   productBase={`${base}products/kaizenly/`}
 >
-  <ComingSoon
-    title="Kaizenly"
-    text="Kaizenly's own site is coming soon — features, screenshots, downloads, and its privacy policy and terms."
-  />
+  <section>
+    <div class="container">
+      <span class="eyebrow">Kaizenly</span>
+      <h1>A little better, every day.</h1>
+      <p class="muted" style="max-width: 560px;">
+        Kaizenly is a strict, local-first focus guard. Pick a time, pick the
+        apps that distract you, and start a session — everything in the bag
+        stays shut until the timer ends.
+      </p>
+      <!-- TODO: wire the download link when the release is public -->
+      <div style="margin-bottom: 24px;">
+        <button class="btn btn-primary" type="button" disabled>Download — coming soon</button>
+      </div>
+      <div class="product-grid">
+        <article class="card">
+          <h3>Sessions, not willpower</h3>
+          <p>Choose 15 minutes, 45 minutes, 3 hours, or a custom duration, pick a bag — a named set of apps — and slide to start. A floating pill keeps the countdown on screen while blocked apps show the block screen.</p>
+        </article>
+        <article class="card">
+          <h3>Strict by design</h3>
+          <p>Blocking is enforced on-device (accessibility service, device admin, overlay, and a watchdog), so a blocked app can't be slipped past by reopening it. Leaving early costs parachutes — the price of breaking focus is real.</p>
+        </article>
+        <article class="card">
+          <h3>A break that doesn't kill the session</h3>
+          <p>With more than 30 minutes left, you can take a 30-minute break for one parachute: the clock freezes and the block returns by itself. Ending early costs more the more time is left.</p>
+        </article>
+        <article class="card">
+          <h3>Streaks and routines</h3>
+          <p>The daily target is one minute — small enough to keep, every day. The week starts on Monday, stats run by day, week, and month, and routines can start sessions on a schedule with a pre-alert.</p>
+        </article>
+        <article class="card">
+          <h3>Private by design</h3>
+          <p>Sessions and stats live in a local database on the phone. No analytics, no tracking — the only network use is Play Billing.</p>
+        </article>
+      </div>
+      <p class="muted">In daily use. Privacy and Terms are already live on this site — see the links above.</p>
+    </div>
+  </section>
 </ProductLayout>
