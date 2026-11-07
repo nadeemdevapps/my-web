@@ -233,6 +233,35 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .hero h1 .accent { color: var(--color-primary); }
 .hero p { font-size: 18px; max-width: 560px; }
 
+/* Two-column hero — copy left, work card right; stacks below 840px */
+.hero-grid { display: flex; align-items: center; gap: var(--space-xxl); }
+.hero-copy { flex: 1 1 0; min-width: 0; }
+.hero-visual { flex: 0 0 360px; min-width: 0; }
+.hero-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+.hero-work { list-style: none; margin: 0; padding: 0; }
+.hero-work li + li { border-top: 1px solid var(--color-hairline); }
+.hero-work a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  color: var(--color-ink);
+  text-decoration: none;
+}
+.hero-work a:hover { color: var(--color-primary); text-decoration: none; }
+.hero-work .product-icon { width: 44px; height: 44px; font-size: 22px; margin-bottom: 0; flex: none; }
+.hero-work-text strong { display: block; font-size: 16px; font-weight: 600; }
+.hero-work-text > span { display: block; font-size: 14px; color: var(--color-ink-muted); }
+.hero-work-all { margin: 16px 0 0; }
+
+/* Anchor target sits below the sticky header */
+#work { scroll-margin-top: 80px; }
+
 /* Alternating sections + plain-text section labels (for content pages) */
 .section-alt { background: var(--color-surface); }
 .kicker {
@@ -304,11 +333,18 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .not-found p.muted { max-width: 560px; }
 .not-found-cta { display: flex; gap: var(--space-md); flex-wrap: wrap; justify-content: center; margin-top: var(--space-lg); }
 
-/* Product grid */
+/* Product grid — centered flex-wrap so the last item centers when the
+   count is odd: 3 items → 2 + 1 centered, 4 → 2x2, 5 → 2+2+1 centered.
+   Used on Home, the Products index, and Contact. */
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-lg);
+}
+.product-grid > * {
+  flex: 1 1 320px;
+  max-width: 540px;
 }
 .product-icon {
   width: 56px;
@@ -409,8 +445,11 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   h2 { font-size: 30px; }
   section { padding: var(--space-section-mobile) 0; }
   .hero { padding: 64px 0; }
+  .hero-grid { flex-direction: column; align-items: stretch; gap: var(--space-lg); }
+  .hero-visual { flex: 1 1 auto; }
   .band { padding: 32px; }
-  .product-grid { grid-template-columns: 1fr; }
+  .product-grid { flex-direction: column; }
+  .product-grid > * { flex: 1 1 auto; max-width: none; }
   .site-nav nav { display: none; }
   .menu-toggle { display: inline-flex; }
   .mobile-menu.open { display: block; }

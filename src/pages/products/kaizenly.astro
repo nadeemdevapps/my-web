@@ -21,6 +21,7 @@ const jsonLd = [
   productName="Kaizenly"
   productBase={`${base}products/kaizenly/`}
   jsonLd={jsonLd}
+  developerSection
 >
   <section>
     <div class="container narrow">
@@ -38,23 +39,19 @@ const jsonLd = [
   </section>
 
   <section class="section-alt">
-    <div class="container narrow">
+    <div class="container" style="max-width: 780px; display: flex; flex-direction: column; align-items: center; text-align: center;">
       <span class="kicker">The name</span>
       <h2>Why “Kaizenly”?</h2>
       <p class="lede">
         The name comes from <strong>Kaizen</strong> — a Japanese idea meaning
         “change for the better.” <strong>Kai</strong> is change and progress;
-        <strong>Zen</strong> is calm, focus, and balance; <strong>ly</strong>
-        makes it a daily lifestyle; and <strong>+</strong> is the complete
-        system beyond a single-feature app.
+        <strong>Zen</strong> is calm, focus, and balance; and <strong>ly</strong>
+        makes it a daily lifestyle.
       </p>
-      <ul class="feature-list">
-        <li><strong>Kai</strong> — change, progress, and the decision to become better.</li>
-        <li><strong>Zen</strong> — calm, focus, and balance; peaceful productivity without stress.</li>
-        <li><strong>ly</strong> — a modern, daily ending that makes improvement feel natural.</li>
-        <li><strong>+</strong> — a complete system, more than a single-feature app.</li>
-      </ul>
       <p class="lede">Together: <strong>improve your life calmly, one small step at a time.</strong></p>
+      <div style="display: flex; justify-content: center; margin-top: 22px;">
+        <a class="btn btn-secondary" href={`${base}about/`}>Read the full story →</a>
+      </div>
     </div>
   </section>
 
@@ -122,7 +119,7 @@ const jsonLd = [
           login, no account, and <strong>no analytics</strong>.
         </p>
         <p>
-          The only network use is Play Billing. Backups are
+          The only planned network use is Play Billing. Backups are
           <strong>local JSON files</strong> you export and import yourself —
           nothing is uploaded anywhere.
         </p>

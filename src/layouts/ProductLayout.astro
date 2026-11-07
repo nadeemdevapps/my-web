@@ -8,12 +8,77 @@ interface Props {
   productName: string;
   productBase: string;
   jsonLd?: Record<string, unknown>[];
+  developerSection?: boolean;
 }
 
-const { title, description, productName, productBase, jsonLd } = Astro.props;
+const { title, description, productName, productBase, jsonLd, developerSection = false } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 
-<BaseLayout title={title} description={description} jsonLd={jsonLd}>
+<BaseLayout title={title} description={description} jsonLd={jsonLd} noMainChrome>
   <ProductNav productName={productName} productBase={productBase} />
   <slot />
+  {developerSection && (
+    <section class="developer-section">
+      <div class="container narrow">
+        <span class="kicker">The developer</span>
+        <h2>Built by Nadeem.</h2>
+        <p class="lede">
+          {productName} was built by <strong>Nadeem Mazhar</strong>, a solo
+          developer in Pakistan, as part of Nadeem Dev Apps.
+        </p>
+        <p>
+          <a href={base}>Visit the portfolio →</a>
+        </p>
+      </div>
+    </section>
+  )}
+  <footer class="product-footer">
+    <div class="container">
+      <span class="product-footer-name">{productName}</span>
+      <span class="product-footer-built">Built by Nadeem Dev Apps</span>
+      <nav aria-label={`${productName} footer`}>
+        <a href={productBase}>Overview</a>
+        <a href={`${productBase}privacy/`}>Privacy</a>
+        <a href={`${productBase}terms/`}>Terms</a>
+        <a href={base}>Back to main website →</a>
+      </nav>
+    </div>
+  </footer>
 </BaseLayout>
+
+<style>
+  .developer-section { border-top: 1px solid var(--color-hairline); }
+  .product-footer {
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-hairline);
+    padding: 32px 0;
+  }
+  .product-footer .container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .product-footer-name {
+    font-family: var(--font-display);
+    font-size: 18px;
+    color: var(--color-ink);
+  }
+  .product-footer-built {
+    color: var(--color-ink-muted);
+    font-size: 14px;
+  }
+  .product-footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    margin-top: 8px;
+  }
+  .product-footer nav a {
+    color: var(--color-ink);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .product-footer nav a:hover { color: var(--color-primary); text-decoration: none; }
+</style>

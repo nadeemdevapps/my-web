@@ -7,9 +7,10 @@ interface Props {
   description?: string;
   jsonLd?: Record<string, unknown>[];
   noindex?: boolean;
+  noMainChrome?: boolean;
 }
 
-const { title, description = 'Nadeem Dev Apps — small, local-first apps.', jsonLd = [], noindex = false } = Astro.props;
+const { title, description = 'Nadeem Dev Apps — small, local-first apps.', jsonLd = [], noindex = false, noMainChrome = false } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 // Absolute URLs for canonical / Open Graph: Astro.site is the production
 // origin (https://nadeemdevapps.github.io); the pathname carries /my-web.
@@ -56,6 +57,7 @@ const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
     </script>
   </head>
   <body>
+    {!noMainChrome && (
     <header class="site-nav" id="top">
       <div class="container">
         <a class="wordmark" href={`${base}`}><Logo size={28} /> Nadeem Dev Apps</a>
@@ -85,11 +87,13 @@ const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
         </div>
       </div>
     </header>
+    )}
 
     <main>
       <slot />
     </main>
 
+    {!noMainChrome && (
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
@@ -125,6 +129,7 @@ const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
         </div>
       </div>
     </footer>
+    )}
 
     <script is:inline>
       // Theme toggle: light <-> dark, saved for the next visit.

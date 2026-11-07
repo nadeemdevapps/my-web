@@ -22,29 +22,67 @@ const jsonLd = [
 
 <BaseLayout
   title="Home"
-  description="Nadeem Dev Apps builds small, local-first apps — Tsumly, a money ledger, Kaizenly, a focus guard, and MsgLoop, a WhatsApp scheduler."
+  description="Nadeem Mazhar — a solo developer in Pakistan building websites, Windows apps, Android apps, and backends. Selected work: Tsumly, Kaizenly, and MsgLoop."
   jsonLd={jsonLd}
 >
   <section class="hero">
-    <div class="container">
-      <Logo size={48} />
-      <h1>Small apps,<br />built for <span class="accent">real life.</span></h1>
-      <p class="muted">
-        Nadeem Dev Apps builds local-first tools that solve one problem well —
-        starting with money, focus, and messaging.
-      </p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href={`${base}products/tsumly/`}>Meet Tsumly</a>
-        <a class="btn btn-secondary" href={`${base}products/kaizenly/`}>Kaizenly</a>
-        <a class="btn btn-secondary" href={`${base}products/msgloop/`}>MsgLoop</a>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <Logo size={48} />
+        <h1>I'm Nadeem Mazhar —<br />I build apps and websites for <span class="accent">real life.</span></h1>
+        <p class="muted">
+          Solo developer in Pakistan. I plan, design, and ship websites,
+          Windows apps, Android apps, and backends — local-first or cloud,
+          whichever the project needs — with AI doing the heavy lifting under
+          my direction.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#work">See my work</a>
+          <a class="btn btn-secondary" href={`${base}contact/`}>Get in touch</a>
+        </div>
       </div>
+      <aside class="hero-visual">
+        <div class="hero-card">
+          <p class="kicker">Selected work</p>
+          <ul class="hero-work">
+            <li>
+              <a href={`${base}products/tsumly/`}>
+                <span class="product-icon" aria-hidden="true">T</span>
+                <span class="hero-work-text">
+                  <strong>Tsumly</strong>
+                  <span>A money ledger that adds up.</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href={`${base}products/kaizenly/`}>
+                <span class="product-icon" aria-hidden="true">K</span>
+                <span class="hero-work-text">
+                  <strong>Kaizenly</strong>
+                  <span>A focus guard that means it.</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href={`${base}products/msgloop/`}>
+                <span class="product-icon" aria-hidden="true">M</span>
+                <span class="hero-work-text">
+                  <strong>MsgLoop</strong>
+                  <span>A WhatsApp sender for Android.</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="hero-work-all"><a href={`${base}products/`}>All products →</a></p>
+        </div>
+      </aside>
     </div>
   </section>
 
-  <section class="section-alt">
+  <section class="section-alt" id="work">
     <div class="container">
-      <p class="kicker">Products</p>
-      <h2>What we make</h2>
+      <p class="kicker">Selected work</p>
+      <h2>What I've built</h2>
       <div class="product-grid">
         <div>
           <h3>Tsumly</h3>
@@ -92,40 +130,50 @@ const jsonLd = [
 
   <section>
     <div class="container narrow">
-      <p class="kicker">Why Nadeem Dev Apps</p>
-      <h2>Built for real life, not for a server.</h2>
+      <p class="kicker">What I do</p>
+      <h2>Planning, design, and shipping — with AI.</h2>
       <p class="lede">
-        Every app here is <strong>local-first</strong> — your data stays on your
-        device. <strong>No tracking, no accounts, no ads.</strong> They solve one
-        problem well: a ledger that adds up, a phone that stays quiet when it
-        matters, and messages that go out on time.
+        I explore a problem until I understand it, plan the shape of the
+        answer, design the interface, and ship it — with <strong>AI tools
+        doing the heavy lifting</strong> under my direction. The apps I ship
+        are <strong>local-first by design</strong> — no accounts, no tracking,
+        no ads — because that's the right call for a personal tool, not
+        because it's all I can build.
       </p>
+      <ul class="feature-list">
+        <li><strong>Exploration</strong> — I research what's out there, what fails, and what's missing before I build anything.</li>
+        <li><strong>AI-assisted development</strong> — I direct the build and review every step; AI writes the bulk of the code, I own the decisions.</li>
+        <li><strong>UI design</strong> — interfaces I design myself: clean, calm, and built to be used every day.</li>
+        <li><strong>Planning &amp; brainstorming</strong> — documentation and a clear plan come before the first line of code.</li>
+        <li><strong>Problem-solving</strong> — the hard part isn't the code, it's finding the right shape for the answer.</li>
+        <li><strong>Security review</strong> — I follow security protocols properly, with AI help, on every build.</li>
+      </ul>
     </div>
   </section>
 
   <section class="section-alt">
     <div class="container narrow">
       <p class="kicker">About</p>
-      <h2>Built by one developer, for himself first.</h2>
+      <h2>A solo developer, building for himself first.</h2>
       <p class="muted">
-        Every app here started as a personal problem — a ledger that never
-        added up, a phone that never stayed quiet. Tsumly and Kaizenly ship
-        when they work in daily use, not before.
+        I'm Nadeem Mazhar, a solo developer in Pakistan. I build the tools I
+        wish existed — planned, documented, reviewed, and shipped. Tsumly and
+        Kaizenly started as personal problems: a ledger that never added up, a
+        phone that never stayed quiet. They ship when they work in daily use,
+        not before.
       </p>
-      <p><a href={`${base}about/`}>More about the developer →</a></p>
+      <p><a href={`${base}about/`}>More about Nadeem →</a></p>
     </div>
   </section>
 
   <section>
     <div class="container narrow">
-      <h2>Ready to try them?</h2>
+      <h2>Have an idea?</h2>
       <p class="muted">
-        Pick the problem you want solved first — money, focus, or messaging.
+        Questions, feedback, or just want to say hi — get in touch.
       </p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href={`${base}products/tsumly/`}>Meet Tsumly</a>
-        <a class="btn btn-secondary" href={`${base}products/kaizenly/`}>Kaizenly</a>
-        <a class="btn btn-secondary" href={`${base}products/msgloop/`}>MsgLoop</a>
+        <a class="btn btn-primary" href={`${base}contact/`}>Get in touch</a>
       </div>
     </div>
   </section>
