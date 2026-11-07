@@ -243,6 +243,31 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   margin-bottom: 8px;
 }
 
+/* Lede — larger grey intro paragraph; bold phrases pull the eye in near-black */
+.lede {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-ink-secondary);
+  max-width: 640px;
+}
+.lede strong { color: var(--color-ink); font-weight: 600; }
+
+/* Feature list — square-bullet lists that carry the data */
+.feature-list { list-style: square; padding-left: 20px; color: var(--color-ink-secondary); }
+.feature-list li { margin-bottom: 8px; }
+.feature-list li::marker { color: var(--color-ink-muted); }
+.feature-list strong { color: var(--color-ink); font-weight: 600; }
+
+/* Inverted band — one dark block per page at most (privacy, etc.) */
+.band {
+  background: var(--color-ink);
+  color: var(--color-canvas);
+  border-radius: 12px;
+  padding: 48px;
+}
+.band h2, .band h3 { color: var(--color-canvas); }
+.band p { opacity: .8; }
+
 /* 404 — centered, plain canvas */
 .not-found { padding: 96px 0; text-align: center; }
 .not-found .container { display: flex; flex-direction: column; align-items: center; }

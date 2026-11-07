@@ -13,7 +13,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   <section>
     <div class="container">
       <h1>A little better, every day.</h1>
-      <p class="muted" style="max-width: 560px;">
+      <p class="lede">
         Kaizenly is a strict, local-first focus guard. Pick a time, pick the
         apps that distract you, and start a session — everything in the bag
         stays shut until the timer ends.
@@ -22,28 +22,105 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
       <div style="margin-bottom: 24px;">
         <button class="btn btn-primary" type="button" disabled>Download — coming soon</button>
       </div>
-      <div class="product-grid">
-        <article class="card">
-          <h3>Sessions, not willpower</h3>
-          <p>Choose 15 minutes, 45 minutes, 3 hours, or a custom duration, pick a bag — a named set of apps — and slide to start. A floating pill keeps the countdown on screen while blocked apps show the block screen.</p>
-        </article>
-        <article class="card">
-          <h3>Strict by design</h3>
-          <p>Blocking is enforced on-device (accessibility service, device admin, overlay, and a watchdog), so a blocked app can't be slipped past by reopening it. Leaving early costs parachutes — the price of breaking focus is real.</p>
-        </article>
-        <article class="card">
-          <h3>A break that doesn't kill the session</h3>
-          <p>With more than 30 minutes left, you can take a 30-minute break for one parachute: the clock freezes and the block returns by itself. Ending early costs more the more time is left.</p>
-        </article>
-        <article class="card">
-          <h3>Streaks and routines</h3>
-          <p>The daily target is one minute — small enough to keep, every day. The week starts on Monday, stats run by day, week, and month, and routines can start sessions on a schedule with a pre-alert.</p>
-        </article>
-        <article class="card">
-          <h3>Private by design</h3>
-          <p>Sessions and stats live in a local database on the phone. No analytics, no tracking — the only network use is Play Billing.</p>
-        </article>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <span class="kicker">The name</span>
+      <h2>Why “Kaizenly”?</h2>
+      <p class="lede">
+        The name comes from <strong>Kaizen</strong> — a Japanese idea meaning
+        “change for the better.” <strong>Kai</strong> is change and progress;
+        <strong>Zen</strong> is calm, focus, and balance; <strong>ly</strong>
+        makes it a daily lifestyle; and <strong>+</strong> is the complete
+        system beyond a single-feature app.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Kai</strong> — change, progress, and the decision to become better.</li>
+        <li><strong>Zen</strong> — calm, focus, and balance; peaceful productivity without stress.</li>
+        <li><strong>ly</strong> — a modern, daily ending that makes improvement feel natural.</li>
+        <li><strong>+</strong> — a complete system, more than a single-feature app.</li>
+      </ul>
+      <p class="lede">Together: <strong>improve your life calmly, one small step at a time.</strong></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <span class="kicker">Focus</span>
+      <h2>Pick a time. Start a session. Stay put.</h2>
+      <p class="lede">
+        A focus session is a <strong>bag</strong> — a named set of apps that
+        stays shut until the timer ends. Choose <strong>15 minutes, 45 minutes,
+        3 hours, or a custom length</strong>, slide to start, and the block
+        does the rest.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Bags</strong> — each session blocks a named set of distracting apps; pick 15 minutes, 45 minutes, 3 hours, or a custom duration.</li>
+        <li><strong>Floating pill</strong> — a small overlay keeps the countdown on screen, so the time left is always in sight.</li>
+        <li><strong>Block screen</strong> — opening a blocked app shows the block screen (Distraction Wall) and sends you back to focus.</li>
+        <li><strong>Parachutes</strong> — leaving early costs parachutes, so ending a session is a deliberate decision, not a reflex.</li>
+        <li><strong>A 30-minute break</strong> — with more than 30 minutes left, you can take a 30-minute break for one parachute: the clock freezes and the block returns by itself. Ending early costs more the more time is left.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <span class="kicker">Routines &amp; streaks</span>
+      <h2>Small steps, every day.</h2>
+      <p class="lede">
+        Focus works best as a <strong>routine</strong>, not a one-off effort.
+        Kaizenly starts sessions on a schedule, reminds you before they begin,
+        and keeps the daily target small enough to hold.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Routines</strong> — schedule sessions to start on chosen days, with a <strong>pre-alert</strong> before each one begins.</li>
+        <li><strong>A one-minute daily target</strong> — one minute of focus a day is enough to keep the streak alive. Small enough to keep, every day.</li>
+        <li><strong>Monday-start weeks</strong> — weeks run Monday to Sunday, so the streak counts the way your week does.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <span class="kicker">Stats</span>
+      <h2>Your progress, on your device.</h2>
+      <p class="lede">
+        Every session is recorded <strong>locally</strong>, in a Room database
+        on your phone. See how your focus adds up — <strong>by day, by week,
+        and by month</strong> — without anything leaving the device.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Day, week, and month views</strong> — totals for each period, side by side.</li>
+        <li><strong>Post-session celebration</strong> — finishing a session ends with a small celebration, and a shareable image of the result.</li>
+        <li><strong>No account, no sync</strong> — stats live in the local database; there is nothing to log in to.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="band">
+        <h2>Your focus belongs to you.</h2>
+        <p>
+          There is <strong>no server</strong> and no custom backend. Your
+          sessions and stats live in a local database on your device — no
+          login, no account, and <strong>no analytics</strong>.
+        </p>
+        <p>
+          The only network use is Play Billing. Backups are
+          <strong>local JSON files</strong> you export and import yourself —
+          nothing is uploaded anywhere.
+        </p>
+        <a class="btn btn-secondary" href={`${base}products/kaizenly/privacy/`}>Read the privacy model</a>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
       <p class="muted">In daily use. Privacy and Terms are already live on this site — see the links above.</p>
     </div>
   </section>

@@ -7,7 +7,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 <BaseLayout
   title="Home"
-  description="Nadeem Dev Apps builds small, local-first apps — Tsumly, a personal expense and loan ledger, and Kaizenly, a strict focus guard."
+  description="Nadeem Dev Apps builds small, local-first apps — Tsumly, a personal expense and loan ledger, Kaizenly, a strict focus guard, and MsgLoop, a WhatsApp message scheduler."
 >
   <section class="hero">
     <div class="container">
@@ -15,7 +15,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
       <h1>Small apps,<br />built for <span class="accent">real life.</span></h1>
       <p class="muted">
         Nadeem Dev Apps builds local-first tools that solve one problem well —
-        starting with money and focus.
+        starting with money, focus, and messaging.
       </p>
       <div class="hero-cta">
         <a class="btn btn-primary" href={`${base}products/tsumly/`}>Meet Tsumly</a>
@@ -24,34 +24,91 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     </div>
   </section>
 
-  <section>
+  <section class="section-alt">
     <div class="container">
+      <p class="kicker">Products</p>
       <h2>What we make</h2>
       <div class="product-grid">
-        <article class="card">
-          <div class="product-icon" aria-hidden="true">T</div>
+        <div>
           <h3>Tsumly</h3>
-          <p>Every amount adds up. A local-first personal expense and loan ledger, with a smart multi-loan repayment split and optional Google Drive backup.</p>
-          <a href={`${base}products/tsumly/`}>Learn more →</a>
-        </article>
-        <article class="card">
-          <div class="product-icon" aria-hidden="true">K</div>
+          <p class="lede">
+            A <strong>local-first money ledger</strong> — every amount adds up.
+            Track expenses and loans on your own device, with an optional
+            <strong>encrypted Google Drive backup</strong>.
+          </p>
+          <ul class="feature-list">
+            <li><strong>Smart multi-loan repayment split</strong> — one repayment spread across your loans, the fair way.</li>
+            <li><strong>Pre-app loans</strong> — record loans from before the app without moving your balance.</li>
+            <li><strong>Person profiles</strong> — every loan tied to a person, with their totals at a glance.</li>
+          </ul>
+          <p><a href={`${base}products/tsumly/`}>Learn more →</a></p>
+        </div>
+        <div>
           <h3>Kaizenly</h3>
-          <p>A strict, local-first focus guard — built from scratch to keep distracting apps shut when it matters.</p>
-          <a href={`${base}products/kaizenly/`}>Learn more →</a>
-        </article>
+          <p class="lede">
+            A <strong>strict, local-first focus guard</strong> — timed sessions
+            that keep distracting apps shut when it matters.
+          </p>
+          <ul class="feature-list">
+            <li><strong>Sessions ("bags")</strong> — 15 min, 45 min, 3 h, or a custom length.</li>
+            <li><strong>Parachute exit cost</strong> — quitting early costs something, so it stays a deliberate choice.</li>
+            <li><strong>Streaks, routines, and stats</strong> — the habit building up, visible day by day.</li>
+          </ul>
+          <p><a href={`${base}products/kaizenly/`}>Learn more →</a></p>
+        </div>
+        <div>
+          <h3>MsgLoop</h3>
+          <p class="lede">
+            A <strong>WhatsApp sender for Android</strong> — one message, sent
+            many times, right now or on a schedule.
+          </p>
+          <ul class="feature-list">
+            <li><strong>Schedule for later</strong> — pick a date and time; an exact alarm sends when you said it would.</li>
+            <li><strong>A queue that survives anything</strong> — tasks live on the phone, through restarts and app kills.</li>
+            <li><strong>Private by design</strong> — no account, no server, no tracking.</li>
+          </ul>
+          <p><a href={`${base}products/msgloop/`}>Learn more →</a></p>
+        </div>
       </div>
     </div>
   </section>
 
   <section>
     <div class="container">
+      <p class="kicker">Why Nadeem Dev Apps</p>
+      <h2>Built for real life, not for a server.</h2>
+      <p class="lede">
+        Every app here is <strong>local-first</strong> — your data stays on your
+        device. <strong>No tracking, no accounts, no ads.</strong> They solve one
+        problem well: a ledger that adds up, a phone that stays quiet when it
+        matters, and messages that go out on time.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <p class="kicker">About</p>
       <h2>Built by one developer, for himself first.</h2>
       <p class="muted">
         Every app here started as a personal problem — a ledger that never
         added up, a phone that never stayed quiet. They ship when they work
         in daily use, not before.
       </p>
+      <p><a href={`${base}about/`}>More about the developer →</a></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Ready to try them?</h2>
+      <p class="muted">
+        Pick the problem you want solved first — money or focus.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href={`${base}products/tsumly/`}>Meet Tsumly</a>
+        <a class="btn btn-secondary" href={`${base}products/kaizenly/`}>Kaizenly</a>
+      </div>
     </div>
   </section>
 </BaseLayout>

@@ -1,0 +1,56 @@
+---
+import ProductLayout from '../../../layouts/ProductLayout.astro';
+import LegalDoc from '../../../components/LegalDoc.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<ProductLayout
+  title="MsgLoop Terms of Use"
+  description="Terms of use for the MsgLoop app."
+  productName="MsgLoop"
+  productBase={`${base}products/msgloop/`}
+>
+  <LegalDoc
+    title="MsgLoop Terms of Use"
+    intro="MsgLoop is a WhatsApp sender, provided as-is. Read the warning below before you use it."
+    sections={[
+      {
+        heading: 'Acceptance',
+        body: 'By installing and using MsgLoop, you agree to these terms. If you do not agree with any part of them, please do not use the app.',
+      },
+      {
+        heading: 'What MsgLoop does',
+        body: 'MsgLoop sends one WhatsApp message many times \u2014 right now, or at a time you pick \u2014 through WhatsApp Web inside the app. It uses no official WhatsApp API. You log in once by scanning a QR code, and the session stays on your phone.',
+      },
+      {
+        heading: 'The WhatsApp warning',
+        body: 'Automating WhatsApp Web violates WhatsApp\u2019s Terms of Service. Repetitive bulk messaging is exactly the pattern WhatsApp\u2019s anti-spam systems look for, and it can get your number temporarily or permanently banned. Use MsgLoop at your own risk, only on numbers you own or have permission to message. Keep the delay conservative for large counts, and prefer smaller batches.',
+      },
+      {
+        heading: 'Your responsibility',
+        body: 'You are responsible for the messages you send and the numbers you send them to. Use MsgLoop only on numbers you own or have permission to message, and only for lawful purposes. You may not use the app to send spam, harassment, or anything illegal.',
+      },
+      {
+        heading: 'Local-first, no MsgLoop account',
+        body: 'MsgLoop stores everything in local storage on your device. There is no MsgLoop account and no sign-up, and MsgLoop operates no server that receives your data. On Android the app opts out of automatic cloud backup (allowBackup=false), so a fresh install starts empty and uninstalling the app wipes its local data.',
+      },
+      {
+        heading: 'Provided as-is',
+        body: 'MsgLoop is provided "as is" and "as available", without warranties of any kind, express or implied, including any implied warranty of fitness for a particular purpose. To the extent permitted by law, the developer is not liable for any loss or damage arising from your use of the app, including a banned WhatsApp number, a missed send, or a lost task.',
+      },
+      {
+        heading: 'Stopping use',
+        body: 'You can stop using MsgLoop at any time. Log out of WhatsApp Web in the app, or uninstall the app to delete its local data from the device.',
+      },
+      {
+        heading: 'Changes to these terms',
+        body: 'These terms may be updated from time to time. The version on this page is always the current one.',
+      },
+      {
+        heading: 'Contact',
+        body: 'Questions about these terms? Email nadeem.devapps@gmail.com.',
+      },
+    ]}
+  />
+</ProductLayout>

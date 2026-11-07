@@ -13,33 +13,110 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   <section>
     <div class="container">
       <h1>Every amount adds up.</h1>
-      <p class="muted" style="max-width: 560px;">
-        Tsumly is a local-first personal expense and loan ledger. Your money
-        stays on your device — no account, no cloud by default — with an
-        optional encrypted Google Drive backup when you want one.
+      <p class="lede">
+        Tsumly is a <strong>local-first</strong> personal expense and loan
+        ledger. Your money stays on your device — <strong>no account, no
+        cloud by default</strong> — with an optional encrypted Google Drive
+        backup when you want one.
       </p>
       <!-- TODO: wire the download link when the release is public -->
       <p>
         <button class="btn btn-primary" type="button" disabled>Download — coming soon</button>
       </p>
-      <div class="product-grid">
-        <article class="card">
-          <h3>Smart multi-loan repayment split</h3>
-          <p>One repayment, split across several active loans in a single action. Tsumly pre-selects the loans it applies to, shows which will be fully paid and which partially, and never merges loans — a Rs. 3,000 loan repaid by Rs. 1,170 stays one loan with Rs. 1,830 left. A repayment recorded by mistake can be reversed in one step.</p>
-        </article>
-        <article class="card">
-          <h3>Loans that fit real life</h3>
-          <p>Lend or borrow, record partial repayments, and mark loans that started before the app — pre-app loans are recorded without moving your current balance. Every loan keeps its own due amount, fees, and history.</p>
-        </article>
-        <article class="card">
-          <h3>People, not just numbers</h3>
-          <p>Loans live on person profiles, so you always see who owes what. A person with an outstanding loan can't be archived by accident, and archived people can still be picked — and are restored automatically.</p>
-        </article>
-        <article class="card">
-          <h3>Private by design</h3>
-          <p>Offline-first and one-device-first. Nothing leaves the phone unless you turn on Drive backup, which is encrypted (AES-256-GCM) and stored in the app's own private Drive folder.</p>
-        </article>
-      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <span class="kicker">How it works</span>
+      <h2>A ledger that lives on your phone.</h2>
+      <p class="lede">
+        Tsumly is a <strong>local-first ledger</strong> for the money you
+        <strong>lend and borrow</strong>. Record a loan, note who it is
+        with, and keep a <strong>running balance</strong> — everything is
+        stored on your device, and it works offline.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Lend or borrow</strong> — record a loan in either direction, with its due amount, fees, and history.</li>
+        <li><strong>Partial repayments</strong> — a loan can be paid back a little at a time, and every payment is recorded against the same loan.</li>
+        <li><strong>Running balance</strong> — always see where you stand: what you are owed, and what you owe.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <span class="kicker">Smart repayment split</span>
+      <h2>One repayment, split across every loan it covers.</h2>
+      <p class="lede">
+        When someone pays you back, the money rarely matches a single loan.
+        Tsumly <strong>splits one repayment across several active
+        loans</strong> in a single action — and <strong>never merges
+        loans</strong>, so each loan keeps its own history.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Pre-selected for you</strong> — Tsumly picks the loans the repayment applies to, and shows which will be <strong>fully paid</strong> and which <strong>partially</strong>.</li>
+        <li><strong>No merging</strong> — a Rs. 3,000 loan repaid by Rs. 1,170 stays one loan with <strong>Rs. 1,830 left</strong>.</li>
+        <li><strong>Mistakes are reversible</strong> — a repayment recorded by mistake can be <strong>reversed in one step</strong>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <span class="kicker">Pre-app loans</span>
+      <h2>Loans from before the app still count.</h2>
+      <p class="lede">
+        You were lending and borrowing long before Tsumly. <strong>Pre-app
+        loans</strong> record those older loans <strong>without moving your
+        current balance</strong> — so your history is complete and your
+        balance stays honest.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Mark it pre-app</strong> — when you create a loan that started before the app, it is recorded without an opening balance movement.</li>
+        <li><strong>Same detail, same history</strong> — every loan keeps its own due amount, fees, and history, pre-app or not.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <span class="kicker">Person profiles</span>
+      <h2>People, not just numbers.</h2>
+      <p class="lede">
+        Loans live on <strong>person profiles</strong>, so you always see
+        <strong>who owes what</strong>. Each person carries their own
+        totals, and nothing about an open loan can be hidden by accident.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Per-person totals</strong> — every profile shows what that person owes you, and what you owe them.</li>
+        <li><strong>Archive is guarded</strong> — a person with <strong>outstanding loans cannot be archived</strong>.</li>
+        <li><strong>Archived people stay reachable</strong> — they still appear in the person picker, and picking one <strong>restores them automatically</strong>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <span class="kicker">Backup &amp; privacy</span>
+      <h2>Your money stays yours.</h2>
+      <p class="lede">
+        <strong>Offline-first and one-device-first.</strong> Nothing leaves
+        the phone unless you turn on Drive backup — and even then, the
+        backup is <strong>encrypted</strong> and stored in the app's
+        <strong>own private Drive folder</strong>.
+      </p>
+      <ul class="feature-list">
+        <li><strong>No account, no cloud by default</strong> — your money stays on your device; there is nothing to sign up for.</li>
+        <li><strong>Encrypted backup</strong> — the optional Google Drive backup is encrypted with <strong>AES-256-GCM</strong>.</li>
+        <li><strong>No tracking</strong> — no analytics, no ads, nothing phoning home.</li>
+        <li><strong>Sign-in stays on the device</strong> — device-specific sign-in details never leave the phone in a portable backup.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
       <p class="muted">In daily use. Privacy and Terms are already live on this site — see the links above.</p>
     </div>
   </section>

@@ -1,0 +1,67 @@
+---
+import ProductLayout from '../../layouts/ProductLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<ProductLayout
+  title="MsgLoop"
+  description="MsgLoop — repeat WhatsApp messages on a schedule, from a saved login on your phone."
+  productName="MsgLoop"
+  productBase={`${base}products/msgloop/`}
+>
+  <section>
+    <div class="container">
+      <h1>Send the same message, on repeat — on schedule.</h1>
+      <p class="lede">
+        MsgLoop is a WhatsApp sender for Android. Log in once inside the app,
+        then send one message many times — right now, or at a time you pick.
+        Everything runs on your phone: no account, no server, and no data
+        leaves the device except through WhatsApp itself.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <span class="kicker">Important</span>
+      <h2>A warning before you use it</h2>
+      <p class="lede">
+        MsgLoop automates WhatsApp Web, which WhatsApp's Terms of Service do
+        not allow — bulk messaging can get a number temporarily or permanently
+        banned. Use it only on numbers you own or have permission to message.
+        Keep the delay conservative for large counts, and prefer smaller
+        batches.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <span class="kicker">Features</span>
+      <h2>What MsgLoop does</h2>
+      <div class="product-grid">
+        <article class="card">
+          <h3>Schedule for later</h3>
+          <p>Pick a date and time; an exact alarm wakes a background service and the messages go out when you said they would.</p>
+        </article>
+        <article class="card">
+          <h3>Send now, on repeat</h3>
+          <p>One message, sent N times with a delay you choose (0.3s to 5s, or your own value) — with a live preview of the chat as it sends.</p>
+        </article>
+        <article class="card">
+          <h3>A queue that survives anything</h3>
+          <p>Tasks are stored on the phone, so they survive the app being closed, the phone restarting, and alarms being cleared. Missed tasks fire when the app opens again.</p>
+        </article>
+        <article class="card">
+          <h3>Live progress and history</h3>
+          <p>Watch sent, failed, and remaining counts with a live time estimate, stop a task any time, and see every finished task's result afterwards.</p>
+        </article>
+        <article class="card">
+          <h3>Private by design</h3>
+          <p>No account, no analytics, no tracking. Your login and your tasks stay on your phone; Android backup is off.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</ProductLayout>
