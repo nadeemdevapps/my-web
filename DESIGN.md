@@ -290,10 +290,12 @@ components:
     typography: "{typography.caption-uppercase}"
     rounded: "{rounded.pill}"
     padding: 4px 12px
-  hero-band:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.canvas}"
+  hero:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
     headlineTypography: "{typography.display-xl}"
+    headlineAccent: "{colors.primary}" (one word)
+    mark: "{components.logo}" above the eyebrow
     rounded: 0
   inverted-band:
     backgroundColor: "{colors.primary}"
@@ -370,7 +372,7 @@ Surfaces are defined by **hairlines and the faintest layered shadows** rather th
 - Two shipped polarities (dark anchor + light) that share all non-color tokens; only palette values differ.
 - Fully pill-shaped marketing CTAs contrasted with flat 12px cards and tight 4px inputs.
 - Elevation by hairline + barely-there layered shadow, never heavy drop-shadows.
-- A single dark ink hero band — the one inverted moment on the page.
+- A light hero on the warm canvas — logo mark above the eyebrow, one headline word in the blue accent.
 - Sticker palette as decoration only — small, playful, never structural.
 
 ## Colors
@@ -453,7 +455,7 @@ EB Garamond is the open display face; Cormorant Garamond is the alternate if EB 
 - **Page tail:** `{spacing.content-bottom}` (32px) of breathing room at the end of a page.
 
 ### Grid & Container
-Content is centred in a wide max-width column (1080–1300px on desktop) with generous outer gutters. Feature sections alternate between full-width text blocks and 2-up / 3-up card grids; the products page uses a product-card grid. The dark hero band spans full-bleed edge to edge while body sections respect the centred container.
+Content is centred in a wide max-width column (1080–1300px on desktop) with generous outer gutters. Feature sections alternate between full-width text blocks and 2-up / 3-up card grids; the products page uses a product-card grid. The hero sits inside the centred container, like every other section.
 
 ### Whitespace Philosophy
 Whitespace is the primary grouping device. Sections are separated by large vertical gaps rather than rules, and cards sit on the warm canvas with quiet hairlines instead of heavy frames. The effect is document-like: airy, scannable, never crowded — and calm enough to read as a portfolio rather than a busy dashboard.
@@ -488,7 +490,7 @@ Product screenshots and illustration tiles sit inside rounded `{rounded.md}` / `
 Elevation is **barely-there**: shadows are built from many near-transparent layers so surfaces feel gently lifted off the paper rather than dramatically dropped. Most cards rely on a hairline alone.
 
 ### Decorative Depth
-The brand's real depth cue is **illustration**, not shadow. The dark ink hero band uses sticker constellations to create a lit night scene, and feature sections layer small colourful app-icon stickers over plain surfaces to add playful dimensionality. Monochrome line illustrations provide the quiet spot art.
+The brand's real depth cue is **illustration**, not shadow. Feature sections layer small colourful app-icon stickers over plain surfaces to add playful dimensionality. Monochrome line illustrations provide the quiet spot art.
 
 ## Data Visualization
 
@@ -587,7 +589,7 @@ The site uses almost no photography — it is a content-and-type site. Where a p
 
 ### Signature Components
 
-**`hero-band`** — The dark hero (full-bleed). `{colors.ink}` background, `{colors.canvas}` text, `{typography.display-xl}` serif headline, sticker-constellation field, and a `button-primary` + `button-secondary` CTA pair. The single inverted dark island in an otherwise daylight page.
+**`hero`** — The light hero. Warm canvas, `{colors.ink}` text, `{typography.display-xl}` serif headline with one word in `{colors.primary}`, logo mark above the eyebrow, and a `button-primary` + `button-secondary` CTA pair.
 
 **`inverted-band`** — A polarity-flipped emphasis band for mid-page moments. `{colors.primary}` fill, `{colors.on-primary}` text, `{typography.display-sm}` serif headline, 12px radius. Use sparingly.
 
@@ -597,7 +599,7 @@ The site uses almost no photography — it is a content-and-type site. Where a p
 
 ## Core Pages
 
-- **Home**: hero-band (ink, serif headline, sticker constellations, primary + secondary CTA), products grid (product-cards for Tsumly and Kaizenly), an about strip, and the footer. One calm monochrome illustration, generous whitespace.
+- **Home**: hero (light canvas, logo mark, serif headline with one blue word, primary + secondary CTA), products grid (product-cards for Tsumly and Kaizenly), an about strip, and the footer. One calm monochrome illustration, generous whitespace.
 - **Products** (index): product-card grid; each card links to its sub-page.
 - **Product sub-pages** (`/products/tsumly`, `/products/kaizenly`): hero (display headline + one-line description), feature cards, screenshots in rounded wells, download/store links, and a link back to Products. Product sub-pages inherit this system; a product's in-app brand does not recolour the page. Each product sub-site also has its own `/privacy/` and `/terms/` pages.
 - **About**: document-style long page on the warm canvas; serif section headlines, Inter body.
@@ -639,7 +641,7 @@ The site is built for humans first and for AI agents, LLMs, and search second �
 - Keep marketing CTAs fully pill-shaped (`{rounded.pill}`) and cards flat at 12px (`{rounded.md}`) with a hairline border; utility buttons tighter at 8px (`{rounded.sm}`).
 - Use `{colors.danger}` only for destructive/error states; carry success/affirmative state with ink weight and iconography.
 - Use the toast bus for feedback, with specific, actionable messages.
-- Keep the single dark ink hero band as the one inverted moment — do not repeat dark bands down the page.
+- Keep the hero light and quiet — logo mark, one accent word, no dark bands.
 
 ### Don't
 - Don't introduce any chromatic brand colour into structure — there is no purple/coral/accent hue in layout, buttons, or borders; the structural accent is blue only, and purple lives only in the sticker palette.

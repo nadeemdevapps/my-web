@@ -237,6 +237,13 @@ section { padding: var(--space-section) 0; }
 }
 .hero-cta { display: flex; gap: var(--space-md); flex-wrap: wrap; margin-top: var(--space-lg); }
 
+/* Light hero — logo mark above the eyebrow, one headline word in the accent */
+.hero { padding: 96px 0; }
+.hero .logo-mark { display: block; margin-bottom: var(--space-md); }
+.hero h1 { max-width: 640px; }
+.hero h1 .accent { color: var(--color-primary); }
+.hero p { font-size: 18px; max-width: 560px; }
+
 /* Sticker dots — decoration only */
 .stickers { position: absolute; inset: 0; pointer-events: none; }
 .stickers i {
