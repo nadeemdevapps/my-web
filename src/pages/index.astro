@@ -4,24 +4,44 @@ import Logo from '../components/Logo.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const siteUrl = `https://nadeemdevapps.github.io${base}`;
+const personId = `${siteUrl}#nadeem`;
 const jsonLd = [
   {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Nadeem Dev Apps',
-    url: siteUrl,
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'Nadeem Dev Apps',
-    url: siteUrl,
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': `${siteUrl}#organization`,
+        name: 'Nadeem Dev Apps',
+        url: siteUrl,
+        logo: `${siteUrl}logo.svg`,
+        sameAs: ['https://github.com/nadeemdevapps'],
+        founder: { '@id': personId },
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${siteUrl}#website`,
+        name: 'Nadeem Dev Apps',
+        url: siteUrl,
+        publisher: { '@id': `${siteUrl}#organization` },
+      },
+      {
+        '@type': 'Person',
+        '@id': personId,
+        name: 'Nadeem Mazhar',
+        jobTitle: 'Solo Developer',
+        description:
+          'Solo developer in Pakistan. Builds websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs — with AI doing the heavy lifting under his direction.',
+        url: `${siteUrl}about/`,
+        sameAs: ['https://github.com/nadeemdevapps'],
+      },
+    ],
   },
 ];
 ---
 
 <BaseLayout
-  title="Home"
+  title="Nadeem Mazhar — Solo Developer, Pakistan"
   description="Nadeem Mazhar — a solo developer in Pakistan building websites, Windows apps, Android apps, and backends. Selected work: Tsumly, Kaizenly, and MsgLoop."
   jsonLd={jsonLd}
 >
@@ -107,7 +127,7 @@ const jsonLd = [
           <ul class="feature-list">
             <li><strong>Sessions ("bags")</strong> — 15 min, 45 min, 3 h, or a custom length (3–12 h, premium).</li>
             <li><strong>Parachute exit cost</strong> — quitting early costs something, so it stays a deliberate choice.</li>
-            <li><strong>Streaks, routines, and stats</strong> — the habit building up, visible day by day.</li>
+            <li><strong>Streaks, routines, and stats</strong> — the progress building up, visible day by day.</li>
           </ul>
           <p><a href={`${base}products/kaizenly/`}>Learn more →</a></p>
         </div>
@@ -146,7 +166,7 @@ const jsonLd = [
         <li><strong>UI design</strong> — interfaces I design myself: clean, calm, and built to be used every day.</li>
         <li><strong>Planning &amp; brainstorming</strong> — documentation and a clear plan come before the first line of code.</li>
         <li><strong>Problem-solving</strong> — the hard part isn't the code, it's finding the right shape for the answer.</li>
-        <li><strong>Security review</strong> — I follow security protocols properly, with AI help, on every build.</li>
+        <li><strong>Security analysis</strong> — I follow security protocols properly, with AI help, on every build.</li>
       </ul>
     </div>
   </section>

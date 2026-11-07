@@ -8,16 +8,23 @@ const jsonLd = [
     '@type': 'SoftwareApplication',
     name: 'MsgLoop',
     applicationCategory: 'UtilitiesApplication',
+    applicationSubCategory: 'Message Scheduling',
     operatingSystem: 'Android',
-    description: 'MsgLoop — repeat WhatsApp messages on a schedule, from a saved login on your phone.',
+    url: `https://nadeemdevapps.github.io${base}products/msgloop/`,
+    description: 'MsgLoop is a local-first WhatsApp message scheduler for Android — repeat messages on a schedule from your phone. Automating WhatsApp carries a ban risk.',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
     author: { '@type': 'Organization', name: 'Nadeem Dev Apps' },
   },
 ];
 ---
 
 <ProductLayout
-  title="MsgLoop"
-  description="MsgLoop — repeat WhatsApp messages on a schedule, from a saved login on your phone."
+  title="MsgLoop — WhatsApp Message Scheduler"
+  description="MsgLoop is a local-first WhatsApp message scheduler for Android — repeat messages on a schedule from your phone. Automating WhatsApp carries a ban risk."
   productName="MsgLoop"
   productBase={`${base}products/msgloop/`}
   jsonLd={jsonLd}

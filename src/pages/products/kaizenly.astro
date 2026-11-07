@@ -7,17 +7,24 @@ const jsonLd = [
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: 'Kaizenly',
-    applicationCategory: 'HealthApplication',
+    applicationCategory: 'ProductivityApplication',
+    applicationSubCategory: 'Focus Timer',
     operatingSystem: 'Android',
-    description: 'Kaizenly — a strict, local-first focus guard.',
+    url: `https://nadeemdevapps.github.io${base}products/kaizenly/`,
+    description: 'Kaizenly is a strict, local-first focus guard for Android — timed focus sessions, a floating pill, and an exit cost that keeps distracting apps blocked.',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
     author: { '@type': 'Organization', name: 'Nadeem Dev Apps' },
   },
 ];
 ---
 
 <ProductLayout
-  title="Kaizenly"
-  description="Kaizenly — a strict, local-first focus guard."
+  title="Kaizenly — Strict Focus Guard for Android"
+  description="Kaizenly is a strict, local-first focus guard for Android — timed focus sessions, a floating pill, and an exit cost that keeps distracting apps blocked."
   productName="Kaizenly"
   productBase={`${base}products/kaizenly/`}
   jsonLd={jsonLd}
@@ -31,10 +38,6 @@ const jsonLd = [
         apps that distract you, and start a session — everything in the bag
         stays shut until the timer ends.
       </p>
-      <!-- TODO: wire the download link when the release is public -->
-      <div style="margin-bottom: 24px;">
-        <button class="btn btn-primary" type="button" disabled>Download — coming soon</button>
-      </div>
     </div>
   </section>
 

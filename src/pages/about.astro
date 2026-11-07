@@ -2,11 +2,26 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const siteUrl = `https://nadeemdevapps.github.io${base}`;
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${siteUrl}#nadeem`,
+    name: 'Nadeem Mazhar',
+    jobTitle: 'Solo Developer',
+    description:
+      'Solo developer in Pakistan. Builds websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs — with AI doing the heavy lifting under his direction.',
+    url: `${siteUrl}about/`,
+    sameAs: ['https://github.com/nadeemdevapps'],
+  },
+];
 ---
 
 <BaseLayout
-  title="About"
-  description="About Nadeem Mazhar — a solo developer in Pakistan building websites, Windows apps, Android apps, and backends with AI."
+  title="About Nadeem Mazhar — Solo Developer"
+  description="About Nadeem Mazhar — a solo developer in Pakistan building websites, Windows apps, Android apps, and backends with AI doing the heavy lifting."
+  jsonLd={jsonLd}
 >
   <section>
     <div class="container narrow">
@@ -54,11 +69,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
         cloud-based apps</strong> — whichever the project needs.
       </p>
       <p class="lede">
-        Across everything I make, every feature is <strong>free right
-        now</strong>. If, in the future, server, backend, AI, or MCP
-        features are added and they involve real costs, some of those might
-        become paid. But that's a possible future direction — not a promise,
-        and not part of anything today.
+        Everything I make is <strong>free to use right now</strong> — Kaizenly's premium durations arrive with Play Billing.
       </p>
     </div>
   </section>
@@ -70,7 +81,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
       <ul class="feature-list">
         <li><strong>One problem, solved well</strong> — each app does a single job properly instead of ten things halfway. If it needs a second job, it becomes a second app.</li>
         <li><strong>Private by default</strong> — no accounts, no tracking, no ads. Your data stays on your device; backups go to your own storage, when you choose.</li>
-        <li><strong>Calm, not pushy</strong> — no pressure, no perfectionism, no guilt-driven productivity. The apps feel like a quiet daily companion.</li>
+        <li><strong>Calm, not pushy</strong> — that's how I work and communicate: no pressure, no perfectionism, no guilt-driven productivity. I build steadily and let the work speak for itself.</li>
       </ul>
     </div>
   </section>

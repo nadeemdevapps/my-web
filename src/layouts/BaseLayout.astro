@@ -15,7 +15,12 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 // Absolute URLs for canonical / Open Graph: Astro.site is the production
 // origin (https://nadeemdevapps.github.io); the pathname carries /my-web.
 const siteUrl = Astro.site?.href ?? 'https://nadeemdevapps.github.io/';
-const canonical = new URL(Astro.url.pathname, siteUrl).href;
+// Canonical: force a trailing slash so every page matches the slashed form
+// used by the sitemap and llms.txt (Home is /my-web/, never bare /my-web).
+const pathname = Astro.url.pathname.replace(/\/?$/, '/');
+const canonical = new URL(pathname, siteUrl).href;
+// The 404 page has no canonical: /my-web/404/ is a dead URL (returns 404).
+const is404 = Astro.url.pathname.replace(/\/$/, '').endsWith('/404');
 const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
 ---
 
@@ -24,15 +29,22 @@ const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f5f4" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f0f0f" />
     <title>{title} — Nadeem Dev Apps</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonical} />
+    {!is404 && <link rel="canonical" href={canonical} />}
     {noindex && <meta name="robots" content="noindex" />}
     <meta property="og:title" content={`${title} — Nadeem Dev Apps`} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonical} />
+    {!is404 && <meta property="og:url" content={canonical} />}
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Nadeem Dev Apps" />
+    <meta property="og:site_name" content="Nadeem Dev Apps" />
+    <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={`${title} — Nadeem Dev Apps`} />
     <meta name="twitter:description" content={description} />
@@ -57,6 +69,7 @@ const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     {!noMainChrome && (
     <header class="site-nav" id="top">
       <div class="container">
@@ -67,7 +80,7 @@ const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
           <a href={`${base}about/`}>About</a>
           <a href={`${base}contact/`}>Contact</a>
         </nav>
-        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <svg class="icon-menu" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18 M3 12h18 M3 18h18" /></svg>
           <svg class="icon-close" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18 M6 6l12 12" /></svg>
         </button>
@@ -89,7 +102,7 @@ const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
     </header>
     )}
 
-    <main>
+    <main id="main">
       <slot />
     </main>
 
@@ -111,6 +124,7 @@ const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
           <nav aria-label="Site">
             <h3>Site</h3>
             <a href={`${base}`}>Home</a>
+            <a href={`${base}products/`}>Products</a>
             <a href={`${base}about/`}>About</a>
             <a href={`${base}contact/`}>Contact</a>
           </nav>
@@ -155,17 +169,44 @@ const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
         const btn = document.getElementById('menu-toggle');
         const menu = document.getElementById('mobile-menu');
         if (!btn || !menu) return;
-        btn.addEventListener('click', () => {
-          const open = menu.classList.toggle('open');
+        const setOpen = (open) => {
+          menu.classList.toggle('open', open);
           btn.setAttribute('aria-expanded', String(open));
+          btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        };
+        btn.addEventListener('click', () => {
+          setOpen(!menu.classList.contains('open'));
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && menu.classList.contains('open')) {
+            setOpen(false);
+            btn.focus();
+          }
         });
         menu.addEventListener('click', (e) => {
           if (e.target.closest('a')) {
-            menu.classList.remove('open');
-            btn.setAttribute('aria-expanded', 'false');
+            setOpen(false);
           }
         });
       })();
     </script>
+    <style>
+      /* Skip link: visually hidden until focused (WCAG 2.4.1). */
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 100;
+        padding: 0.75rem 1rem;
+        border-radius: 0 0 8px 0;
+        background: var(--color-primary);
+        color: var(--color-on-primary);
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .skip-link:focus {
+        left: 0;
+      }
+    </style>
   </body>
 </html>

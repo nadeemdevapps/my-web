@@ -7,7 +7,7 @@
   --color-on-primary: #ffffff;
   --color-canvas: #f6f5f4;
   --color-surface: #ffffff;
-  --color-surface-highlight: #e6e6e6;
+  --color-surface-highlight: #ededed;
   --color-hairline: #e6e6e6;
   --color-ink: #111111;
   --color-ink-secondary: #31302e;
@@ -40,7 +40,7 @@
   --color-on-primary: #ffffff;
   --color-canvas: #0f0f0f;
   --color-surface: #1a1a1a;
-  --color-surface-highlight: #2a2a2a;
+  --color-surface-highlight: #242424;
   --color-hairline: #333333;
   --color-ink: #f4f4f4;
   --color-ink-secondary: #a0a0a0;
@@ -50,6 +50,10 @@
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
 
 body {
   margin: 0;
@@ -284,7 +288,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   font-size: 18px;
   line-height: 1.6;
   color: var(--color-ink-secondary);
-  max-width: 640px;
+  max-width: 760px;
 }
 .lede strong { color: var(--color-ink); font-weight: 600; }
 
@@ -433,12 +437,12 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .legal-intro {
   font-size: 18px;
   color: var(--color-ink-secondary);
-  max-width: 640px;
+  max-width: 760px;
   overflow-wrap: anywhere;
 }
 .legal-section { margin-top: 28px; }
 .legal-section h2 { font-size: 22px; margin: 0 0 8px; }
-.legal-section p { color: var(--color-ink-secondary); max-width: 640px; margin: 0; overflow-wrap: anywhere; }
+.legal-section p { color: var(--color-ink-secondary); max-width: 760px; margin: 0; overflow-wrap: anywhere; }
 
 @media (max-width: 840px) {
   h1 { font-size: 48px; }
@@ -447,10 +451,10 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   .hero { padding: 64px 0; }
   .hero-grid { flex-direction: column; align-items: stretch; gap: var(--space-lg); }
   .hero-visual { flex: 1 1 auto; }
-  .band { padding: 32px; }
+  .band { padding: 24px; }
   .product-grid { flex-direction: column; }
   .product-grid > * { flex: 1 1 auto; max-width: none; }
-  .site-nav nav { display: none; }
+  .site-nav > .container > nav { display: none; }
   .menu-toggle { display: inline-flex; }
   .mobile-menu.open { display: block; }
   .site-footer .footer-grid { grid-template-columns: 1fr 1fr; }

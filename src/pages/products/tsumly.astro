@@ -8,16 +8,23 @@ const jsonLd = [
     '@type': 'SoftwareApplication',
     name: 'Tsumly',
     applicationCategory: 'FinanceApplication',
+    applicationSubCategory: 'Personal Finance',
     operatingSystem: 'Android',
-    description: 'Tsumly — a local-first personal expense and loan ledger.',
+    url: `https://nadeemdevapps.github.io${base}products/tsumly/`,
+    description: 'Tsumly is a local-first personal expense and loan ledger for Android — track who owes whom, split multi-loan repayments, and keep every amount accounted for.',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
     author: { '@type': 'Organization', name: 'Nadeem Dev Apps' },
   },
 ];
 ---
 
 <ProductLayout
-  title="Tsumly"
-  description="Tsumly — a local-first personal expense and loan ledger."
+  title="Tsumly — Local-First Loan & Ledger App"
+  description="Tsumly is a local-first personal expense and loan ledger for Android — track who owes whom, split multi-loan repayments, and keep every amount accounted for."
   productName="Tsumly"
   productBase={`${base}products/tsumly/`}
   jsonLd={jsonLd}
@@ -31,10 +38,6 @@ const jsonLd = [
         ledger. Your money stays on your device — <strong>no account, no
         cloud by default</strong> — with an optional encrypted Google Drive
         backup when you want one.
-      </p>
-      <!-- TODO: wire the download link when the release is public -->
-      <p>
-        <button class="btn btn-primary" type="button" disabled>Download — coming soon</button>
       </p>
     </div>
   </section>
