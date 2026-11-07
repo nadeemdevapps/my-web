@@ -35,7 +35,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     </script>
   </head>
   <body>
-    <header class="site-nav">
+    <header class="site-nav" id="top">
       <div class="container">
         <a class="wordmark" href={`${base}`}><Logo size={28} /> Nadeem Dev Apps</a>
         <nav aria-label="Main">
@@ -54,13 +54,36 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
     <footer class="site-footer">
       <div class="container">
-        <a class="wordmark" href={`${base}`} style="font-size: 18px;"><Logo size={22} /> Nadeem Dev Apps</a>
-        <a href={`${base}products/`}>Products</a>
-        <a href={`${base}products/tsumly/`}>Tsumly</a>
-        <a href={`${base}products/kaizenly/`}>Kaizenly</a>
-        <a href={`${base}privacy/`}>Privacy</a>
-        <a href={`${base}terms/`}>Terms</a>
-        <span class="foot-note">© 2026 Nadeem Dev Apps</span>
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="wordmark" href={`${base}`} style="font-size: 18px;"><Logo size={22} /> Nadeem Dev Apps</a>
+            <p>Local-first tools that solve one problem well.</p>
+          </div>
+          <nav aria-label="Products">
+            <h3>Products</h3>
+            <a href={`${base}products/`}>All products</a>
+            <a href={`${base}products/tsumly/`}>Tsumly</a>
+            <a href={`${base}products/kaizenly/`}>Kaizenly</a>
+          </nav>
+          <nav aria-label="Site">
+            <h3>Site</h3>
+            <a href={`${base}`}>Home</a>
+            <a href={`${base}about/`}>About</a>
+            <a href={`${base}contact/`}>Contact</a>
+          </nav>
+          <nav aria-label="Legal">
+            <h3>Legal</h3>
+            <a href={`${base}privacy/`}>Privacy</a>
+            <a href={`${base}terms/`}>Terms</a>
+          </nav>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Nadeem Dev Apps</span>
+          <div class="footer-bottom-links">
+            <a href="https://github.com/nadeemdevapps">GitHub</a>
+            <a href="#top">Back to top ↑</a>
+          </div>
+        </div>
       </div>
     </footer>
 
