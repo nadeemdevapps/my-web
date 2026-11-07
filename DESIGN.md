@@ -141,12 +141,6 @@ typography:
     fontWeight: 500
     lineHeight: 1.4
     letterSpacing: 1.5px
-  eyebrow:
-    fontFamily: "Inter, sans-serif"
-    fontSize: 12px
-    fontWeight: 600
-    lineHeight: 1.33
-    letterSpacing: 0.125px
   button:
     fontFamily: "Inter, sans-serif"
     fontSize: 16px
@@ -168,13 +162,13 @@ rounded:
   sm: 8px      # utility buttons, small surfaces, skeleton placeholders
   md: 12px     # cards, panels, dialogs, illustration frames
   xl: 16px     # large containers, image wells
-  pill: 9999px # marketing CTAs, switches, badges
+  pill: 9999px # marketing CTAs, switches
   full: 9999px # circular icon buttons, avatars
 
 # Spacing — web scale (8px base). Section gaps are web-sized,
 # not phone-sized.
 spacing:
-  xxs: 4px            # tightest gaps — chips, badges
+  xxs: 4px            # tightest gaps
   xs: 8px             # small gap
   sm: 12px            # gap between stacked items within a card
   md: 16px            # standard gap, nav padding
@@ -277,25 +271,12 @@ components:
     uncheckedTrackColor: "{colors.surface-highlight}"
     uncheckedThumbColor: "{colors.ink-muted}"
     rounded: "{rounded.pill}"
-  badge-pill:
-    backgroundColor: "{colors.surface-highlight}"
-    textColor: "{colors.ink}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.pill}"
-    padding: 4px 12px
-  badge-uppercase:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.ink-secondary}"
-    borderColor: "{colors.hairline}"
-    typography: "{typography.caption-uppercase}"
-    rounded: "{rounded.pill}"
-    padding: 4px 12px
   hero:
     backgroundColor: "{colors.canvas}"
     textColor: "{colors.ink}"
     headlineTypography: "{typography.display-xl}"
     headlineAccent: "{colors.primary}" (one word)
-    mark: "{components.logo}" above the eyebrow
+    mark: "{components.logo}" above the headline
     rounded: 0
   inverted-band:
     backgroundColor: "{colors.primary}"
@@ -372,7 +353,7 @@ Surfaces are defined by **hairlines and the faintest layered shadows** rather th
 - Two shipped polarities (dark anchor + light) that share all non-color tokens; only palette values differ.
 - Fully pill-shaped marketing CTAs contrasted with flat 12px cards and tight 4px inputs.
 - Elevation by hairline + barely-there layered shadow, never heavy drop-shadows.
-- A light hero on the warm canvas — logo mark above the eyebrow, one headline word in the blue accent.
+- A light hero on the warm canvas — logo mark above the headline, one headline word in the blue accent.
 - Sticker palette as decoration only — small, playful, never structural.
 
 ## Colors
@@ -432,9 +413,8 @@ The display/body split is editorial:
 | `{typography.title-sm}` | 16px | 500 | 1.4 | 0 | List labels — Inter |
 | `{typography.body-md}` | 16px | 400 | 1.55 | 0 | Default running text — Inter |
 | `{typography.body-sm}` | 14px | 400 | 1.55 | 0 | Dense body, descriptions, fine print — Inter |
-| `{typography.caption}` | 13px | 500 | 1.4 | 0 | Badge labels, captions — Inter |
-| `{typography.caption-uppercase}` | 12px | 500 | 1.4 | 1.5px | Eyebrow tags — Inter |
-| `{typography.eyebrow}` | 12px | 600 | 1.33 | +0.125px | Pill badges, small labels — Inter |
+| `{typography.caption}` | 13px | 500 | 1.4 | 0 | Captions — Inter |
+| `{typography.caption-uppercase}` | 12px | 500 | 1.4 | 1.5px | Small uppercase labels — Inter |
 | `{typography.button}` | 16px | 500 | 1.5 | 0 | Button labels — Inter |
 | `{typography.nav-link}` | 14px | 500 | 1.4 | 0 | Nav links — Inter |
 
@@ -523,7 +503,7 @@ Small repeated icons use `line-glyph` (hand-drawn monochrome stroke glyphs), not
 | `{rounded.sm}` | 8px | Utility buttons, small surfaces, skeleton placeholders |
 | `{rounded.md}` | 12px | Cards, panels, dialogs, illustration frames |
 | `{rounded.xl}` | 16px | Large containers, image wells |
-| `{rounded.pill}` | 9999px | Marketing CTAs, switches, badges |
+| `{rounded.pill}` | 9999px | Marketing CTAs, switches |
 | `{rounded.full}` | 9999px | Circular icon buttons, avatars, product icons |
 
 Marketing CTAs are deliberately **fully pill-shaped** — the contrast between a pill CTA and a 12px card is intentional. Inputs stay tight at 4px so fields never read as buttons. Utility buttons use 8px so nav and secondary actions stay compact.
@@ -581,15 +561,9 @@ The site uses almost no photography — it is a content-and-type site. Where a p
 
 **`dialog`** — Modal surface. `{colors.surface-elevated}` background, `{typography.title-md}` title, `{typography.body-md}` body, 12px radius, 24px padding, Level-2 shadow.
 
-### Tags / Badges
-
-**`badge-pill`** — Small count/category pill. `{colors.surface-highlight}` background, `{colors.ink}` text, `{typography.caption}`, pill shape, 4px × 12px padding.
-
-**`badge-uppercase`** — Eyebrow tag. `{colors.surface}` with hairline border, `{colors.ink-secondary}` text, `{typography.caption-uppercase}` (12 / 500 / 1.5px tracking), pill shape.
-
 ### Signature Components
 
-**`hero`** — The light hero. Warm canvas, `{colors.ink}` text, `{typography.display-xl}` serif headline with one word in `{colors.primary}`, logo mark above the eyebrow, and a `button-primary` + `button-secondary` CTA pair.
+**`hero`** — The light hero. Warm canvas, `{colors.ink}` text, `{typography.display-xl}` serif headline with one word in `{colors.primary}`, logo mark above the headline, and a `button-primary` + `button-secondary` CTA pair.
 
 **`inverted-band`** — A polarity-flipped emphasis band for mid-page moments. `{colors.primary}` fill, `{colors.on-primary}` text, `{typography.display-sm}` serif headline, 12px radius. Use sparingly.
 

@@ -101,21 +101,6 @@ a:hover { text-decoration: underline; }
 
 section { padding: var(--space-section) 0; }
 
-/* Eyebrow / badge pills */
-.eyebrow {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.125px;
-  line-height: 1.33;
-  color: var(--color-ink-secondary);
-  background: var(--color-surface);
-  border: 1px solid var(--color-hairline);
-  border-radius: var(--radius-pill);
-  padding: 4px 12px;
-  margin-bottom: var(--space-md);
-}
-
 .muted { color: var(--color-ink-muted); }
 
 /* Buttons — pill marketing CTAs, 8px utility buttons */
@@ -230,14 +215,9 @@ section { padding: var(--space-section) 0; }
 }
 .hero-band h1 { color: var(--color-canvas); }
 .hero-band p { color: rgba(246, 245, 244, 0.75); font-size: 18px; max-width: 560px; }
-.hero-band .eyebrow {
-  background: transparent;
-  color: var(--color-canvas);
-  border-color: rgba(246, 245, 244, 0.4);
-}
 .hero-cta { display: flex; gap: var(--space-md); flex-wrap: wrap; margin-top: var(--space-lg); }
 
-/* Light hero — logo mark above the eyebrow, one headline word in the accent */
+/* Light hero — logo mark above the headline, one headline word in the accent */
 .hero { padding: 96px 0; }
 .hero .logo-mark { display: block; margin-bottom: var(--space-md); }
 .hero h1 { max-width: 640px; }
