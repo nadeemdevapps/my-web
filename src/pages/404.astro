@@ -7,11 +7,12 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 <BaseLayout
   title="Page not found"
   description="This page doesn't exist — it may have moved, or the link is wrong."
+  noindex
 >
   <section class="not-found">
     <div class="container">
       <h1 class="not-found-code">404</h1>
-      <p class="not-found-headline">This page wandered off.</p>
+      <h2 class="not-found-headline">This page wandered off.</h2>
       <p class="muted">
         It may have moved, or the link is wrong. The apps are still here —
         start from home, or browse the products.

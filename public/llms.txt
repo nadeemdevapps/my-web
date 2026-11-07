@@ -6,6 +6,7 @@
 - [Home](https://nadeemdevapps.github.io/my-web/)
 - [Tsumly](https://nadeemdevapps.github.io/my-web/products/tsumly/): local-first personal expense and loan ledger. "Every amount adds up." Smart multi-loan repayment split, optional Google Drive backup.
 - [Kaizenly](https://nadeemdevapps.github.io/my-web/products/kaizenly/): a strict, local-first focus guard, built from scratch.
+- [MsgLoop](https://nadeemdevapps.github.io/my-web/products/msgloop/): a WhatsApp sender for Android. Send one message many times, now or on a schedule. Local-first, no account, no server.
 
 ## Pages
 
@@ -13,14 +14,23 @@
 - [Products](https://nadeemdevapps.github.io/my-web/products/)
 - [Tsumly](https://nadeemdevapps.github.io/my-web/products/tsumly/)
 - [Kaizenly](https://nadeemdevapps.github.io/my-web/products/kaizenly/)
+- [MsgLoop](https://nadeemdevapps.github.io/my-web/products/msgloop/)
 - [About](https://nadeemdevapps.github.io/my-web/about/)
 - [Contact](https://nadeemdevapps.github.io/my-web/contact/)
+- [Tsumly Privacy Policy](https://nadeemdevapps.github.io/my-web/products/tsumly/privacy/)
+- [Tsumly Terms of Use](https://nadeemdevapps.github.io/my-web/products/tsumly/terms/)
+- [Kaizenly Privacy Policy](https://nadeemdevapps.github.io/my-web/products/kaizenly/privacy/)
+- [Kaizenly Terms of Use](https://nadeemdevapps.github.io/my-web/products/kaizenly/terms/)
+- [MsgLoop Privacy Policy](https://nadeemdevapps.github.io/my-web/products/msgloop/privacy/)
+- [MsgLoop Terms of Use](https://nadeemdevapps.github.io/my-web/products/msgloop/terms/)
+- [Privacy Policy](https://nadeemdevapps.github.io/my-web/privacy/)
+- [Terms of Use](https://nadeemdevapps.github.io/my-web/terms/)
 
 ## Notes
 
 - The site is a static Astro site. Design tokens live in DESIGN.md in the repo root.
-- About, Contact, Privacy, and Terms pages are planned; the Privacy page will
-  carry the privacy-policy URL used by the Tsumly app's Google OAuth setup.
+- The Privacy page carries the privacy-policy URL used by the Tsumly app's Google OAuth setup.
+- The brand mark is a "Stack in a pill" logo: [logo.svg](https://nadeemdevapps.github.io/my-web/logo.svg).
 
 ## Optional
 

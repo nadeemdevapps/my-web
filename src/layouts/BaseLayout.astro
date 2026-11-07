@@ -5,10 +5,17 @@ import Logo from '../components/Logo.astro';
 interface Props {
   title: string;
   description?: string;
+  jsonLd?: Record<string, unknown>[];
+  noindex?: boolean;
 }
 
-const { title, description = 'Nadeem Dev Apps — small, local-first apps.' } = Astro.props;
+const { title, description = 'Nadeem Dev Apps — small, local-first apps.', jsonLd = [], noindex = false } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+// Absolute URLs for canonical / Open Graph: Astro.site is the production
+// origin (https://nadeemdevapps.github.io); the pathname carries /my-web.
+const siteUrl = Astro.site?.href ?? 'https://nadeemdevapps.github.io/';
+const canonical = new URL(Astro.url.pathname, siteUrl).href;
+const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
 ---
 
 <!doctype html>
@@ -18,6 +25,20 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title} — Nadeem Dev Apps</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta property="og:title" content={`${title} — Nadeem Dev Apps`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} — Nadeem Dev Apps`} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    {jsonLd.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
     <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,10 +65,24 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
           <a href={`${base}about/`}>About</a>
           <a href={`${base}contact/`}>Contact</a>
         </nav>
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="icon-menu" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18 M3 12h18 M3 18h18" /></svg>
+          <svg class="icon-close" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18 M6 6l12 12" /></svg>
+        </button>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
           <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
           <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 1v2 M12 21v2 M4.22 4.22l1.42 1.42 M18.36 18.36l1.42 1.42 M1 12h2 M21 12h2 M4.22 19.78l1.42-1.42 M18.36 5.64l1.42-1.42" /></svg>
         </button>
+      </div>
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="container">
+          <nav aria-label="Mobile">
+            <a href={`${base}`}>Home</a>
+            <a href={`${base}products/`}>Products</a>
+            <a href={`${base}about/`}>About</a>
+            <a href={`${base}contact/`}>Contact</a>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -67,6 +102,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
             <a href={`${base}products/`}>All products</a>
             <a href={`${base}products/tsumly/`}>Tsumly</a>
             <a href={`${base}products/kaizenly/`}>Kaizenly</a>
+            <a href={`${base}products/msgloop/`}>MsgLoop</a>
           </nav>
           <nav aria-label="Site">
             <h3>Site</h3>
@@ -95,10 +131,34 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
       (function () {
         const btn = document.getElementById('theme-toggle');
         if (!btn) return;
+        const sync = () => {
+          const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+          btn.setAttribute('aria-label', dark ? 'Toggle light mode' : 'Toggle dark mode');
+          btn.setAttribute('aria-pressed', String(dark));
+        };
+        sync();
         btn.addEventListener('click', () => {
           const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
           document.documentElement.setAttribute('data-theme', next);
           try { localStorage.setItem('nda-theme', next); } catch (e) {}
+          sync();
+        });
+      })();
+
+      // Mobile menu: hamburger <-> panel, below 840px only.
+      (function () {
+        const btn = document.getElementById('menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        if (!btn || !menu) return;
+        btn.addEventListener('click', () => {
+          const open = menu.classList.toggle('open');
+          btn.setAttribute('aria-expanded', String(open));
+        });
+        menu.addEventListener('click', (e) => {
+          if (e.target.closest('a')) {
+            menu.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+          }
         });
       })();
     </script>

@@ -7,12 +7,13 @@ interface Props {
   description?: string;
   productName: string;
   productBase: string;
+  jsonLd?: Record<string, unknown>[];
 }
 
-const { title, description, productName, productBase } = Astro.props;
+const { title, description, productName, productBase, jsonLd } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} jsonLd={jsonLd}>
   <ProductNav productName={productName} productBase={productBase} />
   <slot />
 </BaseLayout>

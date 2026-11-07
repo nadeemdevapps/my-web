@@ -59,6 +59,8 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   }
   .product-nav nav a:hover { color: var(--color-primary); text-decoration: none; }
   @media (max-width: 840px) {
-    .product-nav nav { display: none; }
+    .product-nav .container { overflow-x: auto; scrollbar-width: none; }
+    .product-nav .container::-webkit-scrollbar { display: none; }
+    .product-nav-back, .product-nav-name, .product-nav nav { flex: none; }
   }
 </style>

@@ -2,6 +2,17 @@
 import ProductLayout from '../../layouts/ProductLayout.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Tsumly',
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'Android',
+    description: 'Tsumly — a local-first personal expense and loan ledger.',
+    author: { '@type': 'Organization', name: 'Nadeem Dev Apps' },
+  },
+];
 ---
 
 <ProductLayout
@@ -9,6 +20,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   description="Tsumly — a local-first personal expense and loan ledger."
   productName="Tsumly"
   productBase={`${base}products/tsumly/`}
+  jsonLd={jsonLd}
 >
   <section>
     <div class="container narrow">

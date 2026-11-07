@@ -3,11 +3,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Logo from '../components/Logo.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const siteUrl = `https://nadeemdevapps.github.io${base}`;
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Nadeem Dev Apps',
+    url: siteUrl,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Nadeem Dev Apps',
+    url: siteUrl,
+  },
+];
 ---
 
 <BaseLayout
   title="Home"
-  description="Nadeem Dev Apps builds small, local-first apps — Tsumly, a personal expense and loan ledger, Kaizenly, a strict focus guard, and MsgLoop, a WhatsApp message scheduler."
+  description="Nadeem Dev Apps builds small, local-first apps — Tsumly, a money ledger, Kaizenly, a focus guard, and MsgLoop, a WhatsApp scheduler."
+  jsonLd={jsonLd}
 >
   <section class="hero">
     <div class="container">
@@ -20,6 +36,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
       <div class="hero-cta">
         <a class="btn btn-primary" href={`${base}products/tsumly/`}>Meet Tsumly</a>
         <a class="btn btn-secondary" href={`${base}products/kaizenly/`}>Kaizenly</a>
+        <a class="btn btn-secondary" href={`${base}products/msgloop/`}>MsgLoop</a>
       </div>
     </div>
   </section>
@@ -50,7 +67,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
             that keep distracting apps shut when it matters.
           </p>
           <ul class="feature-list">
-            <li><strong>Sessions ("bags")</strong> — 15 min, 45 min, 3 h, or a custom length.</li>
+            <li><strong>Sessions ("bags")</strong> — 15 min, 45 min, 3 h, or a custom length (3–12 h, premium).</li>
             <li><strong>Parachute exit cost</strong> — quitting early costs something, so it stays a deliberate choice.</li>
             <li><strong>Streaks, routines, and stats</strong> — the habit building up, visible day by day.</li>
           </ul>
@@ -92,8 +109,8 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
       <h2>Built by one developer, for himself first.</h2>
       <p class="muted">
         Every app here started as a personal problem — a ledger that never
-        added up, a phone that never stayed quiet. They ship when they work
-        in daily use, not before.
+        added up, a phone that never stayed quiet. Tsumly and Kaizenly ship
+        when they work in daily use, not before.
       </p>
       <p><a href={`${base}about/`}>More about the developer →</a></p>
     </div>
@@ -103,11 +120,12 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     <div class="container narrow">
       <h2>Ready to try them?</h2>
       <p class="muted">
-        Pick the problem you want solved first — money or focus.
+        Pick the problem you want solved first — money, focus, or messaging.
       </p>
       <div class="hero-cta">
         <a class="btn btn-primary" href={`${base}products/tsumly/`}>Meet Tsumly</a>
         <a class="btn btn-secondary" href={`${base}products/kaizenly/`}>Kaizenly</a>
+        <a class="btn btn-secondary" href={`${base}products/msgloop/`}>MsgLoop</a>
       </div>
     </div>
   </section>

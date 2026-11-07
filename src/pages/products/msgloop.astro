@@ -2,6 +2,17 @@
 import ProductLayout from '../../layouts/ProductLayout.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'MsgLoop',
+    applicationCategory: 'UtilitiesApplication',
+    operatingSystem: 'Android',
+    description: 'MsgLoop — repeat WhatsApp messages on a schedule, from a saved login on your phone.',
+    author: { '@type': 'Organization', name: 'Nadeem Dev Apps' },
+  },
+];
 ---
 
 <ProductLayout
@@ -9,6 +20,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   description="MsgLoop — repeat WhatsApp messages on a schedule, from a saved login on your phone."
   productName="MsgLoop"
   productBase={`${base}products/msgloop/`}
+  jsonLd={jsonLd}
 >
   <section>
     <div class="container narrow">
@@ -62,6 +74,12 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
           <p>No account, no analytics, no tracking. Your login and your tasks stay on your phone; Android backup is off.</p>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container narrow">
+      <p class="muted">Privacy and Terms are already live on this site — see the links above.</p>
     </div>
   </section>
 </ProductLayout>

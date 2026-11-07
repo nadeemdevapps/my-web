@@ -2,25 +2,16 @@
    Change tokens here only when DESIGN.md changes. */
 
 :root {
-  --color-primary: #0075de;
+  --color-primary: #0069c8;
   --color-primary-active: #005bab;
   --color-on-primary: #ffffff;
   --color-canvas: #f6f5f4;
   --color-surface: #ffffff;
-  --color-surface-elevated: #ffffff;
   --color-surface-highlight: #e6e6e6;
   --color-hairline: #e6e6e6;
   --color-ink: #111111;
   --color-ink-secondary: #31302e;
   --color-ink-muted: #615d59;
-  --color-ink-faint: #a39e98;
-  --color-danger: #b3261e;
-  --sticker-sky: #62aef0;
-  --sticker-purple: #d6b6f6;
-  --sticker-pink: #ff64c8;
-  --sticker-orange: #dd5b00;
-  --sticker-teal: #2a9d99;
-  --sticker-green: #1aae39;
 
   --font-display: "EB Garamond", "Cormorant Garamond", Georgia, serif;
   --font-body: "Inter", -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -44,19 +35,16 @@
 }
 
 [data-theme="dark"] {
-  --color-primary: #0075de;
+  --color-primary: #4da3ff;
   --color-primary-active: #005bab;
   --color-on-primary: #ffffff;
   --color-canvas: #0f0f0f;
   --color-surface: #1a1a1a;
-  --color-surface-elevated: #222222;
   --color-surface-highlight: #2a2a2a;
   --color-hairline: #333333;
   --color-ink: #f4f4f4;
   --color-ink-secondary: #a0a0a0;
-  --color-ink-muted: #6b6b6b;
-  --color-ink-faint: #444444;
-  --color-danger: #cf6679;
+  --color-ink-muted: #8f8f8f;
 }
 
 * { box-sizing: border-box; }
@@ -127,27 +115,18 @@ section { padding: var(--space-section) 0; }
 }
 .btn-primary:hover { background: var(--color-primary-active); }
 
+/* Dark theme: links use the lighter --color-primary, but buttons keep a
+   darker blue so the white label still passes AA — no single blue can do
+   both (light enough for links on dark surfaces, dark enough for white text). */
+[data-theme="dark"] .btn-primary { background: #0069c8; }
+
 .btn-secondary {
   background: var(--color-surface);
   color: var(--color-ink);
   border-color: var(--color-hairline);
 }
 
-.btn-secondary--on-dark {
-  background: transparent;
-  color: var(--color-canvas);
-  border-color: rgba(246, 245, 244, 0.4);
-}
-
-.btn-utility {
-  border-radius: var(--radius-sm);
-  padding: 4px 14px;
-  background: var(--color-surface);
-  color: var(--color-ink);
-  border: 1px solid var(--color-hairline);
-}
-
-/* Cards — flat 12px, hairline border */
+.card {
 .card {
   background: var(--color-surface);
   border: 1px solid var(--color-hairline);
@@ -212,16 +191,40 @@ section { padding: var(--space-section) 0; }
 html[data-theme="light"] .theme-toggle .icon-sun { display: none; }
 html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
-/* Hero band — dark ink, full-bleed */
-.hero-band {
-  background: var(--color-ink);
-  color: var(--color-canvas);
-  padding: 96px 0;
-  position: relative;
-  overflow: hidden;
+/* Hamburger — hidden on desktop, shown below 840px */
+.menu-toggle {
+  display: none;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  border: 1px solid var(--color-hairline);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  cursor: pointer;
 }
-.hero-band h1 { color: var(--color-canvas); }
-.hero-band p { color: rgba(246, 245, 244, 0.75); font-size: 18px; max-width: 560px; }
+.menu-toggle svg { display: block; }
+.menu-toggle .icon-close { display: none; }
+.menu-toggle[aria-expanded="true"] .icon-close { display: block; }
+.menu-toggle[aria-expanded="true"] .icon-menu { display: none; }
+
+/* Mobile menu panel — hidden by default; opened by the hamburger below 840px */
+.mobile-menu { display: none; border-top: 1px solid var(--color-hairline); }
+.mobile-menu nav { display: flex; flex-direction: column; padding: var(--space-sm) 0; }
+.mobile-menu nav a {
+  display: block;
+  padding: 12px 0;
+  color: var(--color-ink);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.mobile-menu nav a + a { border-top: 1px solid var(--color-hairline); }
+.mobile-menu nav a:hover { color: var(--color-primary); text-decoration: none; }
+
 .hero-cta { display: flex; gap: var(--space-md); flex-wrap: wrap; margin-top: var(--space-lg); }
 
 /* Light hero — logo mark above the headline, one headline word in the accent */
@@ -263,15 +266,23 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .feature-list li::marker { color: var(--color-ink-muted); }
 .feature-list strong { color: var(--color-ink); font-weight: 600; }
 
-/* Inverted band — one dark block per page at most (privacy, etc.) */
+/* Inverted band — one dark block per page at most (privacy, etc.).
+   Fixed dark colours so it stays a dark block in both themes. */
 .band {
-  background: var(--color-ink);
-  color: var(--color-canvas);
+  background: #111111;
+  color: #f6f5f4;
+  border: 1px solid #333333;
   border-radius: 12px;
   padding: 48px;
 }
-.band h2, .band h3 { color: var(--color-canvas); }
+.band h2, .band h3 { color: #f6f5f4; }
 .band p { opacity: .8; }
+/* White-pill CTA inside the band, legible in both themes. */
+.band .btn-secondary {
+  background: #ffffff;
+  color: #111111;
+  border-color: transparent;
+}
 
 /* 404 — centered, plain canvas */
 .not-found { padding: 96px 0; text-align: center; }
@@ -293,16 +304,6 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 }
 .not-found p.muted { max-width: 560px; }
 .not-found-cta { display: flex; gap: var(--space-md); flex-wrap: wrap; justify-content: center; margin-top: var(--space-lg); }
-
-/* Sticker dots — decoration only */
-.stickers { position: absolute; inset: 0; pointer-events: none; }
-.stickers i {
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  opacity: 0.9;
-}
 
 /* Product grid */
 .product-grid {
@@ -398,18 +399,22 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   font-size: 18px;
   color: var(--color-ink-secondary);
   max-width: 640px;
+  overflow-wrap: anywhere;
 }
 .legal-section { margin-top: 28px; }
 .legal-section h2 { font-size: 22px; margin: 0 0 8px; }
-.legal-section p { color: var(--color-ink-secondary); max-width: 640px; margin: 0; }
+.legal-section p { color: var(--color-ink-secondary); max-width: 640px; margin: 0; overflow-wrap: anywhere; }
 
 @media (max-width: 840px) {
   h1 { font-size: 48px; }
   h2 { font-size: 30px; }
   section { padding: var(--space-section-mobile) 0; }
-  .hero-band { padding: 64px 0; }
+  .hero { padding: 64px 0; }
+  .band { padding: 32px; }
   .product-grid { grid-template-columns: 1fr; }
   .site-nav nav { display: none; }
+  .menu-toggle { display: inline-flex; }
+  .mobile-menu.open { display: block; }
   .site-footer .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
 }
