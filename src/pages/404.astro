@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Logo from '../components/Logo.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
@@ -9,15 +8,15 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   title="Page not found"
   description="This page doesn't exist — it may have moved, or the link is wrong."
 >
-  <section class="hero">
+  <section class="not-found">
     <div class="container">
-      <Logo size={48} />
-      <h1>This page<br /><span class="accent">wandered off.</span></h1>
+      <h1 class="not-found-code">404</h1>
+      <p class="not-found-headline">This page wandered off.</p>
       <p class="muted">
         It may have moved, or the link is wrong. The apps are still here —
         start from home, or browse the products.
       </p>
-      <div class="hero-cta">
+      <div class="not-found-cta">
         <a class="btn btn-primary" href={`${base}`}>Back home</a>
         <a class="btn btn-secondary" href={`${base}products/`}>All products</a>
       </div>
