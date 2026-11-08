@@ -16,12 +16,6 @@ https://nadeemdevapps.github.io/my-web/
 
 Solo developer in Pakistan. I plan, design, and ship websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs — with AI doing the heavy lifting under my direction.
 
-Selected work:
-
-- **Tsumly** — A money ledger that adds up.
-- **Kaizenly** — A focus guard that means it.
-- **MsgLoop** — A WhatsApp sender for Android.
-
 ## What I've built
 
 ### Tsumly

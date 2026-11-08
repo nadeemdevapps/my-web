@@ -237,32 +237,6 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .hero h1 .accent { color: var(--color-primary); }
 .hero p { font-size: 18px; max-width: 560px; }
 
-/* Two-column hero — copy left, work card right; stacks below 840px */
-.hero-grid { display: flex; align-items: center; gap: var(--space-xxl); }
-.hero-copy { flex: 1 1 0; min-width: 0; }
-.hero-visual { flex: 0 0 360px; min-width: 0; }
-.hero-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-hairline);
-  border-radius: var(--radius-md);
-  padding: var(--space-lg);
-}
-.hero-work { list-style: none; margin: 0; padding: 0; }
-.hero-work li + li { border-top: 1px solid var(--color-hairline); }
-.hero-work a {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 0;
-  color: var(--color-ink);
-  text-decoration: none;
-}
-.hero-work a:hover { color: var(--color-primary); text-decoration: none; }
-.hero-work .product-icon { width: 44px; height: 44px; font-size: 22px; margin-bottom: 0; flex: none; }
-.hero-work-text strong { display: block; font-size: 16px; font-weight: 600; }
-.hero-work-text > span { display: block; font-size: 14px; color: var(--color-ink-muted); }
-.hero-work-all { margin: 16px 0 0; }
-
 /* Anchor target sits below the sticky header */
 #work { scroll-margin-top: 80px; }
 
@@ -449,8 +423,6 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   h2 { font-size: 30px; }
   section { padding: var(--space-section-mobile) 0; }
   .hero { padding: 64px 0; }
-  .hero-grid { flex-direction: column; align-items: stretch; gap: var(--space-lg); }
-  .hero-visual { flex: 1 1 auto; }
   .band { padding: 24px; }
   .product-grid { flex-direction: column; }
   .product-grid > * { flex: 1 1 auto; max-width: none; }
