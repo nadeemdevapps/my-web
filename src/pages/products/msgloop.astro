@@ -2,6 +2,49 @@
 import ProductLayout from '../../layouts/ProductLayout.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const description =
+  'MsgLoop is a local-first WhatsApp message scheduler for Android — send one message up to 500 times, now or on a schedule, from your phone. No account, no server, no tracking. Automating WhatsApp carries a ban risk.';
+const faqs = [
+  {
+    question: 'Does MsgLoop send the same message every day automatically?',
+    answer:
+      'No. Each MsgLoop task fires once, at the time you pick — now, in a few minutes or hours, or at a clock time. There is no daily or weekly repeat, so to send the same message again you create a new task.',
+  },
+  {
+    question: 'How many times can MsgLoop send one message?',
+    answer:
+      'Up to 500 times per task, to one number per task. The number must be 7–15 digits with its country code and no leading 0. Group chats are not supported — MsgLoop opens a one-to-one chat.',
+  },
+  {
+    question: 'Where do my messages and my WhatsApp login live?',
+    answer:
+      'On your phone only. MsgLoop has no account, no server, no analytics, and no tracking, and Android backup is off. Your login session, tasks, and history stay on the device; the only network use is WhatsApp Web itself.',
+  },
+  {
+    question: 'What happens if my phone restarts before a scheduled send?',
+    answer:
+      'The task is not lost. Scheduled tasks are stored on the phone, their alarms are re-registered after a reboot, and a task whose time passed while the phone was off fires when the app opens again. A task interrupted mid-send resumes from where it stopped.',
+  },
+  {
+    question: 'Can I stop a send after it starts?',
+    answer:
+      'Yes. You can stop just the task that is running and let the queue carry on, stop everything including the queue, or cancel any scheduled task before it starts. The notification also has Stop buttons while a task is running.',
+  },
+  {
+    question: 'Can WhatsApp ban my number for using MsgLoop?',
+    answer:
+      'Yes. MsgLoop automates WhatsApp Web, which WhatsApp’s Terms of Service do not allow, and bulk messaging can get a number temporarily or permanently banned. Use it only on numbers you own or have permission to message, keep the delay conservative for large counts, and prefer smaller batches.',
+  },
+];
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
 const jsonLd = [
   {
     '@context': 'https://schema.org',
@@ -11,7 +54,7 @@ const jsonLd = [
     applicationSubCategory: 'Message Scheduling',
     operatingSystem: 'Android',
     url: `https://nadeemdevapps.github.io${base}products/msgloop/`,
-    description: 'MsgLoop is a local-first WhatsApp message scheduler for Android — repeat messages on a schedule from your phone. Automating WhatsApp carries a ban risk.',
+    description,
     offers: {
       '@type': 'Offer',
       price: '0',
@@ -19,12 +62,13 @@ const jsonLd = [
     },
     author: { '@type': 'Organization', name: 'Nadeem Dev Apps' },
   },
+  faqJsonLd,
 ];
 ---
 
 <ProductLayout
   title="MsgLoop — WhatsApp Message Scheduler"
-  description="MsgLoop is a local-first WhatsApp message scheduler for Android — repeat messages on a schedule from your phone. Automating WhatsApp carries a ban risk."
+  description={description}
   productName="MsgLoop"
   productBase={`${base}products/msgloop/`}
   jsonLd={jsonLd}
@@ -32,13 +76,14 @@ const jsonLd = [
 >
   <section>
     <div class="container narrow">
-      <h1>Send the same message, on repeat — on schedule.</h1>
+      <h1>Send the same message, up to 500 times — on schedule.</h1>
       <p class="lede">
         MsgLoop is a <strong>local-first WhatsApp message scheduler</strong>
-        for Android. Log in once inside the app, then send one message many
-        times — right now, or at a time you pick. Everything runs on your
-        phone: <strong>no account, no server, no tracking</strong>, and no
-        data leaves the device except through WhatsApp itself.
+        for Android. Log in once inside the app, then send one message up to
+        500 times — right now, or at a time you pick — and queue several
+        tasks to run one after another. Everything runs on your phone:
+        <strong>no account, no server, no tracking</strong>, and no data
+        leaves the device except through WhatsApp itself.
       </p>
     </div>
   </section>
@@ -64,25 +109,105 @@ const jsonLd = [
       <div class="product-grid">
         <article class="card">
           <h3>Schedule for later</h3>
-          <p>Pick a date and time; an exact alarm wakes a background service and the messages go out when you said they would.</p>
+          <p>Start now, in 5, 15, or 30 minutes, in 1 or 3 hours, or at a clock time — 9:00 PM by default, tomorrow if that time has already passed. An exact alarm fires the task at the time you picked when Android allows exact alarms; otherwise it fires on the system's inexact alarm.</p>
         </article>
         <article class="card">
-          <h3>Send now, on repeat</h3>
-          <p>One message, sent N times with a delay you choose (0.3s to 5s, or your own value) — with a live preview of the chat as it sends.</p>
+          <h3>Send now, up to 500 times</h3>
+          <p>One message to one number, repeated 1 to 500 times. The number must be 7–15 digits with its country code and no leading 0, and the message can span several lines.</p>
+        </article>
+        <article class="card">
+          <h3>A delay you control</h3>
+          <p>Choose 0.3, 1, 2, or 5 seconds between sends, or type your own delay from 0 to 60 seconds. Longer delays are the safer choice for large counts.</p>
+        </article>
+        <article class="card">
+          <h3>A queue that runs one task at a time</h3>
+          <p>Send-now tasks run first, then scheduled tasks in time order. Every queued task shows when it will start, counting the running task and the tasks ahead of it.</p>
         </article>
         <article class="card">
           <h3>A queue that survives anything</h3>
-          <p>Tasks are stored on the phone, so they survive the app being closed, the phone restarting, and alarms being cleared. Missed tasks fire when the app opens again.</p>
+          <p>Tasks are stored on the phone, so they survive the app being closed, the phone restarting, and alarms being cleared. After a reboot the alarms are re-registered, and a task whose time passed fires when the app opens again.</p>
         </article>
         <article class="card">
-          <h3>Live progress and history</h3>
-          <p>Watch sent, failed, and remaining counts with a live time estimate, stop a task any time, and see every finished task's result afterwards.</p>
+          <h3>Keeps going in the background</h3>
+          <p>Sending runs in a foreground service, so it continues with the app closed or the phone locked, with a notification showing progress. If the system kills the service mid-task, it resumes from where it stopped, with the sent and failed counts intact.</p>
+        </article>
+        <article class="card">
+          <h3>Live progress and time estimate</h3>
+          <p>Watch sent, failed, and remaining counts with a live estimate of the time left, and a live view of the WhatsApp Web page itself as the messages go out.</p>
+        </article>
+        <article class="card">
+          <h3>Stop, cancel, and reorder</h3>
+          <p>Stop just the task that is running and let the queue carry on, stop everything including the queue, cancel any scheduled task, cancel the whole queue, or move a task up or down among tasks set for the same time.</p>
+        </article>
+        <article class="card">
+          <h3>Every send is verified</h3>
+          <p>Each message is checked — the text went in and the send button fired — and retried once if it did not. If the chat drops out, the page reloads and tries again. A number that is not on WhatsApp, or a session that expired, stops the task with a clear message instead of failing silently.</p>
+        </article>
+        <article class="card">
+          <h3>History of finished tasks</h3>
+          <p>The last 30 finished tasks stay on the phone, with the number, how many of the count were sent and how many failed, the result — completed, stopped, failed, or login required — when it finished, and the first 200 characters of the message.</p>
+        </article>
+        <article class="card">
+          <h3>One-time login, saved on the phone</h3>
+          <p>Scan the WhatsApp Web QR code once in the app's own browser, tap Continue, and the session is saved. If WhatsApp shows a pairing code instead, the app copies it to the clipboard for you. If the session expires, the app says so and asks you to log in again.</p>
+        </article>
+        <article class="card">
+          <h3>A warning before risky sends</h3>
+          <p>Before a task starts, the app shows the count, the delay, and how long it will take. A delay under 2 seconds with more than 10 messages triggers a confirmation that names the ban risk. Your half-typed task is kept as a draft, so leaving the screen loses nothing.</p>
         </article>
         <article class="card">
           <h3>Private by design</h3>
-          <p>No account, no analytics, no tracking. Your login and your tasks stay on your phone; Android backup is off.</p>
+          <p>No account, no analytics, no tracking, no ads. Your login, tasks, and history stay on the phone; Android backup is off. The app asks for no contacts, no SMS, no storage, and no accessibility service — only internet, notifications, exact alarms, and the battery exemption that keeps scheduled sends firing.</p>
+        </article>
+        <article class="card">
+          <h3>Settings that keep it reliable</h3>
+          <p>Settings show whether WhatsApp is connected, let you log out, switch between system, light, and dark themes, and check the battery exemption and notification permission that scheduled sends depend on.</p>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container narrow">
+      <span class="kicker">How it works</span>
+      <h2>Three steps, then it runs itself</h2>
+      <ol>
+        <li>
+          <strong>Connect WhatsApp once.</strong> Open the setup screen, scan
+          the QR code in the app's own browser, and tap Continue — the session
+          is saved on your phone.
+        </li>
+        <li>
+          <strong>Write the task.</strong> Enter the number, the message, how
+          many times to send it, the delay between sends, and when to start.
+          A review line shows the count, the delay, and how long it will
+          take before you confirm.
+        </li>
+        <li>
+          <strong>Send now or queue it.</strong> The task runs in the
+          background with live progress, or waits for its time and fires on
+          its own. Stop it any time, and check the result in history
+          afterwards.
+        </li>
+      </ol>
+      <p>
+        One task sends to one number. There is no daily or weekly repeat, no
+        group chats, and no sending to several numbers at once — each task is
+        a single message, to a single number, at a single time.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container narrow">
+      <span class="kicker">Questions</span>
+      <h2>Frequently asked questions</h2>
+      {faqs.map((faq) => (
+        <>
+          <h3>{faq.question}</h3>
+          <p>{faq.answer}</p>
+        </>
+      ))}
     </div>
   </section>
 

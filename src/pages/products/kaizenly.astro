@@ -2,6 +2,38 @@
 import ProductLayout from '../../layouts/ProductLayout.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const faqs = [
+  {
+    question: 'What is Kaizenly?',
+    answer:
+      'Kaizenly is a strict, local-first focus guard for Android. You pick a time — 15 minutes, 45 minutes, 3 hours, or a custom 3–12 hour session (premium) — pick the apps that distract you, and start a session. Everything in the bag stays shut until the timer ends, and quitting early costs parachutes.',
+  },
+  {
+    question: 'How much does Kaizenly cost?',
+    answer:
+      'Everything I make is free to use right now — Kaizenly’s premium durations arrive with Play Billing. There is no purchase in the app today.',
+  },
+  {
+    question: 'What happens if I quit a focus session early?',
+    answer:
+      'With 30 minutes or less left, leaving costs 1 parachute and ends the session. With more than 30 minutes left, you choose: take a 30-minute break for 1 parachute and the block returns by itself, or end the session for 1 parachute plus 1 per started hour left.',
+  },
+  {
+    question: 'Does Kaizenly upload my data anywhere?',
+    answer:
+      'No. Sessions and stats live in a Room database on your device, there is no account, no sync, and no analytics. Backups are local JSON files you export and import yourself — nothing is uploaded anywhere.',
+  },
+  {
+    question: 'Which apps still work during a Kaizenly session?',
+    answer:
+      'The essentials keep working: your default messaging app, dialer, camera, alarm app, and keyboards, plus in-call screens. Everything in the active bag is blocked.',
+  },
+  {
+    question: 'Does Kaizenly keep blocking after a reboot?',
+    answer:
+      'Yes. A live session is restored after a reboot, and a watchdog alarm re-checks the block every 15 seconds while a session runs.',
+  },
+];
 const jsonLd = [
   {
     '@context': 'https://schema.org',
@@ -18,6 +50,31 @@ const jsonLd = [
       priceCurrency: 'USD',
     },
     author: { '@type': 'Organization', name: 'Nadeem Dev Apps' },
+    featureList: [
+      'Timed focus sessions (bags) of 15 minutes, 45 minutes, 3 hours, or a custom 3–12 hours (premium)',
+      'Three bags of blocked apps (first bag free, all three with premium); 3 app slots free, 6 with the sixth-slot add-on',
+      'Floating pill countdown overlay, tap to open the block screen, drag to move',
+      'Block screen with countdown, end time, and parachute count',
+      'Parachute exit cost: 1 parachute to leave early, 30-minute break for 1 parachute, scaled full-exit cost of 1 plus 1 per started hour left',
+      'Hold-to-extend: hold 3 seconds to add 15 minutes, up to 60 minutes per session',
+      'Four synthesized soundscapes: rain, waves, white noise, city',
+      'Up to 3 scheduled routines with 5-minute pre-alerts',
+      'Daily streak: 1 minute of focus a day, 5 minutes on the first-ever day; weeks start Monday',
+      'The Tower: 5 minutes of focus a day lays a block, 7 blocks make a floor, 3 reserve blocks save missed days',
+      'Day, Month, and Year stats views from a local Room database',
+      'Post-session celebration with DONE or SOS and a shareable PNG image',
+      'Home-screen preset and streak widgets',
+      'Local JSON backup export and import; no account, no sync, no analytics',
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
   },
 ];
 ---
@@ -72,11 +129,19 @@ const jsonLd = [
         does the rest.
       </p>
       <ul class="feature-list">
-        <li><strong>Bags</strong> — each session blocks a named set of distracting apps; pick 15 minutes, 45 minutes, 3 hours, or a custom duration (3–12 hours, premium).</li>
-        <li><strong>Floating pill</strong> — a small overlay keeps the countdown on screen, so the time left is always in sight.</li>
-        <li><strong>Block screen</strong> — opening a blocked app shows the block screen (Distraction Wall) and sends you back to focus.</li>
-        <li><strong>Parachutes</strong> — leaving early costs parachutes, so ending a session is a deliberate decision, not a reflex.</li>
-        <li><strong>A 30-minute break</strong> — with more than 30 minutes left, you can take a 30-minute break for one parachute: the clock freezes and the block returns by itself. Ending early costs more the more time is left.</li>
+        <li><strong>Bags</strong> — three bags, each holding up to 6 apps. The free plan uses the first bag with its first 3 apps; premium unlocks all three bags, and a separate add-on opens all 6 slots in each bag. Pick apps from a searchable list of installed apps.</li>
+        <li><strong>Presets and a wheel</strong> — tap 15 minutes, 45 minutes, or 3 hours, or spin the ruler wheel from 1 minute up to 12 hours. Custom sessions over 3 hours need at least one parachute on board.</li>
+        <li><strong>Slide to start</strong> — the footer slider starts the session; there is no tap-to-start shortcut to hit by accident.</li>
+        <li><strong>Floating pill</strong> — a small overlay keeps the countdown on screen, so the time left is always in sight. Tap it to open the block screen; drag it to move it.</li>
+        <li><strong>Block screen</strong> — opening a blocked app shows the block screen (Distraction Wall) with the countdown, the end time, and your parachutes, and sends you back to focus. After 3 seconds idle, the chrome dims into rest mode until you touch it again.</li>
+        <li><strong>Essentials stay open</strong> — your default messaging app, dialer, camera, alarm app, and keyboards keep working during a session, along with in-call screens. Everything in the active bag is blocked.</li>
+        <li><strong>Enforcement that holds</strong> — an accessibility service bounces blocked apps, closes the notification shade, recents, and power menu, and dismisses floating windows. A watchdog re-checks the block every 15 seconds, a live session is restored after a reboot, and a guardian fallback watches the foreground app when the accessibility service is down.</li>
+        <li><strong>Parachutes</strong> — leaving early costs parachutes, so ending a session is a deliberate decision, not a reflex. With 30 minutes or less left, it costs 1 parachute.</li>
+        <li><strong>A 30-minute break</strong> — with more than 30 minutes left, you can take a 30-minute break for one parachute: the clock freezes and the block returns by itself. Ending early costs more the more time is left: 1 parachute plus 1 per started hour remaining.</li>
+        <li><strong>Hold to extend</strong> — hold the +15 card for 3 seconds to add 15 minutes to a live session, up to 60 extra minutes per session. It needs a parachute on board.</li>
+        <li><strong>Soundscapes</strong> — four sounds, generated live on the device with no audio files: rain, waves, white noise, and city. A session starts silent; sound plays only when you pick it. The extra sounds are an add-on.</li>
+        <li><strong>Settings passes</strong> — while a session runs, Android Settings can be opened only on a 60-second pass, at most 3 passes per session, so the block cannot be switched off casually.</li>
+        <li><strong>Routine-aware sessions</strong> — a manual session can stretch to the end of the next routine window, capped at 12 hours, when a routine is enabled and you have a parachute.</li>
       </ul>
     </div>
   </section>
@@ -91,27 +156,117 @@ const jsonLd = [
         and keeps the daily target small enough to hold.
       </p>
       <ul class="feature-list">
-        <li><strong>Routines</strong> — schedule sessions to start on chosen days, with a <strong>pre-alert</strong> before each one begins.</li>
+        <li><strong>Routines</strong> — up to 3 named routines, each with its own start time, a duration from 5 minutes to 12 hours, and the days of the week it runs on. Routines are premium, and turning one on needs at least one parachute.</li>
+        <li><strong>Pre-alerts</strong> — a notification 5 minutes before a routine starts, so the block never catches you by surprise.</li>
+        <li><strong>Overlap warnings</strong> — if two routines would overlap, Kaizenly shows the combined locked window and asks before turning the second one on.</li>
+        <li><strong>Each routine, its own bag</strong> — with this premium setting on, each routine blocks its own bag, and your previous bag comes back when the routine session ends.</li>
         <li><strong>A one-minute daily target</strong> — one minute of focus a day is enough to keep the streak alive (5 minutes on the very first day). Small enough to keep, every day.</li>
+        <li><strong>Evening streak reminder</strong> — at 8:30 pm, a nudge if today has no session yet. It can be switched off in Settings.</li>
         <li><strong>Monday-start weeks</strong> — weeks run Monday to Sunday, so the streak counts the way your week does.</li>
+        <li><strong>Post-session celebration</strong> — finishing a session ends with a small celebration: DONE when the clock runs out, SOS when you left with a parachute. A finished session shows stat cards and the Monday-first week, and a share button exports the celebration card as a PNG image (not shown for SOS).</li>
       </ul>
     </div>
   </section>
 
   <section>
     <div class="container narrow">
+      <span class="kicker">The Tower</span>
+      <h2>Every day lays a block.</h2>
+      <p class="lede">
+        The Tower is the streak, built visibly: every day with at least
+        <strong>five minutes of focus lays a block</strong>, seven blocks make
+        a floor, and the floors become your tower.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Blocks and floors</strong> — one block per day with five minutes of focus; seven blocks make one floor. Tap the streak badge on the home screen to open the Tower.</li>
+        <li><strong>Three reserve blocks</strong> — a reserve block can save the tower when you skip a day. Ten days in a row restores one spent reserve, up to three.</li>
+        <li><strong>Missed-day repair</strong> — when a recent day is missed but the days around it hold, the Tower repairs it automatically using a reserve.</li>
+        <li><strong>Day one hundred</strong> — reach day one hundred and you will find a surprise.</li>
+        <li><strong>Best streak kept</strong> — your longest run is recorded and shown on the Tower, alongside the current streak.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container narrow">
       <span class="kicker">Stats</span>
       <h2>Your progress, on your device.</h2>
       <p class="lede">
         Every session is recorded <strong>locally</strong>, in a Room database
-        on your phone. See how your focus adds up — <strong>by day, by week,
-        and by month</strong> — without anything leaving the device.
+        on your phone. See how your focus adds up — <strong>by day, by month,
+        and by year</strong> — without anything leaving the device.
       </p>
       <ul class="feature-list">
-        <li><strong>Day, week, and month views</strong> — totals for each period, side by side.</li>
+        <li><strong>Day, Month, and Year views</strong> — the Day view shows focus minutes per hour across 24 hours; the Month view shows minutes per day; the Year view shows minutes per month. A rotary wheel picks the period and a stepper walks back into the past.</li>
+        <li><strong>What is recorded</strong> — each session stores its start and end, planned minutes, actual seconds, bag, and whether it finished or ended with a parachute. Sessions shorter than 5 seconds are not recorded.</li>
         <li><strong>Post-session celebration</strong> — finishing a session ends with a small celebration, and a shareable image of the result.</li>
         <li><strong>No account, no sync</strong> — stats live in the local database; there is nothing to log in to.</li>
       </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container narrow">
+      <span class="kicker">Widgets</span>
+      <h2>Focus, from the home screen.</h2>
+      <p class="lede">
+        Two home-screen widgets keep Kaizenly one tap away, without opening
+        the app first.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Preset widget</strong> — a hero countdown with up to three of your presets (1–720 minutes). Tap a preset to select it, tap the selected one to open the wheel editor, and start a session from the widget.</li>
+        <li><strong>Streak widget</strong> — the last 28 days as four week rows under the current streak count. Tapping it opens the Tower.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container narrow">
+      <span class="kicker">Settings &amp; backup</span>
+      <h2>Yours to set up, yours to keep.</h2>
+      <p class="lede">
+        Kaizenly asks for three system permissions at setup — accessibility,
+        draw over other apps, and ignoring battery optimization — so the
+        system cannot interrupt an ongoing block. The rest is plain settings
+        and a backup file you own.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Theme</strong> — light, automatic, or dark.</li>
+        <li><strong>Haptics</strong> — haptic feedback can be switched off.</li>
+        <li><strong>Silence during sessions</strong> — premium: Do Not Disturb turns on by itself while the block lasts, and your previous interruption setting comes back at the end.</li>
+        <li><strong>Display name</strong> — a name for the profile, stored on the device. There is no account and no sign-in.</li>
+        <li><strong>Local JSON backup</strong> — export your sessions, bags, routines, streak, and settings to one JSON file, or restore them on another device. Import replaces the data on the device; a live session is never carried over. No Drive, no password, no upload.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container narrow">
+      <span class="kicker">Premium</span>
+      <h2>Free now. Premium arrives with Play Billing.</h2>
+      <p class="lede">
+        Everything I make is free to use right now — Kaizenly’s premium
+        durations arrive with Play Billing. There is no purchase in the app
+        today.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Premium unlocks</strong> — sessions up to 12 hours, automatic routines, two extra bags, and silence (Do Not Disturb) during sessions.</li>
+        <li><strong>Add-ons</strong> — the extra soundscapes and the sixth app slot in each bag are separate add-ons, arriving with the same billing.</li>
+        <li><strong>Free today</strong> — the free plan covers 15-minute, 45-minute, and 3-hour sessions, the first bag with its first 3 apps, the floating pill, the block screen, parachutes, the break, the Tower, stats, and widgets.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container narrow">
+      <span class="kicker">Questions</span>
+      <h2>Kaizenly, answered.</h2>
+      {faqs.map((faq) => (
+        <>
+          <h3>{faq.question}</h3>
+          <p>{faq.answer}</p>
+        </>
+      ))}
     </div>
   </section>
 

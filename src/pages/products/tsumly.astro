@@ -11,7 +11,7 @@ const jsonLd = [
     applicationSubCategory: 'Personal Finance',
     operatingSystem: 'Android',
     url: `https://nadeemdevapps.github.io${base}products/tsumly/`,
-    description: 'Tsumly is a local-first personal expense and loan ledger for Android — track who owes whom, split multi-loan repayments, and keep every amount accounted for.',
+    description: 'Tsumly is a local-first personal expense and loan ledger for Android — track income, expenses, transfers and who owes whom, split multi-loan repayments, and keep every amount accounted for.',
     offers: {
       '@type': 'Offer',
       price: '0',
@@ -24,7 +24,7 @@ const jsonLd = [
 
 <ProductLayout
   title="Tsumly — Local-First Loan & Ledger App"
-  description="Tsumly is a local-first personal expense and loan ledger for Android — track who owes whom, split multi-loan repayments, and keep every amount accounted for."
+  description="Tsumly is a local-first personal expense and loan ledger for Android — track income, expenses, transfers and who owes whom, split multi-loan repayments, and keep every amount accounted for."
   productName="Tsumly"
   productBase={`${base}products/tsumly/`}
   jsonLd={jsonLd}
@@ -37,10 +37,11 @@ const jsonLd = [
         Tsumly is a <strong>local-first</strong> personal expense and loan
         ledger for Android: your money stays on your device — <strong>no
         account, no cloud by default</strong> — with an optional encrypted
-        Google Drive backup. Its <strong>smart multi-loan repayment
-        split</strong> spreads one repayment across several loans, and
-        <strong>pre-app loans</strong> record older loans without moving your
-        balance.
+        Google Drive backup. It tracks <strong>income, expenses and
+        transfers</strong> between accounts, and its <strong>smart
+        multi-loan repayment split</strong> spreads one repayment across
+        several loans, while <strong>pre-app loans</strong> record older
+        loans without moving your balance.
       </p>
     </div>
   </section>
@@ -59,6 +60,8 @@ const jsonLd = [
         <li><strong>Lend or borrow</strong> — record a loan in either direction, with its due amount, fees, and history.</li>
         <li><strong>Partial repayments</strong> — a loan can be paid back a little at a time, and every payment is recorded against the same loan.</li>
         <li><strong>Running balance</strong> — always see where you stand: what you are owed, and what you owe.</li>
+        <li><strong>Settle in full</strong> — pay off a loan's full remaining balance in one step, after a confirmation.</li>
+        <li><strong>Edits stay honest</strong> — a loan's note and due date can be edited, and a loan with no repayments can be deleted; the money itself only moves through repayments.</li>
       </ul>
     </div>
   </section>
@@ -77,6 +80,10 @@ const jsonLd = [
         <li><strong>Pre-selected for you</strong> — Tsumly picks the loans the repayment applies to, and shows which will be <strong>fully paid</strong> and which <strong>partially</strong>.</li>
         <li><strong>No merging</strong> — a Rs. 3,000 loan repaid by Rs. 1,170 stays one loan with <strong>Rs. 1,830 left</strong>.</li>
         <li><strong>Mistakes are reversible</strong> — a repayment recorded by mistake can be <strong>reversed in one step</strong>.</li>
+        <li><strong>Smallest first</strong> — the split pays the smallest outstanding loan first, and the oldest loan first when two are equal.</li>
+        <li><strong>Overpayment is blocked</strong> — a repayment cannot be more than the selected loans' total outstanding.</li>
+        <li><strong>Auto-select, on by default</strong> — Tsumly pre-selects all of a person's open loans; turn it off in settings to pick by hand.</li>
+        <li><strong>Every split is recorded</strong> — each repayment stores how much landed on each loan, and the balance before and after, so statements can show the breakdown.</li>
       </ul>
     </div>
   </section>
@@ -94,6 +101,7 @@ const jsonLd = [
       <ul class="feature-list">
         <li><strong>Mark it pre-app</strong> — when you create a loan that started before the app, it is recorded without an opening balance movement.</li>
         <li><strong>Same detail, same history</strong> — every loan keeps its own due amount, fees, and history, pre-app or not.</li>
+        <li><strong>Flip it later</strong> — marking a loan pre-app adds its opening movement back to the account; removing the mark records it. The amount, due date and repayments stay unchanged.</li>
       </ul>
     </div>
   </section>
@@ -111,6 +119,122 @@ const jsonLd = [
         <li><strong>Per-person totals</strong> — every profile shows what that person owes you, and what you owe them.</li>
         <li><strong>Archive is guarded</strong> — a person with <strong>outstanding loans cannot be archived</strong>.</li>
         <li><strong>Archived people stay reachable</strong> — they still appear in the person picker, and picking one <strong>restores them automatically</strong>.</li>
+        <li><strong>Delete is refused while loans exist</strong> — a person with any loan cannot be deleted; archive them instead.</li>
+        <li><strong>A full ledger per person</strong> — loans opened and repayments made in one interleaved history, with open and paid loan counts.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container narrow">
+      <span class="kicker">Everyday money</span>
+      <h2>Income, expenses and transfers — in the same ledger.</h2>
+      <p class="lede">
+        Tsumly tracks the everyday money too — <strong>income and
+        expenses</strong> against categories and accounts, and
+        <strong>transfers between your own accounts</strong> — so the loan
+        ledger and the cash ledger always agree.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Income &amp; expenses</strong> — record money in and money out against an account and a category, with an optional note, fee and tax on every entry.</li>
+        <li><strong>Transfers between accounts</strong> — move money from one account to another in one entry, with its own fee and tax; deleting a transfer removes both legs and puts the balances back.</li>
+        <li><strong>Fees &amp; taxes, kept visible</strong> — every income, expense, transfer, loan and repayment can carry a fee and a tax, and monthly reports total them separately.</li>
+        <li><strong>Categories with subcategories</strong> — starter categories for Pakistani households, including Salary, Business, Freelance, Groceries and Transport, with subcategories such as Supermarket and Local Market; add, rename or archive your own, two levels deep.</li>
+        <li><strong>Dates you control</strong> — entries carry the date and time you choose, and an entry keeps the clock time you recorded even when you travel across timezones.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container narrow">
+      <span class="kicker">Accounts</span>
+      <h2>Every rupee lives in an account.</h2>
+      <p class="lede">
+        Cash, a bank, JazzCash, Easypaisa or another wallet — each account
+        has its own <strong>opening balance</strong> and a live balance that
+        follows every movement.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Opening balance per account</strong> — start each account with the money already in it; its balance is the opening balance plus every movement since.</li>
+        <li><strong>Five account types</strong> — Cash, Bank, JazzCash, Easypaisa and Other, each with its own icon.</li>
+        <li><strong>Archive, never delete</strong> — archiving an account keeps its history intact, and archived accounts are excluded from your available balance.</li>
+        <li><strong>Balance guard</strong> — when a payment would take an account below zero, Tsumly either warns you and waits for confirmation, or blocks it — your choice in settings.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container narrow">
+      <span class="kicker">Reports &amp; statements</span>
+      <h2>Where the money went, on one screen — and on paper.</h2>
+      <p class="lede">
+        Monthly reports show <strong>where the money went</strong>, and
+        statements turn any slice of the ledger into a
+        <strong>PDF you can share</strong>.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Monthly reports</strong> — cash in, cash out and net for any month, with income and expense broken down by category, a weekly cash-flow chart, fees and taxes totalled, and lent and borrowed positions.</li>
+        <li><strong>Six statement exports</strong> — all activity, expense, income, loans, transfers and per-account statements, each as a PDF.</li>
+        <li><strong>Per-person statements</strong> — from any person's profile, export their loans and repayments as a PDF for a date range you pick: last 30 or 90 days, last 6 months, last year, all time, or a custom range.</li>
+        <li><strong>Repayment breakdowns on statements</strong> — every repayment shows how it was split across loans, because each split is stored with the repayment.</li>
+        <li><strong>Share or save</strong> — every statement PDF can be shared from the system share sheet or saved as a file.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container narrow">
+      <span class="kicker">Home dashboard</span>
+      <h2>Your money, the moment you open the app.</h2>
+      <p class="lede">
+        The home tab opens on your <strong>available balance</strong>, your
+        <strong>net position</strong>, and what you have <strong>lent and
+        borrowed</strong> — with one-tap actions for income, expense,
+        transfer or a loan payment.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Available balance &amp; net position</strong> — the balance across your active accounts, with the net position underneath it; either can be hidden in settings.</li>
+        <li><strong>Lent &amp; borrowed at a glance</strong> — two tiles show what others owe you and what you owe, always live.</li>
+        <li><strong>Quick actions</strong> — Income, Expense, Transfer and Loan from one row; the Loan action opens the smart repayment flow for a person.</li>
+        <li><strong>Daily quote</strong> — a short quote under the greeting, drawn from a bundled set, with Urdu quotes shown right-to-left in a Nastaliq or Naskh font you pick.</li>
+        <li><strong>Pull to refresh</strong> — a pull refreshes every number on the dashboard.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container narrow">
+      <span class="kicker">Loan reminders</span>
+      <h2>A due date that reminds you itself.</h2>
+      <p class="lede">
+        A loan with a due date reminds you on its own: a local notification
+        on the <strong>due date at 9:00 AM</strong>, and an
+        <strong>overdue reminder the next morning</strong> if it is still
+        open.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Due-date reminders</strong> — set an optional due date when you create a loan; Tsumly schedules a 9:00 AM reminder for the day and an overdue reminder the next day.</li>
+        <li><strong>Tapping opens the loan</strong> — a reminder opens the loan's detail screen, ready to record the repayment.</li>
+        <li><strong>Reminders follow the loan</strong> — editing a due date reschedules its reminders, and deleting a loan cancels them.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container narrow">
+      <span class="kicker">Make it yours</span>
+      <h2>Light or dark, your font, your currency.</h2>
+      <p class="lede">
+        Tsumly bends to how you like it: <strong>light or dark</strong>,
+        your <strong>display font</strong>, and which numbers the home tab
+        shows.
+      </p>
+      <ul class="feature-list">
+        <li><strong>Theme &amp; display font</strong> — System, Dark or Light theme, and Bricolage Grotesque or EB Garamond for headings.</li>
+        <li><strong>Show or hide</strong> — available balance, net position and animated amounts can each be switched off.</li>
+        <li><strong>One base currency</strong> — pick from 15 currencies on first run, PKR pre-selected; everything is recorded in that one currency.</li>
+        <li><strong>Your name on the greeting</strong> — the home greeting uses the display name you set in settings.</li>
+        <li><strong>Date &amp; time control</strong> — allow changing the date and time on entries, or lock them to now.</li>
       </ul>
     </div>
   </section>
@@ -130,6 +254,10 @@ const jsonLd = [
         <li><strong>Encrypted backup</strong> — the optional Google Drive backup is encrypted with <strong>AES-256-GCM</strong>.</li>
         <li><strong>No tracking</strong> — no analytics, no ads, nothing phoning home.</li>
         <li><strong>Sign-in stays on the device</strong> — device-specific sign-in details never leave the phone in a portable backup.</li>
+        <li><strong>Local backup file</strong> — export everything to a timestamped <strong>.moneybackup</strong> file and restore it on any device; older backups are migrated on import.</li>
+        <li><strong>Scheduled Drive backups</strong> — hourly, daily, weekly or monthly automatic uploads to your private Drive folder, keeping the latest three.</li>
+        <li><strong>Password protection</strong> — an optional password of at least 8 characters encrypts a backup (AES-256-GCM, PBKDF2 with 600,000 iterations); scheduled uploads can reuse a password kept in the Android Keystore.</li>
+        <li><strong>Restore on first run</strong> — a fresh install offers to restore from a local backup file or from Drive before you set anything up.</li>
       </ul>
     </div>
   </section>

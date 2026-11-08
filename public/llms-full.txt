@@ -155,7 +155,7 @@ A strict, local-first focus guard — built from scratch to keep distracting app
 
 ### MsgLoop
 
-Repeat WhatsApp messages on a schedule, from a saved login on your phone.
+Send a WhatsApp message up to 500 times, now or on a schedule, from a saved login on your phone.
 
 ---
 
@@ -165,7 +165,7 @@ https://nadeemdevapps.github.io/my-web/products/tsumly/
 
 # Every amount adds up.
 
-Tsumly is a **local-first** personal expense and loan ledger for Android: your money stays on your device — **no account, no cloud by default** — with an optional encrypted Google Drive backup. Its **smart multi-loan repayment split** spreads one repayment across several loans, and **pre-app loans** record older loans without moving your balance.
+Tsumly is a **local-first** personal expense and loan ledger for Android: your money stays on your device — **no account, no cloud by default** — with an optional encrypted Google Drive backup. It tracks **income, expenses and transfers** between accounts, and its **smart multi-loan repayment split** spreads one repayment across several loans, while **pre-app loans** record older loans without moving your balance.
 
 ## A ledger that lives on your phone.
 
@@ -174,6 +174,8 @@ Tsumly is a **local-first ledger** for the money you **lend and borrow**. Record
 - **Lend or borrow** — record a loan in either direction, with its due amount, fees, and history.
 - **Partial repayments** — a loan can be paid back a little at a time, and every payment is recorded against the same loan.
 - **Running balance** — always see where you stand: what you are owed, and what you owe.
+- **Settle in full** — pay off a loan's full remaining balance in one step, after a confirmation.
+- **Edits stay honest** — a loan's note and due date can be edited, and a loan with no repayments can be deleted; the money itself only moves through repayments.
 
 ## One repayment, split across every loan it covers.
 
@@ -182,6 +184,10 @@ When someone pays you back, the money rarely matches a single loan. Tsumly **spl
 - **Pre-selected for you** — Tsumly picks the loans the repayment applies to, and shows which will be **fully paid** and which **partially**.
 - **No merging** — a Rs. 3,000 loan repaid by Rs. 1,170 stays one loan with **Rs. 1,830 left**.
 - **Mistakes are reversible** — a repayment recorded by mistake can be **reversed in one step**.
+- **Smallest first** — the split pays the smallest outstanding loan first, and the oldest loan first when two are equal.
+- **Overpayment is blocked** — a repayment cannot be more than the selected loans' total outstanding.
+- **Auto-select, on by default** — Tsumly pre-selects all of a person's open loans; turn it off in settings to pick by hand.
+- **Every split is recorded** — each repayment stores how much landed on each loan, and the balance before and after, so statements can show the breakdown.
 
 ## Loans from before the app still count.
 
@@ -189,6 +195,7 @@ You were lending and borrowing long before Tsumly. **Pre-app loans** record thos
 
 - **Mark it pre-app** — when you create a loan that started before the app, it is recorded without an opening balance movement.
 - **Same detail, same history** — every loan keeps its own due amount, fees, and history, pre-app or not.
+- **Flip it later** — marking a loan pre-app adds its opening movement back to the account; removing the mark records it. The amount, due date and repayments stay unchanged.
 
 ## People, not just numbers.
 
@@ -197,6 +204,65 @@ Loans live on **person profiles**, so you always see **who owes what**. Each per
 - **Per-person totals** — every profile shows what that person owes you, and what you owe them.
 - **Archive is guarded** — a person with **outstanding loans cannot be archived**.
 - **Archived people stay reachable** — they still appear in the person picker, and picking one **restores them automatically**.
+- **Delete is refused while loans exist** — a person with any loan cannot be deleted; archive them instead.
+- **A full ledger per person** — loans opened and repayments made in one interleaved history, with open and paid loan counts.
+
+## Income, expenses and transfers — in the same ledger.
+
+Tsumly tracks the everyday money too — **income and expenses** against categories and accounts, and **transfers between your own accounts** — so the loan ledger and the cash ledger always agree.
+
+- **Income & expenses** — record money in and money out against an account and a category, with an optional note, fee and tax on every entry.
+- **Transfers between accounts** — move money from one account to another in one entry, with its own fee and tax; deleting a transfer removes both legs and puts the balances back.
+- **Fees & taxes, kept visible** — every income, expense, transfer, loan and repayment can carry a fee and a tax, and monthly reports total them separately.
+- **Categories with subcategories** — starter categories for Pakistani households, including Salary, Business, Freelance, Groceries and Transport, with subcategories such as Supermarket and Local Market; add, rename or archive your own, two levels deep.
+- **Dates you control** — entries carry the date and time you choose, and an entry keeps the clock time you recorded even when you travel across timezones.
+
+## Every rupee lives in an account.
+
+Cash, a bank, JazzCash, Easypaisa or another wallet — each account has its own **opening balance** and a live balance that follows every movement.
+
+- **Opening balance per account** — start each account with the money already in it; its balance is the opening balance plus every movement since.
+- **Five account types** — Cash, Bank, JazzCash, Easypaisa and Other, each with its own icon.
+- **Archive, never delete** — archiving an account keeps its history intact, and archived accounts are excluded from your available balance.
+- **Balance guard** — when a payment would take an account below zero, Tsumly either warns you and waits for confirmation, or blocks it — your choice in settings.
+
+## Where the money went, on one screen — and on paper.
+
+Monthly reports show **where the money went**, and statements turn any slice of the ledger into a **PDF you can share**.
+
+- **Monthly reports** — cash in, cash out and net for any month, with income and expense broken down by category, a weekly cash-flow chart, fees and taxes totalled, and lent and borrowed positions.
+- **Six statement exports** — all activity, expense, income, loans, transfers and per-account statements, each as a PDF.
+- **Per-person statements** — from any person's profile, export their loans and repayments as a PDF for a date range you pick: last 30 or 90 days, last 6 months, last year, all time, or a custom range.
+- **Repayment breakdowns on statements** — every repayment shows how it was split across loans, because each split is stored with the repayment.
+- **Share or save** — every statement PDF can be shared from the system share sheet or saved as a file.
+
+## Your money, the moment you open the app.
+
+The home tab opens on your **available balance**, your **net position**, and what you have **lent and borrowed** — with one-tap actions for income, expense, transfer or a loan payment.
+
+- **Available balance & net position** — the balance across your active accounts, with the net position underneath it; either can be hidden in settings.
+- **Lent & borrowed at a glance** — two tiles show what others owe you and what you owe, always live.
+- **Quick actions** — Income, Expense, Transfer and Loan from one row; the Loan action opens the smart repayment flow for a person.
+- **Daily quote** — a short quote under the greeting, drawn from a bundled set, with Urdu quotes shown right-to-left in a Nastaliq or Naskh font you pick.
+- **Pull to refresh** — a pull refreshes every number on the dashboard.
+
+## A due date that reminds you itself.
+
+A loan with a due date reminds you on its own: a local notification on the **due date at 9:00 AM**, and an **overdue reminder the next morning** if it is still open.
+
+- **Due-date reminders** — set an optional due date when you create a loan; Tsumly schedules a 9:00 AM reminder for the day and an overdue reminder the next day.
+- **Tapping opens the loan** — a reminder opens the loan's detail screen, ready to record the repayment.
+- **Reminders follow the loan** — editing a due date reschedules its reminders, and deleting a loan cancels them.
+
+## Light or dark, your font, your currency.
+
+Tsumly bends to how you like it: **light or dark**, your **display font**, and which numbers the home tab shows.
+
+- **Theme & display font** — System, Dark or Light theme, and Bricolage Grotesque or EB Garamond for headings.
+- **Show or hide** — available balance, net position and animated amounts can each be switched off.
+- **One base currency** — pick from 15 currencies on first run, PKR pre-selected; everything is recorded in that one currency.
+- **Your name on the greeting** — the home greeting uses the display name you set in settings.
+- **Date & time control** — allow changing the date and time on entries, or lock them to now.
 
 ## Your money stays yours.
 
@@ -206,12 +272,17 @@ Loans live on **person profiles**, so you always see **who owes what**. Each per
 - **Encrypted backup** — the optional Google Drive backup is encrypted with **AES-256-GCM**.
 - **No tracking** — no analytics, no ads, nothing phoning home.
 - **Sign-in stays on the device** — device-specific sign-in details never leave the phone in a portable backup.
+- **Local backup file** — export everything to a timestamped **.moneybackup** file and restore it on any device; older backups are migrated on import.
+- **Scheduled Drive backups** — hourly, daily, weekly or monthly automatic uploads to your private Drive folder, keeping the latest three.
+- **Password protection** — an optional password of at least 8 characters encrypts a backup (AES-256-GCM, PBKDF2 with 600,000 iterations); scheduled uploads can reuse a password kept in the Android Keystore.
+- **Restore on first run** — a fresh install offers to restore from a local backup file or from Drive before you set anything up.
 
 In daily use. Privacy and Terms are already live on this site.
 
 ## Built by Nadeem.
 
 Tsumly was built by **Nadeem Mazhar**, a solo developer in Pakistan, as part of Nadeem Dev Apps.
+
 
 ---
 
@@ -233,27 +304,102 @@ Together: **improve your life calmly, one small step at a time.**
 
 A focus session is a **bag** — a named set of apps that stays shut until the timer ends. Choose **15 minutes, 45 minutes, 3 hours, or a custom length (3–12 hours, premium)**, slide to start, and the block does the rest.
 
-- **Bags** — each session blocks a named set of distracting apps; pick 15 minutes, 45 minutes, 3 hours, or a custom duration (3–12 hours, premium).
-- **Floating pill** — a small overlay keeps the countdown on screen, so the time left is always in sight.
-- **Block screen** — opening a blocked app shows the block screen (Distraction Wall) and sends you back to focus.
-- **Parachutes** — leaving early costs parachutes, so ending a session is a deliberate decision, not a reflex.
-- **A 30-minute break** — with more than 30 minutes left, you can take a 30-minute break for one parachute: the clock freezes and the block returns by itself. Ending early costs more the more time is left.
+- **Bags** — three bags, each holding up to 6 apps. The free plan uses the first bag with its first 3 apps; premium unlocks all three bags, and a separate add-on opens all 6 slots in each bag. Pick apps from a searchable list of installed apps.
+- **Presets and a wheel** — tap 15 minutes, 45 minutes, or 3 hours, or spin the ruler wheel from 1 minute up to 12 hours. Custom sessions over 3 hours need at least one parachute on board.
+- **Slide to start** — the footer slider starts the session; there is no tap-to-start shortcut to hit by accident.
+- **Floating pill** — a small overlay keeps the countdown on screen, so the time left is always in sight. Tap it to open the block screen; drag it to move it.
+- **Block screen** — opening a blocked app shows the block screen (Distraction Wall) with the countdown, the end time, and your parachutes, and sends you back to focus. After 3 seconds idle, the chrome dims into rest mode until you touch it again.
+- **Essentials stay open** — your default messaging app, dialer, camera, alarm app, and keyboards keep working during a session, along with in-call screens. Everything in the active bag is blocked.
+- **Enforcement that holds** — an accessibility service bounces blocked apps, closes the notification shade, recents, and power menu, and dismisses floating windows. A watchdog re-checks the block every 15 seconds, a live session is restored after a reboot, and a guardian fallback watches the foreground app when the accessibility service is down.
+- **Parachutes** — leaving early costs parachutes, so ending a session is a deliberate decision, not a reflex. With 30 minutes or less left, it costs 1 parachute.
+- **A 30-minute break** — with more than 30 minutes left, you can take a 30-minute break for one parachute: the clock freezes and the block returns by itself. Ending early costs more the more time is left: 1 parachute plus 1 per started hour remaining.
+- **Hold to extend** — hold the +15 card for 3 seconds to add 15 minutes to a live session, up to 60 extra minutes per session. It needs a parachute on board.
+- **Soundscapes** — four sounds, generated live on the device with no audio files: rain, waves, white noise, and city. A session starts silent; sound plays only when you pick it. The extra sounds are an add-on.
+- **Settings passes** — while a session runs, Android Settings can be opened only on a 60-second pass, at most 3 passes per session, so the block cannot be switched off casually.
+- **Routine-aware sessions** — a manual session can stretch to the end of the next routine window, capped at 12 hours, when a routine is enabled and you have a parachute.
 
 ## Small steps, every day.
 
 Focus works best as a **routine**, not a one-off effort. Kaizenly starts sessions on a schedule, reminds you before they begin, and keeps the daily target small enough to hold.
 
-- **Routines** — schedule sessions to start on chosen days, with a **pre-alert** before each one begins.
+- **Routines** — up to 3 named routines, each with its own start time, a duration from 5 minutes to 12 hours, and the days of the week it runs on. Routines are premium, and turning one on needs at least one parachute.
+- **Pre-alerts** — a notification 5 minutes before a routine starts, so the block never catches you by surprise.
+- **Overlap warnings** — if two routines would overlap, Kaizenly shows the combined locked window and asks before turning the second one on.
+- **Each routine, its own bag** — with this premium setting on, each routine blocks its own bag, and your previous bag comes back when the routine session ends.
 - **A one-minute daily target** — one minute of focus a day is enough to keep the streak alive (5 minutes on the very first day). Small enough to keep, every day.
+- **Evening streak reminder** — at 8:30 pm, a nudge if today has no session yet. It can be switched off in Settings.
 - **Monday-start weeks** — weeks run Monday to Sunday, so the streak counts the way your week does.
+- **Post-session celebration** — finishing a session ends with a small celebration: DONE when the clock runs out, SOS when you left with a parachute. A finished session shows stat cards and the Monday-first week, and a share button exports the celebration card as a PNG image (not shown for SOS).
+
+## Every day lays a block.
+
+The Tower is the streak, built visibly: every day with at least **five minutes of focus lays a block**, seven blocks make a floor, and the floors become your tower.
+
+- **Blocks and floors** — one block per day with five minutes of focus; seven blocks make one floor. Tap the streak badge on the home screen to open the Tower.
+- **Three reserve blocks** — a reserve block can save the tower when you skip a day. Ten days in a row restores one spent reserve, up to three.
+- **Missed-day repair** — when a recent day is missed but the days around it hold, the Tower repairs it automatically using a reserve.
+- **Day one hundred** — reach day one hundred and you will find a surprise.
+- **Best streak kept** — your longest run is recorded and shown on the Tower, alongside the current streak.
 
 ## Your progress, on your device.
 
-Every session is recorded **locally**, in a Room database on your phone. See how your focus adds up — **by day, by week, and by month** — without anything leaving the device.
+Every session is recorded **locally**, in a Room database on your phone. See how your focus adds up — **by day, by month, and by year** — without anything leaving the device.
 
-- **Day, week, and month views** — totals for each period, side by side.
+- **Day, Month, and Year views** — the Day view shows focus minutes per hour across 24 hours; the Month view shows minutes per day; the Year view shows minutes per month. A rotary wheel picks the period and a stepper walks back into the past.
+- **What is recorded** — each session stores its start and end, planned minutes, actual seconds, bag, and whether it finished or ended with a parachute. Sessions shorter than 5 seconds are not recorded.
 - **Post-session celebration** — finishing a session ends with a small celebration, and a shareable image of the result.
 - **No account, no sync** — stats live in the local database; there is nothing to log in to.
+
+## Focus, from the home screen.
+
+Two home-screen widgets keep Kaizenly one tap away, without opening the app first.
+
+- **Preset widget** — a hero countdown with up to three of your presets (1–720 minutes). Tap a preset to select it, tap the selected one to open the wheel editor, and start a session from the widget.
+- **Streak widget** — the last 28 days as four week rows under the current streak count. Tapping it opens the Tower.
+
+## Yours to set up, yours to keep.
+
+Kaizenly asks for three system permissions at setup — accessibility, draw over other apps, and ignoring battery optimization — so the system cannot interrupt an ongoing block. The rest is plain settings and a backup file you own.
+
+- **Theme** — light, automatic, or dark.
+- **Haptics** — haptic feedback can be switched off.
+- **Silence during sessions** — premium: Do Not Disturb turns on by itself while the block lasts, and your previous interruption setting comes back at the end.
+- **Display name** — a name for the profile, stored on the device. There is no account and no sign-in.
+- **Local JSON backup** — export your sessions, bags, routines, streak, and settings to one JSON file, or restore them on another device. Import replaces the data on the device; a live session is never carried over. No Drive, no password, no upload.
+
+## Free now. Premium arrives with Play Billing.
+
+Everything I make is free to use right now — Kaizenly’s premium durations arrive with Play Billing. There is no purchase in the app today.
+
+- **Premium unlocks** — sessions up to 12 hours, automatic routines, two extra bags, and silence (Do Not Disturb) during sessions.
+- **Add-ons** — the extra soundscapes and the sixth app slot in each bag are separate add-ons, arriving with the same billing.
+- **Free today** — the free plan covers 15-minute, 45-minute, and 3-hour sessions, the first bag with its first 3 apps, the floating pill, the block screen, parachutes, the break, the Tower, stats, and widgets.
+
+## Kaizenly, answered.
+
+### What is Kaizenly?
+
+Kaizenly is a strict, local-first focus guard for Android. You pick a time — 15 minutes, 45 minutes, 3 hours, or a custom 3–12 hour session (premium) — pick the apps that distract you, and start a session. Everything in the bag stays shut until the timer ends, and quitting early costs parachutes.
+
+### How much does Kaizenly cost?
+
+Everything I make is free to use right now — Kaizenly’s premium durations arrive with Play Billing. There is no purchase in the app today.
+
+### What happens if I quit a focus session early?
+
+With 30 minutes or less left, leaving costs 1 parachute and ends the session. With more than 30 minutes left, you choose: take a 30-minute break for 1 parachute and the block returns by itself, or end the session for 1 parachute plus 1 per started hour left.
+
+### Does Kaizenly upload my data anywhere?
+
+No. Sessions and stats live in a Room database on your device, there is no account, no sync, and no analytics. Backups are local JSON files you export and import yourself — nothing is uploaded anywhere.
+
+### Which apps still work during a Kaizenly session?
+
+The essentials keep working: your default messaging app, dialer, camera, alarm app, and keyboards, plus in-call screens. Everything in the active bag is blocked.
+
+### Does Kaizenly keep blocking after a reboot?
+
+Yes. A live session is restored after a reboot, and a watchdog alarm re-checks the block every 15 seconds while a session runs.
 
 ## Your focus belongs to you.
 
@@ -267,15 +413,16 @@ In daily use. Privacy and Terms are already live on this site.
 
 Kaizenly was built by **Nadeem Mazhar**, a solo developer in Pakistan, as part of Nadeem Dev Apps.
 
+
 ---
 
 ## MsgLoop
 
 https://nadeemdevapps.github.io/my-web/products/msgloop/
 
-# Send the same message, on repeat — on schedule.
+# Send the same message, up to 500 times — on schedule.
 
-MsgLoop is a **local-first WhatsApp message scheduler** for Android. Log in once inside the app, then send one message many times — right now, or at a time you pick. Everything runs on your phone: **no account, no server, no tracking**, and no data leaves the device except through WhatsApp itself.
+MsgLoop is a **local-first WhatsApp message scheduler** for Android. Log in once inside the app, then send one message up to 500 times — right now, or at a time you pick — and queue several tasks to run one after another. Everything runs on your phone: **no account, no server, no tracking**, and no data leaves the device except through WhatsApp itself.
 
 ## A warning before you use it
 
@@ -285,29 +432,100 @@ MsgLoop automates WhatsApp Web, which WhatsApp's Terms of Service do not allow �
 
 ### Schedule for later
 
-Pick a date and time; an exact alarm wakes a background service and the messages go out when you said they would.
+Start now, in 5, 15, or 30 minutes, in 1 or 3 hours, or at a clock time — 9:00 PM by default, tomorrow if that time has already passed. An exact alarm fires the task at the time you picked when Android allows exact alarms; otherwise it fires on the system's inexact alarm.
 
-### Send now, on repeat
+### Send now, up to 500 times
 
-One message, sent N times with a delay you choose (0.3s to 5s, or your own value) — with a live preview of the chat as it sends.
+One message to one number, repeated 1 to 500 times. The number must be 7–15 digits with its country code and no leading 0, and the message can span several lines.
+
+### A delay you control
+
+Choose 0.3, 1, 2, or 5 seconds between sends, or type your own delay from 0 to 60 seconds. Longer delays are the safer choice for large counts.
+
+### A queue that runs one task at a time
+
+Send-now tasks run first, then scheduled tasks in time order. Every queued task shows when it will start, counting the running task and the tasks ahead of it.
 
 ### A queue that survives anything
 
-Tasks are stored on the phone, so they survive the app being closed, the phone restarting, and alarms being cleared. Missed tasks fire when the app opens again.
+Tasks are stored on the phone, so they survive the app being closed, the phone restarting, and alarms being cleared. After a reboot the alarms are re-registered, and a task whose time passed fires when the app opens again.
 
-### Live progress and history
+### Keeps going in the background
 
-Watch sent, failed, and remaining counts with a live time estimate, stop a task any time, and see every finished task's result afterwards.
+Sending runs in a foreground service, so it continues with the app closed or the phone locked, with a notification showing progress. If the system kills the service mid-task, it resumes from where it stopped, with the sent and failed counts intact.
+
+### Live progress and time estimate
+
+Watch sent, failed, and remaining counts with a live estimate of the time left, and a live view of the WhatsApp Web page itself as the messages go out.
+
+### Stop, cancel, and reorder
+
+Stop just the task that is running and let the queue carry on, stop everything including the queue, cancel any scheduled task, cancel the whole queue, or move a task up or down among tasks set for the same time.
+
+### Every send is verified
+
+Each message is checked — the text went in and the send button fired — and retried once if it did not. If the chat drops out, the page reloads and tries again. A number that is not on WhatsApp, or a session that expired, stops the task with a clear message instead of failing silently.
+
+### History of finished tasks
+
+The last 30 finished tasks stay on the phone, with the number, how many of the count were sent and how many failed, the result — completed, stopped, failed, or login required — when it finished, and the first 200 characters of the message.
+
+### One-time login, saved on the phone
+
+Scan the WhatsApp Web QR code once in the app's own browser, tap Continue, and the session is saved. If WhatsApp shows a pairing code instead, the app copies it to the clipboard for you. If the session expires, the app says so and asks you to log in again.
+
+### A warning before risky sends
+
+Before a task starts, the app shows the count, the delay, and how long it will take. A delay under 2 seconds with more than 10 messages triggers a confirmation that names the ban risk. Your half-typed task is kept as a draft, so leaving the screen loses nothing.
 
 ### Private by design
 
-No account, no analytics, no tracking. Your login and your tasks stay on your phone; Android backup is off.
+No account, no analytics, no tracking, no ads. Your login, tasks, and history stay on the phone; Android backup is off. The app asks for no contacts, no SMS, no storage, and no accessibility service — only internet, notifications, exact alarms, and the battery exemption that keeps scheduled sends firing.
+
+### Settings that keep it reliable
+
+Settings show whether WhatsApp is connected, let you log out, switch between system, light, and dark themes, and check the battery exemption and notification permission that scheduled sends depend on.
+
+## Three steps, then it runs itself
+
+1. **Connect WhatsApp once.** Open the setup screen, scan the QR code in the app's own browser, and tap Continue — the session is saved on your phone.
+2. **Write the task.** Enter the number, the message, how many times to send it, the delay between sends, and when to start. A review line shows the count, the delay, and how long it will take before you confirm.
+3. **Send now or queue it.** The task runs in the background with live progress, or waits for its time and fires on its own. Stop it any time, and check the result in history afterwards.
+
+One task sends to one number. There is no daily or weekly repeat, no group chats, and no sending to several numbers at once — each task is a single message, to a single number, at a single time.
+
+## Frequently asked questions
+
+### Does MsgLoop send the same message every day automatically?
+
+No. Each MsgLoop task fires once, at the time you pick — now, in a few minutes or hours, or at a clock time. There is no daily or weekly repeat, so to send the same message again you create a new task.
+
+### How many times can MsgLoop send one message?
+
+Up to 500 times per task, to one number per task. The number must be 7–15 digits with its country code and no leading 0. Group chats are not supported — MsgLoop opens a one-to-one chat.
+
+### Where do my messages and my WhatsApp login live?
+
+On your phone only. MsgLoop has no account, no server, no analytics, and no tracking, and Android backup is off. Your login session, tasks, and history stay on the device; the only network use is WhatsApp Web itself.
+
+### What happens if my phone restarts before a scheduled send?
+
+The task is not lost. Scheduled tasks are stored on the phone, their alarms are re-registered after a reboot, and a task whose time passed while the phone was off fires when the app opens again. A task interrupted mid-send resumes from where it stopped.
+
+### Can I stop a send after it starts?
+
+Yes. You can stop just the task that is running and let the queue carry on, stop everything including the queue, or cancel any scheduled task before it starts. The notification also has Stop buttons while a task is running.
+
+### Can WhatsApp ban my number for using MsgLoop?
+
+Yes. MsgLoop automates WhatsApp Web, which WhatsApp’s Terms of Service do not allow, and bulk messaging can get a number temporarily or permanently banned. Use it only on numbers you own or have permission to message, keep the delay conservative for large counts, and prefer smaller batches.
 
 Privacy and Terms are already live on this site.
 
 ## Built by Nadeem.
 
 MsgLoop was built by **Nadeem Mazhar**, a solo developer in Pakistan, as part of Nadeem Dev Apps.
+
 
 ---
 
