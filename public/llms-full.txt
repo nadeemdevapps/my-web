@@ -16,7 +16,12 @@ https://nadeemdevapps.github.io/my-web/
 
 Solo developer in Pakistan. I plan, design, and ship websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs — with AI doing the heavy lifting under my direction.
 
-## What I've built
+- **Websites, apps & backends** — Websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs.
+- **3 products** — Tsumly, Kaizenly, and MsgLoop — each one built to solve a problem of my own.
+- **Local-first** — No accounts, no servers, no tracking, no ads — your data stays on your device.
+- **Solo, with AI** — I plan, design, and direct; AI does the heavy lifting — every line reviewed by me.
+
+## Featured Flagships
 
 ### Tsumly
 
@@ -53,13 +58,21 @@ I explore a problem until I understand it, then plan, design, and ship the answe
 - **Problem-solving** — the hard part isn't the code, it's finding the right shape for the answer.
 - **Security analysis** — I follow security protocols properly, with AI help, on every build.
 
+## Software that respects human attention is an ethical obligation.
+
+No noise, no pressure, no guilt. Every app I build is designed to serve you, then get out of the way.
+
+## What I stand for
+
+Three rules govern everything I ship — every app, every page.
+
+- **One problem, solved well** — Each app does a single job properly instead of ten things halfway. If it needs a second job, it becomes a second app.
+- **Private by default** — No accounts, no tracking, no ads. Your data stays on your device; backups go to your own storage, when you choose.
+- **Calm, not pushy** — No pressure, no perfectionism, no guilt-driven productivity. I build steadily and let the work speak for itself.
+
 ## A solo developer, building for himself first.
 
 I'm Nadeem Mazhar, a solo developer in Pakistan. I build the tools I wish existed — planned, documented, reviewed, and shipped. Tsumly and Kaizenly started as personal problems: a ledger that never added up, a phone that never stayed quiet. They ship when they work in daily use, not before.
-
-## Have an idea?
-
-Questions, feedback, or just want to say hi — get in touch.
 
 ---
 

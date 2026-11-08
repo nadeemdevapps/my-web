@@ -186,6 +186,10 @@ components:
     textColor: "{colors.ink}"
     typography: "{typography.nav-link}"
     padding: "{spacing.md}"
+    # Pill nav: wordmark left, centred pill (Home/Products/About/Contact)
+    # on {colors.surface-highlight} with the active page as a surface pill,
+    # theme toggle + compact primary "Get in touch" CTA right;
+    # hamburger below 840px.
   wordmark:
     fontFamily: "EB Garamond, serif"
     fontWeight: 400
@@ -276,7 +280,8 @@ components:
     textColor: "{colors.ink}"
     headlineTypography: "{typography.display-xl}"
     headlineAccent: "{colors.primary}" (one word)
-    mark: "{components.logo}" above the headline
+    mark: none on Home (the logo mark lives in the nav); centred headline
+      + intro + CTA pair on Home
     rounded: 0
   inverted-band:
     backgroundColor: "{colors.primary}"
@@ -310,6 +315,26 @@ components:
     captionTypography: "{typography.caption}"
     rounded: "{rounded.md}"
     padding: 16px
+  flagship-card:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.ink}"
+    borderColor: "{colors.hairline}"
+    rounded: "{rounded.md}"
+    padding: "{spacing.xl}"
+    elevation: 1
+    # Category pill (hairline border + coloured dot, decoration only),
+    # name, description, plain bullets, "Learn more" link.
+    # Grid: 2 per row; an odd last card centres in its own row below
+    # (3 → 2+1 centred, 4 → 2x2, 5 → 2+2+1 centred).
+  attention-band:
+    # One photographic image (grayscale, vendored locally at
+    # public/attention-band.jpg — made for us by Google Stitch), dark
+    # gradient overlay, serif headline bottom-left. Rounded {rounded.xl}.
+  about-card:
+    # Condensed About on a fixed dark block (#111111, hairline #333333 —
+    # stays dark in both themes), text left, primary + secondary CTAs right.
+    rounded: "{rounded.xl}"
+    padding: 48px
   illustration:
     style: monochrome line art + colour sticker accents
     tint: "{colors.ink}"
@@ -353,7 +378,7 @@ Surfaces are defined by **hairlines and the faintest layered shadows** rather th
 - Two shipped polarities (dark anchor + light) that share all non-color tokens; only palette values differ.
 - Fully pill-shaped marketing CTAs contrasted with flat 12px cards and tight 4px inputs.
 - Elevation by hairline + barely-there layered shadow, never heavy drop-shadows.
-- A light hero on the warm canvas — logo mark above the headline, one headline word in the blue accent.
+- A light hero on the warm canvas — one headline word in the blue accent (on Home, centred, no logo mark — the mark lives in the nav).
 - Sticker palette as decoration only — small, playful, never structural.
 
 ## Colors
@@ -509,7 +534,7 @@ Small repeated icons use `line-glyph` (hand-drawn monochrome stroke glyphs), not
 Marketing CTAs are deliberately **fully pill-shaped** — the contrast between a pill CTA and a 12px card is intentional. Inputs stay tight at 4px so fields never read as buttons. Utility buttons use 8px so nav and secondary actions stay compact.
 
 ### Imagery
-The site uses almost no photography — it is a content-and-type site. Where a product screenshot appears, it sits in a rounded `{rounded.md}` / `{rounded.xl}` well with a hairline edge, scaling fluidly. Where an app icon appears (e.g. product cards), it crops to a circle (`{rounded.full}`).
+The site uses almost no photography — it is a content-and-type site. The one exception is the attention band on Home: a single grayscale photograph (vendored locally at `public/attention-band.jpg`, made for us by Google Stitch), shown under a dark gradient with a serif headline. Photography is otherwise not used as decoration.
 
 ## Components
 
@@ -517,7 +542,7 @@ The site uses almost no photography — it is a content-and-type site. Where a p
 
 ### Navigation
 
-**`nav-bar`** — Top navigation. Slim sticky bar, `{colors.surface}` background, `{colors.ink}` link text at `{typography.nav-link}`, padding `{spacing.md}`. Left wordmark (`{components.wordmark}`), centre product/menu links, right theme toggle + `button-utility` CTA. Condenses to a hamburger below the tablet breakpoint.
+**`nav-bar`** — Top navigation. Slim sticky bar, `{colors.surface}` background, 64px tall. Left wordmark (`{components.wordmark}`), centred pill nav (`Home / Products / About / Contact`) on `{colors.surface-highlight}` with the active page as a `{colors.surface}` pill, right theme toggle + a compact `button-primary` ("Get in touch"). Condenses to a hamburger below 840px (pill nav and CTA hidden; links live in the mobile menu).
 
 **`wordmark`** — The "Nadeem Dev Apps" text lockup, used with the logo mark in the nav bar and footer. EB Garamond 400, `{colors.ink}`, negative tracking −0.5px.
 
@@ -531,7 +556,7 @@ The site uses almost no photography — it is a content-and-type site. Where a p
 
 **`button-secondary`** — Pill button for secondary actions. `{colors.surface}` background, `{colors.ink}` text, 1px `{colors.hairline}` border, same pill shape and padding as primary.
 
-**`button-utility`** — Nav / compact button. `{colors.surface}` background, `{colors.ink}` text, type `{typography.button}`, tighter `{rounded.sm}` (8px), padding 4px × 14px, 1px `{colors.hairline}` border. Used for the nav CTA and compact actions where the marketing pill would be too large.
+**`button-utility`** — Nav / compact button. `{colors.surface}` background, `{colors.ink}` text, type `{typography.button}`, tighter `{rounded.sm}` (8px), padding 4px × 14px, 1px `{colors.hairline}` border. Used for compact actions where the marketing pill would be too large.
 
 **`text-link`** — Inline link, no background, `{colors.primary}` text. Used for inline links in body copy.
 
@@ -563,7 +588,7 @@ The site uses almost no photography — it is a content-and-type site. Where a p
 
 ### Signature Components
 
-**`hero`** — The light hero. Warm canvas, `{colors.ink}` text, `{typography.display-xl}` serif headline with one word in `{colors.primary}`, logo mark above the headline, and a `button-primary` + `button-secondary` CTA pair.
+**`hero`** — The light hero. Warm canvas, `{colors.ink}` text, `{typography.display-xl}` serif headline with one word in `{colors.primary}`, and a `button-primary` + `button-secondary` CTA pair. On Home the hero is centred (headline + intro + CTAs) with no logo mark — the mark lives in the nav.
 
 **`inverted-band`** — A polarity-flipped emphasis band for mid-page moments. `{colors.primary}` fill, `{colors.on-primary}` text, `{typography.display-sm}` serif headline, 12px radius. Use sparingly.
 
@@ -573,7 +598,7 @@ The site uses almost no photography — it is a content-and-type site. Where a p
 
 ## Core Pages
 
-- **Home**: hero (light canvas, logo mark, serif headline with one blue word, primary + secondary CTA), products grid (product-cards for Tsumly and Kaizenly), an about strip, and the footer. One calm monochrome illustration, generous whitespace.
+- **Home**: centred hero (serif headline with one blue word, primary + secondary CTA), four stat cards, Featured Flagships (2-column grid — Tsumly + Kaizenly row 1, MsgLoop centred row 2; an odd last product always centres in its own row), What I do, the attention band (photo + "Software that respects human attention is an ethical obligation."), What I stand for (three principle cards), the About black card, and the footer.
 - **Products** (index): product-card grid; each card links to its sub-page.
 - **Product sub-pages** (`/products/tsumly`, `/products/kaizenly`): hero (display headline + one-line description), feature cards, screenshots in rounded wells, download/store links, and a link back to Products. Product sub-pages inherit this system; a product's in-app brand does not recolour the page. Each product sub-site also has its own `/privacy/` and `/terms/` pages.
 - **About**: document-style long page on the warm canvas; serif section headlines, Inter body.
@@ -615,7 +640,7 @@ The site is built for humans first and for AI agents, LLMs, and search second �
 - Keep marketing CTAs fully pill-shaped (`{rounded.pill}`) and cards flat at 12px (`{rounded.md}`) with a hairline border; utility buttons tighter at 8px (`{rounded.sm}`).
 - Use `{colors.danger}` only for destructive/error states; carry success/affirmative state with ink weight and iconography.
 - Use the toast bus for feedback, with specific, actionable messages.
-- Keep the hero light and quiet — logo mark, one accent word, no dark bands.
+- Keep the hero light and quiet — one accent word, no dark bands; on Home the hero is centred with no logo mark (the mark lives in the nav).
 
 ### Don't
 - Don't introduce any chromatic brand colour into structure — there is no purple/coral/accent hue in layout, buttons, or borders; the structural accent is blue only, and purple lives only in the sticker palette.

@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Logo from '../components/Logo.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const siteUrl = `https://nadeemdevapps.github.io${base}`;
@@ -45,9 +44,8 @@ const jsonLd = [
   description="Nadeem Mazhar — a solo developer in Pakistan building websites, Windows apps, Android apps, and backends. Selected work: Tsumly, Kaizenly, and MsgLoop."
   jsonLd={jsonLd}
 >
-  <section class="hero">
+  <section class="hero hero-center">
     <div class="container">
-      <Logo size={48} />
       <h1>I'm Nadeem Mazhar —<br />I build apps and websites for <span class="accent">real life.</span></h1>
       <p class="muted">
         Solo developer in Pakistan. I plan, design, and ship websites,
@@ -62,14 +60,56 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="section-alt" id="work">
+  <section class="stat-section">
     <div class="container">
-      <p class="kicker">Selected work</p>
-      <h2>What I've built</h2>
-      <div class="product-grid">
-        <div>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-label">Core focus</span>
+            <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5z" /><path d="m2 17 10 5 10-5" /><path d="m2 12 10 5 10-5" /></svg>
+          </div>
+          <h3>Websites, apps &amp; backends</h3>
+          <p>Websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs.</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-label">Flagship ecosystem</span>
+            <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" /><rect x="3" y="14" width="7" height="7" rx="1" /><rect x="14" y="14" width="7" height="7" rx="1" /></svg>
+          </div>
+          <h3>3 products</h3>
+          <p>Tsumly, Kaizenly, and MsgLoop — each one built to solve a problem of my own.</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-label">Data thesis</span>
+            <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19a4.5 4.5 0 0 0 .42-8.98 6 6 0 0 0-11.7 1.62A4 4 0 0 0 7 19.5h10.5z" /><path d="m3 3 18 18" /></svg>
+          </div>
+          <h3>Local-first</h3>
+          <p>No accounts, no servers, no tracking, no ads — your data stays on your device.</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-label">How I work</span>
+            <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z" /><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15z" /></svg>
+          </div>
+          <h3>Solo, with AI</h3>
+          <p>I plan, design, and direct; AI does the heavy lifting — every line reviewed by me.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="container">
+      <div class="flagship-head">
+        <h2>Featured Flagships</h2>
+        <a href={`${base}products/`}>All products →</a>
+      </div>
+      <div class="flagship-grid">
+        <article class="flagship-card">
+          <span class="flagship-pill"><span class="flagship-dot" style="background: #0d9488;"></span>Personal Money Ledger</span>
           <h3>Tsumly</h3>
-          <p class="lede">
+          <p class="flagship-desc">
             A <strong>local-first money ledger</strong> — every amount adds up.
             Track expenses and loans on your own device, with an optional
             <strong>encrypted Google Drive backup</strong>.
@@ -80,10 +120,11 @@ const jsonLd = [
             <li><strong>Person profiles</strong> — every loan tied to a person, with their totals at a glance.</li>
           </ul>
           <p><a href={`${base}products/tsumly/`}>Learn more →</a></p>
-        </div>
-        <div>
+        </article>
+        <article class="flagship-card">
+          <span class="flagship-pill"><span class="flagship-dot" style="background: #ea580c;"></span>Focus Guard</span>
           <h3>Kaizenly</h3>
-          <p class="lede">
+          <p class="flagship-desc">
             A <strong>strict, local-first focus guard</strong> — timed sessions
             that keep distracting apps shut when it matters.
           </p>
@@ -93,10 +134,11 @@ const jsonLd = [
             <li><strong>Streaks, routines, and stats</strong> — the progress building up, visible day by day.</li>
           </ul>
           <p><a href={`${base}products/kaizenly/`}>Learn more →</a></p>
-        </div>
-        <div>
+        </article>
+        <article class="flagship-card flagship-card--last">
+          <span class="flagship-pill"><span class="flagship-dot" style="background: #16a34a;"></span>WhatsApp Scheduler</span>
           <h3>MsgLoop</h3>
-          <p class="lede">
+          <p class="flagship-desc">
             A <strong>WhatsApp sender for Android</strong> — one message, sent
             many times, right now or on a schedule.
           </p>
@@ -106,12 +148,12 @@ const jsonLd = [
             <li><strong>Private by design</strong> — no account, no server, no tracking.</li>
           </ul>
           <p><a href={`${base}products/msgloop/`}>Learn more →</a></p>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="section-alt">
     <div class="container narrow">
       <p class="kicker">What I do</p>
       <h2>Planning, design, and shipping — with AI.</h2>
@@ -135,28 +177,58 @@ const jsonLd = [
   </section>
 
   <section class="section-alt">
-    <div class="container narrow">
-      <p class="kicker">About</p>
-      <h2>A solo developer, building for himself first.</h2>
-      <p class="muted">
-        I'm Nadeem Mazhar, a solo developer in Pakistan. I build the tools I
-        wish existed — planned, documented, reviewed, and shipped. Tsumly and
-        Kaizenly started as personal problems: a ledger that never added up, a
-        phone that never stayed quiet. They ship when they work in daily use,
-        not before.
-      </p>
-      <p><a href={`${base}about/`}>More about Nadeem →</a></p>
+    <div class="container">
+      <div class="attention-band">
+        <img src={`${base}attention-band.jpg`} alt="A quiet desk with a laptop, notebook, and pen" width="1200" height="655" loading="lazy" />
+        <div class="attention-band-text">
+          <h2>Software that respects human attention is an ethical obligation.</h2>
+          <p>No noise, no pressure, no guilt. Every app I build is designed to serve you, then get out of the way.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section>
-    <div class="container narrow">
-      <h2>Have an idea?</h2>
-      <p class="muted">
-        Questions, feedback, or just want to say hi — get in touch.
-      </p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href={`${base}contact/`}>Get in touch</a>
+    <div class="container">
+      <h2>What I stand for</h2>
+      <p class="lede">Three rules govern everything I ship — every app, every page.</p>
+      <div class="principle-grid">
+        <div class="principle-card">
+          <div class="principle-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="5" /><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none" /></svg>
+          </div>
+          <h3>One problem, solved well</h3>
+          <p>Each app does a single job properly instead of ten things halfway. If it needs a second job, it becomes a second app.</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2" /><path d="M8 11V7a4 4 0 0 1 8 0v4" /></svg>
+          </div>
+          <h3>Private by default</h3>
+          <p>No accounts, no tracking, no ads. Your data stays on your device; backups go to your own storage, when you choose.</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" /><path d="M16 8 2 22" /><path d="M17.5 15H9" /></svg>
+          </div>
+          <h3>Calm, not pushy</h3>
+          <p>No pressure, no perfectionism, no guilt-driven productivity. I build steadily and let the work speak for itself.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="about-card">
+        <div class="about-card-text">
+          <h2>A solo developer, building for himself first.</h2>
+          <p>I'm Nadeem Mazhar, a solo developer in Pakistan. I build the tools I wish existed — planned, documented, reviewed, and shipped. Tsumly and Kaizenly started as personal problems: a ledger that never added up, a phone that never stayed quiet. They ship when they work in daily use, not before.</p>
+        </div>
+        <div class="about-card-cta">
+          <a class="btn btn-primary" href={`${base}about/`}>More about Nadeem →</a>
+          <a class="btn btn-secondary" href={`${base}contact/`}>Get in touch</a>
+        </div>
       </div>
     </div>
   </section>
