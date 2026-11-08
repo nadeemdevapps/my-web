@@ -1,0 +1,379 @@
+# Nadeem Dev Apps — Full Site Text
+
+> Nadeem Mazhar is a solo developer in Pakistan building websites, Windows apps, Android apps, and backends, with AI doing the heavy lifting under his direction.
+
+This file is the full-text companion to [llms.txt](https://nadeemdevapps.github.io/my-web/llms.txt). It contains the full text of every page on this site, in reading order, so an AI system can read the whole site in a single request instead of crawling page by page. The text here matches the live pages; the legal pages at the end are summarized with links to the full text.
+
+Contents: [Home](https://nadeemdevapps.github.io/my-web/) · [About](https://nadeemdevapps.github.io/my-web/about/) · [Products](https://nadeemdevapps.github.io/my-web/products/) · [Tsumly](https://nadeemdevapps.github.io/my-web/products/tsumly/) · [Kaizenly](https://nadeemdevapps.github.io/my-web/products/kaizenly/) · [MsgLoop](https://nadeemdevapps.github.io/my-web/products/msgloop/) · [Contact](https://nadeemdevapps.github.io/my-web/contact/) · [Legal pages](#legal-pages)
+
+---
+
+## Home
+
+https://nadeemdevapps.github.io/my-web/
+
+# I'm Nadeem Mazhar — I build apps and websites for real life.
+
+Solo developer in Pakistan. I plan, design, and ship websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs — with AI doing the heavy lifting under my direction.
+
+Selected work:
+
+- **Tsumly** — A money ledger that adds up.
+- **Kaizenly** — A focus guard that means it.
+- **MsgLoop** — A WhatsApp sender for Android.
+
+## What I've built
+
+### Tsumly
+
+A **local-first money ledger** — every amount adds up. Track expenses and loans on your own device, with an optional **encrypted Google Drive backup**.
+
+- **Smart multi-loan repayment split** — one repayment spread across your loans, the fair way.
+- **Pre-app loans** — record loans from before the app without moving your balance.
+- **Person profiles** — every loan tied to a person, with their totals at a glance.
+
+### Kaizenly
+
+A **strict, local-first focus guard** — timed sessions that keep distracting apps shut when it matters.
+
+- **Sessions ("bags")** — 15 min, 45 min, 3 h, or a custom length (3–12 h, premium).
+- **Parachute exit cost** — quitting early costs something, so it stays a deliberate choice.
+- **Streaks, routines, and stats** — the progress building up, visible day by day.
+
+### MsgLoop
+
+A **WhatsApp sender for Android** — one message, sent many times, right now or on a schedule.
+
+- **Schedule for later** — pick a date and time; an exact alarm sends when you said it would.
+- **A queue that survives anything** — tasks live on the phone, through restarts and app kills.
+- **Private by design** — no account, no server, no tracking.
+
+## Planning, design, and shipping — with AI.
+
+I explore a problem until I understand it, then plan, design, and ship the answer — **websites, Windows apps, Android apps, and backends**, local-first or cloud, whichever the project needs — with **AI tools doing the heavy lifting** under my direction. The apps I ship are **local-first by design**: no accounts, no tracking, no ads.
+
+- **Exploration** — I research what's out there, what fails, and what's missing before I build anything.
+- **AI-assisted development** — I direct the build and review every step; AI writes the bulk of the code, I own the decisions.
+- **UI design** — interfaces I design myself: clean, calm, and built to be used every day.
+- **Planning & brainstorming** — documentation and a clear plan come before the first line of code.
+- **Problem-solving** — the hard part isn't the code, it's finding the right shape for the answer.
+- **Security analysis** — I follow security protocols properly, with AI help, on every build.
+
+## A solo developer, building for himself first.
+
+I'm Nadeem Mazhar, a solo developer in Pakistan. I build the tools I wish existed — planned, documented, reviewed, and shipped. Tsumly and Kaizenly started as personal problems: a ledger that never added up, a phone that never stayed quiet. They ship when they work in daily use, not before.
+
+## Have an idea?
+
+Questions, feedback, or just want to say hi — get in touch.
+
+---
+
+## About
+
+https://nadeemdevapps.github.io/my-web/about/
+
+# I'm Nadeem Mazhar.
+
+Nadeem Dev Apps is my **one-developer studio**. I'm a **solo developer in Pakistan** — no partner, no team — I plan, design, and ship **websites, Windows apps, Android apps, and backends**, with AI tools doing the heavy lifting under my direction. Tsumly and Kaizenly started as my own problems, and they ship only when they work in daily use.
+
+## A solo developer, building for himself first.
+
+I'm a **solo developer based in Pakistan** — no partners, no team. I work the way a one-person studio should: I **plan** the product, **design** the interface, **direct** the build, and **review** everything before it ships. AI tools do the heavy lifting; the decisions are mine.
+
+I'm still learning some languages, and I know the basics of others — but the job was never typing syntax by hand. The job is **exploration, working with AI, UI design, planning, brainstorming, problem-solving, and security analysis** — and that's where I'm strong. I ship real products by combining my judgment with the best tools available.
+
+The apps on this site are **local-first by design** — no account, no server, no ads — because that's the right call for a personal tool. It's a choice, not a limitation: I also build **websites, Windows apps, Android apps, backends, and cloud-based apps** — whichever the project needs.
+
+Everything I make is **free to use right now** — Kaizenly's premium durations arrive with Play Billing.
+
+## One problem, solved well.
+
+- **One problem, solved well** — each app does a single job properly instead of ten things halfway. If it needs a second job, it becomes a second app.
+- **Private by default** — no accounts, no tracking, no ads. Your data stays on your device; backups go to your own storage, when you choose.
+- **Calm, not pushy** — that's how I work and communicate: no pressure, no perfectionism, no guilt-driven productivity. I build steadily and let the work speak for itself.
+
+## Ship only what works.
+
+- **Built for myself first** — every app starts as my own problem. Tsumly and Kaizenly earned their place by working in daily use.
+- **Shipped when it works** — features land after real daily use, not after a roadmap date. What you see in Tsumly and Kaizenly is what is actually running on the developer's own phone.
+- **Honest copy** — no fake badges, ratings, or reviews. A download button, a Play Store badge, or a rating appears only when it is real.
+
+## Questions, answered.
+
+### Who is Nadeem Mazhar?
+
+Nadeem Mazhar is a solo developer in Pakistan who runs Nadeem Dev Apps, a one-developer studio with no partners and no team. He plans, designs, and ships websites, Windows apps, Android apps, and backends, and his apps Tsumly and Kaizenly started as his own problems.
+
+### What does Nadeem build?
+
+Nadeem builds websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs. His shipped apps are local-first by design, with no account, no server, and no ads, because that is the right call for a personal tool, not a limitation on what he can build.
+
+### How does Nadeem work with AI?
+
+Nadeem plans the product, designs the interface, directs the build, and reviews everything before it ships, with AI tools doing the heavy lifting under his direction. The decisions are his: he explores a problem until he understands it, documents a clear plan, and ships only when the result works in daily use.
+
+### What are Nadeem's strengths?
+
+His strengths are exploration, working with AI, UI design, planning, brainstorming, and problem-solving, with security analysis on every build. He is still learning some languages and knows the basics of others, but the job, as he puts it, was never typing syntax by hand.
+
+### Are Nadeem's apps free to use?
+
+Yes. Everything Nadeem makes is free to use right now. Kaizenly's premium durations — custom sessions of 3 to 12 hours — arrive with Play Billing, so there is nothing to pay for today.
+
+### What are Tsumly, Kaizenly, and MsgLoop?
+
+Tsumly is a local-first loan and ledger app that splits one repayment across several loans without merging them. Kaizenly is a strict focus guard for Android whose timed sessions keep distracting apps shut until the timer ends. MsgLoop is a WhatsApp message scheduler for Android — and because it automates WhatsApp, which WhatsApp's terms do not allow, bulk messaging can get a number banned.
+
+### How can I contact Nadeem?
+
+You can reach Nadeem at nadeem.devapps@gmail.com, or find his work on GitHub at github.com/nadeemdevapps, his only social link. The contact page also has a form that opens a pre-addressed email in your own mail app.
+
+Learn more about [Tsumly](https://nadeemdevapps.github.io/my-web/products/tsumly/), [Kaizenly](https://nadeemdevapps.github.io/my-web/products/kaizenly/), and [MsgLoop](https://nadeemdevapps.github.io/my-web/products/msgloop/) — or [get in touch](https://nadeemdevapps.github.io/my-web/contact/).
+
+## Say hello.
+
+Questions, feedback, or just want to say hi? Reach me at nadeem.devapps@gmail.com — or find the work on GitHub (https://github.com/nadeemdevapps).
+
+---
+
+## Products
+
+https://nadeemdevapps.github.io/my-web/products/
+
+# What we make
+
+Small, local-first apps — each with its own dedicated site inside this one. Pick a product to open its pages.
+
+### Tsumly
+
+Every amount adds up. A local-first personal expense and loan ledger, with a smart multi-loan repayment split and optional Google Drive backup.
+
+### Kaizenly
+
+A strict, local-first focus guard — built from scratch to keep distracting apps shut when it matters.
+
+### MsgLoop
+
+Repeat WhatsApp messages on a schedule, from a saved login on your phone.
+
+---
+
+## Tsumly
+
+https://nadeemdevapps.github.io/my-web/products/tsumly/
+
+# Every amount adds up.
+
+Tsumly is a **local-first** personal expense and loan ledger for Android: your money stays on your device — **no account, no cloud by default** — with an optional encrypted Google Drive backup. Its **smart multi-loan repayment split** spreads one repayment across several loans, and **pre-app loans** record older loans without moving your balance.
+
+## A ledger that lives on your phone.
+
+Tsumly is a **local-first ledger** for the money you **lend and borrow**. Record a loan, note who it is with, and keep a **running balance** — everything is stored on your device, and it works offline.
+
+- **Lend or borrow** — record a loan in either direction, with its due amount, fees, and history.
+- **Partial repayments** — a loan can be paid back a little at a time, and every payment is recorded against the same loan.
+- **Running balance** — always see where you stand: what you are owed, and what you owe.
+
+## One repayment, split across every loan it covers.
+
+When someone pays you back, the money rarely matches a single loan. Tsumly **splits one repayment across several active loans** in a single action — and **never merges loans**, so each loan keeps its own history.
+
+- **Pre-selected for you** — Tsumly picks the loans the repayment applies to, and shows which will be **fully paid** and which **partially**.
+- **No merging** — a Rs. 3,000 loan repaid by Rs. 1,170 stays one loan with **Rs. 1,830 left**.
+- **Mistakes are reversible** — a repayment recorded by mistake can be **reversed in one step**.
+
+## Loans from before the app still count.
+
+You were lending and borrowing long before Tsumly. **Pre-app loans** record those older loans **without moving your current balance** — so your history is complete and your balance stays honest.
+
+- **Mark it pre-app** — when you create a loan that started before the app, it is recorded without an opening balance movement.
+- **Same detail, same history** — every loan keeps its own due amount, fees, and history, pre-app or not.
+
+## People, not just numbers.
+
+Loans live on **person profiles**, so you always see **who owes what**. Each person carries their own totals, and nothing about an open loan can be hidden by accident.
+
+- **Per-person totals** — every profile shows what that person owes you, and what you owe them.
+- **Archive is guarded** — a person with **outstanding loans cannot be archived**.
+- **Archived people stay reachable** — they still appear in the person picker, and picking one **restores them automatically**.
+
+## Your money stays yours.
+
+**Offline-first and one-device-first.** Nothing leaves the phone unless you turn on Drive backup — and even then, the backup is **encrypted** and stored in the app's **own private Drive folder**.
+
+- **No account, no cloud by default** — your money stays on your device; there is nothing to sign up for.
+- **Encrypted backup** — the optional Google Drive backup is encrypted with **AES-256-GCM**.
+- **No tracking** — no analytics, no ads, nothing phoning home.
+- **Sign-in stays on the device** — device-specific sign-in details never leave the phone in a portable backup.
+
+In daily use. Privacy and Terms are already live on this site.
+
+## Built by Nadeem.
+
+Tsumly was built by **Nadeem Mazhar**, a solo developer in Pakistan, as part of Nadeem Dev Apps.
+
+---
+
+## Kaizenly
+
+https://nadeemdevapps.github.io/my-web/products/kaizenly/
+
+# A little better, every day.
+
+Kaizenly is a **strict, local-first focus guard** for Android: pick a time — **15 minutes, 45 minutes, 3 hours, or a custom 3–12 hour session (premium)** — pick the apps that distract you, and start a session. Everything in the bag stays shut until the timer ends, and quitting early costs parachutes, so ending is a deliberate choice.
+
+## Why "Kaizenly"?
+
+The name comes from **Kaizen** — a Japanese idea meaning "change for the better." **Kai** is change and progress; **Zen** is calm, focus, and balance; and **ly** makes it a daily lifestyle.
+
+Together: **improve your life calmly, one small step at a time.**
+
+## Pick a time. Start a session. Stay put.
+
+A focus session is a **bag** — a named set of apps that stays shut until the timer ends. Choose **15 minutes, 45 minutes, 3 hours, or a custom length (3–12 hours, premium)**, slide to start, and the block does the rest.
+
+- **Bags** — each session blocks a named set of distracting apps; pick 15 minutes, 45 minutes, 3 hours, or a custom duration (3–12 hours, premium).
+- **Floating pill** — a small overlay keeps the countdown on screen, so the time left is always in sight.
+- **Block screen** — opening a blocked app shows the block screen (Distraction Wall) and sends you back to focus.
+- **Parachutes** — leaving early costs parachutes, so ending a session is a deliberate decision, not a reflex.
+- **A 30-minute break** — with more than 30 minutes left, you can take a 30-minute break for one parachute: the clock freezes and the block returns by itself. Ending early costs more the more time is left.
+
+## Small steps, every day.
+
+Focus works best as a **routine**, not a one-off effort. Kaizenly starts sessions on a schedule, reminds you before they begin, and keeps the daily target small enough to hold.
+
+- **Routines** — schedule sessions to start on chosen days, with a **pre-alert** before each one begins.
+- **A one-minute daily target** — one minute of focus a day is enough to keep the streak alive (5 minutes on the very first day). Small enough to keep, every day.
+- **Monday-start weeks** — weeks run Monday to Sunday, so the streak counts the way your week does.
+
+## Your progress, on your device.
+
+Every session is recorded **locally**, in a Room database on your phone. See how your focus adds up — **by day, by week, and by month** — without anything leaving the device.
+
+- **Day, week, and month views** — totals for each period, side by side.
+- **Post-session celebration** — finishing a session ends with a small celebration, and a shareable image of the result.
+- **No account, no sync** — stats live in the local database; there is nothing to log in to.
+
+## Your focus belongs to you.
+
+There is **no server** and no custom backend. Your sessions and stats live in a local database on your device — no login, no account, and **no analytics**.
+
+The only planned network use is Play Billing. Backups are **local JSON files** you export and import yourself — nothing is uploaded anywhere.
+
+In daily use. Privacy and Terms are already live on this site.
+
+## Built by Nadeem.
+
+Kaizenly was built by **Nadeem Mazhar**, a solo developer in Pakistan, as part of Nadeem Dev Apps.
+
+---
+
+## MsgLoop
+
+https://nadeemdevapps.github.io/my-web/products/msgloop/
+
+# Send the same message, on repeat — on schedule.
+
+MsgLoop is a **local-first WhatsApp message scheduler** for Android. Log in once inside the app, then send one message many times — right now, or at a time you pick. Everything runs on your phone: **no account, no server, no tracking**, and no data leaves the device except through WhatsApp itself.
+
+## A warning before you use it
+
+MsgLoop automates WhatsApp Web, which WhatsApp's Terms of Service do not allow — bulk messaging can get a number temporarily or permanently banned. Use it only on numbers you own or have permission to message. Keep the delay conservative for large counts, and prefer smaller batches.
+
+## What MsgLoop does
+
+### Schedule for later
+
+Pick a date and time; an exact alarm wakes a background service and the messages go out when you said they would.
+
+### Send now, on repeat
+
+One message, sent N times with a delay you choose (0.3s to 5s, or your own value) — with a live preview of the chat as it sends.
+
+### A queue that survives anything
+
+Tasks are stored on the phone, so they survive the app being closed, the phone restarting, and alarms being cleared. Missed tasks fire when the app opens again.
+
+### Live progress and history
+
+Watch sent, failed, and remaining counts with a live time estimate, stop a task any time, and see every finished task's result afterwards.
+
+### Private by design
+
+No account, no analytics, no tracking. Your login and your tasks stay on your phone; Android backup is off.
+
+Privacy and Terms are already live on this site.
+
+## Built by Nadeem.
+
+MsgLoop was built by **Nadeem Mazhar**, a solo developer in Pakistan, as part of Nadeem Dev Apps.
+
+---
+
+## Contact
+
+https://nadeemdevapps.github.io/my-web/contact/
+
+# Talk to us.
+
+Questions, bug reports, or ideas for the apps — send a message below and it will open in your mail app, ready to send.
+
+The contact form asks for your name, your email, and a message, and sends it via email. There is no backend: the form composes a mailto link and opens your own mail app, with the message ready to send.
+
+- **Email** — For support, feedback, and everything else: nadeem.devapps@gmail.com
+- **GitHub** — The public website repo and the developer's other public work: https://github.com/nadeemdevapps
+
+---
+
+## Legal pages
+
+The legal pages are summarized here. Read the full text at the linked page.
+
+### Tsumly Privacy Policy
+
+https://nadeemdevapps.github.io/my-web/products/tsumly/privacy/
+
+Tsumly collects no personal data: there is no account, no signup, and no analytics, advertising, or tracking. Accounts, transactions, loans, repayments, people, categories, and settings stay in the local database on the phone, and Android automatic backup is disabled. Google Drive backup is optional and off by default, uploading only to the app's own hidden appDataFolder, and backups can be protected with a password (AES-256-GCM). Questions: nadeem.devapps@gmail.com.
+
+### Tsumly Terms of Use
+
+https://nadeemdevapps.github.io/my-web/products/tsumly/terms/
+
+Tsumly is a personal finance record-keeping tool, provided as-is: it is not financial advice, and it is not a bank or payment service. Everything is stored locally with no Tsumly account and no server; the user owns their data and is responsible for keeping backups, since uninstalling the app wipes its local data. Use is for lawful personal finance tracking only. Questions: nadeem.devapps@gmail.com.
+
+### Kaizenly Privacy Policy
+
+https://nadeemdevapps.github.io/my-web/products/kaizenly/privacy/
+
+Kaizenly collects no personal data: there is no account, no signup, and no analytics, advertising, or tracking. Sessions, bags, routines, and stats stay on the device, and the permissions blocking needs (usage access, accessibility, device admin, overlay, notifications, alarms) all work locally and never send information anywhere. Premium features, when they go live, will be sold through Google Play Billing, with payment handled by Google Play. Questions: nadeem.devapps@gmail.com.
+
+### Kaizenly Terms of Use
+
+https://nadeemdevapps.github.io/my-web/products/kaizenly/terms/
+
+Kaizenly is a strict focus guard, provided as-is, and its strictness is the point: sessions block a named set of apps until the timer ends, leaving early costs a parachute, and a 30-minute break is available during longer sessions. Data stays local with no account and no server. Some features, such as custom session durations, are premium and will be sold through Google Play Billing when they go live. Questions: nadeem.devapps@gmail.com.
+
+### MsgLoop Privacy Policy
+
+https://nadeemdevapps.github.io/my-web/products/msgloop/privacy/
+
+MsgLoop collects no personal data: there is no account, no signup, and no analytics, advertising, or tracking. Scheduled tasks, history, and the WhatsApp Web login session stay on the phone, and Android automatic backup is disabled. You log in by scanning a QR code; MsgLoop never asks for or sees your WhatsApp password. The only network use is WhatsApp Web itself. Questions: nadeem.devapps@gmail.com.
+
+### MsgLoop Terms of Use
+
+https://nadeemdevapps.github.io/my-web/products/msgloop/terms/
+
+MsgLoop is a WhatsApp sender, provided as-is: it sends one message many times, now or on a schedule, through WhatsApp Web inside the app, with no official WhatsApp API. Automating WhatsApp Web violates WhatsApp's Terms of Service, and repetitive bulk messaging can get a number temporarily or permanently banned, so use it at your own risk and only on numbers you own or have permission to message. Data stays local with no account and no server. Questions: nadeem.devapps@gmail.com.
+
+### Privacy Policy (website)
+
+https://nadeemdevapps.github.io/my-web/privacy/
+
+This website collects no personal data: it is a static site with no analytics, no advertising, no tracking scripts, no cookies, and no accounts. A light/dark theme choice is saved in the visitor's own browser only. The site loads the EB Garamond and Inter fonts from Google Fonts — the only third-party request it makes. Emailing the contact address shares only what the sender writes, used only to reply. Questions: nadeem.devapps@gmail.com.
+
+### Terms of Use (website)
+
+https://nadeemdevapps.github.io/my-web/terms/
+
+These terms cover the Nadeem Dev Apps website, a portfolio and product site for Tsumly, Kaizenly, and MsgLoop; the apps themselves have their own terms on their product pages. The site's text, design, and logo belong to Nadeem Dev Apps — pages may be linked to and quoted fairly, with credit. The site is provided "as is" and "as available", without warranties. Questions: nadeem.devapps@gmail.com.

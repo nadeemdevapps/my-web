@@ -35,4 +35,5 @@
 
 ## Optional
 
+- [Full site text (llms-full.txt)](https://nadeemdevapps.github.io/my-web/llms-full.txt): the full text of every page on this site in one Markdown document — Home, About, Products, Tsumly, Kaizenly, MsgLoop, Contact, and summaries of the legal pages.
 - [Design system](https://github.com/nadeemdevapps/my-web/blob/main/DESIGN.md)

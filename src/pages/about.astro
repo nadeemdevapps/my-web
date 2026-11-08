@@ -3,6 +3,52 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const siteUrl = `https://nadeemdevapps.github.io${base}`;
+const faqs = [
+  {
+    question: 'Who is Nadeem Mazhar?',
+    answer:
+      "Nadeem Mazhar is a solo developer in Pakistan who runs Nadeem Dev Apps, a one-developer studio with no partners and no team. He plans, designs, and ships websites, Windows apps, Android apps, and backends, and his apps Tsumly and Kaizenly started as his own problems.",
+  },
+  {
+    question: 'What does Nadeem build?',
+    answer:
+      "Nadeem builds websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs. His shipped apps are local-first by design, with no account, no server, and no ads, because that is the right call for a personal tool, not a limitation on what he can build.",
+  },
+  {
+    question: 'How does Nadeem work with AI?',
+    answer:
+      "Nadeem plans the product, designs the interface, directs the build, and reviews everything before it ships, with AI tools doing the heavy lifting under his direction. The decisions are his: he explores a problem until he understands it, documents a clear plan, and ships only when the result works in daily use.",
+  },
+  {
+    question: "What are Nadeem's strengths?",
+    answer:
+      "His strengths are exploration, working with AI, UI design, planning, brainstorming, and problem-solving, with security analysis on every build. He is still learning some languages and knows the basics of others, but the job, as he puts it, was never typing syntax by hand.",
+  },
+  {
+    question: "Are Nadeem's apps free to use?",
+    answer:
+      "Yes. Everything Nadeem makes is free to use right now. Kaizenly's premium durations — custom sessions of 3 to 12 hours — arrive with Play Billing, so there is nothing to pay for today.",
+  },
+  {
+    question: 'What are Tsumly, Kaizenly, and MsgLoop?',
+    answer:
+      "Tsumly is a local-first loan and ledger app that splits one repayment across several loans without merging them. Kaizenly is a strict focus guard for Android whose timed sessions keep distracting apps shut until the timer ends. MsgLoop is a WhatsApp message scheduler for Android — and because it automates WhatsApp, which WhatsApp's terms do not allow, bulk messaging can get a number banned.",
+  },
+  {
+    question: 'How can I contact Nadeem?',
+    answer:
+      'You can reach Nadeem at nadeem.devapps@gmail.com, or find his work on GitHub at github.com/nadeemdevapps, his only social link. The contact page also has a form that opens a pre-addressed email in your own mail app.',
+  },
+];
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
 const jsonLd = [
   {
     '@context': 'https://schema.org',
@@ -15,6 +61,7 @@ const jsonLd = [
     url: `${siteUrl}about/`,
     sameAs: ['https://github.com/nadeemdevapps'],
   },
+  faqJsonLd,
 ];
 ---
 
@@ -29,8 +76,8 @@ const jsonLd = [
       <h1>I'm Nadeem Mazhar.</h1>
       <p class="lede">
         Nadeem Dev Apps is my <strong>one-developer studio</strong>. I'm a
-        <strong>solo developer in Pakistan</strong> — I plan, design, and
-        ship <strong>websites, Windows apps, Android apps, and
+        <strong>solo developer in Pakistan</strong> — no partner, no team —
+        I plan, design, and ship <strong>websites, Windows apps, Android apps, and
         backends</strong>, with AI tools doing the heavy lifting under my
         direction. Tsumly and Kaizenly started as my own problems, and they ship
         only when they work in daily use.
@@ -57,7 +104,7 @@ const jsonLd = [
         I'm still learning some languages, and I know the basics of others —
         but the job was never typing syntax by hand. The job is
         <strong>exploration, working with AI, UI design, planning,
-        brainstorming, and problem-solving</strong> — and that's where I'm
+        brainstorming, problem-solving, and security analysis</strong> — and that's where I'm
         strong. I ship real products by combining my judgment with the best
         tools available.
       </p>
@@ -95,6 +142,22 @@ const jsonLd = [
         <li><strong>Shipped when it works</strong> — features land after real daily use, not after a roadmap date. What you see in Tsumly and Kaizenly is what is actually running on the developer's own phone.</li>
         <li><strong>Honest copy</strong> — no fake badges, ratings, or reviews. A download button, a Play Store badge, or a rating appears only when it is real.</li>
       </ul>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container narrow">
+      <span class="kicker">Questions</span>
+      <h2>Questions, answered.</h2>
+      {faqs.map((faq) => (
+        <>
+          <h3>{faq.question}</h3>
+          <p>{faq.answer}</p>
+        </>
+      ))}
+      <p>
+        Learn more about <a href={`${base}products/tsumly/`}>Tsumly</a>, <a href={`${base}products/kaizenly/`}>Kaizenly</a>, and <a href={`${base}products/msgloop/`}>MsgLoop</a> — or <a href={`${base}contact/`}>get in touch</a>.
+      </p>
     </div>
   </section>
 
