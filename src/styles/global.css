@@ -394,6 +394,135 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .flagship-card .feature-list { margin-bottom: var(--space-md); }
 .flagship-card p:last-child { margin-top: auto; margin-bottom: 0; }
 
+/* Selected Works (Products page) — the demo's 3-column project grid with
+   category filter pills. Real products use our verified short ledes; the
+   four demo concepts carry a Demo pill and no link. Tech tags are
+   deliberately NOT shown. The filter is a small page-scoped script (the
+   site's only JS besides the theme toggle); without JS all cards show.
+   Odd last card centers in the middle column — only in the "All" view,
+   toggled by the script via .is-all, so a filtered view never misplaces it. */
+.filter-bar {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  background: var(--color-surface-highlight);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-xl);
+}
+.filter-btn {
+  padding: 6px 14px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--color-ink-muted);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.filter-btn:hover { color: var(--color-ink); }
+.filter-btn.is-active {
+  background: var(--color-surface);
+  color: var(--color-ink);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+}
+[data-theme="dark"] .filter-btn.is-active {
+  background: #2a2a2a;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+.works-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+@media (min-width: 720px) {
+  .works-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1080px) {
+  .works-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .works-grid.is-all .project-card--last { grid-column: 2; }
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 18px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-card { transition: none; }
+  .project-card:hover { transform: none; }
+}
+.project-card.is-hidden { display: none; }
+.project-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.project-cat {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+.project-dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+.demo-pill {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #92400e;
+  background: #fef3c7;
+  border: 1px solid #f0d48a;
+  border-radius: var(--radius-pill);
+  padding: 3px 9px;
+}
+[data-theme="dark"] .demo-pill {
+  color: #fcd34d;
+  background: #3a2f10;
+  border-color: #6b5518;
+}
+.project-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-surface-highlight);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-ink);
+  margin-bottom: 16px;
+}
+.project-icon svg { width: 24px; height: 24px; }
+.project-card h2 { font-size: 24px; margin-bottom: 8px; }
+.project-desc { color: var(--color-ink-muted); font-size: 15px; line-height: 1.6; margin-bottom: 16px; }
+.project-desc strong { color: var(--color-ink); font-weight: 600; }
+.project-foot {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-hairline);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.project-foot a { font-size: 14px; font-weight: 500; }
+.demo-note { color: var(--color-ink-muted); font-size: 13px; }
+
 /* Attention band — photo with a dark gradient, headline bottom-left.
    Photo is ours (Stitch made it for us), vendored at /attention-band.jpg. */
 .attention-band {
@@ -466,13 +595,15 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
    depth cue is a lighter border + a faint light edge instead. */
 [data-theme="dark"] .stat-card,
 [data-theme="dark"] .flagship-card,
-[data-theme="dark"] .principle-card {
+[data-theme="dark"] .principle-card,
+[data-theme="dark"] .project-card {
   border-color: #3d3d3d;
   box-shadow: 0 1px 3px rgba(255, 255, 255, 0.05), 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 [data-theme="dark"] .stat-card:hover,
 [data-theme="dark"] .flagship-card:hover,
-[data-theme="dark"] .principle-card:hover {
+[data-theme="dark"] .principle-card:hover,
+[data-theme="dark"] .project-card:hover {
   border-color: #4a4a4a;
   box-shadow: 0 2px 6px rgba(255, 255, 255, 0.07), 0 12px 32px rgba(0, 0, 0, 0.55);
 }

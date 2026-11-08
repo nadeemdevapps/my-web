@@ -148,33 +148,28 @@ Questions, feedback, or just want to say hi? Reach me at nadeem.devapps@gmail.co
 
 https://nadeemdevapps.github.io/my-web/products/
 
-# What we make
+# Selected Works
 
-Small, local-first apps — each with its own dedicated site inside this one. Pick a product to open its pages.
+Three products I ship, and four demo concepts listed for now. The live products each have their own site inside this one — pick one to open its pages.
 
-### Tsumly
+### Tsumly (Mobile & Native)
 
 A **local-first money ledger** — every amount adds up. Track expenses and loans on your own device, with an optional **encrypted Google Drive backup**.
 
-- **Smart multi-loan repayment split** — one repayment spread across your loans, the fair way.
-- **Pre-app loans** — record loans from before the app without moving your balance.
-- **Person profiles** — every loan tied to a person, with their totals at a glance.
-
-### Kaizenly
+### Kaizenly (Mobile & Native)
 
 A **strict, local-first focus guard** — timed sessions that keep distracting apps shut when it matters.
 
-- **Sessions ("bags")** — 15 min, 45 min, 3 h, or a custom length (3–12 h, premium).
-- **Parachute exit cost** — quitting early costs something, so it stays a deliberate choice.
-- **Streaks, routines, and stats** — the progress building up, visible day by day.
-
-### MsgLoop
+### MsgLoop (Mobile & Native)
 
 A **WhatsApp sender for Android** — one message, sent many times, right now or on a schedule.
 
-- **Schedule for later** — pick a date and time; an exact alarm sends when you said it would.
-- **A queue that survives anything** — tasks live on the phone, through restarts and app kills.
-- **Private by design** — no account, no server, no tracking.
+### Demo concepts (listed for now, not shipped products)
+
+- **Aetheria Engine** (Developer Tool) — lightweight static site compiler and embedded semantic vector indexing engine built for content vaults and technical monographs.
+- **DocuSense** (Web Application) — privacy-first document intelligence with local browser-side LLM inference. Ingests research PDFs without transferring byte data to remote clouds.
+- **Monolith CLI** (Developer Tool) — zero-dependency build orchestrator for unified TypeScript workspaces. Eliminates recursive npm dependency trees with single binary execution.
+- **PaperCraft UI** (Developer Tool) — quiet, editorial design token compiler for Astro and semantic web documents. Replaces bloated CSS runtimes with pure typography metrics.
 
 ---
 
