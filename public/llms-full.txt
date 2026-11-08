@@ -133,7 +133,7 @@ Learn more about [Tsumly](https://nadeemdevapps.github.io/my-web/products/tsumly
 
 ## Say hello.
 
-Questions, feedback, or just want to say hi? Reach me at nadeem.devapps@gmail.com — or find the work on GitHub (https://github.com/nadeemdevapps).
+Questions, feedback, or just want to say hi? Reach me at nadeem.devapps@gmail.com.
 
 ---
 
