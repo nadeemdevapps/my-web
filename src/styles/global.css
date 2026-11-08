@@ -166,6 +166,7 @@ section { padding: var(--space-section) 0; }
   color: var(--color-ink);
   text-decoration: none;
   margin-right: auto;
+  white-space: nowrap;
 }
 .wordmark:hover { text-decoration: none; }
 .site-nav nav { display: flex; gap: var(--space-lg); }
@@ -427,6 +428,8 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   .product-grid { flex-direction: column; }
   .product-grid > * { flex: 1 1 auto; max-width: none; }
   .site-nav > .container > nav { display: none; }
+  .site-nav .container { gap: 12px; }
+  .wordmark { font-size: 19px; }
   .menu-toggle { display: inline-flex; }
   .mobile-menu.open { display: block; }
   .site-footer .footer-grid { grid-template-columns: 1fr 1fr; }
