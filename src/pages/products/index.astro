@@ -10,24 +10,41 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 >
   <section>
     <div class="container">
-      <div class="narrow">
-      <h1>Selected Works</h1>
-      <p class="muted">
-        Three products I ship, and four demo concepts listed for now. The live
-        products each have their own site inside this one — pick one to open
-        its pages.
-      </p>
-      </div>
-
-      <div class="filter-bar" role="group" aria-label="Filter projects by category">
-        <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">All Projects (7)</button>
-        <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web Applications (1)</button>
-        <button class="filter-btn" type="button" data-filter="native" aria-pressed="false">Mobile &amp; Native (3)</button>
-        <button class="filter-btn" type="button" data-filter="tools" aria-pressed="false">Developer Tools (3)</button>
+      <div class="works-head">
+        <div class="works-head-grid">
+          <div class="works-head-main">
+            <span class="works-index"><span class="works-index-dot"></span>Index // 2026.03</span>
+            <h1>Selected Works &amp; <span class="accent">Architecture</span></h1>
+            <p class="muted">
+              Three products I ship, and four demo concepts listed for now. The
+              live products each have their own site inside this one — pick one
+              to explore its architectural specs, offline storage layer, or
+              interactive demo.
+            </p>
+          </div>
+          <div class="works-stats">
+            <div class="works-stat">
+              <span class="works-stat-label">Total Systems</span>
+              <div class="works-stat-value">07 <span class="works-stat-active">active</span></div>
+              <span class="works-stat-sub">3 Shipped · 4 Lab</span>
+            </div>
+            <div class="works-stat">
+              <span class="works-stat-label">Architectural Spec</span>
+              <div class="works-stat-value">100%</div>
+              <span class="works-stat-sub">Local-First &amp; Zero Bloat</span>
+            </div>
+          </div>
+        </div>
+        <div class="filter-row" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true"><span>All Projects</span><span class="filter-badge">7</span></button>
+          <button class="filter-btn" type="button" data-filter="web" aria-pressed="false"><span>Web Applications</span><span class="filter-badge">1</span></button>
+          <button class="filter-btn" type="button" data-filter="mobile" aria-pressed="false"><span>Mobile &amp; Native</span><span class="filter-badge">3</span></button>
+          <button class="filter-btn" type="button" data-filter="tools" aria-pressed="false"><span>Developer Tools</span><span class="filter-badge">3</span></button>
+        </div>
       </div>
 
       <div class="works-grid is-all">
-        <article class="project-card" data-category="native">
+        <article class="project-card" data-category="mobile">
           <div class="project-top-row">
             <span class="project-cat"><span class="project-dot" style="background: #0d9488;"></span>Mobile &amp; Native</span>
           </div>
@@ -45,7 +62,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
           </div>
         </article>
 
-        <article class="project-card" data-category="native">
+        <article class="project-card" data-category="mobile">
           <div class="project-top-row">
             <span class="project-cat"><span class="project-dot" style="background: #ea580c;"></span>Mobile &amp; Native</span>
           </div>
@@ -62,7 +79,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
           </div>
         </article>
 
-        <article class="project-card" data-category="native">
+        <article class="project-card" data-category="mobile">
           <div class="project-top-row">
             <span class="project-cat"><span class="project-dot" style="background: #16a34a;"></span>Mobile &amp; Native</span>
           </div>
@@ -141,7 +158,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
             <span class="demo-pill">Demo</span>
           </div>
           <div class="project-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 3.5h6.5L21 14.5 16.5 19 5.5 8 3.5 6.5z"/><path d="M3.5 3.5V10L10 16.5"/><circle cx="8" cy="8" r="1.2" fill="currentColor" stroke="none"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5z"/></svg>
           </div>
           <h2>PaperCraft UI</h2>
           <p class="project-desc">

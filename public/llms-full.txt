@@ -148,9 +148,11 @@ Questions, feedback, or just want to say hi? Reach me at nadeem.devapps@gmail.co
 
 https://nadeemdevapps.github.io/my-web/products/
 
-# Selected Works
+# Selected Works & Architecture
 
-Three products I ship, and four demo concepts listed for now. The live products each have their own site inside this one — pick one to open its pages.
+Three products I ship, and four demo concepts listed for now. The live products each have their own site inside this one — pick one to explore its architectural specs, offline storage layer, or interactive demo.
+
+Total systems: 7 — 3 shipped, 4 lab. Architectural spec: 100% local-first & zero bloat.
 
 ### Tsumly (Mobile & Native)
 
