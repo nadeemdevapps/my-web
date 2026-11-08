@@ -70,10 +70,16 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     display: flex;
     align-items: center;
     gap: var(--space-lg);
+    /* Grow to fill the header: the nav's margin-left:auto then pushes the
+       page links to the right edge, and the theme toggle sits at the far
+       right — mirroring the main site header. Without this the whole row
+       was content-width and the right half of the header sat empty. */
+    flex: 1 1 0;
     min-width: 0;
     overflow-x: auto;
     scrollbar-width: none;
   }
+  .product-nav .theme-toggle { flex: none; }
   .product-nav-scroll::-webkit-scrollbar { display: none; }
   @media (max-width: 840px) {
     /* Fade at the right edge hints the row scrolls; the theme toggle sits

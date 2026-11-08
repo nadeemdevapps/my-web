@@ -35,8 +35,10 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   )}
   <footer class="product-footer">
     <div class="container">
-      <span class="product-footer-name">{productName}</span>
-      <span class="product-footer-built">Built by Nadeem Dev Apps</span>
+      <div class="product-footer-brand">
+        <span class="product-footer-name">{productName}</span>
+        <span class="product-footer-built">Built by Nadeem Dev Apps</span>
+      </div>
       <nav aria-label={`${productName} footer`}>
         <a href={productBase}>Overview</a>
         <a href={`${productBase}privacy/`}>Privacy</a>
@@ -56,8 +58,14 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   }
   .product-footer .container {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .product-footer-brand {
+    display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 2px;
   }
   .product-footer-name {
     font-family: var(--font-display);
@@ -72,7 +80,6 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-lg);
-    margin-top: 8px;
   }
   .product-footer nav a {
     color: var(--color-ink);
@@ -81,4 +88,11 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     text-decoration: none;
   }
   .product-footer nav a:hover { color: var(--color-primary); text-decoration: none; }
+  @media (max-width: 840px) {
+    .product-footer .container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  }
 </style>
