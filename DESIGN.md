@@ -281,7 +281,8 @@ components:
     headlineTypography: "{typography.display-xl}"
     headlineAccent: "{colors.primary}" (one word)
     mark: none on Home (the logo mark lives in the nav); centred headline
-      + intro + CTA pair on Home
+      + intro + CTA pair on Home; fills the first screen (min-height
+      100vh minus the nav) so the cards below appear on scroll
     rounded: 0
   inverted-band:
     backgroundColor: "{colors.primary}"
@@ -322,17 +323,21 @@ components:
     rounded: "{rounded.md}"
     padding: "{spacing.xl}"
     elevation: 1
-    # Category pill (hairline border + coloured dot, decoration only),
-    # name, description, plain bullets, "Learn more" link.
+    # Header row: name left, category pill right (pill + coloured dot,
+    # decoration only) — the pill never sits on its own line above the
+    # name. Then description, plain bullets, "Learn more" link.
     # Grid: 2 per row; an odd last card centres in its own row below
     # (3 → 2+1 centred, 4 → 2x2, 5 → 2+2+1 centred).
   attention-band:
     # One photographic image (grayscale, vendored locally at
     # public/attention-band.jpg — made for us by Google Stitch), dark
     # gradient overlay, serif headline bottom-left. Rounded {rounded.xl}.
+    # Hover returns the photo to colour; it is black-and-white otherwise.
   about-card:
-    # Condensed About on a fixed dark block (#111111, hairline #333333 —
-    # stays dark in both themes), text left, primary + secondary CTAs right.
+    # Condensed About on a fixed dark block (#111111, hairline #333333) in
+    # light theme; INVERTED in dark theme (bright #f6f5f4 card, dark text)
+    # so it still stands out against the dark canvas. Text left, primary
+    # + secondary CTAs right.
     rounded: "{rounded.xl}"
     padding: 48px
   illustration:
@@ -492,7 +497,7 @@ Product screenshots and illustration tiles sit inside rounded `{rounded.md}` / `
 | 1 — Soft | Layered micro-shadow: `rgba(0,0,0,0.01) 0 0.175px 1.041px`, `0.02 0 0.8px 2.925px`, `0.027 0 2.025px 7.847px`, `0.04 0 4px 18px` | Raised feature cards, floating buttons |
 | 2 — Elevated | Deeper 5-stop stack ending in `rgba(0,0,0,0.05) 0 23px 52px` | Modals, popovers |
 
-Elevation is **barely-there**: shadows are built from many near-transparent layers so surfaces feel gently lifted off the paper rather than dramatically dropped. Most cards rely on a hairline alone.
+Elevation is **barely-there**: shadows are built from many near-transparent layers so surfaces feel gently lifted off the paper rather than dramatically dropped. Most cards rely on a hairline alone. **In dark theme a black shadow is invisible on a near-black canvas** — the depth cue there is a lighter card border (`#3d3d3d`, `#4a4a4a` on hover) plus a faint light edge, not a darker shadow.
 
 ### Decorative Depth
 The brand's real depth cue is **illustration**, not shadow. Feature sections layer small colourful app-icon stickers over plain surfaces to add playful dimensionality. Monochrome line illustrations provide the quiet spot art.
@@ -554,7 +559,7 @@ The site uses almost no photography — it is a content-and-type site. The one e
 - Pressed state `button-primary-pressed` darkens to `{colors.primary-active}`; marketing buttons also apply a brief `scale(0.9)` press transform.
 - Disabled state uses `{colors.surface-highlight}` fill with `{colors.ink-faint}` text.
 
-**`button-secondary`** — Pill button for secondary actions. `{colors.surface}` background, `{colors.ink}` text, 1px `{colors.hairline}` border, same pill shape and padding as primary.
+**`button-secondary`** — Pill button for secondary actions. `{colors.surface}` background, `{colors.ink}` text, 1px `{colors.hairline}` border, same pill shape and padding as primary. Hover fills `{colors.surface-highlight}` (a grey shade).
 
 **`button-utility`** — Nav / compact button. `{colors.surface}` background, `{colors.ink}` text, type `{typography.button}`, tighter `{rounded.sm}` (8px), padding 4px × 14px, 1px `{colors.hairline}` border. Used for compact actions where the marketing pill would be too large.
 
@@ -598,11 +603,11 @@ The site uses almost no photography — it is a content-and-type site. The one e
 
 ## Core Pages
 
-- **Home**: centred hero (serif headline with one blue word, primary + secondary CTA), four stat cards, Featured Flagships (2-column grid — Tsumly + Kaizenly row 1, MsgLoop centred row 2; an odd last product always centres in its own row), What I do, the attention band (photo + "Software that respects human attention is an ethical obligation."), What I stand for (three principle cards), the About black card, and the footer.
-- **Products** (index): product-card grid; each card links to its sub-page.
+- **Home**: centred hero (serif headline with one blue word, primary + secondary CTA; fills the first screen so the stat cards appear on scroll), four stat cards, Featured Flagships (2-column grid — Tsumly + Kaizenly row 1, MsgLoop centred row 2; an odd last product always centres in its own row; name left, category pill right in each card), What I do, the attention band (photo + "Software that respects human attention is an ethical obligation." — colour on hover, black-and-white otherwise), What I stand for (three principle cards), the About black card (bright in dark theme), and the footer.
+- **Products** (index): flagship-card grid (same cards as Home's Featured Flagships, 2 + 1 centred); each card links to its sub-page.
 - **Product sub-pages** (`/products/tsumly`, `/products/kaizenly`): hero (display headline + one-line description), feature cards, screenshots in rounded wells, download/store links, and a link back to Products. Product sub-pages inherit this system; a product's in-app brand does not recolour the page. Each product sub-site also has its own `/privacy/` and `/terms/` pages.
 - **About**: document-style long page on the warm canvas; serif section headlines, Inter body.
-- **Contact**: simple form (text-inputs + button-primary) on a card; errors via `{colors.danger}`, feedback via the toast bus.
+- **Contact**: "Talk to me." — a short lede (I read every message myself; what to write about), a mailto form (name, email, message — no backend), and Email + GitHub cards. Errors via `{colors.danger}`, feedback via the toast bus.
 - **Privacy / Terms**: document pages — warm canvas, serif headlines, Inter body, generous line-height.
 
 ## AI Readability

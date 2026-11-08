@@ -17,24 +17,55 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
         this one. Pick a product to open its pages.
       </p>
       </div>
-      <div class="product-grid">
-        <article class="card">
-          <div class="product-icon" aria-hidden="true">T</div>
-          <h2>Tsumly</h2>
-          <p>Every amount adds up. A local-first personal expense and loan ledger, with a smart multi-loan repayment split and optional Google Drive backup.</p>
-          <a href={`${base}products/tsumly/`}>Open Tsumly's site →</a>
+      <div class="flagship-grid">
+        <article class="flagship-card">
+          <div class="flagship-head-row">
+            <h2>Tsumly</h2>
+            <span class="flagship-pill"><span class="flagship-dot" style="background: #0d9488;"></span>Personal Money Ledger</span>
+          </div>
+          <p class="flagship-desc">
+            A <strong>local-first money ledger</strong> — every amount adds up.
+            Track expenses and loans on your own device, with an optional
+            <strong>encrypted Google Drive backup</strong>.
+          </p>
+          <ul class="feature-list">
+            <li><strong>Smart multi-loan repayment split</strong> — one repayment spread across your loans, the fair way.</li>
+            <li><strong>Pre-app loans</strong> — record loans from before the app without moving your balance.</li>
+            <li><strong>Person profiles</strong> — every loan tied to a person, with their totals at a glance.</li>
+          </ul>
+          <p><a href={`${base}products/tsumly/`}>Open Tsumly's site →</a></p>
         </article>
-        <article class="card">
-          <div class="product-icon" aria-hidden="true">K</div>
-          <h2>Kaizenly</h2>
-          <p>A strict, local-first focus guard — built from scratch to keep distracting apps shut when it matters.</p>
-          <a href={`${base}products/kaizenly/`}>Open Kaizenly's site →</a>
+        <article class="flagship-card">
+          <div class="flagship-head-row">
+            <h2>Kaizenly</h2>
+            <span class="flagship-pill"><span class="flagship-dot" style="background: #ea580c;"></span>Focus Guard</span>
+          </div>
+          <p class="flagship-desc">
+            A <strong>strict, local-first focus guard</strong> — timed sessions
+            that keep distracting apps shut when it matters.
+          </p>
+          <ul class="feature-list">
+            <li><strong>Sessions ("bags")</strong> — 15 min, 45 min, 3 h, or a custom length (3–12 h, premium).</li>
+            <li><strong>Parachute exit cost</strong> — quitting early costs something, so it stays a deliberate choice.</li>
+            <li><strong>Streaks, routines, and stats</strong> — the progress building up, visible day by day.</li>
+          </ul>
+          <p><a href={`${base}products/kaizenly/`}>Open Kaizenly's site →</a></p>
         </article>
-        <article class="card">
-          <div class="product-icon" aria-hidden="true">M</div>
-          <h2>MsgLoop</h2>
-          <p>Send a WhatsApp message up to 500 times, now or on a schedule, from a saved login on your phone.</p>
-          <a href={`${base}products/msgloop/`}>Open MsgLoop's site →</a>
+        <article class="flagship-card flagship-card--last">
+          <div class="flagship-head-row">
+            <h2>MsgLoop</h2>
+            <span class="flagship-pill"><span class="flagship-dot" style="background: #16a34a;"></span>WhatsApp Scheduler</span>
+          </div>
+          <p class="flagship-desc">
+            A <strong>WhatsApp sender for Android</strong> — one message, sent
+            many times, right now or on a schedule.
+          </p>
+          <ul class="feature-list">
+            <li><strong>Schedule for later</strong> — pick a date and time; an exact alarm sends when you said it would.</li>
+            <li><strong>A queue that survives anything</strong> — tasks live on the phone, through restarts and app kills.</li>
+            <li><strong>Private by design</strong> — no account, no server, no tracking.</li>
+          </ul>
+          <p><a href={`${base}products/msgloop/`}>Open MsgLoop's site →</a></p>
         </article>
       </div>
     </div>
