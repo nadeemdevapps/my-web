@@ -1,0 +1,43 @@
+---
+import Wordmark from './Wordmark.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const siteHome = 'https://nadeemdevapps.github.io/my-web/';
+---
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="footer-lockup" href={base} aria-label="Kaizenly — home">
+        <img src={`${base}logo.svg`} alt="" width="34" height="34" />
+        <Wordmark height={20} />
+      </a>
+      <p class="footer-tagline">Better every day.</p>
+      <p class="footer-built">
+        Built by <a href={siteHome}>Nadeem</a> — solo developer, Nadeem Dev Apps.
+      </p>
+    </div>
+
+    <nav class="footer-col" aria-label="Kaizenly">
+      <h2>Kaizenly</h2>
+      <ul>
+        <li><a href={base}>Overview</a></li>
+        <li><a href={`${base}privacy/`}>Privacy Policy</a></li>
+        <li><a href={`${base}terms/`}>Terms of Use</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer-col" aria-label="Machine-readable">
+      <h2>Machine</h2>
+      <ul>
+        <li><a href={`${base}llms.txt`}>llms.txt</a></li>
+        <li><a href={`${base}robots.txt`}>robots.txt</a></li>
+        <li><a href={`${base}sitemap.xml`}>sitemap.xml</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Nadeem Dev Apps — Built with Astro.</p>
+    <p>Your focus belongs to you.</p>
+  </div>
+</footer>

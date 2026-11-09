@@ -23,6 +23,10 @@ colors:
   ink-secondary: "#E4FAD3"   # secondary body copy — pale mint beige
   ink-muted: "#909C8A"       # supporting / muted copy — green-grey
   hairline: "#7A807A"        # 1px borders, dividers
+  nav: "#272E24"             # nav bar card — the app's navBackground
+  block: "#1A1E1C"           # block / celebration glass
+  label: "#686E62"           # block / celebration labels
+  handle: "#757C6D"          # sheet drag handle
   danger: "#FF6B57"          # the single reserved non-green colour besides the accent
 
 # LIGHT theme — the fresh-install default. Same token shape, lightness inverted.
@@ -40,6 +44,11 @@ colors-light:
   ink-secondary: "#717870"   # secondary body copy
   ink-muted: "#717870"
   hairline: "#5B615A"
+  peach: "#5B615A"           # unselected nav tint (light)
+  nav: "#FFFFFF"             # nav bar card — the app's navBackground
+  block: "#1A1E1C"           # block / celebration glass (same in both themes)
+  label: "#686E62"           # block / celebration labels (same in both themes)
+  handle: "#757C6D"          # sheet drag handle (same in both themes)
   danger: "#B3261E"
 
 # Typography: DM Sans carries everything — the app's own font (OFL).
@@ -215,9 +224,10 @@ components:
     textColor: "{colors.ink}"
     headlineTypography: "{typography.display-xl}"
     headlineAccent: "{colors.accent}" (one word)
-    # Dark canvas, huge DM Sans headline, one word in vivid green.
-    # The 3-tile mark sits above the headline; the pixel wordmark is
-    # the header lockup, not a hero element.
+    # Follows the active theme (dark anchor, light default). Huge DM Sans
+    # headline, one word in vivid green. The 3-tile mark sits above the
+    # headline; the pixel wordmark is the header lockup, not a hero element.
+    # A drifting floating pill and a live ticking timer echo the app.
   footer:
     backgroundColor: "{colors.canvas}"
     textColor: "{colors.ink-secondary}"
@@ -279,9 +289,10 @@ The site ships in **two polarities** that share every non-color token:
 2. **Light theme** — the fresh-install default (like the app). Neutral grey
    canvas (`{colors-light.canvas}` — #E0E0E0), green-tinted near-black ink.
 
-The theme follows the system by default and can be set explicitly to Dark
-or Light via the toggle. The light theme must read as the **same product**,
-not a recolor — only palette values change between the two.
+The theme is Light by default (the app's fresh-install default), and the
+toggle persists the choice. Dark is the design anchor: design against
+dark first, then ship light as the same product with palette values
+inverted in lightness.
 
 Surfaces are the app's surfaces: 24px cards (`{rounded.lg}`), pill CTAs,
 hairlines, barely-there shadows. The timer's huge square digits echo in
@@ -523,28 +534,28 @@ and the Machine column (llms.txt / robots.txt / sitemap.xml).
 ## Core Pages
 
 - **Home**: hero (3-tile mark, DM Sans headline with one green word,
-  primary + secondary CTA), the name section ("Why Kaizenly?" — Kai =
-  change, Zen = calm, ly = daily), Focus (bags, presets, wheel, slide to
-  start, floating pill, block screen, essentials, enforcement,
-  parachutes, break, hold to extend, soundscapes, settings passes,
-  routine-aware sessions), Routines & streaks, The Tower, Stats, Widgets,
-  Settings & backup, Premium, FAQ ("Kaizenly, answered."), the
-  local-first band ("Your focus belongs to you."), and the footer. Copy
-  carries over from the main site's `/products/kaizenly/` page, verified
-  against FEATURES.md in the app repo.
+  primary + secondary CTA, drifting floating pill, ticking timer), the name
+  section ("Why Kaizenly?" — Kai = change, Zen = calm, ly = daily), Focus
+  (bags, presets, wheel, slide to start, floating pill, block screen,
+  essentials, enforcement, parachutes, break, hold to extend, soundscapes,
+  settings passes, routine-aware sessions), Routines & streaks, The Tower
+  (builds block-by-block as you scroll), Stats, Widgets, Settings & backup,
+  Premium / free model, How to get parachutes (the reward rule + table),
+  FAQ ("Kaizenly, answered."), the local-first band ("Your focus belongs
+  to you."), About / developer (who built it, link to the main website),
+  and the footer. Copy carries over from the main site's
+  `/products/kaizenly/` page, verified against FEATURES.md in the app repo
+  and updated for the free model (see "Free model — decided" below).
 - **Privacy / Terms**: document pages — dark canvas, DM Sans headlines,
   generous line-height. Content carries over from the main site's
   `/products/kaizenly/privacy/` and `/terms/` pages.
-- **How to get parachutes** (planned — see Open decisions): a page or
-  section explaining how parachutes are earned in the free version.
 
 ## AI Readability
 
 Same discipline as the main site: semantic HTML, `llms.txt` +
-`llms-full.txt`, `robots.txt` allowing AI crawlers, `sitemap.xml`
-generated at build time, JSON-LD (`SoftwareApplication` + `FAQPage`) on
-the home page. The site's `llms.txt` lives at this folder's root when the
-site is extracted; until cutover it is served from the main site's copy.
+`llms-full.txt` (both in this folder's `public/`, served with the site),
+`robots.txt` allowing AI crawlers, `sitemap.xml` generated at build time,
+JSON-LD (`SoftwareApplication` + `FAQPage`) on the home page.
 
 ## Accessibility
 
@@ -565,27 +576,63 @@ site is extracted; until cutover it is served from the main site's copy.
   same product with palette values inverted in lightness.
 - **Only palette changes.** Spacing, type, radius, and components are
   identical across themes. Never branch layout or shape on theme.
-- **Theme source:** resolved from the toggle + system preference,
-  defaulting to light (the app's fresh-install default). Every token reads
-  the active palette, so theme flips re-colour the whole site without
+- **Theme source:** Light by default (the app's fresh-install default);
+  the toggle persists the choice in localStorage. Every token reads the
+  active palette, so theme flips re-colour the whole site without
   touching call sites.
 
-## Open decisions (do not build copy on these yet)
+## Free model — decided (2026-11-10, implemented in the app)
 
-- **Free vs paid model** (in discussion): all bags free, Routines tab free
-  (3 routines), parachutes free via a streak reward (3 continuous days of
-  ≥30-minute sessions → parachutes on a milestone schedule); Sign in with
-  Google and Leave a review removed from the profile sheet; Premium page
-  stays; the buy-packs UI stays but opens a "free version" bottom sheet;
-  a "How to get parachutes" explainer is planned. The milestone numbers,
-  the exact streak rule, the backup anti-tamper design, and the sounds
-  pack are still open questions — the site's Premium/FAQ copy must wait
-  for those answers.
-- **Cutover**: when this site goes live, its `dist` is copied into the
-  main site's `dist` under `/products/kaizenly/`, and the main site's
-  `src/pages/products/kaizenly.astro` + `kaizenly/privacy.astro` +
-  `kaizenly/terms.astro` are deleted. Until then the main site's pages
-  stay live and this folder builds standalone only.
+- **Free**: all 3 bags with 6 slots each, 3 routines (routine-own-bag
+  free), all 4 soundscapes, and parachutes earned free via streaks.
+- **Parachute streak**: a separate counter from the Tower. A qualifying
+  day = one session with ≥30 minutes of actual focus; at most one
+  qualifying day per calendar day. First 10 days pay DOUBLE (day 3 → +2,
+  days 4–10 → +2/day, day 10 → +6 that day with its +4 bonus); after day
+  10 → +1/day, day 20 → +6 that day (+1 daily + 5 bonus). Cumulative
+  totals: 3→2, 6→8, 10→20, 15→25, 20→35, 30→45. A missed day resets the
+  counter to 0 — Tower reserve blocks do not save it. Cap 99.
+- **Parachute costs**: break = 1 per 30-minute break; exit =
+  1 + 1 per started hour left (minimum 2); hold-to-extend and starting a
+  session over 3 hours need at least 1 parachute on board (not consumed);
+  enabling a routine needs at least 1 parachute.
+- **Still Premium**: sessions up to 12 hours (custom card) and silence /
+  Do Not Disturb during sessions. Premium is Rs 1,450 one-time (simulated
+  in v1 — no real billing yet; arrives with Play Billing).
+- **Never list as paid**: routines, bags, slots, sounds, parachutes. The
+  old site copy that listed them as paid was stale; the Premium page in
+  the app was revised the same day.
+- **Profile**: no sign-in, no "Leave a review" — the profile sheet has a
+  "How to get parachutes" row instead.
+
+## Cutover
+
+When this site goes live, its `dist` is copied into the main site's `dist`
+under `/products/kaizenly/`, and the main site's
+`src/pages/products/kaizenly.astro` + `kaizenly/privacy.astro` +
+`kaizenly/terms.astro` are deleted. Until then the main site's pages stay
+live and this folder builds standalone only.
+
+## Motion
+
+Motion is part of the identity, not decoration. The app's own motion
+language — pixel blocks that land, pills that drift, digits that tick —
+carries over to the web:
+
+- **Scroll-driven reveals**: feature cards and sections fade + rise into
+  view (`view-timeline` / `IntersectionObserver` fallback; transform and
+  opacity only).
+- **The Tower**: builds block-by-block as you scroll (7 blocks per floor,
+  reserve blocks in pale green) — the streak, made visible.
+- **Hero**: the floating pill drifts gently; the timer digits tick.
+- **3D scrolling**: hero and section art tilt on scroll (`perspective` +
+  `rotateX` / `rotateY`, driven by scroll progress), parallax on the
+  background tiles.
+- **Reward table**: rows highlight in sequence as the streak grows.
+- **Rules**: motion is transform/opacity only (no layout thrash);
+  `prefers-reduced-motion` disables all of it (content fully visible, no
+  animation); no JS framework — small page-scoped scripts only, like the
+  main site's Products filter script.
 
 ## Do's and Don'ts
 

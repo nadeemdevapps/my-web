@@ -1,0 +1,69 @@
+---
+import KaizenLayout from '../layouts/KaizenLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+const sections = [
+  {
+    heading: 'What Kaizenly collects',
+    body: 'Almost nothing. Kaizenly stores your sessions in a local database on your device, and bags, routines, and settings in on-device preferences. It does not collect your name, email, contacts, location, or the contents of your apps. There is no Kaizenly account and no sign-up.',
+  },
+  {
+    heading: 'Blocked-app information',
+    body: "Kaizenly keeps a local list of the apps you choose to block, and records when they are blocked. That information stays on your device; it is never sent anywhere. Android's usage-access and accessibility permissions are used only to detect and block apps during a session.",
+  },
+  {
+    heading: 'What stays on your device',
+    body: 'Everything. Sessions, bags, routines, settings, your streak and Tower progress, and your parachutes are all stored locally. On Android the app opts out of automatic cloud backup (allowBackup=false), so a fresh install starts empty and uninstalling the app wipes its local data. There is no analytics, no advertising, no tracking, and no third-party code that sends data anywhere.',
+  },
+  {
+    heading: 'Backup',
+    body: 'You can export a JSON backup of your data yourself, and import it back. Kaizenly does not upload your data anywhere, and it does not store any backup on a server. Your backup file is yours — keep it safe, since anyone with the file can read what is in it.',
+  },
+  {
+    heading: 'Premium purchases',
+    body: 'Premium features, when they go live, will be sold through Google Play Billing. Kaizenly does not receive your card number, bank details, or any other payment information; payments are handled entirely by Google Play.',
+  },
+  {
+    heading: 'Permissions',
+    body: "Kaizenly needs usage access, the accessibility service, device admin, and the overlay permission to block apps. Those permissions are used only for blocking, and only while you have a session or routine running. You can revoke them at any time in your phone's settings; blocking may stop working, including sessions already in progress.",
+  },
+  {
+    heading: 'Children',
+    body: 'Kaizenly does not collect any personal data, and no data is shared with third parties. The app has no ads, no account, and no in-app communication with other people.',
+  },
+  {
+    heading: 'Changes to this policy',
+    body: 'This policy may be updated from time to time. The version on this page is always the current one.',
+  },
+  {
+    heading: 'Contact',
+    body: 'Questions about this policy? Email nadeem.devapps@gmail.com.',
+  },
+];
+---
+
+<KaizenLayout
+  title="Kaizenly Privacy Policy"
+  description="Kaizenly's privacy policy — a strict local-first focus guard that collects almost nothing. Your sessions, bags, routines, and streaks stay on your device."
+>
+  <main class="doc">
+    <div class="container doc-inner">
+      <a class="doc-back" href={base}>← Back to Overview</a>
+      <h1>Kaizenly Privacy Policy</h1>
+      <p class="doc-intro">
+        Kaizenly is a strict focus guard, and a private one. This policy
+        explains what it collects — almost nothing — and where your data lives.
+      </p>
+      <p class="doc-updated">Last updated: 10 November 2026.</p>
+      {
+        sections.map((s) => (
+          <section class="doc-section">
+            <h2>{s.heading}</h2>
+            <p>{s.body}</p>
+          </section>
+        ))
+      }
+    </div>
+  </main>
+</KaizenLayout>

@@ -8,11 +8,18 @@ spirit — this folder pins the same Astro version as the main site.
 
 ## Status
 
-Scaffold (2026-11-10): the project builds; the home page is a hero-only
-placeholder carrying the verified H1 + lede. The full page (features,
-Tower, stats, FAQ, footer) and the Privacy/Terms pages are built next,
-carrying copy over from the main site's `/products/kaizenly/` pages,
-verified against `FEATURES.md` in the app repo.
+Complete (2026-11-10): the full site is built — Home (hero, Why Kaizenly?,
+Focus, Routines & streaks, the Tower, Stats, Widgets, Settings & backup,
+Free & Premium, How to get parachutes, FAQ, local-first band, About, footer)
+plus Privacy and Terms. Copy carries over from the main site's
+`/products/kaizenly/` pages, verified against `FEATURES.md` in the app repo
+and updated for the free model (bags, routines, sounds, and parachutes are
+free; Premium is 12-hour sessions + silence/DND only). Motion: scroll
+reveals, the Tower building block-by-block, a ticking timer, a drifting
+floating pill, and 3D scroll tilt — all transform/opacity only, disabled
+under `prefers-reduced-motion`. SEO: `llms.txt` + `llms-full.txt`,
+`robots.txt`, `sitemap.xml` at build time, JSON-LD
+(`SoftwareApplication` + `FAQPage`) on Home.
 
 ## Run it
 

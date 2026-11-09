@@ -1,0 +1,32 @@
+---
+// The KAIZENLY pixel wordmark, drawn in the app's own tile alphabet
+// (PixelText.kt: 3x5 PixelFont, 0.9-cell letter gap, 14% cell gap).
+// The centre tile of the Z is the brand accent — the same nod the app
+// makes to the little orange block in the reference mark, now green.
+// Ink tiles use currentColor so the mark follows the active theme.
+interface Props {
+  height?: number;
+  class?: string;
+}
+const { height = 20, class: className = '' } = Astro.props;
+---
+<svg
+  class={className}
+  height={height}
+  viewBox="0 0 303 50"
+  role="img"
+  aria-label="Kaizenly"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g fill="currentColor">
+    <rect x="0.7" y="0.7" width="8.6" height="8.6" /><rect x="20.7" y="0.7" width="8.6" height="8.6" /><rect x="0.7" y="10.7" width="8.6" height="8.6" /><rect x="20.7" y="10.7" width="8.6" height="8.6" /><rect x="0.7" y="20.7" width="8.6" height="8.6" /><rect x="10.7" y="20.7" width="8.6" height="8.6" /><rect x="0.7" y="30.7" width="8.6" height="8.6" /><rect x="20.7" y="30.7" width="8.6" height="8.6" /><rect x="0.7" y="40.7" width="8.6" height="8.6" /><rect x="20.7" y="40.7" width="8.6" height="8.6" />
+    <rect x="49.7" y="0.7" width="8.6" height="8.6" /><rect x="39.7" y="10.7" width="8.6" height="8.6" /><rect x="59.7" y="10.7" width="8.6" height="8.6" /><rect x="39.7" y="20.7" width="8.6" height="8.6" /><rect x="49.7" y="20.7" width="8.6" height="8.6" /><rect x="59.7" y="20.7" width="8.6" height="8.6" /><rect x="39.7" y="30.7" width="8.6" height="8.6" /><rect x="59.7" y="30.7" width="8.6" height="8.6" /><rect x="39.7" y="40.7" width="8.6" height="8.6" /><rect x="59.7" y="40.7" width="8.6" height="8.6" />
+    <rect x="78.7" y="0.7" width="8.6" height="8.6" /><rect x="88.7" y="0.7" width="8.6" height="8.6" /><rect x="98.7" y="0.7" width="8.6" height="8.6" /><rect x="88.7" y="10.7" width="8.6" height="8.6" /><rect x="88.7" y="20.7" width="8.6" height="8.6" /><rect x="88.7" y="30.7" width="8.6" height="8.6" /><rect x="78.7" y="40.7" width="8.6" height="8.6" /><rect x="88.7" y="40.7" width="8.6" height="8.6" /><rect x="98.7" y="40.7" width="8.6" height="8.6" />
+    <rect x="117.7" y="0.7" width="8.6" height="8.6" /><rect x="127.7" y="0.7" width="8.6" height="8.6" /><rect x="137.7" y="0.7" width="8.6" height="8.6" /><rect x="137.7" y="10.7" width="8.6" height="8.6" /><rect x="117.7" y="30.7" width="8.6" height="8.6" /><rect x="117.7" y="40.7" width="8.6" height="8.6" /><rect x="127.7" y="40.7" width="8.6" height="8.6" /><rect x="137.7" y="40.7" width="8.6" height="8.6" />
+    <rect x="156.7" y="0.7" width="8.6" height="8.6" /><rect x="166.7" y="0.7" width="8.6" height="8.6" /><rect x="176.7" y="0.7" width="8.6" height="8.6" /><rect x="156.7" y="10.7" width="8.6" height="8.6" /><rect x="156.7" y="20.7" width="8.6" height="8.6" /><rect x="166.7" y="20.7" width="8.6" height="8.6" /><rect x="156.7" y="30.7" width="8.6" height="8.6" /><rect x="156.7" y="40.7" width="8.6" height="8.6" /><rect x="166.7" y="40.7" width="8.6" height="8.6" /><rect x="176.7" y="40.7" width="8.6" height="8.6" />
+    <rect x="195.7" y="0.7" width="8.6" height="8.6" /><rect x="215.7" y="0.7" width="8.6" height="8.6" /><rect x="195.7" y="10.7" width="8.6" height="8.6" /><rect x="205.7" y="10.7" width="8.6" height="8.6" /><rect x="215.7" y="10.7" width="8.6" height="8.6" /><rect x="195.7" y="20.7" width="8.6" height="8.6" /><rect x="205.7" y="20.7" width="8.6" height="8.6" /><rect x="215.7" y="20.7" width="8.6" height="8.6" /><rect x="195.7" y="30.7" width="8.6" height="8.6" /><rect x="205.7" y="30.7" width="8.6" height="8.6" /><rect x="215.7" y="30.7" width="8.6" height="8.6" /><rect x="195.7" y="40.7" width="8.6" height="8.6" /><rect x="215.7" y="40.7" width="8.6" height="8.6" />
+    <rect x="234.7" y="0.7" width="8.6" height="8.6" /><rect x="234.7" y="10.7" width="8.6" height="8.6" /><rect x="234.7" y="20.7" width="8.6" height="8.6" /><rect x="234.7" y="30.7" width="8.6" height="8.6" /><rect x="234.7" y="40.7" width="8.6" height="8.6" /><rect x="244.7" y="40.7" width="8.6" height="8.6" /><rect x="254.7" y="40.7" width="8.6" height="8.6" />
+    <rect x="273.7" y="0.7" width="8.6" height="8.6" /><rect x="293.7" y="0.7" width="8.6" height="8.6" /><rect x="273.7" y="10.7" width="8.6" height="8.6" /><rect x="293.7" y="10.7" width="8.6" height="8.6" /><rect x="283.7" y="20.7" width="8.6" height="8.6" /><rect x="283.7" y="30.7" width="8.6" height="8.6" /><rect x="283.7" y="40.7" width="8.6" height="8.6" />
+  </g>
+  <rect x="127.7" y="20.7" width="8.6" height="8.6" fill="#27f24c" />
+</svg>
