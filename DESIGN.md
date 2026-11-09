@@ -597,7 +597,7 @@ The site uses almost no photography — it is a content-and-type site. The one e
 
 **`inverted-band`** — A polarity-flipped emphasis band for mid-page moments. `{colors.primary}` fill, `{colors.on-primary}` text, `{typography.display-sm}` serif headline, 12px radius. Use sparingly.
 
-**`footer`** — Site footer. Warm `{colors.canvas}` band, `{colors.ink-secondary}` link text at `{typography.caption}`, padding `{spacing.xxl}`. Multi-column link directory closing every page.
+**`footer`** — Site footer. Warm `{colors.canvas}` band, `{colors.ink-secondary}` link text at `{typography.caption}`, padding `{spacing.xxl}`. Brand column (wordmark, tagline, mailto pill with the real contact email) + four link columns — Products, Site, Machine (llms.txt / robots.txt / sitemap.xml), Legal — closing every page. Bottom row: "© 2026 Nadeem Dev Apps — Built with Astro." with GitHub + Back to top links. Five-column grid collapses to two columns (brand full-width) at ≤1080px.
 
 **`stat-tile`** — A stat block. `{colors.surface}` background, value in `{typography.display-sm}` serif, caption in `{typography.caption}`, 12px radius, 16px padding.
 

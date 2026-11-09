@@ -122,6 +122,7 @@ const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
           <div class="footer-brand">
             <a class="wordmark" href={`${base}`} style="font-size: 18px;"><Logo size={22} /> Nadeem Dev Apps</a>
             <p>Local-first tools that solve one problem well.</p>
+            <a class="footer-mail" href="mailto:nadeem.devapps@gmail.com"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg> nadeem.devapps@gmail.com</a>
           </div>
           <nav aria-label="Products">
             <h3>Products</h3>
@@ -137,6 +138,12 @@ const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
             <a href={`${base}about/`}>About</a>
             <a href={`${base}contact/`}>Contact</a>
           </nav>
+          <nav aria-label="Machine">
+            <h3>Machine</h3>
+            <a href={`${base}llms.txt`}>llms.txt</a>
+            <a href={`${base}robots.txt`}>robots.txt</a>
+            <a href={`${base}sitemap.xml`}>sitemap.xml</a>
+          </nav>
           <nav aria-label="Legal">
             <h3>Legal</h3>
             <a href={`${base}privacy/`}>Privacy</a>
@@ -144,7 +151,7 @@ const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
           </nav>
         </div>
         <div class="footer-bottom">
-          <span>© 2026 Nadeem Dev Apps</span>
+          <span>© 2026 Nadeem Dev Apps — Built with Astro.</span>
           <div class="footer-bottom-links">
             <a href="https://github.com/nadeemdevapps">GitHub</a>
             <a href="#top">Back to top ↑</a>
