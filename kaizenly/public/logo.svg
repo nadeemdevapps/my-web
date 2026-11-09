@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108">
+  <!-- Kaizenly mark: three stacked tiles forming a K. Theme-reactive via currentColor. -->
+  <g fill="currentColor">
+    <path d="M22,72c-3,0 -5.5,2 -5.5,5v16c0,3 2.5,5 5.5,5h32c3,0 5.5,-2 5.5,-5v-16c0,-3 -2.5,-5 -5.5,-5z" />
+    <path d="M44,44c-2,0 -4,1.5 -4,3.5v16c0,2 2,5.5 4,5.5h20c2,0 4,-1.5 4,-3.5v-16c0,-2 -2,-5.5 -4,-5.5z" />
+  </g>
+  <path fill="#27F24C" d="M72,22c-3,0 -5.5,2 -5.5,5v16c0,3 2.5,5 5.5,5h20c3,0 5.5,-2 5.5,-5v-16c0,-3 -2.5,-5 -5.5,-5z" />
+</svg>

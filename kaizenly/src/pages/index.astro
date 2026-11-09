@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+
+// Scaffold home page — hero only. The full page (features, Tower, stats,
+// FAQ, footer) is built next, from the verified copy on the main site's
+// /products/kaizenly/ page and FEATURES.md in the app repo.
+---
+
+<BaseLayout
+  title="Kaizenly — Strict Focus Guard for Android"
+  description="Kaizenly is a strict, local-first focus guard for Android — timed focus sessions, a floating pill, and an exit cost that keeps distracting apps blocked."
+>
+  <main>
+    <section>
+      <div class="container narrow">
+        <h1>A little better, every day.</h1>
+        <p>
+          Kaizenly is a <strong>strict, local-first focus guard</strong> for
+          Android: pick a time — <strong>15 minutes, 45 minutes, 3 hours, or a
+          custom 3–12 hour session</strong> — pick the apps that distract you,
+          and start a session. Everything in the bag stays shut until the timer
+          ends, and quitting early costs parachutes, so ending is a deliberate
+          choice.
+        </p>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  section {
+    padding: 64px 0;
+  }
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 16px;
+  }
+  h1 + p {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+  strong {
+    color: var(--text);
+  }
+</style>

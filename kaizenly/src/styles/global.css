@@ -1,0 +1,72 @@
+/* Kaizenly tokens — from the app (COLORS.md). Dark is the design anchor;
+   light is the fresh-install default. Only palette values change between
+   themes; type, spacing, radius and components are identical. */
+
+:root,
+[data-theme='dark'] {
+  --accent: #27f24c;
+  --accent-deep: #1dbf3a;
+  --accent-deeper: #17992f;
+  --pale: #cbe8c3;
+  --on-accent: #1c2d28;
+  --bg: #1d201a;
+  --surface: #2a3327;
+  --surface-variant: #232720;
+  --sheet: #2a2e26;
+  --text: #ecfbe1;
+  --text-secondary: #e4fad3;
+  --muted: #909c8a;
+  --outline: #7a807a;
+  --danger: #ff6b57;
+}
+
+[data-theme='light'] {
+  --accent: #1dbf3a;
+  --accent-deep: #17992f;
+  --accent-deeper: #17992f;
+  --pale: #cbe8c3;
+  --on-accent: #1c2d28;
+  --bg: #e0e0e0;
+  --surface: #ffffff;
+  --surface-variant: #dbdbdb;
+  --sheet: #e0e0e0;
+  --text: #2a2c29;
+  --text-secondary: #717870;
+  --muted: #717870;
+  --outline: #5b615a;
+  --danger: #b3261e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+a {
+  color: var(--accent);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container.narrow {
+  max-width: 780px;
+}

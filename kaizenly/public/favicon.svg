@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108">
+  <rect width="108" height="108" rx="24" fill="#1D201A" />
+  <!-- Three stacked tiles forming the K mark — same geometry as the launcher icon. -->
+  <path fill="#ECFBE1" d="M22,72c-3,0 -5.5,2 -5.5,5v16c0,3 2.5,5 5.5,5h32c3,0 5.5,-2 5.5,-5v-16c0,-3 -2.5,-5 -5.5,-5z" />
+  <path fill="#ECFBE1" d="M44,44c-2,0 -4,1.5 -4,3.5v16c0,2 2,5.5 4,5.5h20c2,0 4,-1.5 4,-3.5v-16c0,-2 -2,-5.5 -4,-5.5z" />
+  <path fill="#27F24C" d="M72,22c-3,0 -5.5,2 -5.5,5v16c0,3 2.5,5 5.5,5h20c3,0 5.5,-2 5.5,-5v-16c0,-3 -2.5,-5 -5.5,-5z" />
+</svg>
