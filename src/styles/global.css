@@ -549,8 +549,37 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .project-card:hover {
   box-shadow: 0 0.5px 1.8px rgba(0, 0, 0, 0.015), 0 2px 6px rgba(0, 0, 0, 0.03), 0 6px 16px rgba(0, 0, 0, 0.05);
 }
+/* Custom product cards: Tsumly + Kaizenly use their own canvas + real
+   icon (their DESIGN.md palettes), with a slight tilt on hover. */
+.project-card--tsumly {
+  background: color-mix(in srgb, #e8e1f7 65%, var(--color-surface));
+  border-color: color-mix(in srgb, #6c4de6 28%, var(--color-hairline));
+  transition: box-shadow 0.15s ease, transform 0.25s ease;
+}
+.project-card--kaizenly {
+  background: color-mix(in srgb, #ecfbe1 65%, var(--color-surface));
+  border-color: color-mix(in srgb, #27f24c 35%, var(--color-hairline));
+  transition: box-shadow 0.15s ease, transform 0.25s ease;
+}
+.project-card--tsumly:hover,
+.project-card--kaizenly:hover {
+  transform: perspective(900px) rotateX(2.5deg) rotateY(-2.5deg) translateY(-4px);
+}
+.project-card--tsumly .project-icon,
+.project-card--kaizenly .project-icon {
+  background: transparent;
+  width: 44px;
+  height: 44px;
+}
+.project-card--tsumly .project-icon img,
+.project-card--kaizenly .project-icon img {
+  width: 44px;
+  height: 44px;
+}
 @media (prefers-reduced-motion: reduce) {
   .project-card { transition: none; }
+  .project-card--tsumly:hover,
+  .project-card--kaizenly:hover { transform: none; }
 }
 .project-card.is-hidden { display: none; }
 .project-top-row {

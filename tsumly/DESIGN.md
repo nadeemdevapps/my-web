@@ -679,10 +679,10 @@ font), caption in `{typography.caption}`, 20px radius, 16px padding.
   section closes the page: one paragraph (solo developer, builds with
   AI, every app starts as his own problem) + contact + a link to the
   portfolio home. The developer bio does NOT repeat the main portfolio
-  site — it lives there. No location is stated anywhere on this site for
-  the developer ("solo developer", never "in Pakistan"); the app's
-  Pakistani-household starter categories are a product fact, not
-  developer bio, and stay on Features.
+  site — it lives there. No location is stated anywhere on any site
+  for the developer ("solo developer", never a country); no Pakistan
+  mention anywhere (2026-11-10 decision) — the starter categories are
+  "for everyday households".
 - **Download**: links on top — primary "Get Tsumly on GitHub" → the
   GitHub releases page (the release page, never a direct APK link),
   secondary "Explore features" → Features. "What to expect" card

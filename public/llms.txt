@@ -1,6 +1,6 @@
 # Nadeem Dev Apps
 
-> Nadeem Mazhar is a solo developer in Pakistan building websites, Windows apps,
+> Nadeem Mazhar is a solo developer building websites, Windows apps,
 > Android apps, and backends, with AI doing the heavy lifting. This site is his
 > portfolio; products live as sub-pages.
 

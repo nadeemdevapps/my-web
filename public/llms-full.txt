@@ -1,6 +1,6 @@
 # Nadeem Dev Apps — Full Site Text
 
-> Nadeem Mazhar is a solo developer in Pakistan building websites, Windows apps, Android apps, and backends, with AI doing the heavy lifting under his direction.
+> Nadeem Mazhar is a solo developer building websites, Windows apps, Android apps, and backends, with AI doing the heavy lifting under his direction.
 
 This file is the full-text companion to [llms.txt](https://nadeemdevapps.github.io/my-web/llms.txt). It contains the full text of every page on this site, in reading order, so an AI system can read the whole site in a single request instead of crawling page by page. The text here matches the live pages; the legal pages at the end are summarized with links to the full text.
 
@@ -14,7 +14,7 @@ https://nadeemdevapps.github.io/my-web/
 
 # I'm Nadeem Mazhar — I build apps and websites for real life.
 
-Solo developer in Pakistan. I plan, design, and ship websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs — with AI doing the heavy lifting under my direction.
+Solo developer. I plan, design, and ship websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs — with AI doing the heavy lifting under my direction.
 
 - **Websites, apps & backends** — Websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs.
 - **3 products** — Tsumly, Kaizenly, and MsgLoop — each one built to solve a problem of my own.
@@ -72,7 +72,7 @@ Three rules govern everything I ship — every app, every page.
 
 ## A solo developer, building for himself first.
 
-I'm Nadeem Mazhar, a solo developer in Pakistan. I build the tools I wish existed — planned, documented, reviewed, and shipped. Tsumly and Kaizenly started as personal problems: a ledger that never added up, a phone that never stayed quiet. They ship when they work in daily use, not before.
+I'm Nadeem Mazhar, a solo developer. I build the tools I wish existed — planned, documented, reviewed, and shipped. Tsumly and Kaizenly started as personal problems: a ledger that never added up, a phone that never stayed quiet. They ship when they work in daily use, not before.
 
 ---
 
@@ -82,11 +82,11 @@ https://nadeemdevapps.github.io/my-web/about/
 
 # I'm Nadeem Mazhar.
 
-Nadeem Dev Apps is my **one-developer studio**. I'm a **solo developer in Pakistan** — no partner, no team — I plan, design, and ship **websites, Windows apps, Android apps, and backends**, with AI tools doing the heavy lifting under my direction. Tsumly and Kaizenly started as my own problems, and they ship only when they work in daily use.
+Nadeem Dev Apps is my **one-developer studio**. I'm a **solo developer** — no partner, no team — I plan, design, and ship **websites, Windows apps, Android apps, and backends**, with AI tools doing the heavy lifting under my direction. Tsumly and Kaizenly started as my own problems, and they ship only when they work in daily use.
 
 ## A solo developer, building for himself first.
 
-I'm a **solo developer based in Pakistan** — no partners, no team. I work the way a one-person studio should: I **plan** the product, **design** the interface, **direct** the build, and **review** everything before it ships. AI tools do the heavy lifting; the decisions are mine.
+I'm a **solo developer** — no partners, no team. I work the way a one-person studio should: I **plan** the product, **design** the interface, **direct** the build, and **review** everything before it ships. AI tools do the heavy lifting; the decisions are mine.
 
 I'm still learning some languages, and I know the basics of others — but the job was never typing syntax by hand. The job is **exploration, working with AI, UI design, planning, brainstorming, problem-solving, and security analysis** — and that's where I'm strong. I ship real products by combining my judgment with the best tools available.
 
@@ -110,7 +110,7 @@ Everything I make is **free to use right now**.
 
 ### Who is Nadeem Mazhar?
 
-Nadeem Mazhar is a solo developer in Pakistan who runs Nadeem Dev Apps, a one-developer studio with no partners and no team. He plans, designs, and ships websites, Windows apps, Android apps, and backends, and his apps Tsumly and Kaizenly started as his own problems.
+Nadeem Mazhar is a solo developer who runs Nadeem Dev Apps, a one-developer studio with no partners and no team. He plans, designs, and ships websites, Windows apps, Android apps, and backends, and his apps Tsumly and Kaizenly started as his own problems.
 
 ### What does Nadeem build?
 
@@ -351,7 +351,7 @@ Privacy and Terms are already live on this site.
 
 ## Built by Nadeem.
 
-MsgLoop was built by **Nadeem Mazhar**, a solo developer in Pakistan, as part of Nadeem Dev Apps.
+MsgLoop was built by **Nadeem Mazhar**, a solo developer, as part of Nadeem Dev Apps.
 
 
 ---
