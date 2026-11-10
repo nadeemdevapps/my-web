@@ -562,7 +562,11 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   transition: box-shadow 0.15s ease, transform 0.25s ease;
 }
 .project-card--tsumly:hover,
-.project-card--kaizenly:hover {
+.project-card--tsumly:active,
+.project-card--tsumly:focus-within,
+.project-card--kaizenly:hover,
+.project-card--kaizenly:active,
+.project-card--kaizenly:focus-within {
   transform: perspective(900px) rotateX(2.5deg) rotateY(-2.5deg) translateY(-4px);
 }
 .project-card--tsumly .project-icon,
@@ -579,7 +583,11 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 @media (prefers-reduced-motion: reduce) {
   .project-card { transition: none; }
   .project-card--tsumly:hover,
-  .project-card--kaizenly:hover { transform: none; }
+  .project-card--tsumly:active,
+  .project-card--tsumly:focus-within,
+  .project-card--kaizenly:hover,
+  .project-card--kaizenly:active,
+  .project-card--kaizenly:focus-within { transform: none; }
 }
 .project-card.is-hidden { display: none; }
 .project-top-row {
@@ -723,6 +731,20 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 [data-theme="dark"] .project-card:hover {
   border-color: #4a4a4a;
   box-shadow: 0 2px 6px rgba(255, 255, 255, 0.07), 0 12px 32px rgba(0, 0, 0, 0.55);
+}
+
+/* Dark theme for the custom Tsumly/Kaizenly cards: the light canvas mix
+   stays light while the text goes light, so the cards get their dark
+   tints instead (Tsumly dark plum / Kaizenly dark green). */
+[data-theme="dark"] .project-card--tsumly,
+[data-theme="dark"] .project-card--tsumly:hover {
+  background: color-mix(in srgb, #6c4de6 16%, var(--color-surface));
+  border-color: color-mix(in srgb, #6c4de6 38%, var(--color-hairline));
+}
+[data-theme="dark"] .project-card--kaizenly,
+[data-theme="dark"] .project-card--kaizenly:hover {
+  background: color-mix(in srgb, #27f24c 12%, var(--color-surface));
+  border-color: color-mix(in srgb, #27f24c 32%, var(--color-hairline));
 }
 
 /* About black card — condensed About on a dark block (fixed dark colours,
