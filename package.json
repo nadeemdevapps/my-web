@@ -1,1 +1,1 @@
-{"dependencies":{"@astrojs/sitemap":"^3.2.0","astro":"^5.12.0"},"name":"my-web","private":true,"scripts":{"astro":"astro","build":"astro build && node scripts/merge-kaizenly.mjs","dev":"astro dev","preview":"astro preview"},"type":"module","version":"0.1.0"}
+{"dependencies":{"@astrojs/sitemap":"^3.2.0","astro":"^5.12.0"},"name":"my-web","private":true,"scripts":{"astro":"astro","build":"astro build && node scripts/merge-kaizenly.mjs && node scripts/merge-tsumly.mjs","dev":"astro dev","preview":"astro preview"},"type":"module","version":"0.1.0"}

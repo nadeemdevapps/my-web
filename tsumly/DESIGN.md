@@ -617,7 +617,10 @@ background, `{typography.title-md}` title, `{typography.body-md}` body,
 **`hero`** — Pale lavender-cream canvas, `{colors.ink}` text,
 `{typography.display-xl}` Bricolage two-tone headline ("Every amount"
 dim → "adds up." strong), and a `button-primary` + `button-secondary`
-CTA pair. Tsumu sits above the headline.
+CTA pair. Primary CTA is "Get Tsumly on GitHub" → the GitHub releases
+page (the release page, never a direct APK link); secondary CTA is "See
+how it works" → `#how-it-works`. A small note under the CTAs reads
+"Free. Android. No account needed." Tsumu sits above the headline.
 
 **`footer`** — Own footer. `{colors.canvas}` band,
 `{colors.ink-secondary}` link text at `{typography.caption}`, padding
@@ -645,7 +648,9 @@ font), caption in `{typography.caption}`, 20px radius, 16px padding.
   (available balance, net position, lent & borrowed, quick actions,
   daily quote), Loan reminders (due-date 9:00 AM + overdue), Make it
   yours (theme, display font, currency, name), Backup & privacy
-  (offline-first, encrypted Drive backup, no tracking), and the footer.
+  (offline-first, encrypted Drive backup, no tracking), FAQ (six
+  questions, each answer a restatement of verified copy — drives the
+  FAQPage JSON-LD), and the footer.
   Copy carries over from the main site's `/products/tsumly/` page,
   verified against the app repo and `docs/06_DESIGN.md`.
 - **Privacy / Terms**: document pages — warm canvas, Bricolage
@@ -657,8 +662,10 @@ font), caption in `{typography.caption}`, 20px radius, 16px padding.
 Same discipline as the main site: semantic HTML, `llms.txt` +
 `llms-full.txt`, `robots.txt` allowing AI crawlers, `sitemap.xml`
 generated at build time, JSON-LD (`SoftwareApplication` + `FAQPage`) on
-the home page. The site's `llms.txt` lives at this folder's root when the
-site is extracted; until cutover it is served from the main site's copy.
+the home page — the FAQPage is driven by the on-page FAQ section, never
+invented. The site's `llms.txt` + `llms-full.txt` + `robots.txt` live in
+`public/` and are served at `/products/tsumly/llms.txt` (and so on) after
+cutover; the root `robots.txt` also lists the Tsumly sitemap.
 
 ## Accessibility
 
@@ -730,10 +737,17 @@ own sake"):
   ticks; the site mark drops them so the stack stays legible at
   20–28px. The full wave mascot (with arms) is for large illustration
   use in Step 2, not the header lockup.
-- **Cutover**: when this site goes live, its `dist` is copied into the
-  main site's `dist` under `/products/tsumly/`, and the main site's
-  `src/pages/products/tsumly.astro` is deleted. Until then the main
-  site's page stays live and this folder builds standalone only.
+- **Cutover**: when this site goes live, the durable merge runs — root
+  `package.json` build is `astro build && node scripts/merge-kaizenly.mjs
+  && node scripts/merge-tsumly.mjs`; `scripts/merge-tsumly.mjs`
+  auto-installs tsumly deps if `node_modules` is missing, builds
+  `tsumly/`, copies its dist into `dist/products/tsumly/`, verifies
+  index/privacy/terms exist, and fails loudly otherwise. Cutover deletes
+  the main site's `src/pages/products/tsumly.astro` AND
+  `src/pages/products/tsumly/privacy.astro` AND
+  `src/pages/products/tsumly/terms.astro`, and the root `robots.txt`
+  gains the Tsumly sitemap line. Until then the main site's pages stay
+  live and this folder builds standalone only.
 
 ## Tint revision — purple canvas (2026-11-10)
 
@@ -749,10 +763,19 @@ Contrast re-calculated (see Contrast): ink 13.4:1, purple 4.3:1, purpleDeep
 
 ## Cutover
 
-When this site goes live, its `dist` is copied into the main site's `dist`
-under `/products/tsumly/`, and the main site's
-`src/pages/products/tsumly.astro` is deleted. Until then the main site's
-page stays live and this folder builds standalone only.
+When this site goes live, the durable merge runs, not a manual copy:
+root `package.json` build is `astro build && node
+scripts/merge-kaizenly.mjs && node scripts/merge-tsumly.mjs`.
+`scripts/merge-tsumly.mjs` auto-installs tsumly deps if `node_modules`
+is missing, builds `tsumly/`, copies its dist into
+`dist/products/tsumly/`, verifies index/privacy/terms exist, and fails
+loudly otherwise — no workflow change needed (deploy.yml runs `npm run
+build`). Cutover deletes the main site's
+`src/pages/products/tsumly.astro` AND
+`src/pages/products/tsumly/privacy.astro` AND
+`src/pages/products/tsumly/terms.astro`, and the root `robots.txt` gains
+the Tsumly sitemap line. Until then the main site's pages stay live and
+this folder builds standalone only.
 
 ## Do's and Don'ts
 

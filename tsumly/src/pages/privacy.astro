@@ -1,0 +1,68 @@
+---
+import TsumlyLayout from '../layouts/TsumlyLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+const sections = [
+  {
+    heading: 'The short version',
+    body: 'Tsumly is private by design. It does not collect, track, profile, or upload personal data. No Tsumly account or signup is required, and there are no analytics, advertising, or tracking SDKs. Your records stay on this device unless you choose to make a backup. If you choose Google Drive backup, Google Sign-In and Google Drive process the account and authentication information needed to provide that feature.',
+  },
+  {
+    heading: 'What stays on your device',
+    body: "Your accounts, transactions, transfers, loans, repayments, people, categories, settings, and optional profile name are stored only in the app's local database (SQLite) on your phone. Uninstalling the app (or clearing its data) removes them. Android automatic backup is disabled for the app, so the operating system never silently copies your data to the cloud.",
+  },
+  {
+    heading: 'Local backups',
+    body: 'Exporting a backup produces a file you control (.moneybackup), and import is validated before anything is written. An unencrypted backup file contains readable financial data — store it privately, like you would any sensitive document.',
+  },
+  {
+    heading: 'Google Drive backup (optional)',
+    body: 'Drive backup is optional and off by default. If you sign in, Tsumly uploads backup files to the hidden appDataFolder of your own Google account. The app requests only the drive.appdata OAuth scope (https://www.googleapis.com/auth/drive.appdata), which limits it to its own hidden folder — it cannot see, list, or access any other files in your Drive. Backups never pass through any server run by us (we run none). You can disconnect your Google account at any time in Settings; disconnecting stops future uploads but does not delete backups already on your Drive. To remember the connected account, the app stores your Google account’s email and display name locally on the device. This identity is never uploaded anywhere except inside backups you create yourself — and it is excluded from portable backup files, so restoring a backup on another device never shows a stale "connected" state. Your Google authentication tokens are managed by Google Sign-In on the device and are never written into backup files.',
+  },
+  {
+    heading: 'Scheduled backups',
+    body: 'You can optionally enable automatic backups (hourly, daily, weekly, or monthly). Scheduled backups use the same export and upload as manual ones: the app checks first whether your data has actually changed, and skips the upload when there is nothing new to back up.',
+  },
+  {
+    heading: 'Optional password encryption',
+    body: 'You can protect a backup with a password. The backup is encrypted with AES-256-GCM using a key derived from your password via PBKDF2. The password is kept only in this device’s secure storage (Android Keystore) — it never leaves the device and is never included in the backup itself. There is no way to recover a forgotten password: an encrypted backup whose password is lost cannot be restored.',
+  },
+  {
+    heading: 'Your choices',
+    body: 'Your data is yours. You can export it, delete backup files, disconnect Google Drive, or uninstall the app at any time to remove its local data from the device.',
+  },
+  {
+    heading: 'Changes to this policy',
+    body: 'This policy may be updated from time to time; the version on this page is always the current one. If the app ever starts handling data in a new way, the policy will say so.',
+  },
+  {
+    heading: 'Contact',
+    body: 'Questions about privacy? Email nadeem.devapps@gmail.com.',
+  },
+];
+---
+
+<TsumlyLayout
+  title="Tsumly Privacy Policy for Android"
+  description="Privacy policy for Tsumly, the local-first expense and loan ledger — your money stays on your device, with optional encrypted Drive backup."
+>
+  <main class="doc">
+    <div class="container doc-inner">
+      <a class="doc-back" href={base}>← Back to Overview</a>
+      <h1>Tsumly Privacy Policy</h1>
+      <p class="doc-intro">
+        Tsumly collects no personal data. Everything stays on your device
+        unless you choose to back it up.
+      </p>
+      {
+        sections.map((s) => (
+          <section class="doc-section">
+            <h2>{s.heading}</h2>
+            <p>{s.body}</p>
+          </section>
+        ))
+      }
+    </div>
+  </main>
+</TsumlyLayout>

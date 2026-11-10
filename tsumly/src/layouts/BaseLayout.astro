@@ -1,11 +1,18 @@
 ---
+import '../styles/global.css';
+
 interface Props {
   title: string;
   description: string;
+  jsonLd?: Record<string, unknown>[];
 }
 
-const { title, description } = Astro.props;
+const { title, description, jsonLd } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const canonical = new URL(
+  Astro.url.pathname,
+  Astro.site ?? 'https://nadeemdevapps.github.io',
+).toString();
 ---
 
 <!doctype html>
@@ -15,6 +22,18 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta
+      property="og:image"
+      content={`${Astro.site ?? 'https://nadeemdevapps.github.io'}${base}logo.svg`}
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
     <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,15 +41,42 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bricolage+Grotesque:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
-    <!-- global.css is imported by each page; Astro bundles it. -->
+    {
+      jsonLd?.map((schema) => (
+        <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+      ))
+    }
     <script is:inline>
       // Theme: the app follows the system by default (ThemeMode.system in
-      // the app); the toggle stores an explicit choice. No hard default.
-      try {
-        const saved = localStorage.getItem('tsumly-theme');
-        const theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', theme);
-      } catch (e) {}
+      // the app); the toggle stores an explicit choice: system, dark or
+      // light. With no stored choice the system preference decides.
+      (function () {
+        try {
+          var mq = matchMedia('(prefers-color-scheme: dark)');
+          function apply(mode) {
+            var theme =
+              mode === 'dark'
+                ? 'dark'
+                : mode === 'light'
+                  ? 'light'
+                  : mq.matches
+                    ? 'dark'
+                    : 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+            document.documentElement.setAttribute('data-theme-mode', mode);
+          }
+          var saved = localStorage.getItem('tsumly-theme');
+          var mode =
+            saved === 'dark' || saved === 'light' || saved === 'system'
+              ? saved
+              : 'system';
+          apply(mode);
+          mq.addEventListener('change', function () {
+            if ((localStorage.getItem('tsumly-theme') || 'system') === 'system')
+              apply('system');
+          });
+        } catch (e) {}
+      })();
     </script>
   </head>
   <body>

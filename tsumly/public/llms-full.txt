@@ -1,0 +1,442 @@
+# Tsumly — full site text
+
+> Tsumly is a local-first personal expense and loan ledger for Android,
+> built by Nadeem Mazhar (Nadeem Dev Apps), a solo developer in Pakistan.
+> This document is the full text of every page on the Tsumly site:
+> Overview, Privacy Policy, and Terms of Use.
+
+## Contents
+
+- [Overview](#overview)
+- [Privacy Policy](#privacy-policy)
+- [Terms of Use](#terms-of-use)
+
+---
+
+## Overview
+
+https://nadeemdevapps.github.io/my-web/products/tsumly/
+
+### Every amount adds up.
+
+Tsumly is a **local-first** personal expense and loan ledger for Android:
+your money stays on your device — **no account, no cloud by default** —
+with an optional encrypted Google Drive backup. It tracks **income,
+expenses and transfers** between accounts, and its **smart multi-loan
+repayment split** spreads one repayment across several loans, while
+**pre-app loans** record older loans without moving your balance.
+
+Free. Android. No account needed.
+
+### Why Tsumly?
+
+The name is inspired by the Japanese verb **tsumu** (積む) — to stack, to
+accumulate, to build up over time.
+
+- **Stack** — Tsumu means to stack. Every amount stacks onto the last — a
+  loan, a repayment, a rupee at a time — until the ledger is complete.
+- **Accumulate** — Small amounts, recorded honestly, **accumulate into the
+  full picture**: what you are owed, and what you owe.
+- **Build up** — Over weeks and months the ledger **builds up into a record
+  you can trust** — and a history you can share.
+
+### How it works — A ledger that lives on your phone.
+
+Tsumly is a **local-first ledger** for the money you **lend and borrow**.
+Record a loan, note who it is with, and keep a **running balance** —
+everything is stored on your device, and it works offline.
+
+- **Lend or borrow** — record a loan in either direction, with its due
+  amount, fees, and history.
+- **Partial repayments** — a loan can be paid back a little at a time, and
+  every payment is recorded against the same loan.
+- **Running balance** — always see where you stand: what you are owed, and
+  what you owe.
+- **Settle in full** — pay off a loan's full remaining balance in one step,
+  after a confirmation.
+- **Edits stay honest** — a loan's note and due date can be edited, and a
+  loan with no repayments can be deleted; the money itself only moves
+  through repayments.
+
+### Smart repayment split — One repayment, split across every loan it covers.
+
+When someone pays you back, the money rarely matches a single loan. Tsumly
+**splits one repayment across several active loans** in a single action —
+and **never merges loans**, so each loan keeps its own history.
+
+- **Pre-selected for you** — Tsumly picks the loans the repayment applies
+  to, and shows which will be **fully paid** and which **partially**.
+- **No merging** — a Rs. 3,000 loan repaid by Rs. 1,170 stays one loan with
+  **Rs. 1,830 left**.
+- **Mistakes are reversible** — a repayment recorded by mistake can be
+  **reversed in one step**.
+- **Smallest first** — the split pays the smallest outstanding loan first,
+  and the oldest loan first when two are equal.
+- **Overpayment is blocked** — a repayment cannot be more than the selected
+  loans' total outstanding.
+- **Auto-select, on by default** — Tsumly pre-selects all of a person's
+  open loans; turn it off in settings to pick by hand.
+- **Every split is recorded** — each repayment stores how much landed on
+  each loan, and the balance before and after, so statements can show the
+  breakdown.
+
+### Pre-app loans — Loans from before the app still count.
+
+You were lending and borrowing long before Tsumly. **Pre-app loans**
+record those older loans **without moving your current balance** — so your
+history is complete and your balance stays honest.
+
+- **Mark it pre-app** — when you create a loan that started before the app,
+  it is recorded without an opening balance movement.
+- **Same detail, same history** — every loan keeps its own due amount,
+  fees, and history, pre-app or not.
+- **Flip it later** — marking a loan pre-app adds its opening movement
+  back to the account; removing the mark records it. The amount, due date
+  and repayments stay unchanged.
+
+### Person profiles — People, not just numbers.
+
+Loans live on **person profiles**, so you always see **who owes what**.
+Each person carries their own totals, and nothing about an open loan can
+be hidden by accident.
+
+- **Per-person totals** — every profile shows what that person owes you,
+  and what you owe them.
+- **Archive is guarded** — a person with **outstanding loans cannot be
+  archived**.
+- **Archived people stay reachable** — they still appear in the person
+  picker, and picking one **restores them automatically**.
+- **Delete is refused while loans exist** — a person with any loan cannot
+  be deleted; archive them instead.
+- **A full ledger per person** — loans opened and repayments made in one
+  interleaved history, with open and paid loan counts.
+
+### Everyday money — Income, expenses and transfers — in the same ledger.
+
+Tsumly tracks the everyday money too — **income and expenses** against
+categories and accounts, and **transfers between your own accounts** — so
+the loan ledger and the cash ledger always agree.
+
+- **Income & expenses** — record money in and money out against an account
+  and a category, with an optional note, fee and tax on every entry.
+- **Transfers between accounts** — move money from one account to another
+  in one entry, with its own fee and tax; deleting a transfer removes both
+  legs and puts the balances back.
+- **Fees & taxes, kept visible** — every income, expense, transfer, loan
+  and repayment can carry a fee and a tax, and monthly reports total them
+  separately.
+- **Categories with subcategories** — starter categories for Pakistani
+  households, including Salary, Business, Freelance, Groceries and
+  Transport, with subcategories such as Supermarket and Local Market; add,
+  rename or archive your own, two levels deep.
+- **Dates you control** — entries carry the date and time you choose, and
+  an entry keeps the clock time you recorded even when you travel across
+  timezones.
+
+### Accounts — Every rupee lives in an account.
+
+Cash, a bank, JazzCash, Easypaisa or another wallet — each account has its
+own **opening balance** and a live balance that follows every movement.
+
+- **Opening balance per account** — start each account with the money
+  already in it; its balance is the opening balance plus every movement
+  since.
+- **Five account types** — Cash, Bank, JazzCash, Easypaisa and Other, each
+  with its own icon.
+- **Archive, never delete** — archiving an account keeps its history
+  intact, and archived accounts are excluded from your available balance.
+- **Balance guard** — when a payment would take an account below zero,
+  Tsumly either warns you and waits for confirmation, or blocks it — your
+  choice in settings.
+
+### Reports & statements — Where the money went, on one screen — and on paper.
+
+Monthly reports show **where the money went**, and statements turn any
+slice of the ledger into a **PDF you can share**.
+
+- **Monthly reports** — cash in, cash out and net for any month, with
+  income and expense broken down by category, a weekly cash-flow chart,
+  fees and taxes totalled, and lent and borrowed positions.
+- **Six statement exports** — all activity, expense, income, loans,
+  transfers and per-account statements, each as a PDF.
+- **Per-person statements** — from any person's profile, export their
+  loans and repayments as a PDF for a date range you pick: last 30 or 90
+  days, last 6 months, last year, all time, or a custom range.
+- **Repayment breakdowns on statements** — every repayment shows how it
+  was split across loans, because each split is stored with the repayment.
+- **Share or save** — every statement PDF can be shared from the system
+  share sheet or saved as a file.
+
+### Home dashboard — Your money, the moment you open the app.
+
+The home tab opens on your **available balance**, your **net position**,
+and what you have **lent and borrowed** — with one-tap actions for income,
+expense, transfer or a loan payment.
+
+- **Available balance & net position** — the balance across your active
+  accounts, with the net position underneath it; either can be hidden in
+  settings.
+- **Lent & borrowed at a glance** — two tiles show what others owe you and
+  what you owe, always live.
+- **Quick actions** — Income, Expense, Transfer and Loan from one row; the
+  Loan action opens the smart repayment flow for a person.
+- **Daily quote** — a short quote under the greeting, drawn from a bundled
+  set, with Urdu quotes shown right-to-left in a Nastaliq or Naskh font
+  you pick.
+- **Pull to refresh** — a pull refreshes every number on the dashboard.
+
+### Loan reminders — A due date that reminds you itself.
+
+A loan with a due date reminds you on its own: a local notification on
+the **due date at 9:00 AM**, and an **overdue reminder the next morning**
+if it is still open.
+
+- **Due-date reminders** — set an optional due date when you create a loan;
+  Tsumly schedules a 9:00 AM reminder for the day and an overdue reminder
+  the next day.
+- **Tapping opens the loan** — a reminder opens the loan's detail screen,
+  ready to record the repayment.
+- **Reminders follow the loan** — editing a due date reschedules its
+  reminders, and deleting a loan cancels them.
+
+### Make it yours — Light or dark, your font, your currency.
+
+Tsumly bends to how you like it: **light or dark**, your **display font**,
+and which numbers the home tab shows.
+
+- **Theme & display font** — System, Dark or Light theme, and Bricolage
+  Grotesque or EB Garamond for headings.
+- **Show or hide** — available balance, net position and animated amounts
+  can each be switched off.
+- **One base currency** — pick from 15 currencies on first run, PKR
+  pre-selected; everything is recorded in that one currency.
+- **Your name on the greeting** — the home greeting uses the display name
+  you set in settings.
+- **Date & time control** — allow changing the date and time on entries, or
+  lock them to now.
+
+### Backup & privacy — Your money stays yours.
+
+**Offline-first and one-device-first.** Nothing leaves the phone unless
+you turn on Drive backup — and even then, the backup is **encrypted** and
+stored in the app's **own private Drive folder**.
+
+- **No account, no cloud by default** — your money stays on your device;
+  there is nothing to sign up for.
+- **Encrypted backup** — the optional Google Drive backup is encrypted
+  with **AES-256-GCM**.
+- **No tracking** — no analytics, no ads, nothing phoning home.
+- **Sign-in stays on the device** — device-specific sign-in details never
+  leave the phone in a portable backup.
+- **Local backup file** — export everything to a timestamped
+  **.moneybackup** file and restore it on any device; older backups are
+  migrated on import.
+- **Scheduled Drive backups** — hourly, daily, weekly or monthly automatic
+  uploads to your private Drive folder, keeping the latest three.
+- **Password protection** — an optional password of at least 8 characters
+  encrypts a backup (AES-256-GCM, PBKDF2 with 600,000 iterations);
+  scheduled uploads can reuse a password kept in the Android Keystore.
+- **Restore on first run** — a fresh install offers to restore from a
+  local backup file or from Drive before you set anything up.
+
+### FAQ — Questions, answered.
+
+**Is my money data stored on a server?**
+
+No. Tsumly is local-first: your accounts, transactions, loans and settings
+live in a local database on your device. There is no Tsumly account and no
+sign-up, no analytics, no ads, and nothing phoning home. The only thing
+that ever leaves the phone is a backup you choose to make — an encrypted
+Google Drive backup to your own private Drive folder, or a .moneybackup
+file you export yourself.
+
+**Can I record loans from before I started using the app?**
+
+Yes — pre-app loans record older loans without moving your current
+balance, so your history is complete and your balance stays honest. You
+can flip a loan’s pre-app mark later; the amount, due date and repayments
+stay unchanged.
+
+**What if someone pays back more than the loans add up to?**
+
+That cannot happen by mistake: a repayment cannot be more than the
+selected loans’ total outstanding. The split pays the smallest outstanding
+loan first, and the oldest first when two are equal — and a repayment
+recorded by mistake can be reversed in one step.
+
+**Does Tsumly work offline?**
+
+Yes. Everything is stored on your device and the app works offline. The
+only features that need the internet are the optional Google Drive backup
+and restore.
+
+**Can I export my records?**
+
+Yes. Monthly reports show cash in, cash out and net by category, and
+statements turn any slice of the ledger into a PDF you can share: all
+activity, expense, income, loans, transfers and per-account statements,
+plus per-person statements for any date range you pick. You can also
+export everything to a timestamped .moneybackup file and restore it on
+any device.
+
+**What does Tsumly cost?**
+
+Nothing. Tsumly is free — no account, no subscription, no ads. Your money
+stays on your device.
+
+---
+
+## Privacy Policy
+
+https://nadeemdevapps.github.io/my-web/products/tsumly/privacy/
+
+Tsumly collects no personal data. Everything stays on your device unless
+you choose to back it up.
+
+### The short version
+
+Tsumly is private by design. It does not collect, track, profile, or
+upload personal data. No Tsumly account or signup is required, and there
+are no analytics, advertising, or tracking SDKs. Your records stay on this
+device unless you choose to make a backup. If you choose Google Drive
+backup, Google Sign-In and Google Drive process the account and
+authentication information needed to provide that feature.
+
+### What stays on your device
+
+Your accounts, transactions, transfers, loans, repayments, people,
+categories, settings, and optional profile name are stored only in the
+app's local database (SQLite) on your phone. Uninstalling the app (or
+clearing its data) removes them. Android automatic backup is disabled for
+the app, so the operating system never silently copies your data to the
+cloud.
+
+### Local backups
+
+Exporting a backup produces a file you control (.moneybackup), and import
+is validated before anything is written. An unencrypted backup file
+contains readable financial data — store it privately, like you would any
+sensitive document.
+
+### Google Drive backup (optional)
+
+Drive backup is optional and off by default. If you sign in, Tsumly
+uploads backup files to the hidden appDataFolder of your own Google
+account. The app requests only the drive.appdata OAuth scope
+(https://www.googleapis.com/auth/drive.appdata), which limits it to its
+own hidden folder — it cannot see, list, or access any other files in your
+Drive. Backups never pass through any server run by us (we run none). You
+can disconnect your Google account at any time in Settings; disconnecting
+stops future uploads but does not delete backups already on your Drive. To
+remember the connected account, the app stores your Google account’s email
+and display name locally on the device. This identity is never uploaded
+anywhere except inside backups you create yourself — and it is excluded
+from portable backup files, so restoring a backup on another device never
+shows a stale "connected" state. Your Google authentication tokens are
+managed by Google Sign-In on the device and are never written into backup
+files.
+
+### Scheduled backups
+
+You can optionally enable automatic backups (hourly, daily, weekly, or
+monthly). Scheduled backups use the same export and upload as manual ones:
+the app checks first whether your data has actually changed, and skips the
+upload when there is nothing new to back up.
+
+### Optional password encryption
+
+You can protect a backup with a password. The backup is encrypted with
+AES-256-GCM using a key derived from your password via PBKDF2. The
+password is kept only in this device’s secure storage (Android Keystore)
+— it never leaves the device and is never included in the backup itself.
+There is no way to recover a forgotten password: an encrypted backup whose
+password is lost cannot be restored.
+
+### Your choices
+
+Your data is yours. You can export it, delete backup files, disconnect
+Google Drive, or uninstall the app at any time to remove its local data
+from the device.
+
+### Changes to this policy
+
+This policy may be updated from time to time; the version on this page is
+always the current one. If the app ever starts handling data in a new way,
+the policy will say so.
+
+### Contact
+
+Questions about privacy? Email nadeem.devapps@gmail.com.
+
+---
+
+## Terms of Use
+
+https://nadeemdevapps.github.io/my-web/products/tsumly/terms/
+
+Tsumly is a personal finance tracker, provided as-is. Your data stays on
+your device by default.
+
+### Acceptance
+
+By installing and using Tsumly, you agree to these terms. If you do not
+agree with any part of them, please do not use the app.
+
+### What Tsumly does
+
+Tsumly is a record-keeping tool for tracking your own accounts, income,
+expenses, transfers, loans, and repayments. It is meant for lawful personal
+finance tracking. Tsumly is not financial advice, and it is not a bank or
+payment service — please double-check important numbers yourself before
+acting on them.
+
+### Local-first, no Tsumly account
+
+Tsumly stores everything in a local database (SQLite) on your device.
+There is no Tsumly account and no sign-up, and Tsumly operates no server
+that receives your financial records. On Android the app opts out of
+automatic cloud backup (allowBackup=false), so a fresh install starts
+empty and uninstalling the app wipes its local data. If you choose Google
+Drive backup, backup files are uploaded directly to your own Google
+account — see the Privacy Policy for details.
+
+### Your data is yours
+
+You own everything you record in Tsumly. By default your data lives only
+on your device, you are responsible for keeping your own backups.
+Uninstalling the app, clearing its data, or losing the device can
+permanently remove your records — export a backup before changing devices
+or uninstalling.
+
+### Acceptable use
+
+Use Tsumly for lawful personal finance tracking only. You may not use the
+app to record, conceal, or facilitate anything illegal.
+
+### Provided as-is
+
+Tsumly is provided "as is" and "as available", without warranties of any
+kind, express or implied, including any implied warranty of fitness for a
+particular purpose. To the extent permitted by law, the developer is not
+liable for any loss or damage arising from your use of the app.
+
+### Stopping use
+
+You can stop using Tsumly at any time. Uninstalling the app deletes its
+local data from the device. Any backup files you created — including
+backups on your own Google Drive — stay where you put them until you delete
+them yourself.
+
+### Changes to these terms
+
+These terms may be updated from time to time. The version on this page is
+always the current one.
+
+### Contact
+
+Questions about these terms? Email nadeem.devapps@gmail.com.
+
+---
+
+Built by Nadeem Mazhar, solo developer — Nadeem Dev Apps.
+https://nadeemdevapps.github.io/my-web/

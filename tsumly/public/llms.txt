@@ -1,0 +1,43 @@
+# Tsumly
+
+> Tsumly is a local-first personal expense and loan ledger for Android,
+> built by Nadeem Mazhar (Nadeem Dev Apps), a solo developer in Pakistan.
+> It tracks income, expenses, transfers and who owes whom — with a smart
+> multi-loan repayment split — and your money stays on your device.
+
+- [Overview](https://nadeemdevapps.github.io/my-web/products/tsumly/): Every amount adds up. A local-first ledger for the money you lend and borrow, with smart repayment splits and pre-app loans.
+- [Privacy Policy](https://nadeemdevapps.github.io/my-web/products/tsumly/privacy/): Tsumly collects no personal data. Everything stays on your device unless you choose to back it up.
+- [Terms of Use](https://nadeemdevapps.github.io/my-web/products/tsumly/terms/): Tsumly is a personal finance tracker, provided as-is. Your data stays on your device by default.
+
+## Pages
+
+- [Overview](https://nadeemdevapps.github.io/my-web/products/tsumly/)
+- [Privacy Policy](https://nadeemdevapps.github.io/my-web/products/tsumly/privacy/)
+- [Terms of Use](https://nadeemdevapps.github.io/my-web/products/tsumly/terms/)
+
+## Key facts
+
+- Local-first: no account, no sign-up, no cloud by default, no analytics, no ads, nothing phoning home. Everything is stored in a local SQLite database on the device and the app works offline. Android automatic backup is disabled for the app.
+- Smart repayment split: one repayment spreads across several active loans in a single action and never merges loans — each loan keeps its own history. The split pays the smallest outstanding loan first, and the oldest first when two are equal. Overpayment is blocked. Auto-select is on by default. A repayment recorded by mistake can be reversed in one step. Every split is recorded with how much landed on each loan.
+- Pre-app loans: loans from before the app are recorded without moving the current balance. The pre-app mark can be flipped later; the amount, due date and repayments stay unchanged.
+- Person profiles: loans live on person profiles with per-person totals. A person with outstanding loans cannot be archived or deleted. Archived people still appear in the person picker and picking one restores them automatically.
+- Everyday money: income and expenses against accounts and categories, transfers between your own accounts, fees and taxes on every entry (totalled separately in monthly reports), categories with subcategories two levels deep (starter set for Pakistani households), and entries keep the date and time you choose.
+- Accounts: five types — Cash, Bank, JazzCash, Easypaisa and Other — each with its own opening balance and live balance. Archiving an account keeps its history and excludes it from the available balance. A balance guard warns or blocks when a payment would take an account below zero.
+- Reports and statements: monthly reports (cash in, cash out, net, category breakdown, weekly cash-flow chart, fees and taxes, lent and borrowed positions) and six PDF statement exports — all activity, expense, income, loans, transfers and per-account — plus per-person statements for a date range you pick. Every repayment shows its split breakdown on statements.
+- Home dashboard: available balance, net position, lent and borrowed tiles, one-tap quick actions (Income, Expense, Transfer, Loan), a daily quote, and pull to refresh.
+- Loan reminders: a local notification on the due date at 9:00 AM and an overdue reminder the next morning. Tapping a reminder opens the loan. Editing a due date reschedules; deleting a loan cancels.
+- Make it yours: System, Dark or Light theme (follows the system by default), Bricolage Grotesque or EB Garamond for headings, one base currency picked from 15 (PKR pre-selected), your name on the greeting, show or hide balances and animated amounts.
+- Backup: optional Google Drive backup, encrypted with AES-256-GCM, stored in the app's own private Drive folder (drive.appdata scope only — it cannot see any other Drive files). Scheduled backups hourly, daily, weekly or monthly, keeping the latest three. An optional password of at least 8 characters encrypts a backup (PBKDF2 with 600,000 iterations); scheduled uploads can reuse a password kept in the Android Keystore. A local .moneybackup file can be exported and restored on any device. Device-specific sign-in details never leave the phone in a portable backup.
+- The name is inspired by the Japanese verb tsumu — to stack, to accumulate, to build up over time. The tagline is "Every amount adds up."
+- Theme: System, Dark or Light. A fresh install follows the system. The light theme is the brand home — pale lavender-cream canvas with purple and amber; the dark theme is a first-class deep plum design.
+
+## Notes
+
+- The site is a static Astro site. Design tokens live in DESIGN.md in this folder.
+- The brand mark is Tsumu — three slightly askew amber coins with a minimal face and a purple party hat, drawn in code as SVG.
+
+## Optional
+
+- [Full site text (llms-full.txt)](https://nadeemdevapps.github.io/my-web/products/tsumly/llms-full.txt): the full text of every page on this site in one Markdown document — Overview, Privacy Policy, and Terms of Use.
+- [Design system](https://github.com/nadeemdevapps/my-web/blob/main/tsumly/DESIGN.md)
+- [Built by Nadeem](https://nadeemdevapps.github.io/my-web/): the portfolio home of Nadeem Mazhar, solo developer.

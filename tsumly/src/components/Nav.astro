@@ -1,0 +1,107 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const siteHome = 'https://nadeemdevapps.github.io/my-web/';
+const current = Astro.url.pathname.replace(/\/$/, '') || '/';
+const home = base.replace(/\/$/, '') || '/';
+const isActive = (href: string) => {
+  const h = href.replace(/\/$/, '') || '/';
+  // The home link is active only on the home page — every sub-page path
+  // starts with the home path, so a prefix match would mark it active
+  // everywhere.
+  if (h === home) return current === h;
+  return current === h || current.startsWith(h + '/');
+};
+const links = [
+  { href: `${base}`, label: 'Overview' },
+  { href: `${base}privacy/`, label: 'Privacy' },
+  { href: `${base}terms/`, label: 'Terms' },
+];
+---
+<header class="site-nav" data-nav>
+  <div class="nav-inner">
+    <a class="brand" href={base} aria-label="Tsumly — home">
+      <img src={`${base}logo.svg`} alt="" width="34" height="34" class="brand-mark" />
+      <span>Tsumly</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      {
+        links.map((l) => (
+          <a href={l.href} class={isActive(l.href) ? 'active' : ''} aria-current={isActive(l.href) ? 'page' : undefined}>
+            {l.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="nav-actions">
+      <a class="nav-main-link" href={siteHome}>Main website</a>
+      <button
+        type="button"
+        class="theme-toggle"
+        data-theme-toggle
+        aria-label="Switch theme"
+        title="Switch theme"
+      >
+        <span class="mode-label mode-auto">Auto</span>
+        <span class="mode-label mode-dark">Dark</span>
+        <span class="mode-label mode-light">Light</span>
+      </button>
+      <button
+        type="button"
+        class="menu-toggle"
+        data-menu-toggle
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="nav-mobile" data-mobile-menu aria-label="Mobile">
+    {
+      links.map((l) => (
+        <a href={l.href} class={isActive(l.href) ? 'active' : ''} aria-current={isActive(l.href) ? 'page' : undefined}>
+          {l.label}
+        </a>
+      ))
+    }
+    <a href={siteHome}>Main website</a>
+  </nav>
+</header>
+
+<script>
+  // Theme toggle: cycles System → Dark → Light, storing the choice.
+  // Page-scoped, no framework.
+  const root = document.documentElement;
+  const toggle = document.querySelector('[data-theme-toggle]');
+  const order = ['system', 'dark', 'light'];
+  function applyTheme(mode) {
+    const mq = matchMedia('(prefers-color-scheme: dark)');
+    const theme =
+      mode === 'dark' ? 'dark' : mode === 'light' ? 'light' : mq.matches ? 'dark' : 'light';
+    root.setAttribute('data-theme', theme);
+    root.setAttribute('data-theme-mode', mode);
+    try {
+      localStorage.setItem('tsumly-theme', mode);
+    } catch (e) {}
+  }
+  toggle?.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme-mode') || 'system';
+    const next = order[(order.indexOf(current) + 1) % order.length];
+    applyTheme(next);
+  });
+
+  const menuBtn = document.querySelector('[data-menu-toggle]');
+  const menu = document.querySelector('[data-mobile-menu]');
+  const nav = document.querySelector('[data-nav]');
+  menuBtn?.addEventListener('click', () => {
+    const open = nav?.classList.toggle('menu-open') ?? false;
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  menu?.addEventListener('click', (e) => {
+    if ((e.target as HTMLElement).closest('a')) nav?.classList.remove('menu-open');
+  });
+</script>

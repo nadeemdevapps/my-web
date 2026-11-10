@@ -1,0 +1,68 @@
+---
+import TsumlyLayout from '../layouts/TsumlyLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+const sections = [
+  {
+    heading: 'Acceptance',
+    body: 'By installing and using Tsumly, you agree to these terms. If you do not agree with any part of them, please do not use the app.',
+  },
+  {
+    heading: 'What Tsumly does',
+    body: 'Tsumly is a record-keeping tool for tracking your own accounts, income, expenses, transfers, loans, and repayments. It is meant for lawful personal finance tracking. Tsumly is not financial advice, and it is not a bank or payment service — please double-check important numbers yourself before acting on them.',
+  },
+  {
+    heading: 'Local-first, no Tsumly account',
+    body: 'Tsumly stores everything in a local database (SQLite) on your device. There is no Tsumly account and no sign-up, and Tsumly operates no server that receives your financial records. On Android the app opts out of automatic cloud backup (allowBackup=false), so a fresh install starts empty and uninstalling the app wipes its local data. If you choose Google Drive backup, backup files are uploaded directly to your own Google account — see the Privacy Policy for details.',
+  },
+  {
+    heading: 'Your data is yours',
+    body: 'You own everything you record in Tsumly. By default your data lives only on your device, you are responsible for keeping your own backups. Uninstalling the app, clearing its data, or losing the device can permanently remove your records — export a backup before changing devices or uninstalling.',
+  },
+  {
+    heading: 'Acceptable use',
+    body: 'Use Tsumly for lawful personal finance tracking only. You may not use the app to record, conceal, or facilitate anything illegal.',
+  },
+  {
+    heading: 'Provided as-is',
+    body: 'Tsumly is provided "as is" and "as available", without warranties of any kind, express or implied, including any implied warranty of fitness for a particular purpose. To the extent permitted by law, the developer is not liable for any loss or damage arising from your use of the app.',
+  },
+  {
+    heading: 'Stopping use',
+    body: 'You can stop using Tsumly at any time. Uninstalling the app deletes its local data from the device. Any backup files you created — including backups on your own Google Drive — stay where you put them until you delete them yourself.',
+  },
+  {
+    heading: 'Changes to these terms',
+    body: 'These terms may be updated from time to time. The version on this page is always the current one.',
+  },
+  {
+    heading: 'Contact',
+    body: 'Questions about these terms? Email nadeem.devapps@gmail.com.',
+  },
+];
+---
+
+<TsumlyLayout
+  title="Tsumly Terms of Use for Android App"
+  description="Terms of use for Tsumly, the local-first expense and loan ledger — record loans, split repayments, and keep your data on your device."
+>
+  <main class="doc">
+    <div class="container doc-inner">
+      <a class="doc-back" href={base}>← Back to Overview</a>
+      <h1>Tsumly Terms of Use</h1>
+      <p class="doc-intro">
+        Tsumly is a personal finance tracker, provided as-is. Your data
+        stays on your device by default.
+      </p>
+      {
+        sections.map((s) => (
+          <section class="doc-section">
+            <h2>{s.heading}</h2>
+            <p>{s.body}</p>
+          </section>
+        ))
+      }
+    </div>
+  </main>
+</TsumlyLayout>
