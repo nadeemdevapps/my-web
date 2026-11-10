@@ -3,6 +3,7 @@ import TsumlyLayout from '../layouts/TsumlyLayout.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const releasesUrl = 'https://github.com/nadeemdevapps/tsumly/releases';
+const siteHome = 'https://nadeemdevapps.github.io/my-web/';
 
 const faqs = [
   {
@@ -395,6 +396,25 @@ const faqLd = {
             </details>
           ))
         }
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT / DEVELOPER ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-card reveal">
+        <img class="about-mark" src={`${base}logo.svg`} alt="" width="56" height="56" />
+        <div>
+          <h2>Built by Nadeem.</h2>
+          <p>
+            Tsumly is built by <strong>Nadeem Mazhar</strong>, a solo developer
+            in Pakistan, as <strong>Nadeem Dev Apps</strong>. It started as his own
+            problem — a ledger that never added up — and it is built the way
+            he builds everything: local-first, and honest about what it does.
+          </p>
+          <a class="about-link" href={siteHome}>More from Nadeem Dev Apps →</a>
+        </div>
       </div>
     </div>
   </section>

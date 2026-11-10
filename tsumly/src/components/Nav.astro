@@ -1,6 +1,5 @@
 ---
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
-const siteHome = 'https://nadeemdevapps.github.io/my-web/';
 const current = Astro.url.pathname.replace(/\/$/, '') || '/';
 const home = base.replace(/\/$/, '') || '/';
 const isActive = (href: string) => {
@@ -35,7 +34,6 @@ const links = [
     </nav>
 
     <div class="nav-actions">
-      <a class="nav-main-link" href={siteHome}>Main website</a>
       <button
         type="button"
         class="theme-toggle"
@@ -67,7 +65,6 @@ const links = [
         </a>
       ))
     }
-    <a href={siteHome}>Main website</a>
   </nav>
 </header>
 

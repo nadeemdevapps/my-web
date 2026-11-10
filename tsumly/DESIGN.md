@@ -202,8 +202,9 @@ components:
     typography: "{typography.nav-link}"
     padding: "{spacing.md}"
     # Tsumly's own nav: Tsumu mark + TSUMLY Bricolage wordmark left;
-    # Overview / Privacy / Terms links; theme toggle + "Main website" link
-    # right (back to the portfolio). Hamburger below 840px.
+    # Overview / Privacy / Terms links; theme toggle right. The portfolio
+    # link lives in the About section and the footer ("Built by Nadeem"),
+    # not in the nav. Hamburger below 840px.
   wordmark:
     fontFamily: "Bricolage Grotesque, Inter, system-ui, sans-serif"
     fontWeight: 700
@@ -561,9 +562,10 @@ The contrast between a 16px button and a 20px card is intentional.
 
 **`nav-bar`** — Top navigation. Slim sticky bar, `{colors.surface}`
 background, 64px tall. Left: Tsumu mark + TSUMLY Bricolage wordmark.
-Centre/right: Overview / Privacy / Terms links. Right: theme toggle +
-"Main website" link (back to the portfolio home). Condenses to a hamburger
-below 840px.
+Centre/right: Overview / Privacy / Terms links. Right: theme toggle
+(System / Dark / Light). The portfolio link lives in the About section
+and the footer ("Built by Nadeem"), not in the nav. Condenses to a
+hamburger below 840px.
 
 **`wordmark`** — "Tsumly" in Bricolage Grotesque 700, `{colors.ink}`.
 The app's wordmark. Never set in Inter, never in a pixel webfont.
@@ -650,7 +652,9 @@ font), caption in `{typography.caption}`, 20px radius, 16px padding.
   yours (theme, display font, currency, name), Backup & privacy
   (offline-first, encrypted Drive backup, no tracking), FAQ (six
   questions, each answer a restatement of verified copy — drives the
-  FAQPage JSON-LD), and the footer.
+  FAQPage JSON-LD), About (Built by Nadeem — Nadeem Mazhar, solo
+  developer; the ledger-that-never-added-up origin; one link to the
+  portfolio home), and the footer.
   Copy carries over from the main site's `/products/tsumly/` page,
   verified against the app repo and `docs/06_DESIGN.md`.
 - **Privacy / Terms**: document pages — warm canvas, Bricolage
