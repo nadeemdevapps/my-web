@@ -1,7 +1,7 @@
 ---
 version: alpha
 name: Tsumly
-description: Tsumly's own design language for its independent website — the ledger app's identity on the web. Purple/amber/cream, not blue; Inter + Bricolage Grotesque, not serif; the app's warm cream canvas and 20px cards, not the portfolio's paper. Built for Astro (static HTML, zero JS by default) and for AI readability (semantic HTML, llms.txt, sitemap).
+description: Tsumly's own design language for its independent website — the ledger app's identity on the web. Purple/amber/cream, not blue; Inter + Bricolage Grotesque, not serif; the app's pale lavender-cream canvas and 20px cards, not the portfolio's paper. Built for Astro (static HTML, zero JS by default) and for AI readability (semantic HTML, llms.txt, sitemap).
 ---
 
 # Structural palette — LIGHT theme is the brand home. Only color values
@@ -18,17 +18,17 @@ colors:
   amber-soft: "#FFE9C2"      # soft amber wash — highlights, lent tint base
   on-accent: "#FFFFFF"       # white text on accent fills
   on-accent-container: "#2A1B6E" # deep plum ink on soft purple
-  canvas: "#F6F0E2"          # page background — warm cream
-  surface: "#FDF9F0"         # card / panel surface — warm white
-  surface-variant: "#FAF5E9" # recessed surface
-  surface-high: "#F1E9D6"    # raised surface
-  surface-highest: "#EAE0C9" # highest surface
-  sheet: "#FDF9F0"           # dialog / sheet surface
-  ink: "#23201B"             # primary text — warm near-black
-  ink-secondary: "#6E655A"   # secondary body copy
-  ink-muted: "#6E655A"       # supporting / muted copy
-  hairline: "#EFE6D2"        # 1px card border (light only)
-  outline: "#D8CDB6"         # field / control outlines
+  canvas: "#E8E1F7"          # page background — pale lavender-cream
+  surface: "#F3EFFD"         # card / panel surface — pale lavender-white
+  surface-variant: "#EEEBFA" # recessed surface
+  surface-high: "#DED6F1"    # raised surface
+  surface-highest: "#D3C9EA" # highest surface
+  sheet: "#F3EFFD"           # dialog / sheet surface
+  ink: "#1D1B23"             # primary text — near-black
+  ink-secondary: "#605A6E"   # secondary body copy
+  ink-muted: "#605A6E"       # supporting / muted copy
+  hairline: "#DBD2EF"        # 1px card border (light only)
+  outline: "#C0B6D8"         # field / control outlines
   error: "#C2410C"           # the single reserved non-brand colour
 
 # DARK theme — deep plum, first-class (not an inverted afterthought).
@@ -251,7 +251,7 @@ components:
     backgroundColor: "{colors.canvas}"
     textColor: "{colors.ink}"
     headlineTypography: "{typography.display-xl}"
-    # Warm cream canvas, Bricolage two-tone headline (dim lead-in +
+    # Pale lavender-cream canvas, Bricolage two-tone headline (dim lead-in +
     # full-strength punch). Tsumu sits above the headline; the Bricolage
     # wordmark is the header lockup, not a hero element.
   footer:
@@ -296,7 +296,7 @@ components:
 ## Overview
 
 Tsumly's site feels like the app: warm, quirky, and clean. The dominant
-surface is the app's own warm cream (`{colors.canvas}` — #F6F0E2), with
+surface is the app's own pale lavender-cream (`{colors.canvas}` — #E8E1F7), with
 brand purple (`{colors.accent}` — #6C4DE6) as the single structural
 accent and amber (`{colors.amber}` — #F2A81D) as the secondary brand
 colour — coins, highlights, the mascot. There is no blue here — the main
@@ -316,8 +316,8 @@ alternative. Headlines use the app's two-tone style: a dull lead-in plus
 a full-strength punch ("Every amount" dim → "adds up." strong).
 
 The site ships in **two polarities** that share every non-color token:
-1. **Light theme** — the brand home. Warm cream canvas, warm-white
-   surfaces, warm near-black ink.
+1. **Light theme** — the brand home. Pale lavender-cream canvas, lavender-white
+   surfaces, near-black ink.
 2. **Dark theme** — a first-class deep plum design (`{colors-dark.canvas}`
    — #151020), plum surfaces, cream ink, lighter purple accent.
 
@@ -371,24 +371,24 @@ tint and border carry the separation, never drop shadows.
   #9A6206 light / #FFE9C2 dark) for text/icons on amber tints.
 
 ### Surface
-- **Canvas** (`{colors.canvas}` — #F6F0E2 light / #151020 dark): the
-  page background — warm cream in light, deep plum in dark.
-- **Surface** (`{colors.surface}` — #FDF9F0 light / #1E1729 dark):
+- **Canvas** (`{colors.canvas}` — #E8E1F7 light / #151020 dark): the
+  page background — pale lavender-cream in light, deep plum in dark.
+- **Surface** (`{colors.surface}` — #F3EFFD light / #1E1729 dark):
   card, panel, nav, and form-field surfaces.
-- **Surface Variant** (`{colors.surface-variant}` — #FAF5E9 light /
+- **Surface Variant** (`{colors.surface-variant}` — #EEEBFA light /
   #1A1425 dark): recessed cards and tiles.
-- **Sheet** (`{colors.sheet}` — #FDF9F0 light / #272030 dark): dialogs
+- **Sheet** (`{colors.sheet}` — #F3EFFD light / #272030 dark): dialogs
   and bottom sheets.
-- **Hairline** (`{colors.hairline}` — #EFE6D2 light / none dark): 1px
+- **Hairline** (`{colors.hairline}` — #DBD2EF light / none dark): 1px
   card borders in light; dark cards carry no border — separation comes
   from the surface step.
 
 ### Text
-- **Ink** (`{colors.ink}` — #23201B light / #F5EEDF dark): primary
-  headings and body — warm near-black on cream (14.3:1), cream on plum
+- **Ink** (`{colors.ink}` — #1D1B23 light / #F5EEDF dark): primary
+  headings and body — near-black on lavender-cream (13.4:1), cream on plum
   (16.1:1).
-- **Ink Secondary** (`{colors.ink-secondary}` — #6E655A light / #B9AECB
-  dark): secondary body copy (5.0:1 light, 8.9:1 dark).
+- **Ink Secondary** (`{colors.ink-secondary}` — #605A6E light / #B9AECB
+  dark): secondary body copy (5.2:1 light, 8.9:1 dark).
 - **Ink Muted** (`{colors.ink-muted}`): supporting / muted copy,
   inactive nav labels — same values as secondary.
 
@@ -590,7 +590,7 @@ and a purple party hat": the app's mascot, redrawn as SVG from
 and padding as primary.
 
 **`text-link`** — Inline link, no background, `{colors.accent}` text
-(4.8:1 on cream, 7.1:1 on plum).
+(4.3:1 on lavender-cream, 7.1:1 on plum).
 
 ### Cards & Containers
 
@@ -614,7 +614,7 @@ background, `{typography.title-md}` title, `{typography.body-md}` body,
 
 ### Signature Components
 
-**`hero`** — Warm cream canvas, `{colors.ink}` text,
+**`hero`** — Pale lavender-cream canvas, `{colors.ink}` text,
 `{typography.display-xl}` Bricolage two-tone headline ("Every amount"
 dim → "adds up." strong), and a `button-primary` + `button-secondary`
 CTA pair. Tsumu sits above the headline.
@@ -667,9 +667,11 @@ site is extracted; until cutover it is served from the main site's copy.
 - **Touch targets:** 44×44px minimum hit area on mobile for CTAs and nav
   controls.
 - **Contrast (calculated, not claimed):** white on purple 5.5:1; ink on
-  cream 14.3:1; purpleDeep on cream 7.7:1; purple on cream 4.8:1;
-  creamInk on plum 16.1:1; purpleLight on plum 7.1:1; amberDeep on cream
-  4.5:1; secondary text 5.0:1 on cream, 8.9:1 on plum. Focus states use
+  lavender-cream 13.4:1; purpleDeep on lavender-cream 6.9:1; purple on
+  lavender-cream 4.3:1; creamInk on plum 16.1:1; purpleLight on plum 7.1:1;
+  amberDeep on lavender-cream 4.0:1 (amberDeep text sits on amber tints,
+  not on the canvas); secondary text 5.2:1 on lavender-cream, 8.9:1 on
+  plum. Focus states use
   `{colors.accent}` so keyboard navigation is always visible.
 - **Alt text and labels:** every image carries alt text; charts expose a
   data-summary description; actionable icons carry a meaningful label.
@@ -682,7 +684,7 @@ site is extracted; until cutover it is served from the main site's copy.
   (`ThemeMode.system` is the app's default). The toggle stores an
   explicit choice (System / Dark / Light); with no stored choice the
   system preference decides.
-- **Light is the brand home.** Warm cream canvas, warm-white surfaces —
+- **Light is the brand home.** Pale lavender-cream canvas, lavender-white surfaces —
   the brand layer's home.
 - **Dark is first-class.** Deep plum, not an inverted afterthought.
 - **Only palette changes.** Spacing, type, radius, and components are
@@ -732,6 +734,18 @@ own sake"):
   main site's `dist` under `/products/tsumly/`, and the main site's
   `src/pages/products/tsumly.astro` is deleted. Until then the main
   site's page stays live and this folder builds standalone only.
+
+## Tint revision — purple canvas (2026-11-10)
+
+User decision, Option A (Kaizenly method): the light-theme neutrals' faint
+tint hue rotated warm yellow (~43°) → purple (~258°), same lightness, same
+tint strength. Canvas `#F6F0E2`→`#E8E1F7`, surfaces `#FDF9F0`→`#F3EFFD`,
+containers `#FAF5E9`→`#EEEBFA` / `#F1E9D6`→`#DED6F1` / `#EAE0C9`→`#D3C9EA`,
+outline `#D8CDB6`→`#C0B6D8`, secondary ink `#6E655A`→`#605A6E`, ink
+`#23201B`→`#1D1B23`, hairline `#EFE6D2`→`#DBD2EF`. Dark was already plum —
+untouched. Money tints, donut palette, amber and purple accents unchanged.
+Contrast re-calculated (see Contrast): ink 13.4:1, purple 4.3:1, purpleDeep
+6.9:1 on the new canvas — all still pass for their uses.
 
 ## Cutover
 

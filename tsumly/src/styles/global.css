@@ -1,5 +1,6 @@
 /* Tsumly tokens — from the app (app/lib/core/theme/app_colors.dart).
-   Light is the brand home (warm cream); dark is a first-class plum
+   Light is the brand home (pale lavender-cream — tint rotated warm→purple
+   2026-11-10, same lightness; Kaizenly method); dark is a first-class plum
    design, not an inversion. The site follows the system by default (like
    the app); only palette values change between themes — type, spacing,
    radius and components are identical. The no-JS fallback (the
@@ -15,18 +16,18 @@
   --amber-soft: #ffe9c2;
   --on-accent: #ffffff;
   --on-accent-container: #2a1b6e;
-  --bg: #f6f0e2;
-  --surface: #fdf9f0;
-  --surface-variant: #faf5e9;
-  --surface-high: #f1e9d6;
-  --surface-highest: #eae0c9;
-  --sheet: #fdf9f0;
-  --text: #23201b;
-  --text-secondary: #6e655a;
-  --muted: #6e655a;
-  --outline: #d8cdb6;
-  --outline-variant: #eae0c9;
-  --hairline: #efe6d2;
+  --bg: #e8e1f7;
+  --surface: #f3effd;
+  --surface-variant: #eeebfa;
+  --surface-high: #ded6f1;
+  --surface-highest: #d3c9ea;
+  --sheet: #f3effd;
+  --text: #1d1b23;
+  --text-secondary: #605a6e;
+  --muted: #605a6e;
+  --outline: #c0b6d8;
+  --outline-variant: #d3c9ea;
+  --hairline: #dbd2ef;
   --error: #c2410c;
   /* Money tints — the tint IS the meaning; always pair a tint background
      with its on-tint foreground, never put body text on a tint. */
