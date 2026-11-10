@@ -554,20 +554,25 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .project-card--tsumly {
   background: color-mix(in srgb, #e8e1f7 65%, var(--color-surface));
   border-color: color-mix(in srgb, #6c4de6 28%, var(--color-hairline));
-  transition: box-shadow 0.15s ease, transform 0.25s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 .project-card--kaizenly {
   background: color-mix(in srgb, #ecfbe1 65%, var(--color-surface));
   border-color: color-mix(in srgb, #27f24c 35%, var(--color-hairline));
-  transition: box-shadow 0.15s ease, transform 0.25s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+/* Stronger hover: lift + expand + tilt + a glow in the card's own colour. */
 .project-card--tsumly:hover,
 .project-card--tsumly:active,
-.project-card--tsumly:focus-within,
+.project-card--tsumly:focus-within {
+  transform: perspective(900px) rotateX(3deg) rotateY(-3deg) translateY(-8px) scale(1.02);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 18px 44px rgba(108, 77, 230, 0.28), 0 0 28px rgba(108, 77, 230, 0.16);
+}
 .project-card--kaizenly:hover,
 .project-card--kaizenly:active,
 .project-card--kaizenly:focus-within {
-  transform: perspective(900px) rotateX(2.5deg) rotateY(-2.5deg) translateY(-4px);
+  transform: perspective(900px) rotateX(3deg) rotateY(-3deg) translateY(-8px) scale(1.02);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 18px 44px rgba(39, 242, 76, 0.28), 0 0 28px rgba(39, 242, 76, 0.16);
 }
 .project-card--tsumly .project-icon,
 .project-card--kaizenly .project-icon {
@@ -741,10 +746,20 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   background: color-mix(in srgb, #6c4de6 16%, var(--color-surface));
   border-color: color-mix(in srgb, #6c4de6 38%, var(--color-hairline));
 }
+[data-theme="dark"] .project-card--tsumly:hover,
+[data-theme="dark"] .project-card--tsumly:active,
+[data-theme="dark"] .project-card--tsumly:focus-within {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 18px 44px rgba(108, 77, 230, 0.35), 0 0 32px rgba(108, 77, 230, 0.22);
+}
 [data-theme="dark"] .project-card--kaizenly,
 [data-theme="dark"] .project-card--kaizenly:hover {
   background: color-mix(in srgb, #27f24c 12%, var(--color-surface));
   border-color: color-mix(in srgb, #27f24c 32%, var(--color-hairline));
+}
+[data-theme="dark"] .project-card--kaizenly:hover,
+[data-theme="dark"] .project-card--kaizenly:active,
+[data-theme="dark"] .project-card--kaizenly:focus-within {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 18px 44px rgba(39, 242, 76, 0.35), 0 0 32px rgba(39, 242, 76, 0.22);
 }
 
 /* About black card — condensed About on a dark block (fixed dark colours,
