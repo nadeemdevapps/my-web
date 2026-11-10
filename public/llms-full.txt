@@ -285,12 +285,12 @@ Tsumly bends to how you like it: **light or dark**, your **display font**, and w
 **Offline-first and one-device-first.** Nothing leaves the phone unless you turn on Drive backup — and even then, the backup is **encrypted** and stored in the app's **own private Drive folder**.
 
 - **No account, no cloud by default** — your money stays on your device; there is nothing to sign up for.
-- **Encrypted backup** — the optional Google Drive backup is encrypted with **AES-256-GCM**.
+- **Encrypted backup** — the optional Google Drive backup is encrypted.
 - **No tracking** — no analytics, no ads, nothing phoning home.
 - **Sign-in stays on the device** — device-specific sign-in details never leave the phone in a portable backup.
 - **Local backup file** — export everything to a timestamped **.moneybackup** file and restore it on any device; older backups are migrated on import.
 - **Scheduled Drive backups** — hourly, daily, weekly or monthly automatic uploads to your private Drive folder, keeping the latest three.
-- **Password protection** — an optional password of at least 8 characters encrypts a backup (AES-256-GCM, PBKDF2 with 600,000 iterations); scheduled uploads can reuse a password kept in the Android Keystore.
+- **Password protection** — an optional password of at least 8 characters encrypts a backup; scheduled uploads can reuse a password kept in the device's secure storage.
 - **Restore on first run** — a fresh install offers to restore from a local backup file or from Drive before you set anything up.
 
 In daily use. Privacy and Terms are already live on this site.
@@ -573,7 +573,7 @@ The legal pages are summarized here. Read the full text at the linked page.
 
 https://nadeemdevapps.github.io/my-web/products/tsumly/privacy/
 
-Tsumly collects no personal data: there is no account, no signup, and no analytics, advertising, or tracking. Accounts, transactions, loans, repayments, people, categories, and settings stay in the local database on the phone, and Android automatic backup is disabled. Google Drive backup is optional and off by default, uploading only to the app's own hidden appDataFolder, and backups can be protected with a password (AES-256-GCM). Questions: nadeem.devapps@gmail.com.
+Tsumly collects no personal data: there is no account, no signup, and no analytics, advertising, or tracking. Accounts, transactions, loans, repayments, people, categories, and settings stay in the local database on the phone, and Android automatic backup is disabled. Google Drive backup is optional and off by default, uploading only to the app's own hidden appDataFolder, and backups can be protected with a password. Questions: nadeem.devapps@gmail.com.
 
 ### Tsumly Terms of Use
 

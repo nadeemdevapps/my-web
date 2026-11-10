@@ -372,12 +372,11 @@ upload when there is nothing new to back up.
 
 ### Optional password encryption
 
-You can protect a backup with a password. The backup is encrypted with
-AES-256-GCM using a key derived from your password via PBKDF2. The
-password is kept only in this device’s secure storage (Android Keystore)
-— it never leaves the device and is never included in the backup itself.
-There is no way to recover a forgotten password: an encrypted backup whose
-password is lost cannot be restored.
+You can protect a backup with a password. The backup is encrypted using
+a key derived from your password. The password is kept only in this
+device’s secure storage — it never leaves the device and is never included
+in the backup itself. There is no way to recover a forgotten password: an
+encrypted backup whose password is lost cannot be restored.
 
 ### Your choices
 
