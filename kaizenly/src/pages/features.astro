@@ -16,7 +16,7 @@ const towerDelay = (floor: number, block: number) =>
 
 <KaizenLayout
   title="Features — Kaizenly"
-  description="Every Kaizenly feature, in detail: focus sessions, bags, routines, the Tower streak, parachutes earned free, sounds, stats, widgets, settings, backup, and the free vs Premium model."
+  description="Every Kaizenly feature, in detail: focus sessions, bags, routines, the Tower streak, parachutes earned free, sounds, stats, widgets, settings, backup — everything free."
 >
   <!-- ============ PAGE HERO ============ -->
   <section class="section" id="top">
@@ -40,7 +40,7 @@ const towerDelay = (floor: number, block: number) =>
         <a class="preset" href="#widgets">Widgets</a>
         <a class="preset" href="#settings">Settings</a>
         <a class="preset" href="#backup">Backup</a>
-        <a class="preset" href="#premium">Free &amp; Premium</a>
+        <a class="preset" href="#free">Everything free</a>
       </div>
     </div>
   </section>
@@ -116,7 +116,7 @@ const towerDelay = (floor: number, block: number) =>
             Start in one tap with <strong>15 minutes, 45 minutes, or 3 hours</strong>.
             Or spin the wheel: up to three of your own presets, from
             <strong>1 to 720 minutes</strong>. Sessions over 3 hours need at least
-            one parachute on board — and stay premium-gated past the free 180 minutes.
+            one parachute on board — and the wheel runs all the way to 720 minutes, free for everyone.
           </p>
           <div class="preset-row">
             <span class="preset">15 min</span>
@@ -128,7 +128,7 @@ const towerDelay = (floor: number, block: number) =>
             <span class="wheel-value">45<small>MINUTES</small></span>
           </div>
           <p>
-            The <strong>Custom card</strong> is Premium: it sets the wheel to
+            The <strong>Custom card</strong> is free: it sets the wheel to
             12 hours (720 minutes) and lets it run from 3 to 12 hours. Tapping
             a preset animates the wheel to the new value — one tick per minute
             crossed.
@@ -698,20 +698,19 @@ const towerDelay = (floor: number, block: number) =>
           <div class="icon">◐</div>
           <h3>Silence during sessions</h3>
           <p>
-            Premium. Do Not Disturb while you focus. It needs the system
+            Free. Do Not Disturb while you focus. It needs the system
             permission for it — the app explains why, opens the right settings
             page, and switches on as soon as access is granted. If access is
             ever revoked, the switch resets itself.
           </p>
-          <span class="tag">Premium</span>
+          <span class="tag">Free</span>
         </article>
         <article class="feature-card reveal" style="--d: 0.16s">
           <div class="icon">▣</div>
-          <h3>Go Premium · Info</h3>
+          <h3>Info</h3>
           <p>
-            Two cards at the foot of Settings: one opens Premium (hidden once
-            you own it), the other opens Info — the developer, the credits, and
-            the app version.
+            One card at the foot of Settings opens Info — the developer, the
+            credits, and the app version.
           </p>
         </article>
       </div>
@@ -786,58 +785,43 @@ const towerDelay = (floor: number, block: number) =>
           <h3>No account, ever</h3>
           <p>
             There is no sign-in and no profile to create. The Profile sheet has
-            settings, sharing, the tour, the parachute explainer, and Premium —
-            but no account, because there is nothing to sign in to.
+            settings, sharing, the tour, and the parachute explainer — but no
+            account, because there is nothing to sign in to.
           </p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ PREMIUM / FREE ============ -->
-  <section class="section" id="premium">
+  <!-- ============ EVERYTHING FREE ============ -->
+  <section class="section" id="free">
     <div class="container">
       <div class="section-head reveal">
-        <span class="kicker">Free &amp; Premium</span>
-        <h2>Almost everything is free.</h2>
+        <span class="kicker">Everything free</span>
+        <h2>Everything is free.</h2>
         <p>
-          Bags, routines, sounds, and parachutes are <strong>free in this
-          version</strong>. Premium is two things only — and it arrives with
-          Play Billing.
+          Bags, routines, sounds, parachutes, the custom card, 12-hour
+          sessions, and silence during sessions — everything Kaizenly does
+          is free. There is no purchase in the app, and none is planned.
         </p>
       </div>
       <div class="plan-grid">
-        <article class="plan reveal reveal-left">
-          <span class="plan-tag free-tag">FREE</span>
-          <h3>Free, for now</h3>
+        <article class="plan free reveal">
+          <span class="plan-tag">FREE</span>
+          <h3>Free</h3>
           <p class="plan-lede">Everything you need to focus, every day.</p>
           <ul>
             <li><strong>All 3 bags</strong> with <strong>6 slots</strong> each</li>
-            <li><strong>3 routines</strong> — each routine its own bag, free</li>
+            <li><strong>3 routines</strong> — each routine its own bag</li>
             <li><strong>All 4 soundscapes</strong> — Rain, Waves, White Noise, City</li>
             <li><strong>Parachutes</strong> earned free by the streak</li>
             <li>The Tower, stats, widgets, and local backup</li>
-            <li>Sessions up to 3 hours</li>
-          </ul>
-          <p class="price"><b>Rs 0</b> — free in this version</p>
-        </article>
-        <article class="plan premium reveal reveal-right">
-          <span class="plan-tag">PREMIUM</span>
-          <h3>Premium</h3>
-          <p class="plan-lede">For the long sessions and the quiet ones.</p>
-          <ul>
             <li><strong>Sessions up to 12 hours</strong> — the custom card, 3 to 12 hours</li>
             <li><strong>Silence during sessions</strong> — Do Not Disturb while you focus</li>
-            <li>Everything in Free, of course</li>
           </ul>
-          <p class="price"><b>Rs 1,450</b> one-time · arrives with Play Billing</p>
+          <p class="price"><b>Free</b> — no purchase in the app</p>
         </article>
       </div>
-      <p class="reveal" style="margin-top: 28px; text-align: center; color: var(--ink-2);">
-        There is no purchase in the app today. The Premium screen also has an
-        Add-on page — the big suitcase (6 apps per bag) and the sounds — both
-        shown as “Included free”, with no price and nothing to unlock.
-      </p>
     </div>
   </section>
 
@@ -892,8 +876,8 @@ const towerDelay = (floor: number, block: number) =>
         </article>
         <article class="feature-card reveal" style="--d: 0.08s">
           <div class="icon">●</div>
-          <h3>No purchases yet</h3>
-          <p>Premium arrives with Play Billing. Until then there is nothing to buy in the app — and everything listed as free is actually free.</p>
+          <h3>No purchases</h3>
+          <p>There is nothing to buy in the app — no purchase, no subscription, nothing to unlock — and everything listed as free is actually free.</p>
         </article>
         <article class="feature-card reveal" style="--d: 0.16s">
           <div class="icon">●</div>

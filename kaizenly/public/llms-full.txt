@@ -43,14 +43,15 @@ A: Kaizenly is a strict focus guard for Android. You pick a duration and a
 bag — a named set of distracting apps — and every app in the active bag is
 blocked until the session ends. Leaving early costs parachutes, and there is
 no easy way out: that strictness is the point. All three bags, all six slots
-per bag, routines, and soundscapes are free. The only premium features are
-sessions up to 12 hours and silence during sessions.
+per bag, routines, and soundscapes are free — and so are sessions up to
+12 hours (custom card) and silence during sessions. Everything in the app
+is free.
 
 Q: How much does Kaizenly cost?
 A: Everything is free to use right now. Bags, routines, soundscapes, and
-parachutes are all free in this version. Premium — sessions up to 12 hours
-(custom card) and silence / Do Not Disturb during sessions — is Rs 1,450
-one-time and arrives with Play Billing. There is no purchase in the app today.
+parachutes are all free — and so are the custom card, sessions up to 12
+hours, and silence / Do Not Disturb during sessions. There is no purchase
+in the app, and none is planned.
 
 Q: How do I get parachutes?
 A: Parachutes are earned, never bought. Focus for at least 30 minutes of
@@ -148,9 +149,10 @@ the way of the essentials.
 
 Presets — and the wheel: start in one tap with 15 minutes, 45 minutes, or 3
 hours. Or spin the wheel: up to three of your own presets, from 1 to 720
-minutes. Sessions over 3 hours need at least one parachute on board — and stay
-premium-gated past the free 180 minutes. The Custom card is Premium: it sets
-the wheel to 12 hours (720 minutes) and lets it run from 3 to 12 hours.
+minutes. Sessions over 3 hours need at least one parachute on board — and
+the wheel runs all the way to 720 minutes, free for everyone. The Custom
+card is free: it sets the wheel to 12 hours (720 minutes) and lets it run
+from 3 to 12 hours.
 Tapping a preset animates the wheel to the new value — one tick per minute
 crossed.
 
@@ -377,14 +379,13 @@ Each routine, its own bag: free. Each routine uses its own bag — routine 1
 uses bag 1, and so on — and the bag in hand is restored when the routine
 session ends. The same switch lives in Settings.
 
-Silence during sessions: Premium. Do Not Disturb while you focus. It needs the
+Silence during sessions: free. Do Not Disturb while you focus. It needs the
 system permission for it — the app explains why, opens the right settings
 page, and switches on as soon as access is granted. If access is ever revoked,
 the switch resets itself.
 
-Go Premium · Info: two cards at the foot of Settings — one opens Premium
-(hidden once you own it), the other opens Info — the developer, the credits,
-and the app version.
+Info: one card at the foot of Settings opens Info — the developer, the
+credits, and the app version.
 
 ### Backup & privacy — Your data, yours to keep.
 
@@ -417,29 +418,22 @@ any time in your phone's settings; blocking may stop working, including
 sessions already in progress.
 
 No account, ever: there is no sign-in and no profile to create. The Profile
-sheet has settings, sharing, the tour, the parachute explainer, and Premium —
-but no account, because there is nothing to sign in to.
+sheet has settings, sharing, the tour, and the parachute explainer — but no
+account, because there is nothing to sign in to.
 
-### Free & Premium — Almost everything is free.
+### Everything free — Everything is free.
 
-Free, for now (Rs 0):
+Free:
 
 - All 3 bags with 6 slots each
-- 3 routines — each routine its own bag, free
+- 3 routines — each routine its own bag
 - All 4 soundscapes — Rain, Waves, White Noise, City
 - Parachutes earned free by the streak
 - The Tower, stats, widgets, and local backup
-- Sessions up to 3 hours
-
-Premium (Rs 1,450 one-time, arrives with Play Billing):
-
 - Sessions up to 12 hours — the custom card, 3 to 12 hours
 - Silence during sessions — Do Not Disturb while you focus
-- Everything in Free, of course
 
-There is no purchase in the app today. The Premium screen also has an Add-on
-page — the big suitcase (6 apps per bag) and the sounds — both shown as
-“Included free”, with no price and nothing to unlock.
+There is no purchase in the app, and none is planned.
 
 ### First run — Six steps, then focus.
 
@@ -454,7 +448,7 @@ it again? The Profile sheet has “Take the tour again”.
 - No analytics, no ads, no trackers — Nothing in the app watches you, and nothing is sold to advertisers. Your focus data is yours.
 - No cloud backup — Your data never leaves the phone unless you export a backup file yourself. There is no sync and no cloud copy.
 - No selling parachutes — Parachutes are earned by focusing, never bought. The buy tiles open a “Totally free” sheet — that is the whole point.
-- No purchases yet — Premium arrives with Play Billing. Until then there is nothing to buy in the app — and everything listed as free is actually free.
+- No purchases — There is nothing to buy in the app — no purchase, no subscription, nothing to unlock — and everything listed as free is actually free.
 - No magic — Kaizenly adds friction at the exact moment you would otherwise scroll. It cannot want focus for you — it can only make leaving cost something.
 
 ---
@@ -483,10 +477,10 @@ local-first by design — no account, no sign-up, no analytics, no ads. Sessions
 bags, routines, and settings live on the phone, and the only backup is a file
 exported by the user.
 
-Everything is free in this version — sounds, bags, routines, and parachutes.
-Premium, when it arrives, is only longer sessions and silence during sessions.
-The app is still in development: there is no download yet, and one will appear
-only when it is real.
+Everything is free — sounds, bags, routines, and parachutes, and so are the
+custom card, sessions up to 12 hours, and silence during sessions. The app is
+still in development: there is no download yet, and one will appear only when
+it is real.
 
 ### Why the name — Kaizen, daily.
 
@@ -538,7 +532,7 @@ A strict focus guard for Android. Pick a duration and a bag of distracting
 apps; they stay blocked until the session ends. Leaving early costs
 parachutes — earned free, never sold.
 
-- Free now — Sounds, bags, routines, and parachutes are all free in this version. Premium (Rs 1,450, one-time) is only longer sessions and silence during sessions — and it arrives later.
+- Free now — Sounds, bags, routines, and parachutes are all free — and so are the custom card, sessions up to 12 hours, and silence during sessions. Everything Kaizenly does is free.
 - No account — No sign-up, no sign-in. Nothing to create, nothing to forget, nothing to delete.
 - Local-first — Sessions, bags, routines, and settings stay on the device. The only backup is a file exported by the user.
 - No tracking — No analytics, no ads, no trackers. The app does not phone home.
@@ -585,11 +579,9 @@ Kaizenly does not upload your data anywhere, and it does not store any backup
 on a server. Your backup file is yours — keep it safe, since anyone with the
 file can read what is in it.
 
-### Premium purchases
+### Purchases
 
-Premium features, when they go live, will be sold through Google Play Billing.
-Kaizenly does not receive your card number, bank details, or any other payment
-information; payments are handled entirely by Google Play.
+There are no premium purchases in Kaizenly. The app has no purchases of any kind, so no payment information is ever collected or handled.
 
 ### Permissions
 
@@ -648,11 +640,9 @@ device admin, and the overlay permission. You grant each of them yourself, and
 you can revoke them at any time in your phone's settings. Revoking them may
 stop blocking from working, including sessions already in progress.
 
-### Premium
+### Purchases
 
-Some features, such as custom session durations, are premium and will be sold
-through Google Play Billing when they go live. Purchases and refunds will
-follow Google Play's terms.
+There are no premium features in Kaizenly. Everything the app does is free, and there is nothing to buy in the app — no purchase, no subscription.
 
 ### Acceptable use
 

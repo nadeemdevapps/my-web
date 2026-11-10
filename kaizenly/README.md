@@ -21,7 +21,7 @@ to expect when it arrives), plus Privacy and Terms. Nav: Home / Features
 / Gallery / About / Download / Privacy / Terms. Copy carries over from the main site's
 `/products/kaizenly/` pages, verified against `FEATURES.md` in the app repo
 and updated for the free model (bags, routines, sounds, and parachutes are
-free; Premium is 12-hour sessions + silence/DND only). No internal details
+free — including 12-hour sessions + silence/DND). No internal details
 anywhere in site copy: no architecture names, no component names, no
 encryption algorithm names — behaviour only. No location is stated for the
 developer anywhere on this site. Motion: scroll reveals, the Tower building

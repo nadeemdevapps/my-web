@@ -555,7 +555,7 @@ sitemap.xml).
   100, best day — with the scroll-built Tower visual), Parachutes (earn rule
   table, spend costs, break/exit), Sounds, Stats (Day / Month / Year),
   Widgets (preset + streak), Settings (theme, haptics, reminders, silence),
-  Backup & privacy, Free & Premium, First run, and Honest boundaries. Every
+  Backup & privacy, Everything free, First run, and Honest boundaries. Every
   fact verified against FEATURES.md / the app's code — never copied from the
   old site without re-checking it. No internal details: no architecture
   names, no component names, no encryption algorithm names — behaviour only.
@@ -577,8 +577,8 @@ sitemap.xml).
 - **Download**: honest, no download yet. H1 "No download yet." — the app
   is in development; no Play Store listing, no APK, no download button
   (the repo is private, so no GitHub link either); those appear here only
-  when they are real. "What to expect" (free now — Premium Rs 1,450 later;
-  no account; local-first; no tracking) and "Questions first?" (Privacy
+  when they are real. "What to expect" (everything free; no account;
+  local-first; no tracking) and "Questions first?" (Privacy
   + FAQ on Home). No version or release numbers anywhere on the page —
   they go stale. Primary CTA "See how it works" → Features #focus;
   secondary "Explore features" → Features.
@@ -632,12 +632,9 @@ JSON-LD (`SoftwareApplication` + `FAQPage`) on the home page.
   1 + 1 per started hour left (minimum 2); hold-to-extend and starting a
   session over 3 hours need at least 1 parachute on board (not consumed);
   enabling a routine needs at least 1 parachute.
-- **Still Premium**: sessions up to 12 hours (custom card) and silence /
-  Do Not Disturb during sessions. Premium is Rs 1,450 one-time (simulated
-  in v1 — no real billing yet; arrives with Play Billing).
-- **Never list as paid**: routines, bags, slots, sounds, parachutes. The
-  old site copy that listed them as paid was stale; the Premium page in
-  the app was revised the same day.
+- **Also free**: sessions up to 12 hours (custom card) and silence /
+  Do Not Disturb during sessions. There is no Premium variant and no purchase in the app.
+- **Never list as paid**: routines, bags, slots, sounds, parachutes, the custom card, 12-hour sessions, silence / Do Not Disturb. Everything in the app is free; there is no Premium variant.
 - **Profile**: no sign-in, no "Leave a review" — the profile sheet has a
   "How to get parachutes" row instead.
 

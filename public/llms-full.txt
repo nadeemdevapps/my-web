@@ -35,7 +35,7 @@ A **local-first money ledger** — every amount adds up. Track expenses and loan
 
 A **strict, local-first focus guard** — timed sessions that keep distracting apps shut when it matters.
 
-- **Sessions ("bags")** — 15 min, 45 min, 3 h, or a custom length (3–12 h, premium).
+- **Sessions ("bags")** — 15 min, 45 min, 3 h, or a custom length (3–12 h).
 - **Parachute exit cost** — quitting early costs something, so it stays a deliberate choice.
 - **Streaks, routines, and stats** — the progress building up, visible day by day.
 
@@ -92,7 +92,7 @@ I'm still learning some languages, and I know the basics of others — but the j
 
 The apps on this site are **local-first by design** — no account, no server, no ads — because that's the right call for a personal tool. It's a choice, not a limitation: I also build **websites, Windows apps, Android apps, backends, and cloud-based apps** — whichever the project needs.
 
-Everything I make is **free to use right now** — Kaizenly's premium durations arrive with Play Billing.
+Everything I make is **free to use right now**.
 
 ## One problem, solved well.
 
@@ -126,7 +126,7 @@ His strengths are exploration, working with AI, UI design, planning, brainstormi
 
 ### Are Nadeem's apps free to use?
 
-Yes. Everything Nadeem makes is free to use right now. Kaizenly's premium durations — custom sessions of 3 to 12 hours — arrive with Play Billing, so there is nothing to pay for today.
+Yes. Everything Nadeem makes is free to use right now — including Kaizenly's custom sessions of 3 to 12 hours. There is nothing to pay for.
 
 ### What are Tsumly, Kaizenly, and MsgLoop?
 
@@ -230,7 +230,7 @@ The name comes from **Kaizen** — a Japanese idea meaning "change for the bette
 - **The Tower** — five minutes a day lays a block. Seven blocks make a floor. Your streak, built where you can watch it grow.
 - **Parachutes, earned free** — focus for 30 minutes a day and the streak pays you in parachutes — the first 10 days pay double. Never sold.
 
-Everything is free in this version. Premium — a custom card, 720-minute sessions, and silence / Do Not Disturb during sessions — is Rs 1,450 one-time; there is no purchase in the app today.
+Everything is free. A custom card, 720-minute sessions, and silence / Do Not Disturb during sessions are all free, and there is no purchase in the app.
 
 ## Built by Nadeem.
 
@@ -393,13 +393,13 @@ Tsumly is a personal finance record-keeping tool, provided as-is: it is not fina
 
 https://nadeemdevapps.github.io/my-web/products/kaizenly/privacy/
 
-Kaizenly collects no personal data: there is no account, no signup, and no analytics, advertising, or tracking. Sessions, bags, routines, and stats stay on the device, and the permissions blocking needs (usage access, accessibility, device admin, overlay, notifications, alarms) all work locally and never send information anywhere. Premium features, when they go live, will be sold through Google Play Billing, with payment handled by Google Play. Questions: nadeem.devapps@gmail.com.
+Kaizenly collects no personal data: there is no account, no signup, and no analytics, advertising, or tracking. Sessions, bags, routines, and stats stay on the device, and the permissions blocking needs (usage access, accessibility, device admin, overlay, notifications, alarms) all work locally and never send information anywhere. There are no premium purchases in Kaizenly — the app has no purchases of any kind, so no payment information is ever collected or handled. Questions: nadeem.devapps@gmail.com.
 
 ### Kaizenly Terms of Use
 
 https://nadeemdevapps.github.io/my-web/products/kaizenly/terms/
 
-Kaizenly is a strict focus guard, provided as-is, and its strictness is the point: sessions block a named set of apps until the timer ends, leaving early costs a parachute, and a 30-minute break is available during longer sessions. Data stays local with no account and no server. Some features, such as custom session durations, are premium and will be sold through Google Play Billing when they go live. Questions: nadeem.devapps@gmail.com.
+Kaizenly is a strict focus guard, provided as-is, and its strictness is the point: sessions block a named set of apps until the timer ends, leaving early costs a parachute, and a 30-minute break is available during longer sessions. Data stays local with no account and no server. There are no premium features in Kaizenly. Everything the app does is free, and there is nothing to buy in the app — no purchase, no subscription. Questions: nadeem.devapps@gmail.com.
 
 ### MsgLoop Privacy Policy
 

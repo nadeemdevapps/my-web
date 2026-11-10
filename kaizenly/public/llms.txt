@@ -6,7 +6,7 @@
 > Leaving early costs parachutes. Your data never leaves your device.
 
 - [Home](https://nadeemdevapps.github.io/my-web/products/kaizenly/): A little better, every day. Timed sessions, bags of blocked apps, routines, the Tower streak, and parachutes earned free by focusing.
-- [Features](https://nadeemdevapps.github.io/my-web/products/kaizenly/features/): Every feature, in detail — focus sessions, routines, the Tower, parachutes, sounds, stats, widgets, settings, backup, and the free vs Premium model.
+- [Features](https://nadeemdevapps.github.io/my-web/products/kaizenly/features/): Every feature, in detail — focus sessions, routines, the Tower, parachutes, sounds, stats, widgets, settings, backup — everything free.
 - [Gallery](https://nadeemdevapps.github.io/my-web/products/kaizenly/gallery/): Real screens from the app. App screenshots are on the way.
 - [About](https://nadeemdevapps.github.io/my-web/products/kaizenly/about/): About Kaizenly — built for a phone that would not stay down. Why the name, the philosophy (strict about the session, gentle about the person), and the solo developer behind it.
 - [Download](https://nadeemdevapps.github.io/my-web/products/kaizenly/download/): No download yet — the app is in development. What to expect when it arrives: everything free, no account, local-first, no tracking.
@@ -28,7 +28,7 @@
 - Free in this version: all 3 bags with 6 slots each, 3 routines (each routine its own bag), all 4 soundscapes (Rain, Waves, White Noise, City), and parachutes earned free by the parachute streak.
 - Parachute streak: a qualifying day is a day with at least one session of 30 minutes of actual focus. First 10 days pay double (day 3 earns +2; day 10 earns +6 with its bonus; cumulative totals 3→2, 6→8, 10→20, 15→25, 20→35, 30→45). A missed day resets the streak to 0; Tower reserve blocks do not save it. Cap 99.
 - Parachute costs: a 30-minute break costs 1; exiting early costs 1 + 1 per hour left (minimum 2); holding to extend and starting a session over 3 hours need one on board (not consumed); enabling a routine needs one.
-- Still Premium: sessions up to 12 hours (custom card) and silence / Do Not Disturb during sessions. Premium is Rs 1,450 one-time and arrives with Play Billing.
+- Also free: sessions up to 12 hours (custom card) and silence / Do Not Disturb during sessions. There is no purchase in the app, and none is planned.
 - The Tower: 5 minutes of focus a day lays one block; 7 blocks make a floor; 3 reserve blocks are spent automatically on missed days; 10 days in a row restores one spent reserve.
 - The daily streak: 1 minute a day keeps it alive; 5 minutes on the first day; weeks run Monday to Sunday; an evening reminder at 8:30 PM.
 - Local-first: no account, no sign-up, no server, no analytics, no ads, no trackers. Backup is a local JSON file you export and import yourself.

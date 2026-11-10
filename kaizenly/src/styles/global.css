@@ -1365,10 +1365,12 @@ button {
   }
 }
 
-/* ---------- Premium / free ---------- */
+/* ---------- Free plan ---------- */
 .plan-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  max-width: 640px;
+  margin: 0 auto;
   gap: 20px;
 }
 
@@ -1379,7 +1381,7 @@ button {
   box-shadow: var(--shadow-card);
 }
 
-.plan.premium {
+.plan.free {
   background: var(--block);
   color: #ecfbe1;
   border: 2px solid var(--accent);
@@ -1396,14 +1398,9 @@ button {
   letter-spacing: 0.06em;
 }
 
-[data-theme="light"] .plan.premium .plan-tag {
+[data-theme="light"] .plan.free .plan-tag {
   background: var(--accent-deep);
   color: #ffffff;
-}
-
-.plan.premium .plan-tag.free-tag {
-  background: #cbe8c3;
-  color: #1c2d28;
 }
 
 .plan h3 {
@@ -1411,7 +1408,7 @@ button {
   font-size: 26px;
 }
 
-.plan.premium p.plan-lede {
+.plan.free p.plan-lede {
   color: #c4cebf;
 }
 
@@ -1432,7 +1429,7 @@ button {
   font-size: 16px;
 }
 
-.plan.premium li {
+.plan.free li {
   color: #c4cebf;
 }
 
@@ -1440,7 +1437,7 @@ button {
   color: var(--ink);
 }
 
-.plan.premium li strong {
+.plan.free li strong {
   color: #ecfbe1;
 }
 
@@ -1460,7 +1457,7 @@ button {
   color: var(--ink-2);
 }
 
-.plan.premium .price {
+.plan.free .price {
   color: #909c8a;
 }
 
@@ -1469,14 +1466,8 @@ button {
   color: var(--ink);
 }
 
-.plan.premium .price b {
+.plan.free .price b {
   color: #ecfbe1;
-}
-
-@media (max-width: 840px) {
-  .plan-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* ---------- Parachutes: reward table ---------- */
@@ -1769,6 +1760,8 @@ button {
 }
 
 .footer-inner {
+  width: min(100% - 40px, var(--container));
+  margin-inline: auto;
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr;
   gap: 48px;
