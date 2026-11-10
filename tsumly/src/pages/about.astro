@@ -4,9 +4,7 @@ import TsumlyLayout from '../layouts/TsumlyLayout.astro';
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const siteHome = 'https://nadeemdevapps.github.io/my-web/';
 
-// Bio is adapted from the main site's About page
-// (nadeemdevapps.github.io/my-web/about/) — same facts, no location:
-// Nadeem is a solo developer; where he is based is not stated here.
+// Short Person JSON-LD for SEO/AEO — no location stated.
 const personLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
@@ -20,82 +18,115 @@ const personLd = {
 ---
 
 <TsumlyLayout
-  title="About Nadeem Mazhar — Solo Developer"
-  description="About Nadeem Mazhar — a solo developer building websites, Windows apps, Android apps, and backends with AI doing the heavy lifting. Every app starts as his own problem."
+  title="About Tsumly — A Ledger That Finally Adds Up"
+  description="Why Tsumly exists: money lent and borrowed between people deserves a record you can trust — local-first, no account, free. The story, the name, and what makes it different."
   jsonLd={[personLd]}
 >
-  <!-- ============ INTRO ============ -->
+  <!-- ============ STORY ============ -->
   <section class="section">
     <div class="container narrow">
       <div class="reveal">
         <span class="kicker">About</span>
-        <h1 class="page-h1">I'm Nadeem Mazhar.</h1>
+        <h1 class="page-h1">A ledger that finally adds up.</h1>
         <p class="lede">
-          Nadeem Dev Apps is my <strong>one-developer studio</strong>. I'm a
-          <strong>solo developer</strong> — no partner, no team — I plan,
-          design, and ship <strong>websites, Windows apps, Android apps, and
-          backends</strong>, with AI tools doing the heavy lifting under my
-          direction. Tsumly started as my own problem, and it ships only
-          when it works in daily use.
+          Tsumly started as my own problem — a ledger that never added up.
+          I was lending and borrowing money the way most people do: a note
+          here, a memory there, a chat message somewhere else. The amounts
+          were small and the people were people I trusted — and still, the
+          record never quite added up. Who had paid what? What was left?
+          The answer was always a guess.
+        </p>
+        <p class="lede">
+          Money between people deserves a record you can trust. So I built
+          one: a ledger for the money you lend and borrow, where every
+          amount is recorded, every repayment lowers what is left, and the
+          balance is always honest. It lives on your phone, it works
+          offline, it needs no account — and it is free.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- ============ HOW I WORK ============ -->
+  <!-- ============ WHY THE NAME ============ -->
   <section class="section alt">
     <div class="container narrow">
       <div class="reveal">
-        <span class="kicker">How I work</span>
-        <h2>A solo developer, building for himself first.</h2>
+        <span class="kicker">Why the name</span>
+        <h2>Why "Tsumly"?</h2>
         <p class="lede">
-          I work the way a one-person studio should: I
-          <strong>plan</strong> the product, <strong>design</strong> the
-          interface, <strong>direct</strong> the build, and
-          <strong>review</strong> everything before it ships. AI tools do
-          the heavy lifting; the decisions are mine.
+          The name is inspired by the Japanese verb <strong>tsumu</strong>
+          (積む) — to stack, to accumulate, to build up over time.
         </p>
         <p class="lede">
-          I'm still learning some languages, and I know the basics of
-          others — but the job was never typing syntax by hand. The job is
-          <strong>exploration, working with AI, UI design, planning,
-          brainstorming, problem-solving, and security analysis</strong> —
-          and that's where I'm strong. I ship real products by combining my
-          judgment with the best tools available.
+          Every amount stacks onto the last — a loan, a repayment, a rupee
+          at a time — until the ledger is complete. Small amounts, recorded
+          honestly, accumulate into the full picture: what you are owed,
+          and what you owe. Over weeks and months, the ledger builds up
+          into a record you can trust — and a history you can share.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- ============ WHAT I BUILD ============ -->
+  <!-- ============ WHAT MAKES IT DIFFERENT ============ -->
   <section class="section">
     <div class="container narrow">
       <div class="reveal">
-        <span class="kicker">What I build</span>
-        <h2>Websites, apps, backends — and cloud.</h2>
-        <p class="lede">
-          The apps on this site are <strong>local-first by design</strong> —
-          no account, no server, no ads — because that's the right call for
-          a personal tool. It's a choice, not a limitation: I also build
-          <strong>websites, Windows apps, Android apps, backends, and
-          cloud-based apps</strong> — whichever the project needs.
-        </p>
+        <span class="kicker">What makes it different</span>
+        <h2>Three things most ledger apps get wrong — or leave out.</h2>
         <ul class="feature-list">
-          <li><strong>Every app starts as my own problem.</strong> Tsumly began as a ledger that never added up; Kaizenly began as a phone that would not stay down. Each earned its place by working in daily use.</li>
-          <li><strong>One problem, solved well.</strong> Each app does a single job properly instead of ten things halfway. If it needs a second job, it becomes a second app.</li>
-          <li><strong>Private by default.</strong> No accounts, no tracking, no ads. Your data stays on your device; backups go to your own storage, when you choose.</li>
-          <li><strong>Honest copy.</strong> No fake badges, ratings, or reviews. A download button, a Play Store badge, or a rating appears only when it is real.</li>
+          <li><strong>Smart repayment split</strong> — when someone pays you back, the money rarely matches a single loan. Tsumly splits one repayment across several loans in a single action — and never merges them, so each loan keeps its own history. <a href={`${base}features/#smart-repayment-split`}>How the split works →</a></li>
+          <li><strong>Pre-app loans</strong> — you were lending and borrowing long before Tsumly. Pre-app loans record those older loans without moving your current balance, so your history is complete and your balance stays honest. <a href={`${base}features/#pre-app-loans`}>How pre-app loans work →</a></li>
+          <li><strong>Person profiles</strong> — loans live on person profiles, so you always see who owes what: per-person totals, a guarded archive, and a full ledger per person. <a href={`${base}features/#person-profiles`}>How profiles work →</a></li>
         </ul>
+        <p class="lede">
+          Around those three, Tsumly tracks the everyday money too —
+          income, expenses and transfers in the same ledger — with monthly
+          reports, statements you can share, and reminders that arrive on
+          their own. <a href={`${base}features/`}>Every feature, in detail →</a>
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- ============ CONTACT ============ -->
+  <!-- ============ SHAPED BY COMPARISON ============ -->
   <section class="section alt">
     <div class="container narrow">
       <div class="reveal">
-        <span class="kicker">Contact</span>
-        <h2>Say hello.</h2>
+        <span class="kicker">Shaped by comparison</span>
+        <h2>Compared against the apps out there — and against daily use.</h2>
+        <p class="lede">
+          Tsumly was shaped by comparing it with other ledger apps. Testing
+          the app on my own phone against <strong>Pendara</strong>, for
+          example, led to three changes: the people list got cards like
+          the accounts list, the person detail got a single summary card
+          instead of three confusing tiles, and onboarding gained a
+          restore step, so a fresh install can bring back a backup before
+          anything else.
+        </p>
+        <p class="lede">
+          That is how Tsumly keeps being shaped — by using it every day,
+          and by what is missing. If a repayment cannot be split honestly,
+          or an old loan has nowhere honest to live, that is the next
+          thing to fix.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DEVELOPER (SHORT) ============ -->
+  <section class="section">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">Built by Nadeem</span>
+        <h2>A solo developer, building for himself first.</h2>
+        <p class="lede">
+          Tsumly is built by <strong>Nadeem Mazhar</strong>, a solo
+          developer, as <strong>Nadeem Dev Apps</strong>. I plan, design,
+          and direct the build, with AI tools doing the heavy lifting —
+          and every app starts as my own problem. Tsumly began as a ledger
+          that never added up.
+        </p>
         <p class="lede">
           Questions, feedback, or just want to say hi? Reach me at
           <a href="mailto:nadeem.devapps@gmail.com">nadeem.devapps@gmail.com</a>,

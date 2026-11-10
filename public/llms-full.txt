@@ -183,121 +183,28 @@ https://nadeemdevapps.github.io/my-web/products/tsumly/
 
 Tsumly is a **local-first** personal expense and loan ledger for Android: your money stays on your device — **no account, no cloud by default** — with an optional encrypted Google Drive backup. It tracks **income, expenses and transfers** between accounts, and its **smart multi-loan repayment split** spreads one repayment across several loans, while **pre-app loans** record older loans without moving your balance.
 
-## A ledger that lives on your phone.
+Free. Android. No account needed.
 
-Tsumly is a **local-first ledger** for the money you **lend and borrow**. Record a loan, note who it is with, and keep a **running balance** — everything is stored on your device, and it works offline.
+## Why Tsumly?
 
-- **Lend or borrow** — record a loan in either direction, with its due amount, fees, and history.
-- **Partial repayments** — a loan can be paid back a little at a time, and every payment is recorded against the same loan.
-- **Running balance** — always see where you stand: what you are owed, and what you owe.
-- **Settle in full** — pay off a loan's full remaining balance in one step, after a confirmation.
-- **Edits stay honest** — a loan's note and due date can be edited, and a loan with no repayments can be deleted; the money itself only moves through repayments.
+The name is inspired by the Japanese verb **tsumu** (積む) — to stack, to accumulate, to build up over time.
 
-## One repayment, split across every loan it covers.
+## What Tsumly does best.
 
-When someone pays you back, the money rarely matches a single loan. Tsumly **splits one repayment across several active loans** in a single action — and **never merges loans**, so each loan keeps its own history.
+- **Smart repayment split** — one repayment, split across every loan it covers — never merged, smallest first, overpayment blocked.
+- **Pre-app loans** — loans from before the app still count — recorded without moving your balance, and flippable later.
+- **Person profiles** — people, not just numbers — per-person totals, a guarded archive, and a full ledger per person.
+- **Backup & privacy** — your money stays yours — local-first, encrypted backup, no tracking, no account.
 
-- **Pre-selected for you** — Tsumly picks the loans the repayment applies to, and shows which will be **fully paid** and which **partially**.
-- **No merging** — a Rs. 3,000 loan repaid by Rs. 1,170 stays one loan with **Rs. 1,830 left**.
-- **Mistakes are reversible** — a repayment recorded by mistake can be **reversed in one step**.
-- **Smallest first** — the split pays the smallest outstanding loan first, and the oldest loan first when two are equal.
-- **Overpayment is blocked** — a repayment cannot be more than the selected loans' total outstanding.
-- **Auto-select, on by default** — Tsumly pre-selects all of a person's open loans; turn it off in settings to pick by hand.
-- **Every split is recorded** — each repayment stores how much landed on each loan, and the balance before and after, so statements can show the breakdown.
-
-## Loans from before the app still count.
-
-You were lending and borrowing long before Tsumly. **Pre-app loans** record those older loans **without moving your current balance** — so your history is complete and your balance stays honest.
-
-- **Mark it pre-app** — when you create a loan that started before the app, it is recorded without an opening balance movement.
-- **Same detail, same history** — every loan keeps its own due amount, fees, and history, pre-app or not.
-- **Flip it later** — marking a loan pre-app adds its opening movement back to the account; removing the mark records it. The amount, due date and repayments stay unchanged.
-
-## People, not just numbers.
-
-Loans live on **person profiles**, so you always see **who owes what**. Each person carries their own totals, and nothing about an open loan can be hidden by accident.
-
-- **Per-person totals** — every profile shows what that person owes you, and what you owe them.
-- **Archive is guarded** — a person with **outstanding loans cannot be archived**.
-- **Archived people stay reachable** — they still appear in the person picker, and picking one **restores them automatically**.
-- **Delete is refused while loans exist** — a person with any loan cannot be deleted; archive them instead.
-- **A full ledger per person** — loans opened and repayments made in one interleaved history, with open and paid loan counts.
-
-## Income, expenses and transfers — in the same ledger.
-
-Tsumly tracks the everyday money too — **income and expenses** against categories and accounts, and **transfers between your own accounts** — so the loan ledger and the cash ledger always agree.
-
-- **Income & expenses** — record money in and money out against an account and a category, with an optional note, fee and tax on every entry.
-- **Transfers between accounts** — move money from one account to another in one entry, with its own fee and tax; deleting a transfer removes both legs and puts the balances back.
-- **Fees & taxes, kept visible** — every income, expense, transfer, loan and repayment can carry a fee and a tax, and monthly reports total them separately.
-- **Categories with subcategories** — starter categories for Pakistani households, including Salary, Business, Freelance, Groceries and Transport, with subcategories such as Supermarket and Local Market; add, rename or archive your own, two levels deep.
-- **Dates you control** — entries carry the date and time you choose, and an entry keeps the clock time you recorded even when you travel across timezones.
-
-## Every rupee lives in an account.
-
-Cash, a bank, JazzCash, Easypaisa or another wallet — each account has its own **opening balance** and a live balance that follows every movement.
-
-- **Opening balance per account** — start each account with the money already in it; its balance is the opening balance plus every movement since.
-- **Five account types** — Cash, Bank, JazzCash, Easypaisa and Other, each with its own icon.
-- **Archive, never delete** — archiving an account keeps its history intact, and archived accounts are excluded from your available balance.
-- **Balance guard** — when a payment would take an account below zero, Tsumly either warns you and waits for confirmation, or blocks it — your choice in settings.
-
-## Where the money went, on one screen — and on paper.
-
-Monthly reports show **where the money went**, and statements turn any slice of the ledger into a **PDF you can share**.
-
-- **Monthly reports** — cash in, cash out and net for any month, with income and expense broken down by category, a weekly cash-flow chart, fees and taxes totalled, and lent and borrowed positions.
-- **Six statement exports** — all activity, expense, income, loans, transfers and per-account statements, each as a PDF.
-- **Per-person statements** — from any person's profile, export their loans and repayments as a PDF for a date range you pick: last 30 or 90 days, last 6 months, last year, all time, or a custom range.
-- **Repayment breakdowns on statements** — every repayment shows how it was split across loans, because each split is stored with the repayment.
-- **Share or save** — every statement PDF can be shared from the system share sheet or saved as a file.
-
-## Your money, the moment you open the app.
-
-The home tab opens on your **available balance**, your **net position**, and what you have **lent and borrowed** — with one-tap actions for income, expense, transfer or a loan payment.
-
-- **Available balance & net position** — the balance across your active accounts, with the net position underneath it; either can be hidden in settings.
-- **Lent & borrowed at a glance** — two tiles show what others owe you and what you owe, always live.
-- **Quick actions** — Income, Expense, Transfer and Loan from one row; the Loan action opens the smart repayment flow for a person.
-- **Daily quote** — a short quote under the greeting, drawn from a bundled set, with Urdu quotes shown right-to-left in a Nastaliq or Naskh font you pick.
-- **Pull to refresh** — a pull refreshes every number on the dashboard.
-
-## A due date that reminds you itself.
-
-A loan with a due date reminds you on its own: a local notification on the **due date at 9:00 AM**, and an **overdue reminder the next morning** if it is still open.
-
-- **Due-date reminders** — set an optional due date when you create a loan; Tsumly schedules a 9:00 AM reminder for the day and an overdue reminder the next day.
-- **Tapping opens the loan** — a reminder opens the loan's detail screen, ready to record the repayment.
-- **Reminders follow the loan** — editing a due date reschedules its reminders, and deleting a loan cancels them.
-
-## Light or dark, your font, your currency.
-
-Tsumly bends to how you like it: **light or dark**, your **display font**, and which numbers the home tab shows.
-
-- **Theme & display font** — System, Dark or Light theme, and Bricolage Grotesque or EB Garamond for headings.
-- **Show or hide** — available balance, net position and animated amounts can each be switched off.
-- **One base currency** — pick from 15 currencies on first run, PKR pre-selected; everything is recorded in that one currency.
-- **Your name on the greeting** — the home greeting uses the display name you set in settings.
-- **Date & time control** — allow changing the date and time on entries, or lock them to now.
-
-## Your money stays yours.
-
-**Offline-first and one-device-first.** Nothing leaves the phone unless you turn on Drive backup — and even then, the backup is **encrypted** and stored in the app's **own private Drive folder**.
-
-- **No account, no cloud by default** — your money stays on your device; there is nothing to sign up for.
-- **Encrypted backup** — the optional Google Drive backup is encrypted.
-- **No tracking** — no analytics, no ads, nothing phoning home.
-- **Sign-in stays on the device** — device-specific sign-in details never leave the phone in a portable backup.
-- **Local backup file** — export everything to a timestamped **.moneybackup** file and restore it on any device; older backups are migrated on import.
-- **Scheduled Drive backups** — hourly, daily, weekly or monthly automatic uploads to your private Drive folder, keeping the latest three.
-- **Password protection** — an optional password of at least 8 characters encrypts a backup; scheduled uploads can reuse a password kept in the device's secure storage.
-- **Restore on first run** — a fresh install offers to restore from a local backup file or from Drive before you set anything up.
-
-In daily use. Privacy and Terms are already live on this site.
+The full detail lives on the Features page.
 
 ## Built by Nadeem.
 
-Tsumly was built by **Nadeem Mazhar**, a solo developer in Pakistan, as part of Nadeem Dev Apps.
+Tsumly is built by **Nadeem Mazhar**, a solo developer, as **Nadeem Dev Apps**. It started as his own problem — a ledger that never added up — and it is built the way he builds everything: local-first, and honest about what it does.
+
+More from Nadeem Dev Apps → https://nadeemdevapps.github.io/my-web/
+
+Tsumly pages: [Home](https://nadeemdevapps.github.io/my-web/products/tsumly/) · [Features](https://nadeemdevapps.github.io/my-web/products/tsumly/features/) · [Gallery](https://nadeemdevapps.github.io/my-web/products/tsumly/gallery/) · [About](https://nadeemdevapps.github.io/my-web/products/tsumly/about/) · [Download](https://nadeemdevapps.github.io/my-web/products/tsumly/download/) · [Privacy](https://nadeemdevapps.github.io/my-web/products/tsumly/privacy/) · [Terms](https://nadeemdevapps.github.io/my-web/products/tsumly/terms/) — full text: [llms-full.txt](https://nadeemdevapps.github.io/my-web/products/tsumly/llms-full.txt)
 
 
 ---
@@ -308,129 +215,30 @@ https://nadeemdevapps.github.io/my-web/products/kaizenly/
 
 # A little better, every day.
 
-Kaizenly is a **strict, local-first focus guard** for Android: pick a time — **15 minutes, 45 minutes, 3 hours, or a custom 3–12 hour session (premium)** — pick the apps that distract you, and start a session. Everything in the bag stays shut until the timer ends, and quitting early costs parachutes, so ending is a deliberate choice.
+Kaizenly is a **strict, local-first focus guard** for Android: pick a time, pick the apps that distract you, and start a session. Everything in the bag stays shut until the timer ends, and quitting early costs parachutes, so ending is a deliberate choice.
+
+No download yet — the app is in development.
 
 ## Why "Kaizenly"?
 
 The name comes from **Kaizen** — a Japanese idea meaning "change for the better." **Kai** is change and progress; **Zen** is calm, focus, and balance; and **ly** makes it a daily lifestyle.
 
-Together: **improve your life calmly, one small step at a time.**
+## What it does — strict where it matters.
 
-## Pick a time. Start a session. Stay put.
+- **Focus sessions** — bags, presets, the wheel, and a block screen that does not let go — with breaks and parachutes for when life interrupts.
+- **Routines** — three routines that start themselves — on schedule, on the days you choose, each with its own bag.
+- **The Tower** — five minutes a day lays a block. Seven blocks make a floor. Your streak, built where you can watch it grow.
+- **Parachutes, earned free** — focus for 30 minutes a day and the streak pays you in parachutes — the first 10 days pay double. Never sold.
 
-A focus session is a **bag** — a named set of apps that stays shut until the timer ends. Choose **15 minutes, 45 minutes, 3 hours, or a custom length (3–12 hours, premium)**, slide to start, and the block does the rest.
-
-- **Bags** — three bags, each holding up to 6 apps, all free. Pick apps from a searchable list of installed apps.
-- **Presets and a wheel** — tap 15 minutes, 45 minutes, or 3 hours, or spin the ruler wheel from 1 minute up to 12 hours. Custom sessions over 3 hours need at least one parachute on board.
-- **Slide to start** — the footer slider starts the session; there is no tap-to-start shortcut to hit by accident.
-- **Floating pill** — a small overlay keeps the countdown on screen, so the time left is always in sight. Tap it to open the block screen; drag it to move it.
-- **Block screen** — opening a blocked app shows the block screen (Distraction Wall) with the countdown, the end time, and your parachutes, and sends you back to focus. After 3 seconds idle, the chrome dims into rest mode until you touch it again.
-- **Essentials stay open** — your default messaging app, dialer, camera, alarm app, and keyboards keep working during a session, along with in-call screens. Everything in the active bag is blocked.
-- **Enforcement that holds** — an accessibility service bounces blocked apps, closes the notification shade, recents, and power menu, and dismisses floating windows. A watchdog re-checks the block every 15 seconds, a live session is restored after a reboot, and a guardian fallback watches the foreground app when the accessibility service is down.
-- **Parachutes** — leaving early costs parachutes, so ending a session is a deliberate decision, not a reflex. With 30 minutes or less left, it costs 1 parachute. Parachutes are earned free by focusing: a day with at least 30 minutes of actual focus counts toward your streak — the first 10 days pay double (day 3 earns +2, day 10 earns 20 in total); a missed day resets the streak to 0, and Tower reserves do not save it. The counter is capped at 99.
-- **A 30-minute break** — with more than 30 minutes left, you can take a 30-minute break for one parachute: the clock freezes and the block returns by itself. Ending early costs more the more time is left: 1 parachute plus 1 per started hour remaining.
-- **Hold to extend** — hold the +15 card for 3 seconds to add 15 minutes to a live session, up to 60 extra minutes per session. It needs a parachute on board.
-- **Soundscapes** — four sounds, all free, generated live on the device with no audio files: rain, waves, white noise, and city. A session starts silent; sound plays only when you pick it.
-- **Settings passes** — while a session runs, Android Settings can be opened only on a 60-second pass, at most 3 passes per session, so the block cannot be switched off casually.
-- **Routine-aware sessions** — a manual session can stretch to the end of the next routine window, capped at 12 hours, when a routine is enabled and you have a parachute.
-
-## Small steps, every day.
-
-Focus works best as a **routine**, not a one-off effort. Kaizenly starts sessions on a schedule, reminds you before they begin, and keeps the daily target small enough to hold.
-
-- **Routines** — up to 3 named routines, all free, each with its own start time, a duration from 5 minutes to 12 hours, and the days of the week it runs on. Turning one on needs at least one parachute.
-- **Pre-alerts** — a notification 5 minutes before a routine starts, so the block never catches you by surprise.
-- **Overlap warnings** — if two routines would overlap, Kaizenly shows the combined locked window and asks before turning the second one on.
-- **Each routine, its own bag** — each routine blocks its own bag, free, and your previous bag comes back when the routine session ends.
-- **A one-minute daily target** — one minute of focus a day is enough to keep the streak alive (5 minutes on the very first day). Small enough to keep, every day.
-- **Evening streak reminder** — at 8:30 pm, a nudge if today has no session yet. It can be switched off in Settings.
-- **Monday-start weeks** — weeks run Monday to Sunday, so the streak counts the way your week does.
-- **Post-session celebration** — finishing a session ends with a small celebration: DONE when the clock runs out, SOS when you left with a parachute. A finished session shows stat cards and the Monday-first week, and a share button exports the celebration card as a PNG image (not shown for SOS).
-
-## Every day lays a block.
-
-The Tower is the streak, built visibly: every day with at least **five minutes of focus lays a block**, seven blocks make a floor, and the floors become your tower.
-
-- **Blocks and floors** — one block per day with five minutes of focus; seven blocks make one floor. Tap the streak badge on the home screen to open the Tower.
-- **Three reserve blocks** — a reserve block can save the tower when you skip a day. Ten days in a row restores one spent reserve, up to three.
-- **Missed-day repair** — when a recent day is missed but the days around it hold, the Tower repairs it automatically using a reserve.
-- **Day one hundred** — reach day one hundred and you will find a surprise.
-- **Best streak kept** — your longest run is recorded and shown on the Tower, alongside the current streak.
-
-## Your progress, on your device.
-
-Every session is recorded **locally**, in a Room database on your phone. See how your focus adds up — **by day, by month, and by year** — without anything leaving the device.
-
-- **Day, Month, and Year views** — the Day view shows focus minutes per hour across 24 hours; the Month view shows minutes per day; the Year view shows minutes per month. A rotary wheel picks the period and a stepper walks back into the past.
-- **What is recorded** — each session stores its start and end, planned minutes, actual seconds, bag, and whether it finished or ended with a parachute. Sessions shorter than 5 seconds are not recorded.
-- **Post-session celebration** — finishing a session ends with a small celebration, and a shareable image of the result.
-- **No account, no sync** — stats live in the local database; there is nothing to log in to.
-
-## Focus, from the home screen.
-
-Two home-screen widgets keep Kaizenly one tap away, without opening the app first.
-
-- **Preset widget** — a hero countdown with up to three of your presets (1–720 minutes). Tap a preset to select it, tap the selected one to open the wheel editor, and start a session from the widget.
-- **Streak widget** — the last 28 days as four week rows under the current streak count. Tapping it opens the Tower.
-
-## Yours to set up, yours to keep.
-
-Kaizenly asks for three system permissions at setup — accessibility, draw over other apps, and ignoring battery optimization — so the system cannot interrupt an ongoing block. The rest is plain settings and a backup file you own.
-
-- **Theme** — light, automatic, or dark.
-- **Haptics** — haptic feedback can be switched off.
-- **Silence during sessions** — premium: Do Not Disturb turns on by itself while the block lasts, and your previous interruption setting comes back at the end.
-- **Display name** — a name for the profile, stored on the device. There is no account and no sign-in.
-- **Local JSON backup** — export your sessions, bags, routines, streak, and settings to one JSON file, or restore them on another device. Import replaces the data on the device; a live session is never carried over. No Drive, no password, no upload.
-
-## Free now. Premium arrives with Play Billing.
-
-Almost everything is free — bags, routines, soundscapes, and parachutes are all free in this version. Premium arrives with Play Billing. There is no purchase in the app today.
-
-- **Free, for now (Rs 0)** — 3 bags, 6 slots each; 3 routines, each routine its own bag; all 4 soundscapes; parachutes earned free by the streak; the Tower, stats, widgets, and local backup; sessions up to 3 hours.
-- **Premium (Rs 1,450 one-time, arrives with Play Billing)** — sessions up to 12 hours (the custom card, 3 to 12 hours) and silence (Do Not Disturb) during sessions. Everything in Free, of course.
-
-## Kaizenly, answered.
-
-### What is Kaizenly?
-
-Kaizenly is a strict, local-first focus guard for Android. You pick a time — 15 minutes, 45 minutes, 3 hours, or a custom 3–12 hour session (premium) — pick the apps that distract you, and start a session. Everything in the bag stays shut until the timer ends, and quitting early costs parachutes.
-
-### How much does Kaizenly cost?
-
-Everything is free to use right now. Bags, routines, soundscapes, and parachutes are all free in this version. Premium — sessions up to 12 hours and silence (Do Not Disturb) during sessions — arrives with Play Billing (Rs 1,450 one-time). There is no purchase in the app today.
-
-### How do I get parachutes?
-
-Parachutes are earned, never bought. Focus for at least 30 minutes of actual focus in a day and that day counts toward your parachute streak. The first 10 days pay double: day 3 earns +2, and by day 10 you have earned 20. After day 10 you earn +1 a day, with a +5 bonus at day 20. A missed day resets the streak to 0 — even if a Tower reserve saves your Tower streak.
-
-### What happens if I quit a focus session early?
-
-With 30 minutes or less left, leaving costs 1 parachute and ends the session. With more than 30 minutes left, you choose: take a 30-minute break for 1 parachute and the block returns by itself, or end the session for 1 parachute plus 1 per started hour left.
-
-### Does Kaizenly upload my data anywhere?
-
-No. Sessions and stats live in a Room database on your device, there is no account, no sync, and no analytics. Backups are local JSON files you export and import yourself — nothing is uploaded anywhere.
-
-### Which apps still work during a Kaizenly session?
-
-The essentials keep working: your default messaging app, dialer, camera, alarm app, and keyboards, plus in-call screens. Everything in the active bag is blocked.
-
-### Does Kaizenly keep blocking after a reboot?
-
-Yes. A live session is restored after a reboot, and a watchdog alarm re-checks the block every 15 seconds while a session runs.
-
-## Your focus belongs to you.
-
-There is **no server** and no custom backend. Your sessions and stats live in a local database on your device — no login, no account, and **no analytics**.
-
-The only planned network use is Play Billing. Backups are **local JSON files** you export and import yourself — nothing is uploaded anywhere.
-
-In daily use. Privacy and Terms are already live on this site.
+Everything is free in this version. Premium — a custom card, 720-minute sessions, and silence / Do Not Disturb during sessions — is Rs 1,450 one-time; there is no purchase in the app today.
 
 ## Built by Nadeem.
 
-Kaizenly was built by **Nadeem Mazhar**, a solo developer in Pakistan, as part of Nadeem Dev Apps.
+Kaizenly is built by **Nadeem Mazhar**, a solo developer, as **Nadeem Dev Apps**. It started as his own problem — a phone that would not stay down — and it is built the way he builds everything: local-first, strict where it matters, and honest about what it does.
+
+More from Nadeem Dev Apps → https://nadeemdevapps.github.io/my-web/
+
+Kaizenly pages: [Home](https://nadeemdevapps.github.io/my-web/products/kaizenly/) · [Features](https://nadeemdevapps.github.io/my-web/products/kaizenly/features/) · [Gallery](https://nadeemdevapps.github.io/my-web/products/kaizenly/gallery/) · [About](https://nadeemdevapps.github.io/my-web/products/kaizenly/about/) · [Download](https://nadeemdevapps.github.io/my-web/products/kaizenly/download/) · [Privacy](https://nadeemdevapps.github.io/my-web/products/kaizenly/privacy/) · [Terms](https://nadeemdevapps.github.io/my-web/products/kaizenly/terms/) — full text: [llms-full.txt](https://nadeemdevapps.github.io/my-web/products/kaizenly/llms-full.txt)
 
 
 ---

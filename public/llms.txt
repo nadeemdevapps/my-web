@@ -6,7 +6,15 @@
 
 - [Home](https://nadeemdevapps.github.io/my-web/)
 - [Tsumly](https://nadeemdevapps.github.io/my-web/products/tsumly/): local-first personal expense and loan ledger. "Every amount adds up." Smart multi-loan repayment split, optional Google Drive backup.
+- [Tsumly Features](https://nadeemdevapps.github.io/my-web/products/tsumly/features/)
+- [Tsumly Gallery](https://nadeemdevapps.github.io/my-web/products/tsumly/gallery/)
+- [Tsumly About](https://nadeemdevapps.github.io/my-web/products/tsumly/about/)
+- [Tsumly Download](https://nadeemdevapps.github.io/my-web/products/tsumly/download/)
 - [Kaizenly](https://nadeemdevapps.github.io/my-web/products/kaizenly/): a strict, local-first focus guard, built from scratch.
+- [Kaizenly Features](https://nadeemdevapps.github.io/my-web/products/kaizenly/features/)
+- [Kaizenly Gallery](https://nadeemdevapps.github.io/my-web/products/kaizenly/gallery/)
+- [Kaizenly About](https://nadeemdevapps.github.io/my-web/products/kaizenly/about/)
+- [Kaizenly Download](https://nadeemdevapps.github.io/my-web/products/kaizenly/download/)
 - [MsgLoop](https://nadeemdevapps.github.io/my-web/products/msgloop/): a WhatsApp sender for Android. Send one message many times, now or on a schedule. Local-first, no account, no server.
 
 ## Pages

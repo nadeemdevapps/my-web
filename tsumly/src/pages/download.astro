@@ -1,0 +1,90 @@
+---
+import TsumlyLayout from '../layouts/TsumlyLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const releasesUrl = 'https://github.com/nadeemdevapps/tsumly/releases';
+---
+
+<TsumlyLayout
+  title="Download Tsumly — Free Android Ledger App"
+  description="Download Tsumly free for Android — a local-first expense and loan ledger. No account needed, no tracking. Get the latest release on GitHub."
+>
+  <!-- ============ DOWNLOAD ============ -->
+  <section class="section">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">Download</span>
+        <h1 class="page-h1">Download Tsumly</h1>
+        <p class="lede">
+          Tsumly is <strong>free for Android</strong> — a local-first ledger
+          for the money you lend and borrow. No account, no sign-up, no
+          tracking. Get the latest release from GitHub.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href={releasesUrl}>Get Tsumly on GitHub</a>
+          <a class="btn btn-secondary" href={`${base}features/`}>Explore features</a>
+        </div>
+        <p class="hero-note">Free · Android · No account needed.</p>
+        <p>
+          There is no Play Store listing yet — no badge, rating, or
+          download link until it is real.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT TO EXPECT ============ -->
+  <section class="section alt">
+    <div class="container narrow">
+      <div class="reveal">
+        <div class="card">
+          <h2>What to expect</h2>
+          <ul class="feature-list" style="margin-top: 10px">
+            <li><strong>Free</strong> — no account, no subscription, no ads.</li>
+            <li><strong>Android</strong> — installs from the GitHub release.</li>
+            <li><strong>No account needed</strong> — nothing to sign up for.</li>
+            <li><strong>Local-first</strong> — your money stays on your device, and the app works offline.</li>
+            <li><strong>No tracking</strong> — no analytics, no ads, nothing phoning home.</li>
+            <li><strong>Optional encrypted backup</strong> — to your own private Drive folder, or a file you export yourself.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUESTIONS FIRST ============ -->
+  <section class="section">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">Questions first?</span>
+        <h2>See how it handles your data before you install it.</h2>
+        <div class="hero-ctas">
+          <a class="btn btn-secondary" href={`${base}privacy/`}>Privacy</a>
+          <a class="btn btn-secondary" href={`${base}#faq`}>FAQ →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Same restrained reveals as the home page.
+    var els = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('in');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(function (el) {
+        io.observe(el);
+      });
+    } else {
+      els.forEach(function (el) {
+        el.classList.add('in');
+      });
+    }
+  </script>
+</TsumlyLayout>

@@ -202,7 +202,7 @@ components:
     typography: "{typography.nav-link}"
     padding: "{spacing.md}"
     # Tsumly's own nav: Tsumu mark + TSUMLY Bricolage wordmark left;
-    # Home / Features / Gallery / About / Privacy / Terms links; theme
+    # Home / Features / Gallery / About / Download / Privacy / Terms links; theme
     # toggle right. The portfolio link lives in the About section and
     # the footer ("Built by Nadeem"), not in the nav. Hamburger below
     # 840px.
@@ -262,7 +262,8 @@ components:
     typography: "{typography.caption}"
     padding: "{spacing.xxl}"
     # Own footer: mark + tagline, "Built by Nadeem" with a link to the
-    # portfolio home, links to Overview / Privacy / Terms, and the
+    # portfolio home, links to Home / Features / Gallery / About /
+    # Download / Privacy / Terms, and the
     # Machine column (llms.txt / robots.txt / sitemap.xml).
   toast:
     backgroundColor: "{colors.ink}"
@@ -563,7 +564,7 @@ The contrast between a 16px button and a 20px card is intentional.
 
 **`nav-bar`** — Top navigation. Slim sticky bar, `{colors.surface}`
 background, 64px tall. Left: Tsumu mark + TSUMLY Bricolage wordmark.
-Centre/right: Home / Features / Gallery / About / Privacy / Terms links.
+Centre/right: Home / Features / Gallery / About / Download / Privacy / Terms links.
 Right: theme toggle (System / Dark / Light). The portfolio link lives in
 the About section and the footer ("Built by Nadeem"), not in the nav.
 Condenses to a hamburger below 840px.
@@ -620,9 +621,9 @@ background, `{typography.title-md}` title, `{typography.body-md}` body,
 **`hero`** — Pale lavender-cream canvas, `{colors.ink}` text,
 `{typography.display-xl}` Bricolage two-tone headline ("Every amount"
 dim → "adds up." strong), and a `button-primary` + `button-secondary`
-CTA pair. Primary CTA is "Get Tsumly on GitHub" → the GitHub releases
-page (the release page, never a direct APK link); secondary CTA is "See
-how it works" → `{base}features/#how-it-works`. A small note under the
+CTA pair. Primary CTA is "Download Tsumly" → the Download page (the
+GitHub releases page lives there — the release page, never a direct APK
+link); secondary CTA is "See how it works" → `{base}features/#how-it-works`. A small note under the
 CTAs reads "Free. Android. No account needed." Tsumu sits above the
 headline.
 
@@ -630,7 +631,7 @@ headline.
 `{colors.ink-secondary}` link text at `{typography.caption}`, padding
 `{spacing.xxl}`. Brand column (mark + tagline + "Built by Nadeem" with a
 link to the portfolio home), link columns (Home / Features / Gallery /
-About / Privacy / Terms), and the Machine column (llms.txt / robots.txt /
+About / Download / Privacy / Terms), and the Machine column (llms.txt / robots.txt /
 sitemap.xml).
 
 **`stat-tile`** — A stat block. `{colors.surface}` background, value in
@@ -640,7 +641,7 @@ font), caption in `{typography.caption}`, 20px radius, 16px padding.
 ## Core Pages
 
 - **Home**: hero (Tsumu mark, Bricolage two-tone headline "Every amount
-  adds up.", primary CTA → the GitHub releases page, secondary CTA →
+  adds up.", primary CTA "Download Tsumly" → the Download page, secondary CTA →
   `features/#how-it-works`), the name section ("Why Tsumly?" — inspired
   by Japanese *tsumu* 積む, to stack / accumulate / build up), a
   highlights teaser (four cards, each linking to a Features anchor —
@@ -667,17 +668,29 @@ font), caption in `{typography.caption}`, 20px radius, 16px padding.
   user (one Drive folder per app); until then each slot is an empty
   frame and one honest line says the screenshots are on the way. No
   images, no fake screenshots.
-- **About**: the developer — Nadeem Mazhar, solo developer, Nadeem Dev
-  Apps. One-developer studio, no partner, no team; he plans, designs,
-  directs and reviews, with AI tools doing the heavy lifting. Builds
-  websites, Windows and Android apps, backends and cloud. Strengths:
-  exploration, working with AI, UI design, planning, brainstorming,
-  problem-solving, security analysis. Every app starts as his own
-  problem (Tsumly: a ledger that never added up). Ends with a link to
-  the portfolio home. Bio is adapted from the main site's About page —
-  no location is stated anywhere on this site for the developer ("solo
-  developer", never "in Pakistan"); the app's Pakistani-household
-  starter categories are a product fact, not developer bio, and stay.
+- **About**: about the APP first — the story (a ledger that never added
+  up: lending and borrowing without a proper record), why the name
+  (inspired by Japanese *tsumu* 積む, to stack / accumulate / build up),
+  what makes it different (smart repayment split, pre-app loans, person
+  profiles), and how comparing against other ledger apps shaped it
+  (Pendara is the only competitor named — testing against it led to
+  people-list cards, the one-card person summary, and the onboarding
+  restore step; no other competitor name is verified). A short developer
+  section closes the page: one paragraph (solo developer, builds with
+  AI, every app starts as his own problem) + contact + a link to the
+  portfolio home. The developer bio does NOT repeat the main portfolio
+  site — it lives there. No location is stated anywhere on this site for
+  the developer ("solo developer", never "in Pakistan"); the app's
+  Pakistani-household starter categories are a product fact, not
+  developer bio, and stay on Features.
+- **Download**: links on top — primary "Get Tsumly on GitHub" → the
+  GitHub releases page (the release page, never a direct APK link),
+  secondary "Explore features" → Features. "What to expect" card
+  (Free · Android · No account needed · local-first · no tracking ·
+  optional encrypted backup) and the honest note that there is no Play
+  Store listing yet — no badge or link until it is real. "Questions
+  first?" — Privacy + FAQ (FAQ → Home `/#faq`). No version or release
+  numbers on the page (they go stale).
 - **Privacy / Terms**: document pages — warm canvas, Bricolage
   headlines, generous line-height. Content carries over from the main
   site's `/products/tsumly/privacy/` and `/terms/` pages.

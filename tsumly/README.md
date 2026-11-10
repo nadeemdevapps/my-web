@@ -14,8 +14,12 @@ teaser, FAQ, About) + Features (one deep section per feature — How it
 works, smart repayment split, pre-app loans, person profiles, everyday
 money, accounts, reports & statements, home dashboard, loan reminders,
 make it yours, backup & privacy) + Gallery (shell — grid ready, real
-phone screenshots arrive later from the user) + About (developer bio,
-no location stated) + Privacy + Terms, with nav, footer, theme toggle,
+phone screenshots arrive later from the user) + About (about the app
+first — the story, the name, what makes it different, shaped by
+comparison with Pendara; a short developer section closes the page) +
+Download (GitHub releases link, What to expect, Questions first) +
+Privacy + Terms, with nav (Home / Features / Gallery / About / Download
+/ Privacy / Terms), footer, theme toggle,
 sitemap, llms.txt/llms-full.txt and robots.txt. Feature copy is verified against the app repo
 (`docs/06_DESIGN.md`, `docs/05_PHASE_LOG.md`, `app/lib/`); user-facing
 behaviour only — no architecture, library, algorithm or API names.

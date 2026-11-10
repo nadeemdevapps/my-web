@@ -1,0 +1,115 @@
+---
+import KaizenLayout from '../layouts/KaizenLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+const expectations = [
+  {
+    title: 'Free now',
+    body: 'Sounds, bags, routines, and parachutes are all free in this version. Premium (Rs 1,450, one-time) is only longer sessions and silence during sessions — and it arrives later.',
+  },
+  {
+    title: 'No account',
+    body: 'No sign-up, no sign-in. Nothing to create, nothing to forget, nothing to delete.',
+  },
+  {
+    title: 'Local-first',
+    body: 'Your sessions, bags, routines, and settings stay on your device. The only backup is a file you export yourself.',
+  },
+  {
+    title: 'No tracking',
+    body: 'No analytics, no ads, no trackers. The app does not phone home.',
+  },
+];
+---
+
+<KaizenLayout
+  title="Download Kaizenly — No download yet"
+  description="Kaizenly is in development — there is no download, no Play Store listing, and no APK yet. When it is ready, the download will appear here."
+>
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="top">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Download</span>
+        <h2>No download yet.</h2>
+        <p>
+          Kaizenly is still <strong>in development</strong>. There is no
+          Play Store listing, no APK, and no download button yet — those
+          will appear here only when they are real.
+        </p>
+      </div>
+      <div class="reveal" style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
+        <a class="btn btn-primary" href={`${base}features/#focus`}>See how it works</a>
+        <a class="btn btn-secondary" href={`${base}features/`}>Explore features</a>
+      </div>
+      <p class="hero-note reveal" style="margin-top: 16px; text-align: center;">
+        There is no Play Store badge, rating, or review yet because there is
+        no public listing — those will appear only when they are real.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ WHAT TO EXPECT ============ -->
+  <section class="section alt" id="expect">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">What to expect</span>
+        <h2>When it arrives, this is what you get.</h2>
+        <p>
+          A strict focus guard for Android. Pick a duration and a bag of
+          distracting apps; they stay blocked until the session ends.
+          Leaving early costs parachutes — earned free, never sold.
+        </p>
+      </div>
+      <div class="feature-grid">
+        {
+          expectations.map((e, i) => (
+            <article class="feature-card reveal" style={`--d: ${(i % 4) * 0.08}s`}>
+              <div class="icon">●</div>
+              <h3>{e.title}</h3>
+              <p>{e.body}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUESTIONS FIRST ============ -->
+  <section class="section" id="questions">
+    <div class="container">
+      <div class="section-head reveal" style="text-align: center; margin-left: auto; margin-right: auto;">
+        <span class="kicker">Questions first?</span>
+        <h2>See how it handles your data before it launches.</h2>
+      </div>
+      <div class="reveal" style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
+        <a class="btn btn-secondary" href={`${base}privacy/`}>Privacy</a>
+        <a class="btn btn-secondary" href={`${base}#faq`}>FAQ →</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var revealEls = document.querySelectorAll('.reveal');
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        revealEls.forEach(function (el) { el.classList.add('in'); });
+      } else {
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('in');
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -6% 0px' }
+        );
+        revealEls.forEach(function (el) { io.observe(el); });
+      }
+    })();
+  </script>
+</KaizenLayout>

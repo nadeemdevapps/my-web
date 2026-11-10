@@ -17,155 +17,92 @@ const personLd = {
   sameAs: ['https://github.com/nadeemdevapps'],
 };
 
-const principles = [
+const nameParts = [
   {
-    icon: '●',
-    title: 'One problem, solved well',
-    body: 'Each app does a single job properly instead of ten things halfway. If it needs a second job, it becomes a second app.',
+    title: 'Kai — Change',
+    body: 'Small change, on purpose. Not an overhaul — one better session than yesterday.',
   },
   {
-    icon: '●',
-    title: 'Private by default',
-    body: 'No accounts, no tracking, no ads. Your data stays on your device; backups go to your own storage, when you choose.',
+    title: 'Zen — Calm',
+    body: 'Focus without noise. The phone goes quiet, the apps go away, the mind settles.',
   },
   {
-    icon: '●',
-    title: 'Calm, not pushy',
-    body: 'That is how I work and communicate: no pressure, no perfectionism, no guilt-driven productivity. I build steadily and let the work speak for itself.',
+    title: 'ly — Daily',
+    body: 'Every day, not someday. The streak is the product — five minutes a day lays a block.',
+  },
+];
+
+const philosophy = [
+  {
+    title: 'Strict about the session',
+    body: 'Once a session starts, the block does not let go. Leaving early costs a parachute — that is the deal, and the app says so up front.',
   },
   {
-    icon: '●',
-    title: 'Built for myself first',
-    body: 'Every app starts as my own problem. Tsumly and Kaizenly earned their place by working in daily use.',
+    title: 'Small steps, every day',
+    body: 'Five minutes a day lays a block; seven blocks make a floor. You do not need a perfect day — you need one focused session.',
   },
   {
-    icon: '●',
-    title: 'Shipped when it works',
-    body: 'Features land after real daily use, not after a roadmap date. What you see in Kaizenly is what is actually running on my own phone.',
-  },
-  {
-    icon: '●',
-    title: 'Honest copy',
-    body: 'No fake badges, ratings, or reviews. A download button, a Play Store badge, or a rating appears only when it is real.',
+    title: 'No guilt, no pressure',
+    body: 'The app never shames you for a missed day. Progress is quiet and daily — not perfectionism, not pressure.',
   },
 ];
 ---
 
 <KaizenLayout
-  title="About Nadeem Mazhar — Solo Developer"
-  description="About Nadeem Mazhar — a solo developer building websites, Windows apps, Android apps, and backends with AI doing the heavy lifting. Kaizenly started as his own problem: a phone that would not stay down."
+  title="About Kaizenly — Built for a phone that would not stay down"
+  description="Kaizenly started as one developer's own problem: a phone that would not stay down. Strict where it matters, local-first, and free — small steps, every day."
   jsonLd={[personLd]}
 >
-  <!-- ============ INTRO ============ -->
+  <!-- ============ THE STORY ============ -->
   <section class="section" id="top">
     <div class="container">
       <div class="section-head reveal">
         <span class="kicker">About</span>
-        <h2>I'm Nadeem Mazhar.</h2>
+        <h2>Built for a phone that would not stay down.</h2>
         <p>
-          Nadeem Dev Apps is my <strong>one-developer studio</strong>. I'm a
-          <strong>solo developer</strong> — no partner, no team — I plan,
-          design, and ship <strong>websites, Windows apps, Android apps, and
-          backends</strong>, with AI tools doing the heavy lifting under my
-          direction. Kaizenly started as my own problem — a phone that would
-          not stay down — and it ships only when it works in daily use.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ HOW I WORK ============ -->
-  <section class="section alt" id="how-i-work">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="kicker">How I work</span>
-        <h2>A solo developer, building for himself first.</h2>
-        <p>
-          I work the way a one-person studio should: I <strong>plan</strong>
-          the product, <strong>design</strong> the interface,
-          <strong>direct</strong> the build, and <strong>review</strong>
-          everything before it ships. AI tools do the heavy lifting; the
-          decisions are mine.
+          Kaizenly started as my own problem. I built it first for myself,
+          after trying a lot of focus apps and never finding one that was
+          both <strong>strict and private</strong>. Most of them did one thing
+          well — a timer, or a blocker — but they asked me to log in, pulled
+          my data to a server, or wrapped everything in ads and pressure.
         </p>
         <p style="margin-top: 16px;">
-          I'm still learning some languages, and I know the basics of others —
-          but the job was never typing syntax by hand. The job is
-          <strong>exploration, working with AI, UI design, planning,
-          brainstorming, problem-solving, and security analysis</strong> — and
-          that's where I'm strong. I ship real products by combining my
-          judgment with the best tools available.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ WHAT I BUILD ============ -->
-  <section class="section" id="what-i-build">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="kicker">What I build</span>
-        <h2>Websites, Windows, Android, backends, cloud.</h2>
-        <p>
-          The apps on this site are <strong>local-first by design</strong> — no
-          account, no server, no ads — because that's the right call for a
-          personal tool. It's a choice, not a limitation: I also build
-          <strong>websites, Windows apps, Android apps, backends, and
-          cloud-based apps</strong> — whichever the project needs.
+          I wanted one thing: a guard that <strong>holds the line</strong>,
+          with everything staying on my own device. There is no backend and
+          no server to pay for — that constraint became the app's biggest
+          strength. Kaizenly is <strong>local-first by design</strong>: no
+          account, no sign-up, no analytics, no ads. Your sessions, bags,
+          routines, and settings live on your phone, and the only backup is
+          a file you export yourself.
         </p>
         <p style="margin-top: 16px;">
-          Everything I make is <strong>free to use right now</strong> — Kaizenly's
-          premium durations arrive with Play Billing.
+          Everything is <strong>free in this version</strong> — sounds, bags,
+          routines, and parachutes. Premium, when it arrives, is only longer
+          sessions and silence during sessions. The app is still in
+          development: there is no download yet, and one will appear here
+          only when it is real.
         </p>
-      </div>
-      <div class="feature-grid">
-        <article class="feature-card reveal" style="--d: 0s">
-          <div class="icon">●</div>
-          <h3>Kaizenly</h3>
-          <p>
-            A strict focus guard for Android. It started as my own problem — a
-            phone that would not stay down — and it is built the way I build
-            everything: local-first, strict where it matters, and honest about
-            what it does.
-          </p>
-        </article>
-        <article class="feature-card reveal" style="--d: 0.08s">
-          <div class="icon">●</div>
-          <h3>Tsumly</h3>
-          <p>
-            A local-first loan and ledger app that splits one repayment across
-            several loans without merging them. It started the same way — a
-            ledger that never added up.
-          </p>
-        </article>
-        <article class="feature-card reveal" style="--d: 0.16s">
-          <div class="icon">●</div>
-          <h3>MsgLoop</h3>
-          <p>
-            A WhatsApp message scheduler for Android. Because it automates
-            WhatsApp — which WhatsApp's terms do not allow — bulk messaging can
-            get a number banned, and the app says so plainly.
-          </p>
-        </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ PRINCIPLES ============ -->
-  <section class="section alt" id="principles">
+  <!-- ============ WHY THE NAME ============ -->
+  <section class="section alt" id="name">
     <div class="container">
       <div class="section-head reveal">
-        <span class="kicker">What I stand for</span>
-        <h2>One problem, solved well.</h2>
+        <span class="kicker">Why the name</span>
+        <h2>Kaizen, daily.</h2>
         <p>
-          The same rules run through everything I build — the apps, and this
-          site.
+          Kaizenly is Kaizen, daily — the Japanese idea that small,
+          continuous improvement compounds into something real. Three words,
+          one habit.
         </p>
       </div>
       <div class="feature-grid">
         {
-          principles.map((p, i) => (
+          nameParts.map((p, i) => (
             <article class="feature-card reveal" style={`--d: ${(i % 3) * 0.08}s`}>
-              <div class="icon">{p.icon}</div>
+              <div class="icon">●</div>
               <h3>{p.title}</h3>
               <p>{p.body}</p>
             </article>
@@ -175,18 +112,53 @@ const principles = [
     </div>
   </section>
 
-  <!-- ============ CONTACT ============ -->
-  <section class="section" id="contact">
+  <!-- ============ PHILOSOPHY ============ -->
+  <section class="section" id="philosophy">
     <div class="container">
       <div class="section-head reveal">
-        <span class="kicker">Contact</span>
-        <h2>Say hello.</h2>
+        <span class="kicker">The philosophy</span>
+        <h2>Strict about the session, gentle about the person.</h2>
         <p>
-          Questions, feedback, or just want to say hi? Reach me at
+          Kaizenly does not believe in pressure, perfectionism, or
+          guilt-driven productivity. It believes in gentle progress, personal
+          space, and realistic systems — calm focus instead of chaotic
+          hustle. The session is strict; the person is not punished for
+          being human.
+        </p>
+      </div>
+      <div class="feature-grid">
+        {
+          philosophy.map((p, i) => (
+            <article class="feature-card reveal" style={`--d: ${(i % 3) * 0.08}s`}>
+              <div class="icon">●</div>
+              <h3>{p.title}</h3>
+              <p>{p.body}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE DEVELOPER ============ -->
+  <section class="section alt" id="developer">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Built by Nadeem</span>
+        <h2>A solo developer, building for himself first.</h2>
+        <p>
+          Kaizenly is built by <strong>Nadeem Mazhar</strong>, a solo
+          developer — <strong>Nadeem Dev Apps</strong>. He plans, directs,
+          and reviews; AI tools do the heavy lifting. Every app starts as
+          his own problem: Kaizenly began with a phone that would not stay
+          down, Tsumly with a ledger that never added up.
+        </p>
+        <p style="margin-top: 16px;">
+          Questions, feedback, or just want to say hi? Reach him at
           <a href="mailto:nadeem.devapps@gmail.com">nadeem.devapps@gmail.com</a>,
-          or find my work on GitHub at
+          or find his work on GitHub at
           <a href="https://github.com/nadeemdevapps">github.com/nadeemdevapps</a>
-          — my only social link.
+          — his only social link.
         </p>
       </div>
       <p class="reveal" style="text-align: center;">

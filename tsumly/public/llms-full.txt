@@ -3,7 +3,7 @@
 > Tsumly is a local-first personal expense and loan ledger for Android,
 > built by Nadeem Mazhar (Nadeem Dev Apps), a solo developer.
 > This document is the full text of every page on the Tsumly site:
-> Home, Features, Gallery, About, Privacy Policy, and Terms of Use.
+> Home, Features, Gallery, About, Download, Privacy Policy, and Terms of Use.
 
 ## Contents
 
@@ -11,6 +11,7 @@
 - [Features](#features)
 - [Gallery](#gallery)
 - [About](#about)
+- [Download](#download)
 - [Privacy Policy](#privacy-policy)
 - [Terms of Use](#terms-of-use)
 
@@ -286,30 +287,66 @@ App screenshots are on the way — this page will fill in with real screenshots 
 
 https://nadeemdevapps.github.io/my-web/products/tsumly/about/
 
-### I'm Nadeem Mazhar.
+### A ledger that finally adds up.
 
-Nadeem Dev Apps is my **one-developer studio**. I'm a **solo developer** — no partner, no team — I plan, design, and ship **websites, Windows apps, Android apps, and backends**, with AI tools doing the heavy lifting under my direction. Tsumly started as my own problem, and it ships only when it works in daily use.
+Tsumly started as my own problem — a ledger that never added up. I was lending and borrowing money the way most people do: a note here, a memory there, a chat message somewhere else. The amounts were small and the people were people I trusted — and still, the record never quite added up. Who had paid what? What was left? The answer was always a guess.
 
-### A solo developer, building for himself first.
+Money between people deserves a record you can trust. So I built one: a ledger for the money you lend and borrow, where every amount is recorded, every repayment lowers what is left, and the balance is always honest. It lives on your phone, it works offline, it needs no account — and it is free.
 
-I work the way a one-person studio should: I **plan** the product, **design** the interface, **direct** the build, and **review** everything before it ships. AI tools do the heavy lifting; the decisions are mine.
+### Why "Tsumly"?
 
-I'm still learning some languages, and I know the basics of others — but the job was never typing syntax by hand. The job is **exploration, working with AI, UI design, planning, brainstorming, problem-solving, and security analysis** — and that's where I'm strong. I ship real products by combining my judgment with the best tools available.
+The name is inspired by the Japanese verb **tsumu** (積む) — to stack, to accumulate, to build up over time.
 
-### Websites, apps, backends — and cloud.
+Every amount stacks onto the last — a loan, a repayment, a rupee at a time — until the ledger is complete. Small amounts, recorded honestly, accumulate into the full picture: what you are owed, and what you owe. Over weeks and months, the ledger builds up into a record you can trust — and a history you can share.
 
-The apps on this site are **local-first by design** — no account, no server, no ads — because that's the right call for a personal tool. It's a choice, not a limitation: I also build **websites, Windows apps, Android apps, backends, and cloud-based apps** — whichever the project needs.
+### What makes it different — Three things most ledger apps get wrong — or leave out.
 
-- **Every app starts as my own problem.** Tsumly began as a ledger that never added up; Kaizenly began as a phone that would not stay down. Each earned its place by working in daily use.
-- **One problem, solved well.** Each app does a single job properly instead of ten things halfway. If it needs a second job, it becomes a second app.
-- **Private by default.** No accounts, no tracking, no ads. Your data stays on your device; backups go to your own storage, when you choose.
-- **Honest copy.** No fake badges, ratings, or reviews. A download button, a Play Store badge, or a rating appears only when it is real.
+- **Smart repayment split** — when someone pays you back, the money rarely matches a single loan. Tsumly splits one repayment across several loans in a single action — and never merges them, so each loan keeps its own history.
+- **Pre-app loans** — you were lending and borrowing long before Tsumly. Pre-app loans record those older loans without moving your current balance, so your history is complete and your balance stays honest.
+- **Person profiles** — loans live on person profiles, so you always see who owes what: per-person totals, a guarded archive, and a full ledger per person.
 
-### Say hello.
+Around those three, Tsumly tracks the everyday money too — income, expenses and transfers in the same ledger — with monthly reports, statements you can share, and reminders that arrive on their own.
+
+### Shaped by comparison — Compared against the apps out there — and against daily use.
+
+Tsumly was shaped by comparing it with other ledger apps. Testing the app on my own phone against **Pendara**, for example, led to three changes: the people list got cards like the accounts list, the person detail got a single summary card instead of three confusing tiles, and onboarding gained a restore step, so a fresh install can bring back a backup before anything else.
+
+That is how Tsumly keeps being shaped — by using it every day, and by what is missing. If a repayment cannot be split honestly, or an old loan has nowhere honest to live, that is the next thing to fix.
+
+### Built by Nadeem — A solo developer, building for himself first.
+
+Tsumly is built by **Nadeem Mazhar**, a solo developer, as **Nadeem Dev Apps**. I plan, design, and direct the build, with AI tools doing the heavy lifting — and every app starts as my own problem. Tsumly began as a ledger that never added up.
 
 Questions, feedback, or just want to say hi? Reach me at nadeem.devapps@gmail.com, or find my work on GitHub at github.com/nadeemdevapps — my only social link.
 
 More from Nadeem Dev Apps → https://nadeemdevapps.github.io/my-web/
+
+---
+
+## Download
+
+https://nadeemdevapps.github.io/my-web/products/tsumly/download/
+
+### Download Tsumly
+
+Tsumly is **free for Android** — a local-first ledger for the money you lend and borrow. No account, no sign-up, no tracking. Get the latest release from GitHub: https://github.com/nadeemdevapps/tsumly/releases
+
+Free · Android · No account needed.
+
+There is no Play Store listing yet — no badge, rating, or download link until it is real.
+
+### What to expect
+
+- **Free** — no account, no subscription, no ads.
+- **Android** — installs from the GitHub release.
+- **No account needed** — nothing to sign up for.
+- **Local-first** — your money stays on your device, and the app works offline.
+- **No tracking** — no analytics, no ads, nothing phoning home.
+- **Optional encrypted backup** — to your own private Drive folder, or a file you export yourself.
+
+### Questions first?
+
+See how it handles your data before you install it. Privacy: https://nadeemdevapps.github.io/my-web/products/tsumly/privacy/ — FAQ: https://nadeemdevapps.github.io/my-web/products/tsumly/#faq
 
 ---
 

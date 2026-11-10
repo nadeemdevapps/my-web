@@ -175,7 +175,7 @@ components:
     typography: "{typography.nav-link}"
     padding: "{spacing.md}"
     # Kaizenly's own nav: 3-tile mark + KAIZENLY pixel wordmark left;
-    # Home / Features / Gallery / About / Privacy / Terms links; theme
+    # Home / Features / Gallery / About / Download / Privacy / Terms links; theme
     # toggle right. The portfolio link lives in the About section and the
     # footer ("Built by Nadeem"), not in the nav. Hamburger below 840px.
   wordmark:
@@ -235,8 +235,8 @@ components:
     typography: "{typography.caption}"
     padding: "{spacing.xxl}"
     # Own footer: mark + tagline, "Built by Nadeem" with a link to the
-    # portfolio home, links to Home / Features / Gallery / About / Privacy
-    # / Terms, and the Machine column (llms.txt / robots.txt / sitemap.xml).
+    # portfolio home, links to Home / Features / Gallery / About / Download
+    # / Privacy / Terms, and the Machine column (llms.txt / robots.txt / sitemap.xml).
   toast:
     backgroundColor: "{colors.sheet}"
     textColor: "{colors.ink}"
@@ -469,7 +469,7 @@ between a pill CTA and a 24px card is intentional. Inputs stay tight at
 
 **`nav-bar`** — Top navigation. Slim sticky bar, `{colors.surface}`
 background, 64px tall. Left: 3-tile mark + KAIZENLY pixel wordmark.
-Centre/right: Home / Features / Gallery / About / Privacy / Terms links.
+Centre/right: Home / Features / Gallery / About / Download / Privacy / Terms links.
 Right: theme toggle. The portfolio link lives in the About section and the
 footer ("Built by Nadeem"), not in the nav. Condenses to a hamburger
 below 840px.
@@ -527,7 +527,7 @@ the headline.
 `{colors.ink-secondary}` link text at `{typography.caption}`, padding
 `{spacing.xxl}`. Brand column (mark + tagline + "Built by Nadeem" with a
 link to the portfolio home), link columns (Home / Features / Gallery /
-About / Privacy / Terms), and the Machine column (llms.txt / robots.txt /
+About / Download / Privacy / Terms), and the Machine column (llms.txt / robots.txt /
 sitemap.xml).
 
 **`stat-tile`** — A stat block. `{colors.surface}` background, value in
@@ -564,13 +564,24 @@ sitemap.xml).
   with the grid layout ready and placeholder frames. No images — real phone
   screenshots arrive later from the user (per-app Drive folder) and replace
   the placeholders.
-- **About**: the developer page — Nadeem Mazhar, solo developer, Nadeem Dev
-  Apps. Builds with AI (he plans, directs and reviews, AI does the heavy
-  lifting); builds websites, Windows and Android apps, backends and cloud;
-  strengths: exploration, AI, UI design, planning, brainstorming,
-  problem-solving; every app starts as his own problem (Kaizenly: a phone
-  that would not stay down). Ends with a link to the portfolio home. No
-  location is stated for the developer anywhere on this site.
+- **About**: the app's story, not the developer's bio — the developer
+  content already lives on the main portfolio site. H1 "Built for a phone
+  that would not stay down." — why it was built (his own problem; tried
+  other focus apps and never found one both strict and private; local-first
+  by design; everything free in this version), why the name (Kai = change,
+  Zen = calm, ly = daily — Kaizen, daily), the philosophy (strict about
+  the session, gentle about the person — small steps, no guilt), and a
+  short developer section at the end only (one paragraph + contact +
+  "More from Nadeem Dev Apps →"). Keeps the short Person JSON-LD (no
+  location). No location is stated for the developer anywhere on this site.
+- **Download**: honest, no download yet. H1 "No download yet." — the app
+  is in development; no Play Store listing, no APK, no download button
+  (the repo is private, so no GitHub link either); those appear here only
+  when they are real. "What to expect" (free now — Premium Rs 1,450 later;
+  no account; local-first; no tracking) and "Questions first?" (Privacy
+  + FAQ on Home). No version or release numbers anywhere on the page —
+  they go stale. Primary CTA "See how it works" → Features #focus;
+  secondary "Explore features" → Features.
 - **Privacy / Terms**: document pages — dark canvas, DM Sans headlines,
   generous line-height. Content carries over from the main site's
   `/products/kaizenly/privacy/` and `/terms/` pages.

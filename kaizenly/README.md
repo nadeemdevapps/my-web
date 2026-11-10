@@ -13,9 +13,12 @@ highlights teaser (four cards linking to Features), FAQ, the local-first
 band, and the About card — plus a dedicated Features page (exhaustive:
 every feature, rule, and limit in detail, verified against `FEATURES.md`
 in the app repo), a Gallery shell (no images yet — real phone screenshots
-arrive later from the user), and an About page (Nadeem Mazhar, solo
-developer), plus Privacy and Terms. Nav: Home / Features / Gallery /
-About / Privacy / Terms. Copy carries over from the main site's
+arrive later from the user), an About page that is mainly about the app
+(the story, why the name, the philosophy; a short developer section at
+the end only — the developer bio lives on the main portfolio site), a
+Download page (honest: no download yet, the app is in development; what
+to expect when it arrives), plus Privacy and Terms. Nav: Home / Features
+/ Gallery / About / Download / Privacy / Terms. Copy carries over from the main site's
 `/products/kaizenly/` pages, verified against `FEATURES.md` in the app repo
 and updated for the free model (bags, routines, sounds, and parachutes are
 free; Premium is 12-hour sessions + silence/DND only). No internal details

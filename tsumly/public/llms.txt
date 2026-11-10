@@ -8,7 +8,8 @@
 - [Home](https://nadeemdevapps.github.io/my-web/products/tsumly/): Every amount adds up. A local-first ledger for the money you lend and borrow, with smart repayment splits and pre-app loans.
 - [Features](https://nadeemdevapps.github.io/my-web/products/tsumly/features/): Every feature in detail — how it works, what it allows, what it refuses, and where the edges are.
 - [Gallery](https://nadeemdevapps.github.io/my-web/products/tsumly/gallery/): Screenshots from the app, as they look on a real phone.
-- [About](https://nadeemdevapps.github.io/my-web/products/tsumly/about/): About Nadeem Mazhar — a solo developer building websites, Windows apps, Android apps, and backends with AI doing the heavy lifting.
+- [About](https://nadeemdevapps.github.io/my-web/products/tsumly/about/): About Tsumly — why it exists, why the name, what makes it different, and how comparing against other ledger apps shaped it.
+- [Download](https://nadeemdevapps.github.io/my-web/products/tsumly/download/): Download Tsumly free for Android — get the latest release on GitHub. No account needed, no Play Store listing yet.
 - [Privacy Policy](https://nadeemdevapps.github.io/my-web/products/tsumly/privacy/): Tsumly collects no personal data. Everything stays on your device unless you choose to back it up.
 - [Terms of Use](https://nadeemdevapps.github.io/my-web/products/tsumly/terms/): Tsumly is a personal finance tracker, provided as-is. Your data stays on your device by default.
 
@@ -18,6 +19,7 @@
 - [Features](https://nadeemdevapps.github.io/my-web/products/tsumly/features/)
 - [Gallery](https://nadeemdevapps.github.io/my-web/products/tsumly/gallery/)
 - [About](https://nadeemdevapps.github.io/my-web/products/tsumly/about/)
+- [Download](https://nadeemdevapps.github.io/my-web/products/tsumly/download/)
 - [Privacy Policy](https://nadeemdevapps.github.io/my-web/products/tsumly/privacy/)
 - [Terms of Use](https://nadeemdevapps.github.io/my-web/products/tsumly/terms/)
 
@@ -44,6 +46,6 @@
 
 ## Optional
 
-- [Full site text (llms-full.txt)](https://nadeemdevapps.github.io/my-web/products/tsumly/llms-full.txt): the full text of every page on this site in one Markdown document — Home, Features, Gallery, About, Privacy Policy, and Terms of Use.
+- [Full site text (llms-full.txt)](https://nadeemdevapps.github.io/my-web/products/tsumly/llms-full.txt): the full text of every page on this site in one Markdown document — Home, Features, Gallery, About, Download, Privacy Policy, and Terms of Use.
 - [Design system](https://github.com/nadeemdevapps/my-web/blob/main/tsumly/DESIGN.md)
 - [Built by Nadeem](https://nadeemdevapps.github.io/my-web/): the portfolio home of Nadeem Mazhar, solo developer.

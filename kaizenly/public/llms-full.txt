@@ -471,64 +471,83 @@ backup.
 
 ## About
 
-### I'm Nadeem Mazhar.
+### Built for a phone that would not stay down.
 
-Nadeem Dev Apps is my one-developer studio. I'm a solo developer — no
-partner, no team — I plan, design, and ship websites, Windows apps, Android
-apps, and backends, with AI tools doing the heavy lifting under my direction.
-Kaizenly started as my own problem — a phone that would not stay down — and it
-ships only when it works in daily use.
+Kaizenly started as one developer's own problem. It was built first for
+itself, after trying a lot of focus apps and never finding one that was both
+strict and private. Most of them did one thing well — a timer, or a blocker —
+but they asked for a login, pulled data to a server, or wrapped everything in
+ads and pressure. Kaizenly is a guard that holds the line, with everything
+staying on the device. There is no backend and no server: Kaizenly is
+local-first by design — no account, no sign-up, no analytics, no ads. Sessions,
+bags, routines, and settings live on the phone, and the only backup is a file
+exported by the user.
 
-### A solo developer, building for himself first.
+Everything is free in this version — sounds, bags, routines, and parachutes.
+Premium, when it arrives, is only longer sessions and silence during sessions.
+The app is still in development: there is no download yet, and one will appear
+only when it is real.
 
-I work the way a one-person studio should: I plan the product, design the
-interface, direct the build, and review everything before it ships. AI tools
-do the heavy lifting; the decisions are mine.
+### Why the name — Kaizen, daily.
 
-I'm still learning some languages, and I know the basics of others — but the
-job was never typing syntax by hand. The job is exploration, working with AI,
-UI design, planning, brainstorming, problem-solving, and security analysis —
-and that's where I'm strong. I ship real products by combining my judgment
-with the best tools available.
+Kaizenly is Kaizen, daily — the Japanese idea that small, continuous
+improvement compounds into something real. Three words, one habit.
 
-### What I build — Websites, Windows, Android, backends, cloud.
+- Kai — Change. Small change, on purpose. Not an overhaul — one better session than yesterday.
+- Zen — Calm. Focus without noise. The phone goes quiet, the apps go away, the mind settles.
+- ly — Daily. Every day, not someday. The streak is the product — five minutes a day lays a block.
 
-The apps on this site are local-first by design — no account, no server, no
-ads — because that's the right call for a personal tool. It's a choice, not a
-limitation: I also build websites, Windows apps, Android apps, backends, and
-cloud-based apps — whichever the project needs.
+### The philosophy — Strict about the session, gentle about the person.
 
-Everything I make is free to use right now — Kaizenly's premium durations
-arrive with Play Billing.
+Kaizenly does not believe in pressure, perfectionism, or guilt-driven
+productivity. It believes in gentle progress, personal space, and realistic
+systems — calm focus instead of chaotic hustle. The session is strict; the
+person is not punished for being human.
 
-Kaizenly — A strict focus guard for Android. It started as my own problem — a
-phone that would not stay down — and it is built the way I build everything:
-local-first, strict where it matters, and honest about what it does.
+- Strict about the session — Once a session starts, the block does not let go. Leaving early costs a parachute — that is the deal, and the app says so up front.
+- Small steps, every day — Five minutes a day lays a block; seven blocks make a floor. You do not need a perfect day — you need one focused session.
+- No guilt, no pressure — The app never shames you for a missed day. Progress is quiet and daily — not perfectionism, not pressure.
 
-Tsumly — A local-first loan and ledger app that splits one repayment across
-several loans without merging them. It started the same way — a ledger that
-never added up.
+### Built by Nadeem.
 
-MsgLoop — A WhatsApp message scheduler for Android. Because it automates
-WhatsApp — which WhatsApp's terms do not allow — bulk messaging can get a
-number banned, and the app says so plainly.
+Kaizenly is built by Nadeem Mazhar, a solo developer — Nadeem Dev Apps. He
+plans, directs, and reviews; AI tools do the heavy lifting. Every app starts
+as his own problem: Kaizenly began with a phone that would not stay down,
+Tsumly with a ledger that never added up.
 
-### What I stand for — One problem, solved well.
-
-- One problem, solved well — Each app does a single job properly instead of ten things halfway. If it needs a second job, it becomes a second app.
-- Private by default — No accounts, no tracking, no ads. Your data stays on your device; backups go to your own storage, when you choose.
-- Calm, not pushy — That is how I work and communicate: no pressure, no perfectionism, no guilt-driven productivity. I build steadily and let the work speak for itself.
-- Built for myself first — Every app starts as my own problem. Tsumly and Kaizenly earned their place by working in daily use.
-- Shipped when it works — Features land after real daily use, not after a roadmap date. What you see in Kaizenly is what is actually running on my own phone.
-- Honest copy — No fake badges, ratings, or reviews. A download button, a Play Store badge, or a rating appears only when it is real.
-
-### Say hello.
-
-Questions, feedback, or just want to say hi? Reach me at
-nadeem.devapps@gmail.com, or find my work on GitHub at
-github.com/nadeemdevapps — my only social link.
+Questions, feedback, or just want to say hi? Reach him at
+nadeem.devapps@gmail.com, or find his work on GitHub at
+github.com/nadeemdevapps — his only social link.
 
 More from Nadeem Dev Apps: https://nadeemdevapps.github.io/my-web/
+
+---
+
+## Download
+
+### No download yet.
+
+Kaizenly is still in development. There is no Play Store listing, no APK, and
+no download button yet — those will appear here only when they are real.
+There is no Play Store badge, rating, or review yet because there is no public
+listing.
+
+### What to expect — When it arrives, this is what you get.
+
+A strict focus guard for Android. Pick a duration and a bag of distracting
+apps; they stay blocked until the session ends. Leaving early costs
+parachutes — earned free, never sold.
+
+- Free now — Sounds, bags, routines, and parachutes are all free in this version. Premium (Rs 1,450, one-time) is only longer sessions and silence during sessions — and it arrives later.
+- No account — No sign-up, no sign-in. Nothing to create, nothing to forget, nothing to delete.
+- Local-first — Sessions, bags, routines, and settings stay on the device. The only backup is a file exported by the user.
+- No tracking — No analytics, no ads, no trackers. The app does not phone home.
+
+### Questions first?
+
+See how it handles your data before it launches. Privacy:
+https://nadeemdevapps.github.io/my-web/products/kaizenly/privacy/ — FAQ:
+https://nadeemdevapps.github.io/my-web/products/kaizenly/#faq
 
 ---
 

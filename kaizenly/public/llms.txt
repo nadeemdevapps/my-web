@@ -8,7 +8,8 @@
 - [Home](https://nadeemdevapps.github.io/my-web/products/kaizenly/): A little better, every day. Timed sessions, bags of blocked apps, routines, the Tower streak, and parachutes earned free by focusing.
 - [Features](https://nadeemdevapps.github.io/my-web/products/kaizenly/features/): Every feature, in detail — focus sessions, routines, the Tower, parachutes, sounds, stats, widgets, settings, backup, and the free vs Premium model.
 - [Gallery](https://nadeemdevapps.github.io/my-web/products/kaizenly/gallery/): Real screens from the app. App screenshots are on the way.
-- [About](https://nadeemdevapps.github.io/my-web/products/kaizenly/about/): About Nadeem Mazhar, solo developer — builds with AI, every app starts as his own problem.
+- [About](https://nadeemdevapps.github.io/my-web/products/kaizenly/about/): About Kaizenly — built for a phone that would not stay down. Why the name, the philosophy (strict about the session, gentle about the person), and the solo developer behind it.
+- [Download](https://nadeemdevapps.github.io/my-web/products/kaizenly/download/): No download yet — the app is in development. What to expect when it arrives: everything free, no account, local-first, no tracking.
 - [Privacy Policy](https://nadeemdevapps.github.io/my-web/products/kaizenly/privacy/): Kaizenly collects almost nothing. Sessions, bags, routines, and settings live on your device; there is no account, no analytics, no tracking.
 - [Terms of Use](https://nadeemdevapps.github.io/my-web/products/kaizenly/terms/): Kaizenly is provided as-is. Sessions are designed to be hard to break: leaving early costs a parachute.
 
@@ -18,6 +19,7 @@
 - [Features](https://nadeemdevapps.github.io/my-web/products/kaizenly/features/)
 - [Gallery](https://nadeemdevapps.github.io/my-web/products/kaizenly/gallery/)
 - [About](https://nadeemdevapps.github.io/my-web/products/kaizenly/about/)
+- [Download](https://nadeemdevapps.github.io/my-web/products/kaizenly/download/)
 - [Privacy Policy](https://nadeemdevapps.github.io/my-web/products/kaizenly/privacy/)
 - [Terms of Use](https://nadeemdevapps.github.io/my-web/products/kaizenly/terms/)
 
@@ -42,6 +44,6 @@
 
 ## Optional
 
-- [Full site text (llms-full.txt)](https://nadeemdevapps.github.io/my-web/products/kaizenly/llms-full.txt): the full text of every page on this site in one Markdown document — Home, Features, Gallery, About, Privacy Policy, and Terms of Use.
+- [Full site text (llms-full.txt)](https://nadeemdevapps.github.io/my-web/products/kaizenly/llms-full.txt): the full text of every page on this site in one Markdown document — Home, Features, Gallery, About, Download, Privacy Policy, and Terms of Use.
 - [Design system](https://github.com/nadeemdevapps/my-web/blob/main/kaizenly/DESIGN.md)
 - [Built by Nadeem](https://nadeemdevapps.github.io/my-web/): the portfolio home of Nadeem Mazhar, solo developer.
