@@ -607,11 +607,12 @@ JSON-LD (`SoftwareApplication` + `FAQPage`) on the home page.
 
 ## Cutover
 
-When this site goes live, its `dist` is copied into the main site's `dist`
-under `/products/kaizenly/`, and the main site's
+Cut over 2026-11-10. `npm run build` at the repo root builds this folder
+and merges its `dist` into the main site's `dist` under
+`/products/kaizenly/` (`scripts/merge-kaizenly.mjs`); the main site's
 `src/pages/products/kaizenly.astro` + `kaizenly/privacy.astro` +
-`kaizenly/terms.astro` are deleted. Until then the main site's pages stay
-live and this folder builds standalone only.
+`kaizenly/terms.astro` were deleted, so this folder is the only source of
+the Kaizenly pages.
 
 ## Motion
 

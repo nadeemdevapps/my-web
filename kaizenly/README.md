@@ -31,21 +31,14 @@ npm run build # outputs dist/
 npm run preview
 ```
 
-## Deploy (at cutover — NOT yet)
+## Deploy (cut over 2026-11-10)
 
-The main site deploys from the repo root via GitHub Pages. When this site
-is ready to go live:
-
-1. Build this folder: `npm run build` (inside `kaizenly/`).
-2. Copy `kaizenly/dist/` into the main site's `dist/` under
-   `products/kaizenly/` (a dist-merge step — GitHub Pages hosts one site
-   per repo, so the product dists are merged into the main dist).
-3. Delete the main site's `src/pages/products/kaizenly.astro`,
-   `src/pages/products/kaizenly/privacy.astro` and
-   `src/pages/products/kaizenly/terms.astro` so the two versions do not
-   collide.
-
-Until cutover, this folder builds standalone only and is not deployed.
+The main site deploys from the repo root via GitHub Pages. `npm run build`
+at the repo root builds this folder and merges its `dist` into the main
+site's `dist` under `products/kaizenly/` (`scripts/merge-kaizenly.mjs`),
+so every deploy carries the Kaizenly pages. The old main-site pages
+(`src/pages/products/kaizenly.astro`, `kaizenly/privacy.astro`,
+`kaizenly/terms.astro`) were deleted at cutover.
 
 ## Extract to its own repo
 

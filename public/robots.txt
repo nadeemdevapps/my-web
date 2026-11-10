@@ -33,3 +33,4 @@ User-agent: DuckAssistBot
 Allow: /
 
 Sitemap: https://nadeemdevapps.github.io/my-web/sitemap.xml
+Sitemap: https://nadeemdevapps.github.io/my-web/products/kaizenly/sitemap.xml

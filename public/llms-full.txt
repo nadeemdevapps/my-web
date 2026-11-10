@@ -320,17 +320,17 @@ Together: **improve your life calmly, one small step at a time.**
 
 A focus session is a **bag** — a named set of apps that stays shut until the timer ends. Choose **15 minutes, 45 minutes, 3 hours, or a custom length (3–12 hours, premium)**, slide to start, and the block does the rest.
 
-- **Bags** — three bags, each holding up to 6 apps. The free plan uses the first bag with its first 3 apps; premium unlocks all three bags, and a separate add-on opens all 6 slots in each bag. Pick apps from a searchable list of installed apps.
+- **Bags** — three bags, each holding up to 6 apps, all free. Pick apps from a searchable list of installed apps.
 - **Presets and a wheel** — tap 15 minutes, 45 minutes, or 3 hours, or spin the ruler wheel from 1 minute up to 12 hours. Custom sessions over 3 hours need at least one parachute on board.
 - **Slide to start** — the footer slider starts the session; there is no tap-to-start shortcut to hit by accident.
 - **Floating pill** — a small overlay keeps the countdown on screen, so the time left is always in sight. Tap it to open the block screen; drag it to move it.
 - **Block screen** — opening a blocked app shows the block screen (Distraction Wall) with the countdown, the end time, and your parachutes, and sends you back to focus. After 3 seconds idle, the chrome dims into rest mode until you touch it again.
 - **Essentials stay open** — your default messaging app, dialer, camera, alarm app, and keyboards keep working during a session, along with in-call screens. Everything in the active bag is blocked.
 - **Enforcement that holds** — an accessibility service bounces blocked apps, closes the notification shade, recents, and power menu, and dismisses floating windows. A watchdog re-checks the block every 15 seconds, a live session is restored after a reboot, and a guardian fallback watches the foreground app when the accessibility service is down.
-- **Parachutes** — leaving early costs parachutes, so ending a session is a deliberate decision, not a reflex. With 30 minutes or less left, it costs 1 parachute.
+- **Parachutes** — leaving early costs parachutes, so ending a session is a deliberate decision, not a reflex. With 30 minutes or less left, it costs 1 parachute. Parachutes are earned free by focusing: a day with at least 30 minutes of actual focus counts toward your streak — the first 10 days pay double (day 3 earns +2, day 10 earns 20 in total); a missed day resets the streak to 0, and Tower reserves do not save it. The counter is capped at 99.
 - **A 30-minute break** — with more than 30 minutes left, you can take a 30-minute break for one parachute: the clock freezes and the block returns by itself. Ending early costs more the more time is left: 1 parachute plus 1 per started hour remaining.
 - **Hold to extend** — hold the +15 card for 3 seconds to add 15 minutes to a live session, up to 60 extra minutes per session. It needs a parachute on board.
-- **Soundscapes** — four sounds, generated live on the device with no audio files: rain, waves, white noise, and city. A session starts silent; sound plays only when you pick it. The extra sounds are an add-on.
+- **Soundscapes** — four sounds, all free, generated live on the device with no audio files: rain, waves, white noise, and city. A session starts silent; sound plays only when you pick it.
 - **Settings passes** — while a session runs, Android Settings can be opened only on a 60-second pass, at most 3 passes per session, so the block cannot be switched off casually.
 - **Routine-aware sessions** — a manual session can stretch to the end of the next routine window, capped at 12 hours, when a routine is enabled and you have a parachute.
 
@@ -338,10 +338,10 @@ A focus session is a **bag** — a named set of apps that stays shut until the t
 
 Focus works best as a **routine**, not a one-off effort. Kaizenly starts sessions on a schedule, reminds you before they begin, and keeps the daily target small enough to hold.
 
-- **Routines** — up to 3 named routines, each with its own start time, a duration from 5 minutes to 12 hours, and the days of the week it runs on. Routines are premium, and turning one on needs at least one parachute.
+- **Routines** — up to 3 named routines, all free, each with its own start time, a duration from 5 minutes to 12 hours, and the days of the week it runs on. Turning one on needs at least one parachute.
 - **Pre-alerts** — a notification 5 minutes before a routine starts, so the block never catches you by surprise.
 - **Overlap warnings** — if two routines would overlap, Kaizenly shows the combined locked window and asks before turning the second one on.
-- **Each routine, its own bag** — with this premium setting on, each routine blocks its own bag, and your previous bag comes back when the routine session ends.
+- **Each routine, its own bag** — each routine blocks its own bag, free, and your previous bag comes back when the routine session ends.
 - **A one-minute daily target** — one minute of focus a day is enough to keep the streak alive (5 minutes on the very first day). Small enough to keep, every day.
 - **Evening streak reminder** — at 8:30 pm, a nudge if today has no session yet. It can be switched off in Settings.
 - **Monday-start weeks** — weeks run Monday to Sunday, so the streak counts the way your week does.
@@ -385,11 +385,10 @@ Kaizenly asks for three system permissions at setup — accessibility, draw over
 
 ## Free now. Premium arrives with Play Billing.
 
-Everything I make is free to use right now — Kaizenly’s premium durations arrive with Play Billing. There is no purchase in the app today.
+Almost everything is free — bags, routines, soundscapes, and parachutes are all free in this version. Premium arrives with Play Billing. There is no purchase in the app today.
 
-- **Premium unlocks** — sessions up to 12 hours, automatic routines, two extra bags, and silence (Do Not Disturb) during sessions.
-- **Add-ons** — the extra soundscapes and the sixth app slot in each bag are separate add-ons, arriving with the same billing.
-- **Free today** — the free plan covers 15-minute, 45-minute, and 3-hour sessions, the first bag with its first 3 apps, the floating pill, the block screen, parachutes, the break, the Tower, stats, and widgets.
+- **Free, for now (Rs 0)** — 3 bags, 6 slots each; 3 routines, each routine its own bag; all 4 soundscapes; parachutes earned free by the streak; the Tower, stats, widgets, and local backup; sessions up to 3 hours.
+- **Premium (Rs 1,450 one-time, arrives with Play Billing)** — sessions up to 12 hours (the custom card, 3 to 12 hours) and silence (Do Not Disturb) during sessions. Everything in Free, of course.
 
 ## Kaizenly, answered.
 
@@ -399,7 +398,11 @@ Kaizenly is a strict, local-first focus guard for Android. You pick a time — 1
 
 ### How much does Kaizenly cost?
 
-Everything I make is free to use right now — Kaizenly’s premium durations arrive with Play Billing. There is no purchase in the app today.
+Everything is free to use right now. Bags, routines, soundscapes, and parachutes are all free in this version. Premium — sessions up to 12 hours and silence (Do Not Disturb) during sessions — arrives with Play Billing (Rs 1,450 one-time). There is no purchase in the app today.
+
+### How do I get parachutes?
+
+Parachutes are earned, never bought. Focus for at least 30 minutes of actual focus in a day and that day counts toward your parachute streak. The first 10 days pay double: day 3 earns +2, and by day 10 you have earned 20. After day 10 you earn +1 a day, with a +5 bonus at day 20. A missed day resets the streak to 0 — even if a Tower reserve saves your Tower streak.
 
 ### What happens if I quit a focus session early?
 
