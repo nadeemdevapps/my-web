@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+
+// Scaffold home page — hero only. The full page (features, accounts,
+// reports, FAQ, footer) and the Privacy/Terms pages are built next,
+// carrying copy over from the main site's /products/tsumly/ page,
+// verified against the app repo and docs/06_DESIGN.md.
+---
+
+<BaseLayout
+  title="Tsumly — Local-First Loan & Ledger App"
+  description="Tsumly is a local-first personal expense and loan ledger for Android — track income, expenses, transfers and who owes whom, split multi-loan repayments, and keep every amount accounted for."
+>
+  <main>
+    <section>
+      <div class="container narrow">
+        <img class="mark" src={`${import.meta.env.BASE_URL.replace(/\/?$/, '/')}logo.svg`} alt="Tsumu, the Tsumly coin-stack mascot" width="96" height="96" />
+        <h1 class="display"><span class="dim">Every amount</span> adds up.</h1>
+        <p>
+          Tsumly is a <strong>local-first</strong> personal expense and loan
+          ledger for Android: your money stays on your device — <strong>no
+          account, no cloud by default</strong> — with an optional encrypted
+          Google Drive backup. It tracks <strong>income, expenses and
+          transfers</strong> between accounts, and its <strong>smart
+          multi-loan repayment split</strong> spreads one repayment across
+          several loans, while <strong>pre-app loans</strong> record older
+          loans without moving your balance.
+        </p>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  section {
+    padding: 64px 0;
+  }
+  .mark {
+    display: block;
+    margin: 0 0 24px;
+    color: var(--text);
+  }
+  h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin: 0 0 16px;
+  }
+  h1 .dim {
+    font-weight: 700;
+    opacity: 0.55;
+  }
+  h1 + p {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+  strong {
+    color: var(--text);
+  }
+</style>

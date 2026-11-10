@@ -1,0 +1,175 @@
+/* Tsumly tokens — from the app (app/lib/core/theme/app_colors.dart).
+   Light is the brand home (warm cream); dark is a first-class plum
+   design, not an inversion. The site follows the system by default (like
+   the app); only palette values change between themes — type, spacing,
+   radius and components are identical. The no-JS fallback (the
+   prefers-color-scheme block at the end) repeats the dark tokens so the
+   page still follows the system when the theme script cannot run. */
+
+:root {
+  --accent: #6c4de6;
+  --accent-deep: #4a2fb8;
+  --accent-soft: #e4dcfb;
+  --amber: #f2a81d;
+  --amber-deep: #9a6206;
+  --amber-soft: #ffe9c2;
+  --on-accent: #ffffff;
+  --on-accent-container: #2a1b6e;
+  --bg: #f6f0e2;
+  --surface: #fdf9f0;
+  --surface-variant: #faf5e9;
+  --surface-high: #f1e9d6;
+  --surface-highest: #eae0c9;
+  --sheet: #fdf9f0;
+  --text: #23201b;
+  --text-secondary: #6e655a;
+  --muted: #6e655a;
+  --outline: #d8cdb6;
+  --outline-variant: #eae0c9;
+  --hairline: #efe6d2;
+  --error: #c2410c;
+  /* Money tints — the tint IS the meaning; always pair a tint background
+     with its on-tint foreground, never put body text on a tint. */
+  --tint-income: #ddf3e3;
+  --on-tint-income: #1e7a45;
+  --tint-expense: #ffe2d4;
+  --on-tint-expense: #c2410c;
+  --tint-transfer: #ede7da;
+  --on-tint-transfer: #6b6257;
+  --tint-lent: #ffedc7;
+  --on-tint-lent: #9a6206;
+  --tint-borrowed: #e7dffb;
+  --on-tint-borrowed: #5b3df0;
+  /* Donut slices (brand palette, cycles past 6 categories). */
+  --donut-1: #6c4de6;
+  --donut-2: #f2a81d;
+  --donut-3: #2fa968;
+  --donut-4: #e86aa0;
+  --donut-5: #3d7be8;
+  --donut-6: #e85d3d;
+}
+
+[data-theme='dark'] {
+  --accent: #a78fff;
+  --accent-deep: #a78fff;
+  --accent-soft: #3a2a7a;
+  --amber: #ffc53d;
+  --amber-deep: #ffe9c2;
+  --amber-soft: #453312;
+  --on-accent: #1e1440;
+  --on-accent-container: #e4dcfb;
+  --bg: #151020;
+  --surface: #1e1729;
+  --surface-variant: #1a1425;
+  --surface-high: #272030;
+  --surface-highest: #322840;
+  --sheet: #272030;
+  --text: #f5eedf;
+  --text-secondary: #b9aecb;
+  --muted: #b9aecb;
+  --outline: #4a3f5c;
+  --outline-variant: #372d47;
+  /* Dark cards carry NO border (BorderSide.none in the app) — separation
+     comes from the surface step, not a hairline. */
+  --hairline: transparent;
+  --error: #ff9e73;
+  --tint-income: #1d3a28;
+  --on-tint-income: #7bd9a4;
+  --tint-expense: #43251a;
+  --on-tint-expense: #ff9e73;
+  --tint-transfer: #2e2a24;
+  --on-tint-transfer: #c9bfae;
+  --tint-lent: #453312;
+  --on-tint-lent: #ffc53d;
+  --tint-borrowed: #2c2350;
+  --on-tint-borrowed: #b7a6ff;
+  --donut-1: #a78fff;
+  --donut-2: #ffc53d;
+  --donut-3: #7bd9a4;
+  --donut-4: #f49ac1;
+  --donut-5: #8fb4f7;
+  --donut-6: #ff9e73;
+}
+
+/* No-JS fallback: follow the system when the theme script cannot run. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --accent: #a78fff;
+    --accent-deep: #a78fff;
+    --accent-soft: #3a2a7a;
+    --amber: #ffc53d;
+    --amber-deep: #ffe9c2;
+    --amber-soft: #453312;
+    --on-accent: #1e1440;
+    --on-accent-container: #e4dcfb;
+    --bg: #151020;
+    --surface: #1e1729;
+    --surface-variant: #1a1425;
+    --surface-high: #272030;
+    --surface-highest: #322840;
+    --sheet: #272030;
+    --text: #f5eedf;
+    --text-secondary: #b9aecb;
+    --muted: #b9aecb;
+    --outline: #4a3f5c;
+    --outline-variant: #372d47;
+    --hairline: transparent;
+    --error: #ff9e73;
+    --tint-income: #1d3a28;
+    --on-tint-income: #7bd9a4;
+    --tint-expense: #43251a;
+    --on-tint-expense: #ff9e73;
+    --tint-transfer: #2e2a24;
+    --on-tint-transfer: #c9bfae;
+    --tint-lent: #453312;
+    --on-tint-lent: #ffc53d;
+    --tint-borrowed: #2c2350;
+    --on-tint-borrowed: #b7a6ff;
+    --donut-1: #a78fff;
+    --donut-2: #ffc53d;
+    --donut-3: #7bd9a4;
+    --donut-4: #f49ac1;
+    --donut-5: #8fb4f7;
+    --donut-6: #ff9e73;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+a {
+  color: var(--accent);
+}
+
+/* Display font — brand moments only (hero headings, empty-state titles,
+   celebration banners). NEVER on amounts, buttons, tabs, or small labels. */
+.display {
+  font-family: 'Bricolage Grotesque', 'Inter', system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container.narrow {
+  max-width: 780px;
+}
