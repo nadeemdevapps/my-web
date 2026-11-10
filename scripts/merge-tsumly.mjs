@@ -29,7 +29,7 @@ run('npm run build', tsumlyDir);
 if (existsSync(target)) rmSync(target, { recursive: true, force: true });
 cpSync(tsumlyDist, target, { recursive: true });
 
-for (const page of ['index.html', 'privacy/index.html', 'terms/index.html']) {
+for (const page of ['index.html', 'features/index.html', 'gallery/index.html', 'about/index.html', 'privacy/index.html', 'terms/index.html']) {
   if (!existsSync(join(target, page))) {
     throw new Error(`[merge-tsumly] missing ${page} in ${target} — merge failed`);
   }

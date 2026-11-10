@@ -13,7 +13,10 @@ const isActive = (href: string) => {
   return current === h || current.startsWith(h + '/');
 };
 const links = [
-  { href: `${base}`, label: 'Overview' },
+  { href: `${base}`, label: 'Home' },
+  { href: `${base}features/`, label: 'Features' },
+  { href: `${base}gallery/`, label: 'Gallery' },
+  { href: `${base}about/`, label: 'About' },
   { href: `${base}privacy/`, label: 'Privacy' },
   { href: `${base}terms/`, label: 'Terms' },
 ];

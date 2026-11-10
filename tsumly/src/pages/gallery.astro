@@ -1,0 +1,82 @@
+---
+import TsumlyLayout from '../layouts/TsumlyLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+// Screenshot groups — the grid and the headings are ready; the real
+// screenshots arrive later from the user (phone screenshots, one folder
+// per app on Drive). No images yet, no placeholders pretending to be
+// screenshots: each slot is an empty frame until a real screenshot fills it.
+const groups = [
+  { id: 'home', title: 'Home dashboard', slots: 3 },
+  { id: 'loans', title: 'Loans & repayments', slots: 3 },
+  { id: 'people', title: 'Person profiles', slots: 3 },
+  { id: 'reports', title: 'Reports & statements', slots: 3 },
+  { id: 'accounts', title: 'Accounts', slots: 3 },
+];
+---
+
+<TsumlyLayout
+  title="Tsumly — Gallery"
+  description="Screenshots from the Tsumly app — the dashboard, loans, person profiles, reports and accounts, as they look on a real phone."
+>
+  <!-- ============ GALLERY INTRO ============ -->
+  <section class="section">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">Gallery</span>
+        <h2>Tsumly on the phone.</h2>
+        <p class="lede">
+          The dashboard, loans, person profiles, reports and accounts — as
+          they look in the app, on a real phone.
+        </p>
+        <p class="gallery-note">
+          App screenshots are on the way — this page will fill in with real
+          screenshots from the app.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCREENSHOT GROUPS ============ -->
+  {
+    groups.map((g, gi) => (
+      <section class={gi % 2 === 0 ? 'section alt' : 'section'} id={g.id}>
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>{g.title}</h2>
+          </div>
+          <div class="gallery-grid">
+            {Array.from({ length: g.slots }).map((_, i) => (
+              <figure class="gallery-slot reveal" style={`--d: ${i * 0.08}s`}>
+                <span>Screenshot coming soon</span>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+    ))
+  }
+
+  <script>
+    // Same restrained reveals as the home page.
+    var els = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('in');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(function (el) {
+        io.observe(el);
+      });
+    } else {
+      els.forEach(function (el) {
+        el.classList.add('in');
+      });
+    }
+  </script>
+</TsumlyLayout>

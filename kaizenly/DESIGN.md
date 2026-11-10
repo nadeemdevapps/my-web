@@ -175,8 +175,9 @@ components:
     typography: "{typography.nav-link}"
     padding: "{spacing.md}"
     # Kaizenly's own nav: 3-tile mark + KAIZENLY pixel wordmark left;
-    # Overview / Privacy / Terms links; theme toggle + "Main website" link
-    # right (back to the portfolio). Hamburger below 840px.
+    # Home / Features / Gallery / About / Privacy / Terms links; theme
+    # toggle right. The portfolio link lives in the About section and the
+    # footer ("Built by Nadeem"), not in the nav. Hamburger below 840px.
   wordmark:
     fontFamily: "pixel tile alphabet (code-drawn SVG, as in the app)"
     textColor: "{colors.ink}"
@@ -234,8 +235,8 @@ components:
     typography: "{typography.caption}"
     padding: "{spacing.xxl}"
     # Own footer: mark + tagline, "Built by Nadeem" with a link to the
-    # portfolio home, links to Overview / Privacy / Terms, and the
-    # Machine column (llms.txt / robots.txt / sitemap.xml).
+    # portfolio home, links to Home / Features / Gallery / About / Privacy
+    # / Terms, and the Machine column (llms.txt / robots.txt / sitemap.xml).
   toast:
     backgroundColor: "{colors.sheet}"
     textColor: "{colors.ink}"
@@ -468,8 +469,9 @@ between a pill CTA and a 24px card is intentional. Inputs stay tight at
 
 **`nav-bar`** — Top navigation. Slim sticky bar, `{colors.surface}`
 background, 64px tall. Left: 3-tile mark + KAIZENLY pixel wordmark.
-Centre/right: Overview / Privacy / Terms links. Right: theme toggle +
-"Main website" link (back to the portfolio home). Condenses to a hamburger
+Centre/right: Home / Features / Gallery / About / Privacy / Terms links.
+Right: theme toggle. The portfolio link lives in the About section and the
+footer ("Built by Nadeem"), not in the nav. Condenses to a hamburger
 below 840px.
 
 **`wordmark`** — The KAIZENLY pixel tile alphabet lockup, used with the
@@ -524,8 +526,9 @@ the headline.
 **`footer`** — Own footer. Dark `{colors.canvas}` band,
 `{colors.ink-secondary}` link text at `{typography.caption}`, padding
 `{spacing.xxl}`. Brand column (mark + tagline + "Built by Nadeem" with a
-link to the portfolio home), link columns (Overview / Privacy / Terms),
-and the Machine column (llms.txt / robots.txt / sitemap.xml).
+link to the portfolio home), link columns (Home / Features / Gallery /
+About / Privacy / Terms), and the Machine column (llms.txt / robots.txt /
+sitemap.xml).
 
 **`stat-tile`** — A stat block. `{colors.surface}` background, value in
 `{typography.timer-digit}` (huge square numerals), caption in
@@ -535,17 +538,39 @@ and the Machine column (llms.txt / robots.txt / sitemap.xml).
 
 - **Home**: hero (3-tile mark, DM Sans headline with one green word,
   primary + secondary CTA, drifting floating pill, ticking timer), the name
-  section ("Why Kaizenly?" — Kai = change, Zen = calm, ly = daily), Focus
-  (bags, presets, wheel, slide to start, floating pill, block screen,
-  essentials, enforcement, parachutes, break, hold to extend, soundscapes,
-  settings passes, routine-aware sessions), Routines & streaks, The Tower
-  (builds block-by-block as you scroll), Stats, Widgets, Settings & backup,
-  Premium / free model, How to get parachutes (the reward rule + table),
-  FAQ ("Kaizenly, answered."), the local-first band ("Your focus belongs
-  to you."), About / developer (who built it, link to the main website),
-  and the footer. Copy carries over from the main site's
-  `/products/kaizenly/` page, verified against FEATURES.md in the app repo
-  and updated for the free model (see "Free model — decided" below).
+  section ("Why Kaizenly?" — Kai = change, Zen = calm, ly = daily), a
+  highlights teaser (four cards — Focus, Routines, the Tower, Parachutes —
+  each linking to its Features anchor), FAQ ("Kaizenly, answered." — ten
+  questions, drives the FAQPage JSON-LD), the local-first band ("Your focus
+  belongs to you."), About / developer card (who built it, link to the main
+  website), and the footer. The feature sections live on the Features page,
+  not here.
+- **Features**: the exhaustive feature page — one section per feature, in
+  deep detail, so no user question stays unanswered. Focus (bags, presets,
+  wheel, slide to start, floating pill, block screen, essentials, the block
+  holding, settings passes, routine-aware stretch, hold to extend, leaving
+  early, break, sounds, celebration, boot restore), Routines & streaks
+  (three routines, schedules, pre-alerts, overlap warnings, own-bag, enable
+  gates, the daily streak), the Tower (blocks/floors, reserves, repair, day
+  100, best day — with the scroll-built Tower visual), Parachutes (earn rule
+  table, spend costs, break/exit), Sounds, Stats (Day / Month / Year),
+  Widgets (preset + streak), Settings (theme, haptics, reminders, silence),
+  Backup & privacy, Free & Premium, First run, and Honest boundaries. Every
+  fact verified against FEATURES.md / the app's code — never copied from the
+  old site without re-checking it. No internal details: no architecture
+  names, no component names, no encryption algorithm names — behaviour only.
+- **Gallery**: a shell, not a gallery yet. Page hero, six group sections
+  (Focus sessions, Routines, the Tower, Stats, Widgets, Settings & backup)
+  with the grid layout ready and placeholder frames. No images — real phone
+  screenshots arrive later from the user (per-app Drive folder) and replace
+  the placeholders.
+- **About**: the developer page — Nadeem Mazhar, solo developer, Nadeem Dev
+  Apps. Builds with AI (he plans, directs and reviews, AI does the heavy
+  lifting); builds websites, Windows and Android apps, backends and cloud;
+  strengths: exploration, AI, UI design, planning, brainstorming,
+  problem-solving; every app starts as his own problem (Kaizenly: a phone
+  that would not stay down). Ends with a link to the portfolio home. No
+  location is stated for the developer anywhere on this site.
 - **Privacy / Terms**: document pages — dark canvas, DM Sans headlines,
   generous line-height. Content carries over from the main site's
   `/products/kaizenly/privacy/` and `/terms/` pages.

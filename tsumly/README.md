@@ -9,13 +9,16 @@ version as the main site.
 
 ## Status
 
-Full site (2026-11-10): Home (hero, Why Tsumly, How it works, smart
-repayment split, pre-app loans, person profiles, everyday money,
-accounts, reports & statements, home dashboard, loan reminders, make it
-yours, backup & privacy, FAQ) + Privacy + Terms, with nav, footer,
-theme toggle, sitemap, llms.txt/llms-full.txt and robots.txt. Copy
-carries over from the main site's `/products/tsumly/` page, verified
-against the app repo and `docs/06_DESIGN.md`.
+Multi-page site (2026-11-10): Home (hero, Why Tsumly, highlights
+teaser, FAQ, About) + Features (one deep section per feature — How it
+works, smart repayment split, pre-app loans, person profiles, everyday
+money, accounts, reports & statements, home dashboard, loan reminders,
+make it yours, backup & privacy) + Gallery (shell — grid ready, real
+phone screenshots arrive later from the user) + About (developer bio,
+no location stated) + Privacy + Terms, with nav, footer, theme toggle,
+sitemap, llms.txt/llms-full.txt and robots.txt. Feature copy is verified against the app repo
+(`docs/06_DESIGN.md`, `docs/05_PHASE_LOG.md`, `app/lib/`); user-facing
+behaviour only — no architecture, library, algorithm or API names.
 
 ## Run it
 

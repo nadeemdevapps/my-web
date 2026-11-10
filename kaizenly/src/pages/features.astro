@@ -1,0 +1,1013 @@
+---
+import KaizenLayout from '../layouts/KaizenLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+// Tower visual: three floors of seven blocks + three reserve blocks.
+// Delays build the tower bottom-up as you scroll: floor 0 is the bottom
+// floor, floor 3 is the reserve row. The visual stacks bottom-up via
+// column-reverse, so the DOM order is progress, caption, reserve label,
+// reserve row, then the floors.
+const towerFloors = [7, 7, 7];
+const towerReserves = 3;
+const towerDelay = (floor: number, block: number) =>
+  ((floor * 7 + block) * 0.07).toFixed(2);
+---
+
+<KaizenLayout
+  title="Features — Kaizenly"
+  description="Every Kaizenly feature, in detail: focus sessions, bags, routines, the Tower streak, parachutes earned free, sounds, stats, widgets, settings, backup, and the free vs Premium model."
+>
+  <!-- ============ PAGE HERO ============ -->
+  <section class="section" id="top">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Features</span>
+        <h2>Everything Kaizenly does, in detail.</h2>
+        <p>
+          Every feature, every rule, every limit — written down so nothing is
+          left to guess. If a question is not answered here, the home page
+          FAQ answers the common ones.
+        </p>
+      </div>
+      <div class="preset-row reveal" style="justify-content: center; flex-wrap: wrap;">
+        <a class="preset" href="#focus">Focus</a>
+        <a class="preset" href="#routines">Routines</a>
+        <a class="preset" href="#tower">The Tower</a>
+        <a class="preset" href="#parachutes">Parachutes</a>
+        <a class="preset" href="#sounds">Sounds</a>
+        <a class="preset" href="#stats">Stats</a>
+        <a class="preset" href="#widgets">Widgets</a>
+        <a class="preset" href="#settings">Settings</a>
+        <a class="preset" href="#backup">Backup</a>
+        <a class="preset" href="#premium">Free &amp; Premium</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOCUS ============ -->
+  <section class="section alt" id="focus">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Focus</span>
+        <h2>One session. No way out.</h2>
+        <p>
+          Pick a bag, pick a time, slide to start. From that moment the apps
+          in the bag are blocked — and <strong>leaving early costs parachutes</strong>.
+        </p>
+      </div>
+
+      <div class="bags-visual reveal">
+        <article class="bag active">
+          <div class="bag-glyph">▦</div>
+          <h4>Bag 1</h4>
+          <div class="slots" aria-label="6 slots, 4 filled"><i></i><i></i><i></i><i></i><i class="empty"></i><i class="empty"></i></div>
+          <p>Active bag · 4 of 6 slots filled</p>
+        </article>
+        <article class="bag">
+          <div class="bag-glyph">▦</div>
+          <h4>Bag 2</h4>
+          <div class="slots" aria-label="6 slots, 3 filled"><i></i><i></i><i></i><i class="empty"></i><i class="empty"></i><i class="empty"></i></div>
+          <p>3 of 6 slots filled</p>
+        </article>
+        <article class="bag">
+          <div class="bag-glyph">▦</div>
+          <h4>Bag 3</h4>
+          <div class="slots" aria-label="6 slots, 2 filled"><i></i><i></i><i class="empty"></i><i class="empty"></i><i class="empty"></i><i class="empty"></i></div>
+          <p>2 of 6 slots filled</p>
+        </article>
+      </div>
+
+      <div class="feature-grid" style="margin-top: 20px">
+        <article class="feature-card reveal" style="--d: 0s">
+          <div class="icon">▦</div>
+          <h3>Three bags, six slots each</h3>
+          <p>
+            A bag is a named set of distracting apps. You get
+            <strong> three bags</strong> with <strong>six slots each</strong>,
+            all free. The active bag is the one that gets blocked — switch bags
+            any time you are not in a session.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.08s">
+          <div class="icon">▣</div>
+          <h3>The app picker</h3>
+          <p>
+            Tap a slot to open the picker: search your installed apps, see
+            them with their real icons, and pick up to six per bag. Save, and
+            the bag is ready. A slot can be cleared the same way, any time.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.16s">
+          <div class="icon">●</div>
+          <h3>The floating pill</h3>
+          <p>
+            A small pill floats over everything while a session runs — time
+            left and parachutes at a glance. Tap it to open the app. It never
+            gets in the way of the essentials.
+          </p>
+        </article>
+      </div>
+
+      <div class="focus-split" style="margin-top: 20px">
+        <article class="focus-panel reveal reveal-left">
+          <h3>Presets — and the wheel</h3>
+          <p>
+            Start in one tap with <strong>15 minutes, 45 minutes, or 3 hours</strong>.
+            Or spin the wheel: up to three of your own presets, from
+            <strong>1 to 720 minutes</strong>. Sessions over 3 hours need at least
+            one parachute on board — and stay premium-gated past the free 180 minutes.
+          </p>
+          <div class="preset-row">
+            <span class="preset">15 min</span>
+            <span class="preset on">45 min</span>
+            <span class="preset">3 hours</span>
+          </div>
+          <div class="wheel" aria-hidden="true">
+            <span class="wheel-dot"></span>
+            <span class="wheel-value">45<small>MINUTES</small></span>
+          </div>
+          <p>
+            The <strong>Custom card</strong> is Premium: it sets the wheel to
+            12 hours (720 minutes) and lets it run from 3 to 12 hours. Tapping
+            a preset animates the wheel to the new value — one tick per minute
+            crossed.
+          </p>
+          <div class="slide-start">Slide to start — <b>no accidental sessions</b></div>
+          <p style="margin-top: 16px">
+            The slide is deliberate on purpose: the handle has to travel most
+            of the way before the session starts, so a stray touch never locks
+            your phone. If the app cannot block yet, the slide opens the setup
+            instead of starting.
+          </p>
+        </article>
+
+        <article class="focus-panel reveal reveal-right">
+          <h3>Hold to extend</h3>
+          <p>
+            Need more time? Hold for three seconds and the session grows by
+            <strong>15 minutes</strong> — up to +60 minutes per session. Extending
+            needs a parachute on board (it is not consumed). A short tap only
+            shows a HOLD hint and does nothing.
+          </p>
+          <div class="slide-start">Hold 3s → <b>+15 min</b> · up to +60 per session</div>
+          <h3 style="margin-top: 28px">Routine-aware sessions</h3>
+          <p>
+            A session that would end inside a routine window stretches to the end
+            of that window instead — when a routine is enabled and you have a
+            parachute. One focus, no gaps. The stretch is capped at 12 hours
+            from now.
+          </p>
+          <h3 style="margin-top: 28px">Leaving early</h3>
+          <p>
+            Slide to exit and the handle answers honestly: with no parachutes
+            it is dimmed and shakes. With more than 30 minutes left, the slide
+            opens a choice — a 30-minute break for 1 parachute, or end the
+            session for 1 + 1 per hour left (minimum 2). Tapping outside the
+            sheet, or “Keep going”, keeps the session running. With 30 minutes
+            or less left, the slide ends the session directly for 1 parachute.
+          </p>
+        </article>
+      </div>
+
+      <div class="block-mock" style="margin-top: 20px">
+        <div class="block-screen reveal reveal-left" data-tilt>
+          <div class="bs-label">SESSION ACTIVE</div>
+          <div class="bs-timer"><span data-timer="24:59">24:59</span></div>
+          <div class="bs-ends">ENDS <b>6:45 PM</b> · 45 MIN SESSION</div>
+          <div class="bs-row">
+            <div class="bs-chip">PARACHUTES<b>3</b></div>
+            <div class="bs-chip">BREAK<b>30 min</b></div>
+            <div class="bs-chip">SOUND<b>Rain</b></div>
+          </div>
+        </div>
+        <article class="block-copy reveal reveal-right">
+          <h3>The block screen</h3>
+          <p>
+            While a session runs, the block screen is the only thing between you
+            and the apps. It shows the countdown, the end time, and your parachutes —
+            and after three seconds of idle it rests, dimming to a quiet clock.
+            Any touch brings it back.
+          </p>
+          <ul>
+            <li><strong>Essentials stay open</strong> — messaging, dialer, camera, alarm, keyboard, in-call.</li>
+            <li><strong>The block holds</strong> — the notification shade, recents, and the power menu close; floating windows are dismissed; the block comes back on its own even if the app was closed, and it survives a reboot.</li>
+            <li><strong>Settings passes</strong> — if the protection ever drops, Kaizenly lets you open your phone's settings to switch it back on: up to 3 × 60-second passes per session.</li>
+            <li><strong>Always in view</strong> — an ongoing notification shows the time remaining and opens the app on tap; empty slots on the block screen open the app picker.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="feature-grid" style="margin-top: 20px">
+        <article class="feature-card reveal" style="--d: 0s">
+          <div class="icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11a9 9 0 0 1 18 0" /><path d="M5.5 11 12 19M18.5 11 12 19M12 11v8" /><rect x="10" y="19" width="4" height="3" rx="1" /></svg>
+          </div>
+          <h3>Parachutes</h3>
+          <p>
+            Emergency exits that end a block early. A break costs
+            <strong> 1</strong>; exiting early costs
+            <strong> 1 + 1 per hour left</strong> (minimum 2). Earned free by
+            focusing — never bought. The full rule is in the
+            <a href="#parachutes">parachutes section</a> below.
+          </p>
+          <span class="tag">Earned free, never sold</span>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.08s">
+          <div class="icon">◐</div>
+          <h3>The 30-minute break</h3>
+          <p>
+            One parachute buys a 30-minute break, as many times as you need in a
+            session. The clock freezes; the block returns when the break ends.
+            Enforcement, sound, and Do Not Disturb rest during the break. A
+            break that would run past a routine's end stops the session there
+            instead — a routine window is fixed.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.16s">
+          <div class="icon">♪</div>
+          <h3>Soundscapes</h3>
+          <p>
+            <strong>Rain, Waves, White Noise, and City</strong> — four sounds
+            generated live on your device, never streamed, never auto-played.
+            They fade in and out with the session. All four are free.
+          </p>
+          <span class="tag">All 4 sounds free</span>
+        </article>
+        <article class="feature-card reveal" style="--d: 0s">
+          <div class="icon">▣</div>
+          <h3>Block screen, done right</h3>
+          <p>
+            The countdown, the end time, your parachutes — and a celebration when
+            you finish. <strong>DONE</strong> in white tiles, <strong>SOS</strong> in
+            green when you bailed. The celebration shows your minutes for the
+            session and for today, plus the week — Monday first. Share the card
+            as a PNG; the done pill is the only way out.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.08s">
+          <div class="icon">✦</div>
+          <h3>Boot restore</h3>
+          <p>
+            Restart the phone mid-session and the block comes back. A session ends
+            when the timer ends — not when the phone does.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.16s">
+          <div class="icon">▲</div>
+          <h3>Sessions under 5 seconds</h3>
+          <p>
+            A session shorter than five seconds is not recorded anywhere — no
+            stats, no streak, no Tower block. Everything else counts, and break
+            minutes never count toward your focus time.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ROUTINES & STREAKS ============ -->
+  <section class="section" id="routines">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Routines &amp; streaks</span>
+        <h2>Set it once. Focus on schedule.</h2>
+        <p>
+          Up to <strong>three routines</strong> — a bag, a time window, days of the
+          week — and Kaizenly starts the block for you. Routines are
+          <strong> free</strong>, including each routine using its own bag.
+        </p>
+      </div>
+      <div class="feature-grid two">
+        <article class="feature-card reveal reveal-left">
+          <div class="icon">◷</div>
+          <h3>Routines that start themselves</h3>
+          <p>
+            A routine needs at least one parachute to enable — the safety net
+            for an automatic block. Overlapping routines ask before they both
+            fire, and each routine can use <strong>its own bag</strong>: the bag
+            in hand is restored when the routine session ends.
+          </p>
+          <span class="tag">3 routines free</span>
+        </article>
+        <article class="feature-card reveal reveal-right">
+          <div class="icon">▲</div>
+          <h3>The daily streak</h3>
+          <p>
+            <strong>One minute a day</strong> keeps the streak alive — five minutes
+            on your very first day. Weeks run Monday to Sunday, and a gentle
+            evening reminder at <strong>8:30 PM</strong> nudges you if today has
+            less than five minutes of focus: “Five minutes of session lay today's block.”
+          </p>
+          <span class="tag">1 min a day keeps it alive</span>
+        </article>
+      </div>
+      <div class="feature-grid" style="margin-top: 20px">
+        <article class="feature-card reveal" style="--d: 0s">
+          <div class="icon">✎</div>
+          <h3>Built like the app: knobs, not fields</h3>
+          <p>
+            Each routine has a name (rename it — up to 10 characters), a start
+            time and an end time set with rotating knobs, and seven day faders
+            for the days it runs. A routine's window can be anywhere from
+            <strong> 5 to 720 minutes</strong> long. Turning all seven days off
+            switches the routine off.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.08s">
+          <div class="icon">◔</div>
+          <h3>Switching a routine on</h3>
+          <p>
+            Three checks, in order: at least one parachute on board, no
+            unresolved overlap with another routine, and the system permission
+            the app needs to start on time. If two routines overlap, Kaizenly
+            asks — “Turn on anyway” or “Not now” — instead of guessing.
+            Switching a routine off is always allowed, no questions asked.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.16s">
+          <div class="icon">◷</div>
+          <h3>On schedule, every time</h3>
+          <p>
+            A routine starts itself on its chosen days, and a reminder arrives
+            <strong> 5 minutes before</strong> it starts. Change a routine and
+            its schedule updates within moments. While you are on a break, the
+            Routines tab shows the break countdown in the header, so you always
+            know when the block returns.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE TOWER ============ -->
+  <section class="section alt" id="tower">
+    <div class="container">
+      <div class="tower-wrap">
+        <div class="tower-visual" data-tower>
+          <div class="tower-progress" aria-hidden="true"></div>
+          <div class="tower-caption">Scroll — the Tower builds block by block</div>
+          <div class="tower-reserve-label">3 reserve blocks</div>
+          <div class="tower-floor">
+            {Array.from({ length: towerReserves }).map((_, i) => (
+              <div class="tower-block reserve" style={`--d: ${towerDelay(3, i)}s`}></div>
+            ))}
+          </div>
+          {
+            towerFloors.map((blocks, fi) => (
+              <div class="tower-floor">
+                {Array.from({ length: blocks }).map((_, bi) => (
+                  <div class="tower-block" style={`--d: ${towerDelay(fi, bi)}s`}></div>
+                ))}
+              </div>
+            ))
+          }
+        </div>
+        <div class="tower-copy reveal reveal-right">
+          <span class="kicker">The Tower</span>
+          <h3>Your streak, built.</h3>
+          <p>
+            Five minutes of focus a day lays <strong>one block</strong>. Seven
+            blocks make a <strong>floor</strong>. The Tower grows as you do —
+            and you can watch it grow, floor by floor.
+          </p>
+          <p>
+            Life happens: <strong>three reserve blocks</strong> sit beside the
+            Tower and are spent automatically on missed days. Ten days in a row
+            restores one spent reserve, up to three. And if you reach
+            <strong> day one hundred</strong>, you will find a surprise.
+          </p>
+          <div class="tower-stats">
+            <div class="tower-stat"><b>5 min</b><span>lays a block</span></div>
+            <div class="tower-stat"><b>7</b><span>blocks make a floor</span></div>
+            <div class="tower-stat"><b>3</b><span>reserve blocks</span></div>
+            <div class="tower-stat"><b>Day 100</b><span>a surprise</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="feature-grid" style="margin-top: 32px">
+        <article class="feature-card reveal" style="--d: 0s">
+          <div class="icon">▦</div>
+          <h3>Two counters, not one</h3>
+          <p>
+            The Tower and the daily streak are different counters. The streak
+            stays alive with <strong>one minute a day</strong> (five on your
+            very first day); a Tower block needs <strong>five minutes</strong>.
+            A missed day spends a reserve block for the Tower — the repair
+            happens automatically, while reserves remain.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.08s">
+          <div class="icon">▣</div>
+          <h3>Every block tells its day</h3>
+          <p>
+            Long-press any block to see its day: the date, how many sessions
+            ran and for how many minutes — or “Repaired day · the tower held
+            up” for a day a reserve saved. The first block carries a note of
+            its own: this is where it all began. When the Tower is taller than
+            a week, a scrubber on the right edge scrolls it.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.16s">
+          <div class="icon">▲</div>
+          <h3>Your numbers, at the foot of the Tower</h3>
+          <p>
+            The Tower screen keeps four numbers: your <strong>best day</strong>
+            (tap it to jump to that floor), your <strong>total focus time</strong>,
+            your <strong>average minutes per day</strong>, and your
+            <strong> tallest Tower</strong>. The streak count lives in the header
+            badge — tap it any time to open the Tower.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW TO GET PARACHUTES ============ -->
+  <section class="section" id="parachutes">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">How to get parachutes</span>
+        <h2>Earn them. Never buy them.</h2>
+        <p>
+          Parachutes are the emergency exits of Kaizenly — and they are
+          <strong> earned by focusing</strong>, never sold.
+        </p>
+      </div>
+      <div class="parachute-wrap">
+        <div class="parachute-copy reveal reveal-left">
+          <h3>The rule, in full</h3>
+          <p>
+            A <strong>qualifying day</strong> is a day with at least one session
+            of <strong>30 minutes of actual focus</strong>. One qualifying day
+            counts per calendar day, and the counter is the number of qualifying
+            days in a row.
+          </p>
+          <p>
+            The <strong>first 10 days pay double</strong> — because building a
+            habit is the hardest part, so the start pays more. Day 3 earns +2,
+            and every day after that earns +2 until day 10, which pays +6 with
+            its bonus. After day 10, each day earns +1, with a +5 bonus at day 20.
+          </p>
+          <div class="rule-note">
+            <strong>A missed day resets the streak to 0.</strong> Tower reserve
+            blocks do not save it — the parachute streak has no reserves. The
+            counter is capped at 99.
+          </div>
+          <p style="margin-top: 20px">
+            Parachutes are spent on breaks (<strong>1 per 30-minute break</strong>)
+            and on exiting early (<strong>1 + 1 per hour left</strong>, minimum 2).
+            Holding to extend and starting a session over 3 hours need one on
+            board — but do not consume it. Enabling a routine needs one too.
+          </p>
+          <h3 style="margin-top: 28px">What an early exit costs</h3>
+          <p>
+            The cost grows with the time thrown away: 31–60 minutes left costs
+            2 parachutes, 61–120 minutes costs 3, 3 hours costs 4, 4 hours
+            costs 5. With 30 minutes or less left, sliding to exit ends the
+            session directly for 1 parachute.
+          </p>
+          <h3 style="margin-top: 28px">Where the count lives</h3>
+          <p>
+            Your parachutes show in three places: the header pill (it pulses
+            gently while you have any), the Bag tab, and the block screen. The
+            buy tiles on the Bag tab open a “Totally free” sheet instead of a
+            purchase — parachutes are never sold. The app's Profile sheet has a
+            “How to get parachutes” row that opens the full explainer, with a
+            copy button that copies it as plain text.
+          </p>
+        </div>
+        <div class="reveal reveal-right">
+          <table class="reward-table">
+            <thead>
+              <tr><th>Streak day</th><th>Reward</th><th>Total</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Day 3</td><td>+2</td><td>2</td></tr>
+              <tr><td>Day 6</td><td>+2 / day</td><td>8</td></tr>
+              <tr class="bonus"><td>Day 10</td><td>+6 · bonus day</td><td>20</td></tr>
+              <tr><td>Day 15</td><td>+1 / day</td><td>25</td></tr>
+              <tr class="bonus"><td>Day 20</td><td>+6 · bonus day</td><td>35</td></tr>
+              <tr><td>Day 30</td><td>+1 / day</td><td>45</td></tr>
+            </tbody>
+          </table>
+          <p class="reward-foot">Rows light up as the streak grows. Miss a day, and the counter returns to 0.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOUNDS ============ -->
+  <section class="section alt" id="sounds">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Sounds</span>
+        <h2>Four sounds, made on your device.</h2>
+        <p>
+          No streaming, no downloads, no account. The sounds are generated
+          live on your phone, and all four are free.
+        </p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal" style="--d: 0s">
+          <div class="icon">♪</div>
+          <h3>Rain</h3>
+          <p>Steady rain, made live on your device. Pick it on the block screen and it starts — stop it the same way.</p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.08s">
+          <div class="icon">♪</div>
+          <h3>Waves</h3>
+          <p>Ocean waves, made live on your device. Nothing is streamed, so it works with the phone offline.</p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.16s">
+          <div class="icon">♪</div>
+          <h3>White Noise</h3>
+          <p>Even white noise, made live on your device. It fades in with the session and out when it ends.</p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0s">
+          <div class="icon">♪</div>
+          <h3>City</h3>
+          <p>City ambience, made live on your device. The sound stops when the session ends — it never plays on its own.</p>
+        </article>
+      </div>
+      <p class="reveal" style="margin-top: 28px; text-align: center; color: var(--ink-2);">
+        Nothing auto-plays: a sound starts only when you pick it, and the
+        session fades it in and out for you.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="section" id="stats">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Stats</span>
+        <h2>Proof, not promises.</h2>
+        <p>
+          Day, month, and year — every session you finished, in one place.
+          Sessions under five seconds are not recorded; the rest is all yours.
+        </p>
+      </div>
+      <div class="stat-panels">
+        <article class="stat-panel reveal" style="--d: 0s">
+          <div class="range">DAY</div>
+          <div class="stat-bars" aria-hidden="true"><i style="height: 34%"></i><i style="height: 62%"></i><i style="height: 48%"></i><i style="height: 84%"></i><i style="height: 56%"></i><i style="height: 100%"></i><i style="height: 40%"></i></div>
+          <p>Today's focus, session by session.</p>
+        </article>
+        <article class="stat-panel reveal" style="--d: 0.1s">
+          <div class="range">MONTH</div>
+          <div class="stat-bars" aria-hidden="true"><i style="height: 52%"></i><i style="height: 70%"></i><i style="height: 44%"></i><i style="height: 88%"></i><i style="height: 66%"></i><i style="height: 92%"></i><i style="height: 58%"></i></div>
+          <p>This month's total — the rotary wheel and stepper make it easy to browse.</p>
+        </article>
+        <article class="stat-panel reveal" style="--d: 0.2s">
+          <div class="range">YEAR</div>
+          <div class="stat-bars" aria-hidden="true"><i style="height: 46%"></i><i style="height: 60%"></i><i style="height: 78%"></i><i style="height: 54%"></i><i style="height: 96%"></i><i style="height: 70%"></i><i style="height: 82%"></i></div>
+          <p>The year so far. The Tower remembers what the calendar forgets.</p>
+        </article>
+      </div>
+      <div class="feature-grid" style="margin-top: 20px">
+        <article class="feature-card reveal" style="--d: 0s">
+          <div class="icon">▦</div>
+          <h3>Three views, one history</h3>
+          <p>
+            <strong>Day, Month, and Year</strong> — Month is the default view.
+            Step back through past days, months, and years with the chevrons
+            or the rotary wheel; you can only browse into the past, never into
+            the future. The readout under the chart always says the period and
+            the total minutes.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.08s">
+          <div class="icon">◐</div>
+          <h3>What counts, and what does not</h3>
+          <p>
+            A finished session counts its actual focus minutes — break minutes
+            are excluded, and sessions shorter than five seconds are not
+            recorded at all. Bars for days ahead are dimmed; the selected bar
+            is highlighted in green.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.16s">
+          <div class="icon">▲</div>
+          <h3>The Tower keeps the rest</h3>
+          <p>
+            Best day, total time, average minutes per day, and your tallest
+            Tower live on the Tower screen — the stats page is for the
+            calendar, the Tower is for the streak.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WIDGETS ============ -->
+  <section class="section alt" id="widgets">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Widgets</span>
+        <h2>Focus, from the home screen.</h2>
+        <p>
+          Two widgets, no app-opening required. Start a session or check the
+          streak right from where your phone already is.
+        </p>
+      </div>
+      <div class="widget-grid">
+        <article class="widget-mock reveal reveal-left">
+          <h3>Preset widget</h3>
+          <p class="widget-sub">Up to three of your presets · 1–720 minutes</p>
+          <div class="widget-presets">
+            <span>15</span>
+            <span class="on">45</span>
+            <span>180</span>
+          </div>
+          <p class="widget-sub" style="margin-top: 14px">Tap a preset, slide, focus. The green one is ready.</p>
+          <p style="margin-top: 14px">
+            Tap a preset to open the app with that timer; the play button
+            starts a session straight away. While a session runs, the widget
+            becomes a countdown with the time remaining. Add or edit presets
+            in the wheel editor — up to three, from 1 to 720 minutes.
+          </p>
+        </article>
+        <article class="widget-mock reveal reveal-right">
+          <h3>Streak widget</h3>
+          <p class="widget-sub">The last 28 days · 4 week rows</p>
+          <div class="streak-weeks" aria-hidden="true">
+            <div class="week"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i></div>
+            <div class="week"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i></div>
+            <div class="week"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i></div>
+            <div class="week"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="today"></i><i></i></div>
+          </div>
+          <p class="widget-sub" style="margin-top: 14px">Today is ringed. Tomorrow is empty — until you fill it.</p>
+          <p style="margin-top: 14px">
+            Twenty-eight days on the home screen, today ringed. After 8 PM,
+            if today is still empty, the widget pulses gently — a quiet nudge,
+            not an alarm. Tap it to open the Tower.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SETTINGS ============ -->
+  <section class="section" id="settings">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Settings</span>
+        <h2>Yours, the way you like it.</h2>
+        <p>
+          A small settings page, and every switch does exactly what it says.
+        </p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal" style="--d: 0s">
+          <div class="icon">◐</div>
+          <h3>Theme</h3>
+          <p>
+            Three cards — <strong>Light, Automatic, Dark</strong>. Dark is the
+            design anchor: deep green-black surfaces with the vivid green accent.
+            A fresh install starts in Light.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.08s">
+          <div class="icon">✦</div>
+          <h3>Haptics</h3>
+          <p>
+            One global switch. Turn it off and every vibration in the app stops —
+            turn it on and you feel it immediately.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.16s">
+          <div class="icon">◷</div>
+          <h3>Streak reminders</h3>
+          <p>
+            One evening nudge at <strong>8:30 PM</strong>, only if today has
+            less than five minutes of focus and no session has run. Switch it
+            off and the evening stays quiet.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0s">
+          <div class="icon">▦</div>
+          <h3>Each routine, its own bag</h3>
+          <p>
+            Free. Each routine uses its own bag — routine 1 uses bag 1, and so
+            on — and the bag in hand is restored when the routine session ends.
+            The same switch lives in Settings.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.08s">
+          <div class="icon">◐</div>
+          <h3>Silence during sessions</h3>
+          <p>
+            Premium. Do Not Disturb while you focus. It needs the system
+            permission for it — the app explains why, opens the right settings
+            page, and switches on as soon as access is granted. If access is
+            ever revoked, the switch resets itself.
+          </p>
+          <span class="tag">Premium</span>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.16s">
+          <div class="icon">▣</div>
+          <h3>Go Premium · Info</h3>
+          <p>
+            Two cards at the foot of Settings: one opens Premium (hidden once
+            you own it), the other opens Info — the developer, the credits, and
+            the app version.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BACKUP & PRIVACY ============ -->
+  <section class="section alt" id="backup">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Backup &amp; privacy</span>
+        <h2>Your data, yours to keep.</h2>
+        <p>
+          Kaizenly has <strong>no account, no sign-up, and no server</strong>.
+          Your data lives on your device — and the only way it leaves is a
+          backup file you make yourself.
+        </p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal" style="--d: 0s">
+          <div class="icon">▣</div>
+          <h3>Local backup</h3>
+          <p>
+            Export a <strong>timestamped JSON backup</strong> and import it back
+            with a confirm step. It is validated before it is written, and a
+            live session is never carried over. No drive, no password, no upload.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.08s">
+          <div class="icon">●</div>
+          <h3>What a backup carries</h3>
+          <p>
+            Sessions, bags and all their slots, all three routines, your streak
+            and Tower progress, your parachutes and their streak, and your
+            settings. An active session's timer state is not carried over —
+            a backup never restores a session in progress.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.16s">
+          <div class="icon">✦</div>
+          <h3>Protected, even in a file</h3>
+          <p>
+            Your parachute balance is protected inside the backup: editing the
+            file cannot add parachutes — a tampered balance imports as 0, while
+            your sessions, bags, routines, and settings still import normally.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0s">
+          <div class="icon">◐</div>
+          <h3>Nothing leaves on its own</h3>
+          <p>
+            The app opts out of automatic cloud backup, so a fresh install
+            starts empty and uninstalling wipes its local data. There is no
+            analytics, no advertising, and no tracking — and no third-party code
+            that sends data anywhere.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.08s">
+          <div class="icon">▦</div>
+          <h3>Permissions, only for blocking</h3>
+          <p>
+            Blocking needs sensitive permissions — the ones that let the app
+            see which app is open, draw over the screen, and lock the device.
+            They are used only for blocking, and only while you have a session
+            or routine running. You grant each one yourself, and you can revoke
+            any of them any time in your phone's settings; blocking may stop
+            working, including sessions already in progress.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.16s">
+          <div class="icon">▲</div>
+          <h3>No account, ever</h3>
+          <p>
+            There is no sign-in and no profile to create. The Profile sheet has
+            settings, sharing, the tour, the parachute explainer, and Premium —
+            but no account, because there is nothing to sign in to.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PREMIUM / FREE ============ -->
+  <section class="section" id="premium">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Free &amp; Premium</span>
+        <h2>Almost everything is free.</h2>
+        <p>
+          Bags, routines, sounds, and parachutes are <strong>free in this
+          version</strong>. Premium is two things only — and it arrives with
+          Play Billing.
+        </p>
+      </div>
+      <div class="plan-grid">
+        <article class="plan reveal reveal-left">
+          <span class="plan-tag free-tag">FREE</span>
+          <h3>Free, for now</h3>
+          <p class="plan-lede">Everything you need to focus, every day.</p>
+          <ul>
+            <li><strong>All 3 bags</strong> with <strong>6 slots</strong> each</li>
+            <li><strong>3 routines</strong> — each routine its own bag, free</li>
+            <li><strong>All 4 soundscapes</strong> — Rain, Waves, White Noise, City</li>
+            <li><strong>Parachutes</strong> earned free by the streak</li>
+            <li>The Tower, stats, widgets, and local backup</li>
+            <li>Sessions up to 3 hours</li>
+          </ul>
+          <p class="price"><b>Rs 0</b> — free in this version</p>
+        </article>
+        <article class="plan premium reveal reveal-right">
+          <span class="plan-tag">PREMIUM</span>
+          <h3>Premium</h3>
+          <p class="plan-lede">For the long sessions and the quiet ones.</p>
+          <ul>
+            <li><strong>Sessions up to 12 hours</strong> — the custom card, 3 to 12 hours</li>
+            <li><strong>Silence during sessions</strong> — Do Not Disturb while you focus</li>
+            <li>Everything in Free, of course</li>
+          </ul>
+          <p class="price"><b>Rs 1,450</b> one-time · arrives with Play Billing</p>
+        </article>
+      </div>
+      <p class="reveal" style="margin-top: 28px; text-align: center; color: var(--ink-2);">
+        There is no purchase in the app today. The Premium screen also has an
+        Add-on page — the big suitcase (6 apps per bag) and the sounds — both
+        shown as “Included free”, with no price and nothing to unlock.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ FIRST RUN ============ -->
+  <section class="section alt" id="first-run">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">First run</span>
+        <h2>Six steps, then focus.</h2>
+        <p>
+          The first run is a short tour, not a form: six steps with square step
+          numbers and a draggable lever. It explains the block, the bags, and
+          the permissions the app needs — and you grant each one yourself.
+          Finished the tour and want it again? The Profile sheet has “Take the
+          tour again”.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HONEST BOUNDARIES ============ -->
+  <section class="section" id="boundaries">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Honest boundaries</span>
+        <h2>What Kaizenly does not do.</h2>
+        <p>
+          A focus guard has to be honest about its limits, or the strictness
+          is just theatre. Here are ours.
+        </p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal" style="--d: 0s">
+          <div class="icon">●</div>
+          <h3>No account, no server</h3>
+          <p>No sign-up, no login, no developer server. There is nowhere for your data to go — and no one to send it to.</p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.08s">
+          <div class="icon">●</div>
+          <h3>No analytics, no ads, no trackers</h3>
+          <p>Nothing in the app watches you, and nothing is sold to advertisers. Your focus data is yours.</p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.16s">
+          <div class="icon">●</div>
+          <h3>No cloud backup</h3>
+          <p>Your data never leaves the phone unless you export a backup file yourself. There is no sync and no cloud copy.</p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0s">
+          <div class="icon">●</div>
+          <h3>No selling parachutes</h3>
+          <p>Parachutes are earned by focusing, never bought. The buy tiles open a “Totally free” sheet — that is the whole point.</p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.08s">
+          <div class="icon">●</div>
+          <h3>No purchases yet</h3>
+          <p>Premium arrives with Play Billing. Until then there is nothing to buy in the app — and everything listed as free is actually free.</p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.16s">
+          <div class="icon">●</div>
+          <h3>No magic</h3>
+          <p>Kaizenly adds friction at the exact moment you would otherwise scroll. It cannot want focus for you — it can only make leaving cost something.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING CTA ============ -->
+  <section class="section alt">
+    <div class="container" style="text-align: center;">
+      <div class="section-head reveal" style="text-align: center;">
+        <span class="kicker">Still curious?</span>
+        <h2>See it, or ask about it.</h2>
+        <p>
+          The Gallery has real screens from the app, and the home page FAQ
+          answers the questions people actually ask.
+        </p>
+      </div>
+      <div class="hero-ctas reveal" style="justify-content: center;">
+        <a class="btn btn-primary" href={`${base}gallery/`}>See the Gallery</a>
+        <a class="btn btn-secondary" href={`${base}#faq`}>Home FAQ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MOTION SCRIPT ============ -->
+  <script>
+    (function () {
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Reveal on scroll — IntersectionObserver (works everywhere);
+      // CSS view-timeline handles the decorative scroll-linked bits.
+      var revealEls = document.querySelectorAll('.reveal, .reward-table tbody tr');
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        revealEls.forEach(function (el) { el.classList.add('in'); });
+      } else {
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('in');
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -6% 0px' }
+        );
+        revealEls.forEach(function (el) { io.observe(el); });
+      }
+
+      // The Tower builds block-by-block as it scrolls into view.
+      var tower = document.querySelector('[data-tower]');
+      if (tower) {
+        if (reduceMotion || !('IntersectionObserver' in window)) {
+          tower.classList.add('in');
+        } else {
+          var tio = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  tower.classList.add('in');
+                  tio.disconnect();
+                }
+              });
+            },
+            { threshold: 0.25 }
+          );
+          tio.observe(tower);
+        }
+      }
+
+      // 3D tilt on scroll — small rotateX/rotateY on the phone visuals,
+      // driven by each element's position relative to the viewport centre.
+      var tiltEls = document.querySelectorAll('[data-tilt]');
+      if (!reduceMotion && tiltEls.length) {
+        var ticking = false;
+        var onScroll = function () {
+          if (ticking) return;
+          ticking = true;
+          requestAnimationFrame(function () {
+            var vh = window.innerHeight;
+            tiltEls.forEach(function (el) {
+              var r = el.getBoundingClientRect();
+              if (r.bottom < -80 || r.top > vh + 80) return;
+              var progress = (r.top + r.height / 2 - vh / 2) / vh; // -0.5 .. 0.5
+              var rx = Math.max(-6, Math.min(6, progress * 10));
+              var ry = Math.max(-5, Math.min(5, -progress * 8));
+              el.style.setProperty('--rx', rx.toFixed(2) + 'deg');
+              el.style.setProperty('--ry', ry.toFixed(2) + 'deg');
+            });
+            ticking = false;
+          });
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+      }
+
+      // The timers tick — the block screen, alive.
+      if (!reduceMotion) {
+        document.querySelectorAll('[data-timer]').forEach(function (el) {
+          var parts = (el.getAttribute('data-timer') || '45:00').split(':');
+          var total = parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10);
+          var start = total;
+          setInterval(function () {
+            total = total > 0 ? total - 1 : start;
+            var m = Math.floor(total / 60);
+            var s = total % 60;
+            el.textContent = String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+          }, 1000);
+        });
+      }
+    })();
+  </script>
+</KaizenLayout>

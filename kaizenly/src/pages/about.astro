@@ -1,0 +1,220 @@
+---
+import KaizenLayout from '../layouts/KaizenLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const siteHome = 'https://nadeemdevapps.github.io/my-web/';
+const aboutUrl = 'https://nadeemdevapps.github.io/my-web/products/kaizenly/about/';
+
+const personLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': `${aboutUrl}#nadeem`,
+  name: 'Nadeem Mazhar',
+  jobTitle: 'Solo Developer',
+  description:
+    'Solo developer. Builds websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs — with AI doing the heavy lifting under his direction.',
+  url: aboutUrl,
+  sameAs: ['https://github.com/nadeemdevapps'],
+};
+
+const principles = [
+  {
+    icon: '●',
+    title: 'One problem, solved well',
+    body: 'Each app does a single job properly instead of ten things halfway. If it needs a second job, it becomes a second app.',
+  },
+  {
+    icon: '●',
+    title: 'Private by default',
+    body: 'No accounts, no tracking, no ads. Your data stays on your device; backups go to your own storage, when you choose.',
+  },
+  {
+    icon: '●',
+    title: 'Calm, not pushy',
+    body: 'That is how I work and communicate: no pressure, no perfectionism, no guilt-driven productivity. I build steadily and let the work speak for itself.',
+  },
+  {
+    icon: '●',
+    title: 'Built for myself first',
+    body: 'Every app starts as my own problem. Tsumly and Kaizenly earned their place by working in daily use.',
+  },
+  {
+    icon: '●',
+    title: 'Shipped when it works',
+    body: 'Features land after real daily use, not after a roadmap date. What you see in Kaizenly is what is actually running on my own phone.',
+  },
+  {
+    icon: '●',
+    title: 'Honest copy',
+    body: 'No fake badges, ratings, or reviews. A download button, a Play Store badge, or a rating appears only when it is real.',
+  },
+];
+---
+
+<KaizenLayout
+  title="About Nadeem Mazhar — Solo Developer"
+  description="About Nadeem Mazhar — a solo developer building websites, Windows apps, Android apps, and backends with AI doing the heavy lifting. Kaizenly started as his own problem: a phone that would not stay down."
+  jsonLd={[personLd]}
+>
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="top">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">About</span>
+        <h2>I'm Nadeem Mazhar.</h2>
+        <p>
+          Nadeem Dev Apps is my <strong>one-developer studio</strong>. I'm a
+          <strong>solo developer</strong> — no partner, no team — I plan,
+          design, and ship <strong>websites, Windows apps, Android apps, and
+          backends</strong>, with AI tools doing the heavy lifting under my
+          direction. Kaizenly started as my own problem — a phone that would
+          not stay down — and it ships only when it works in daily use.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW I WORK ============ -->
+  <section class="section alt" id="how-i-work">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">How I work</span>
+        <h2>A solo developer, building for himself first.</h2>
+        <p>
+          I work the way a one-person studio should: I <strong>plan</strong>
+          the product, <strong>design</strong> the interface,
+          <strong>direct</strong> the build, and <strong>review</strong>
+          everything before it ships. AI tools do the heavy lifting; the
+          decisions are mine.
+        </p>
+        <p style="margin-top: 16px;">
+          I'm still learning some languages, and I know the basics of others —
+          but the job was never typing syntax by hand. The job is
+          <strong>exploration, working with AI, UI design, planning,
+          brainstorming, problem-solving, and security analysis</strong> — and
+          that's where I'm strong. I ship real products by combining my
+          judgment with the best tools available.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT I BUILD ============ -->
+  <section class="section" id="what-i-build">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">What I build</span>
+        <h2>Websites, Windows, Android, backends, cloud.</h2>
+        <p>
+          The apps on this site are <strong>local-first by design</strong> — no
+          account, no server, no ads — because that's the right call for a
+          personal tool. It's a choice, not a limitation: I also build
+          <strong>websites, Windows apps, Android apps, backends, and
+          cloud-based apps</strong> — whichever the project needs.
+        </p>
+        <p style="margin-top: 16px;">
+          Everything I make is <strong>free to use right now</strong> — Kaizenly's
+          premium durations arrive with Play Billing.
+        </p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal" style="--d: 0s">
+          <div class="icon">●</div>
+          <h3>Kaizenly</h3>
+          <p>
+            A strict focus guard for Android. It started as my own problem — a
+            phone that would not stay down — and it is built the way I build
+            everything: local-first, strict where it matters, and honest about
+            what it does.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.08s">
+          <div class="icon">●</div>
+          <h3>Tsumly</h3>
+          <p>
+            A local-first loan and ledger app that splits one repayment across
+            several loans without merging them. It started the same way — a
+            ledger that never added up.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--d: 0.16s">
+          <div class="icon">●</div>
+          <h3>MsgLoop</h3>
+          <p>
+            A WhatsApp message scheduler for Android. Because it automates
+            WhatsApp — which WhatsApp's terms do not allow — bulk messaging can
+            get a number banned, and the app says so plainly.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRINCIPLES ============ -->
+  <section class="section alt" id="principles">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">What I stand for</span>
+        <h2>One problem, solved well.</h2>
+        <p>
+          The same rules run through everything I build — the apps, and this
+          site.
+        </p>
+      </div>
+      <div class="feature-grid">
+        {
+          principles.map((p, i) => (
+            <article class="feature-card reveal" style={`--d: ${(i % 3) * 0.08}s`}>
+              <div class="icon">{p.icon}</div>
+              <h3>{p.title}</h3>
+              <p>{p.body}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Contact</span>
+        <h2>Say hello.</h2>
+        <p>
+          Questions, feedback, or just want to say hi? Reach me at
+          <a href="mailto:nadeem.devapps@gmail.com">nadeem.devapps@gmail.com</a>,
+          or find my work on GitHub at
+          <a href="https://github.com/nadeemdevapps">github.com/nadeemdevapps</a>
+          — my only social link.
+        </p>
+      </div>
+      <p class="reveal" style="text-align: center;">
+        <a class="about-link" href={siteHome}>More from Nadeem Dev Apps →</a>
+      </p>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var revealEls = document.querySelectorAll('.reveal');
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        revealEls.forEach(function (el) { el.classList.add('in'); });
+      } else {
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('in');
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -6% 0px' }
+        );
+        revealEls.forEach(function (el) { io.observe(el); });
+      }
+    })();
+  </script>
+</KaizenLayout>

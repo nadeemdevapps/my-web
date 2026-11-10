@@ -1,0 +1,98 @@
+---
+import KaizenLayout from '../layouts/KaizenLayout.astro';
+
+const groups = [
+  {
+    id: 'focus',
+    title: 'Focus sessions',
+    blurb: 'Setting up a session, the block screen, and the celebration when it ends.',
+  },
+  {
+    id: 'routines',
+    title: 'Routines',
+    blurb: 'Three routines, their schedules, and the streak they keep alive.',
+  },
+  {
+    id: 'tower',
+    title: 'The Tower',
+    blurb: 'The streak, built — blocks, floors, and reserve blocks.',
+  },
+  {
+    id: 'stats',
+    title: 'Stats',
+    blurb: 'Day, month, and year — every finished session, in one place.',
+  },
+  {
+    id: 'widgets',
+    title: 'Widgets',
+    blurb: 'The preset widget and the streak widget, on the home screen.',
+  },
+  {
+    id: 'settings',
+    title: 'Settings & backup',
+    blurb: 'Theme, haptics, reminders, and the local backup.',
+  },
+];
+---
+
+<KaizenLayout
+  title="Gallery — Kaizenly"
+  description="Real screens from the Kaizenly app — focus sessions, routines, the Tower, stats, widgets, and settings. App screenshots are on the way."
+>
+  <section class="section" id="top">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Gallery</span>
+        <h2>See Kaizenly.</h2>
+        <p>
+          Real screens from the app — in light and dark. App screenshots are
+          on the way; this page will fill in as they arrive.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {
+    groups.map((g, gi) => (
+      <section class={`section${gi % 2 === 1 ? ' alt' : ''}`} id={g.id}>
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>{g.title}</h2>
+            <p>{g.blurb}</p>
+          </div>
+          <div class="gallery-grid">
+            {[0, 1, 2].map(() => (
+              <div class="shot-placeholder reveal">
+                <span class="shot-glyph" aria-hidden="true">▯</span>
+                <span class="shot-label">Screenshot coming soon</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    ))
+  }
+
+  <script>
+    (function () {
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var revealEls = document.querySelectorAll('.reveal');
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        revealEls.forEach(function (el) { el.classList.add('in'); });
+      } else {
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('in');
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -6% 0px' }
+        );
+        revealEls.forEach(function (el) { io.observe(el); });
+      }
+    })();
+  </script>
+</KaizenLayout>

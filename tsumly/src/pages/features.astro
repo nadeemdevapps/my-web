@@ -1,0 +1,337 @@
+---
+import TsumlyLayout from '../layouts/TsumlyLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<TsumlyLayout
+  title="Tsumly — Features"
+  description="Every Tsumly feature in detail — how it works, what it allows, what it refuses, and where the edges are. If you have a question about the app, the answer is on this page."
+>
+  <!-- ============ INTRO ============ -->
+  <section class="section">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">Features</span>
+        <h1 class="page-h1">Every feature, in detail.</h1>
+        <p class="lede">
+          This is the full tour: how each part of Tsumly works, what it
+          allows, what it refuses, and where the edges are. If you have a
+          question about the app, the answer is on this page.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="section alt" id="how-it-works">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">How it works</span>
+        <h2>A ledger that lives on your phone.</h2>
+        <p class="lede">
+          Tsumly is a <strong>local-first ledger</strong> for the money you
+          <strong>lend and borrow</strong>. Record a loan, note who it is
+          with, and keep a <strong>running balance</strong> — everything is
+          stored on your device, and it works offline.
+        </p>
+        <ul class="feature-list">
+          <li><strong>Lend or borrow</strong> — pick a direction (Lent is the default), choose the person and the account it moves from or into; the amount must be more than zero.</li>
+          <li><strong>Principal, then charges</strong> — you enter the amount lent or borrowed; the total due is that amount, or the amount plus fee and tax when "Add charges to amount due" is on.</li>
+          <li><strong>Fees and tax, recorded</strong> — every loan can carry a fee and a tax. They are recorded against the loan, and only count toward the total due when the add-charges option is on.</li>
+          <li><strong>Due date is optional</strong> — set one when you create the loan, or leave it off; a due date can never be earlier than the day the loan was opened.</li>
+          <li><strong>Partial repayments</strong> — pay back a little at a time; every payment is recorded against the same loan and lowers what is left.</li>
+          <li><strong>Running balance</strong> — each loan shows how much is left to pay, and a progress bar shows how much of the total due is already paid.</li>
+          <li><strong>Settle in full</strong> — pay the full remaining balance in one step, after a confirmation that shows the person, the amount and the account it goes to. It records exactly the full outstanding, today, with no fee, tax or note.</li>
+          <li><strong>Paid, celebrated</strong> — a fully paid loan shows "FULLY PAID" with a celebration banner; a payment that settles a loan in full shows a short "Loan settled!" moment.</li>
+          <li><strong>Loan list</strong> — Active loans first, then Paid off; active loans newest first, paid loans in the order they were settled. Both sections can be collapsed.</li>
+          <li><strong>Edits stay honest</strong> — a loan's note and due date can be changed (or cleared) any time; the money itself never changes by editing. Amounts only move when a loan is created, when a repayment is recorded, or when a pre-app mark is flipped. A loan with no repayments can be deleted — deleting it also removes its opening entry, putting the money back; a loan with repayments cannot be deleted — reverse the repayments first.</li>
+          <li><strong>Status is live</strong> — a loan is Active, Partially paid or Paid depending on what is left; "Overdue" appears when a due date has passed and the loan is still open.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SMART REPAYMENT SPLIT ============ -->
+  <section class="section" id="smart-repayment-split">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">Smart repayment split</span>
+        <h2>One repayment, split across every loan it covers.</h2>
+        <p class="lede">
+          When someone pays you back, the money rarely matches a single loan.
+          Tsumly <strong>splits one repayment across several active
+          loans</strong> in a single action — and <strong>never merges
+          loans</strong>, so each loan keeps its own history.
+        </p>
+        <ul class="feature-list">
+          <li><strong>One repayment, many loans</strong> — record a single payment against a person and Tsumly spreads it across their open loans in one action; each loan keeps its own history — loans are never merged.</li>
+          <li><strong>Live preview</strong> — as you type the amount, the preview shows per loan how much will be applied and how much will be left ("Rs X applied → Rs Y left"), so you can see at a glance which loans close out.</li>
+          <li><strong>Smallest first</strong> — the split pays the smallest outstanding loan first, and the oldest loan first when two are equal.</li>
+          <li><strong>Overpayment is blocked</strong> — a repayment cannot be more than the selected loans' total outstanding; trying shows a message that the amount is more than the outstanding.</li>
+          <li><strong>Auto-select, on by default</strong> — Tsumly pre-selects all of a person's open loans; turn it off in settings to pick by hand — then only the loan you came from is pre-selected, and you can toggle the rest.</li>
+          <li><strong>Fees and tax on a repayment</strong> — a repayment can carry a fee and a tax; they never reduce what is owed, and together they can never be more than the repayment amount.</li>
+          <li><strong>Any account</strong> — a repayment can come into (or go out of) a different account than the one the loan opened in.</li>
+          <li><strong>Balance guard applies</strong> — if the payment would take the account below zero, the same warn-or-block rule applies (see Accounts).</li>
+          <li><strong>Every split is recorded</strong> — each repayment stores how much landed on each loan, and the balance before and after, so statements can show the breakdown.</li>
+          <li><strong>Mistakes are reversible</strong> — the latest repayment on a loan can be reversed in one step; reversing it removes the repayment and restores the loan balance to what it was before. Older repayments can only be reversed after the newer ones are reversed first. Reversing a repayment is final — the confirmation says it cannot be undone.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRE-APP LOANS ============ -->
+  <section class="section alt" id="pre-app-loans">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">Pre-app loans</span>
+        <h2>Loans from before the app still count.</h2>
+        <p class="lede">
+          You were lending and borrowing long before Tsumly. <strong>Pre-app
+          loans</strong> record those older loans <strong>without moving your
+          current balance</strong> — so your history is complete and your
+          balance stays honest.
+        </p>
+        <ul class="feature-list">
+          <li><strong>Mark it pre-app</strong> — when you create a loan that started before the app, switch on "Pre-app loan"; it is recorded without an opening balance movement, so your current balance is untouched. Repayments move the balance normally.</li>
+          <li><strong>Same detail, same history</strong> — pre-app loans take part in the smart split, dashboard totals, reports and person ledgers exactly like any other loan.</li>
+          <li><strong>Flip it later</strong> — from the loan's detail screen you can flip the pre-app mark, behind a confirmation that states the balance effect; the amount, due date and repayments stay unchanged, and the change is dated at the moment you flip it — the original record is kept.</li>
+          <li><strong>What flipping moves</strong> — for money you lent, marking pre-app puts the opening amount (plus any opening fee and tax) back into the account; removing the mark takes it out again. For money you borrowed, marking pre-app takes the principal out of the account; removing the mark puts it back. Borrowed loans never move the charges — only the principal moves.</li>
+          <li><strong>Charge legs survive the flip</strong> — the opening fee and tax are stored on the loan, so flipping rebuilds the charge legs exactly.</li>
+          <li><strong>Balance check on the flip</strong> — flipping a lent loan from pre-app to normal runs the same balance check as creating a lent loan (see Accounts).</li>
+          <li><strong>Pre-app lent skips the check</strong> — creating a pre-app lent loan never runs the balance check, because no money moves.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PERSON PROFILES ============ -->
+  <section class="section" id="person-profiles">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">Person profiles</span>
+        <h2>People, not just numbers.</h2>
+        <p class="lede">
+          Loans live on <strong>person profiles</strong>, so you always see
+          <strong>who owes what</strong>. Each person carries their own
+          totals, and nothing about an open loan can be hidden by accident.
+        </p>
+        <ul class="feature-list">
+          <li><strong>Per-person totals</strong> — every profile shows what that person owes you, what you owe them, and the signed net between the two, plus open and paid loan counts.</li>
+          <li><strong>Active loans, then History</strong> — open loans appear as cards in an "Active loans" section; History holds the finished business — paid loans' openings and every repayment — newest first, in pages of 50.</li>
+          <li><strong>Repayments are labelled</strong> — each repayment row shows the account it moved through and which loan(s) it went to ("towards lent loan", or "2 settled · 1 partially paid" for a split).</li>
+          <li><strong>Archive is guarded</strong> — a person cannot be archived while their total outstanding is more than zero; a loan with nothing left to pay does not block archiving. Unarchiving is always allowed.</li>
+          <li><strong>Archived people stay reachable</strong> — they still appear in the person picker with an Archived badge, and picking one restores them automatically; in the people list they sort after active people, by name, with their names struck through and a badge.</li>
+          <li><strong>Delete is refused while loans exist</strong> — a person with any loan — even a fully paid one — cannot be deleted; the app says so and offers Archive instead.</li>
+          <li><strong>Export from the profile</strong> — the profile has an Export statement action (download icon) that opens the date-range sheet and a statement preview.</li>
+          <li><strong>New person</strong> — the people list ends with a "New person" card; tap a row to open the profile.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EVERYDAY MONEY ============ -->
+  <section class="section alt" id="everyday-money">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">Everyday money</span>
+        <h2>Income, expenses and transfers — in the same ledger.</h2>
+        <p class="lede">
+          Tsumly tracks the everyday money too — <strong>income and
+          expenses</strong> against categories and accounts, and
+          <strong>transfers between your own accounts</strong> — so the loan
+          ledger and the cash ledger always agree.
+        </p>
+        <ul class="feature-list">
+          <li><strong>Income &amp; expenses</strong> — record money in and money out against an account and a category, with an optional note, fee and tax on every entry. A category is required — an entry cannot be saved without one.</li>
+          <li><strong>Rules on every entry</strong> — the amount must be more than zero; fee and tax cannot be negative; fee and tax together can never be more than the amount; the account cannot be archived.</li>
+          <li><strong>Transfers between accounts</strong> — move money from one account to another in one entry, with its own fee and tax. The fee and tax sit on the out leg only — the source account loses the amount plus fee and tax, the destination gains the amount. Both legs are written together, or neither is; the two accounts must be different.</li>
+          <li><strong>Transfers are editable</strong> — a transfer's amount, fee, tax, date and note can be edited later; only the two accounts are fixed — changing the accounts is a new transfer.</li>
+          <li><strong>Deleting a transfer</strong> — removes both legs in one step and puts the balances back; the confirmation says both legs are removed and the balances move back.</li>
+          <li><strong>Entries are editable</strong> — tap any income or expense row to open its detail, and edit or delete it from there. Loan-linked rows cannot be edited or deleted on their own.</li>
+          <li><strong>Fees &amp; taxes, kept visible</strong> — every income, expense, transfer, loan and repayment can carry a fee and a tax, and monthly reports total them separately. On a detail screen, fee and tax only appear when they are more than zero.</li>
+          <li><strong>Categories with subcategories</strong> — starter categories for Pakistani households: Income — Salary, Business, Freelance, Other Income. Expenses — Groceries (Supermarket, Local Market), Transport (Fuel, Public Transport, Ride Hailing), Utilities (Electricity, Gas, Water, Internet, Mobile Recharge), Rent, Health (Doctor, Pharmacy), Education (Fees, Books), Dining Out, Shopping (Clothing), Entertainment, Other Expense. Add, rename or archive your own — the starters are not locked.</li>
+          <li><strong>Two levels, enforced</strong> — subcategories cannot have their own children; a parent and its subcategories always live in the same tree (income and expense trees are fully separate); editing a category only changes its name and icon — its kind and parent never change. Archiving a parent archives all its subcategories; a subcategory cannot be unarchived while its parent is still archived. There is no limit on how many categories you can add.</li>
+          <li><strong>Dates you control</strong> — entries carry the date and time you choose, and an entry keeps the clock time you recorded even when you travel across timezones (a 4:30 PM entry recorded in one timezone still shows 4:30 PM in another). In settings you can allow changing the date (on by default) and changing the time (off by default); detail pages always show date and time regardless.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACCOUNTS ============ -->
+  <section class="section" id="accounts">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">Accounts</span>
+        <h2>Every rupee lives in an account.</h2>
+        <p class="lede">
+          Cash, a bank, JazzCash, Easypaisa or another wallet — each account
+          has its own <strong>opening balance</strong> and a live balance that
+          follows every movement.
+        </p>
+        <ul class="feature-list">
+          <li><strong>Opening balance per account</strong> — start each account with the money already in it; the opening balance cannot be negative. Its balance is the opening balance plus every movement since. Once an account has any transactions, the opening balance is locked — it cannot be changed.</li>
+          <li><strong>Five account types</strong> — Cash, Bank, JazzCash, Easypaisa and Other, each with its own icon. Picking a type with an empty name fills the name in with the type label. Names are at most 80 characters.</li>
+          <li><strong>Archive, never delete</strong> — accounts cannot be deleted at all; archiving keeps the history intact, and archived accounts are excluded from your available balance. Archiving an account that still holds money shows a warning with the exact amount that will stop counting. Archived accounts live on their own screen, where they can be unarchived.</li>
+          <li><strong>Balance guard</strong> — two modes, in Settings → Customization: "Warn and allow" (the default — show a warning but still let the transaction go through, after you confirm) and "Block" (stop the transaction when the account balance is too low; a confirmation cannot override it). The check runs on every money-out write — expenses, transfers and loans.</li>
+          <li><strong>Where the guard applies</strong> — lent-loan creation, borrowed repayments, and flipping a lent loan from pre-app to normal; a warn-level shortfall offers "Record it anyway?", a block-level shortfall is refused.</li>
+          <li><strong>Account detail</strong> — each account has its own detail screen with its history (50 rows at a time); repayment rows open the repayment detail.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REPORTS & STATEMENTS ============ -->
+  <section class="section alt" id="reports-statements">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">Reports &amp; statements</span>
+        <h2>Where the money went, on one screen — and on paper.</h2>
+        <p class="lede">
+          Monthly reports show <strong>where the money went</strong>, and
+          statements turn any slice of the ledger into a
+          <strong>PDF you can share</strong>.
+        </p>
+        <ul class="feature-list">
+          <li><strong>Monthly reports</strong> — pick a month (the current month by default; future months cannot be viewed). Three tiles: Cash in, Cash out, and "Left over" (cash in minus cash out).</li>
+          <li><strong>Cash in, cash out</strong> — these are net cash figures, not gross income and expense. Cash in counts income, borrowed money received and repayments received on loans you made, net of fees and tax; cash out counts expenses, money you lent, repayments you paid on loans you took, and transfer fees and tax.</li>
+          <li><strong>Category breakdown</strong> — spending by category as a donut (the top 6 categories keep their own slice, the rest group into "Other", the month's total spending in the centre, each slice's share to one decimal place), and income by category as a bar list.</li>
+          <li><strong>Weekly cash-flow chart</strong> — grouped income and expense bars for the four calendar weeks of the month (days 1–7, 8–14, 15–21, 22 to month-end); the four weeks add up to the month's totals.</li>
+          <li><strong>Fees and taxes</strong> — totalled for the month across every kind of entry, on their own card ("Fees + taxes recorded").</li>
+          <li><strong>Lent and borrowed positions</strong> — "People owe me", "I owe people", "Repaid to me this month", "I repaid this month".</li>
+          <li><strong>Six statement exports</strong> — All activity, Expense, Income, Loans, Transfers and Account statement. Each opens a date-range sheet, then a PDF preview.</li>
+          <li><strong>Per-person statements</strong> — from any person's profile (download icon → "Export statement"), export their record as a PDF for a date range you pick: Last 30 or 90 days, Last 6 months, Last year, All time, or a Custom range (earliest 2000, latest today). A person's statement covers their loans and repayments plus any income, expense or transfer linked to them; its summary (Owes me / I owe / Net, Active loans, Paid loans) is always live, not just for the period.</li>
+          <li><strong>What each statement shows</strong> — All activity: cash in, cash out, net and transfer fees (transfer amounts are cash-neutral — only their fees count). Expense: total spending, fees &amp; taxes, net cash out. Income: total income, fees &amp; taxes deducted, net received. Loans: live outstanding lent/borrowed plus the period's repayments received and paid, net of fees and tax. Transfers: count, total moved, fees &amp; taxes. Account statement: opening balance, a Date / Description / Debit / Credit / Balance table with a running balance on every line, and a closing balance.</li>
+          <li><strong>Opening and closing positions</strong> — where they make sense: the person, all-activity and account statements show an opening position when the range is bounded (never for All time) and a closing position always; expense, income, loans and transfers statements carry no opening or closing positions.</li>
+          <li><strong>Repayment breakdowns on statements</strong> — on the person statement and the Loans report, every repayment shows how it was split across loans ("Rs X applied → Settled" or "→ Rs Y left", with the loan's total due and the balance before it). The other statements show a repayment as a single row with no split. The "Applied to N loans" header appears only when a repayment covers more than one loan.</li>
+          <li><strong>The PDF itself</strong> — a formal, branded document: white A4, purple Tsumly wordmark, title, subject, period, "Prepared by" (your name, when set), and when it was generated. The ledger table's header repeats on every page. The footer on every page reads "Page X of Y · Generated &lt;date, time&gt;" with the note: "Generated from records stored locally in Tsumly. This is a personal record, not a bank-issued statement." File names are predictable, like tsumly-statement-&lt;name&gt;-&lt;date&gt;.pdf. Date cells show date + time when a precise time was recorded, date only for older rows.</li>
+          <li><strong>Share or save</strong> — every statement PDF can be shared from the system share sheet or saved as a file, from the same preview screen.</li>
+          <li><strong>Size guard</strong> — a PDF export is refused above 30,000 rows, with a message suggesting a shorter date range and a "Change date range" button.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOME DASHBOARD ============ -->
+  <section class="section" id="home-dashboard">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">Home dashboard</span>
+        <h2>Your money, the moment you open the app.</h2>
+        <p class="lede">
+          The home tab opens on your <strong>available balance</strong>, your
+          <strong>net position</strong>, and what you have <strong>lent and
+          borrowed</strong> — with one-tap actions for income, expense,
+          transfer or a loan payment.
+        </p>
+        <ul class="feature-list">
+          <li><strong>Available balance &amp; net position</strong> — the hero card shows your available balance, with the net position underneath it (available balance + lent − borrowed). Either can be hidden in settings; both are shown by default.</li>
+          <li><strong>Lent &amp; borrowed at a glance</strong> — two tiles, "Lent to others" and "I borrowed", always live.</li>
+          <li><strong>Quick actions</strong> — Income, Expense, Transfer and Loan from one row. The Loan action opens a sheet ("Record loan payment") that takes the direction ("They pay me back" / "I pay them back", lent by default) and the person — with a search box, a "New loan" shortcut, and archived people shown with a badge (picking one restores them).</li>
+          <li><strong>Greeting</strong> — "Good morning / afternoon / evening" with your name when you have set one; the name is optional and set during onboarding or in Settings → Profile (at most 80 characters).</li>
+          <li><strong>Daily quote</strong> — a short quote under the greeting, in a fixed-height slot, clamped to two lines; tap it for the full text in a scrollable sheet, with its source, reference and category. A new quote is picked each time the app is opened fresh, at random, and the last five shown are not repeated right away. If there is no quote to show — while loading, on an error, or when none is available — the brand tagline appears instead, in the same two-tone style. Urdu quotes are shown right-to-left, in Naskh (the default) or Nastaliq, whichever you pick in settings. Pulling to refresh refreshes the numbers on the dashboard — the quote stays as it is.</li>
+          <li><strong>Recent activity</strong> — below the quick actions: recent transactions, recent transfers, and a collapsible Accounts list.</li>
+          <li><strong>Five tabs</strong> — Home, Accounts, Loans, Reports, Settings. Tapping Loans twice opens the People page.</li>
+          <li><strong>Animated amounts</strong> — figures count up when a page opens; the animation can be switched off in settings (on by default).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOAN REMINDERS ============ -->
+  <section class="section alt" id="loan-reminders">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">Loan reminders</span>
+        <h2>A due date that reminds you itself.</h2>
+        <p class="lede">
+          A loan with a due date reminds you on its own: a local notification
+          on the <strong>due date at 9:00 AM</strong>, and an
+          <strong>overdue reminder the next morning</strong> if it is still
+          open.
+        </p>
+        <ul class="feature-list">
+          <li><strong>Due-date reminders</strong> — set an optional due date when you create a loan; Tsumly schedules a 9:00 AM reminder for the day (device-local time) and an overdue reminder the next morning at 9:00 AM.</li>
+          <li><strong>What they say</strong> — "Loan due today — A loan is due today. Open Tsumly to record the repayment." and "Loan overdue — A loan was due yesterday and is still open."</li>
+          <li><strong>Tapping opens the loan</strong> — a reminder opens the loan's detail screen, ready to record the repayment, even when the app was closed.</li>
+          <li><strong>Both reminders are set up front</strong> — when the due date is set, both the due-day and the overdue reminder are scheduled; each is skipped only if its time has already passed. A partial repayment does not cancel the overdue reminder.</li>
+          <li><strong>When reminders stop</strong> — a loan that is fully paid stops its reminders; deleting a loan cancels them; clearing the due date cancels them too.</li>
+          <li><strong>Reminders follow the loan</strong> — editing a due date reschedules its reminders (the old ones are replaced); reversing a repayment re-schedules them if the loan opens again with a due date.</li>
+          <li><strong>Permission, asked in context</strong> — the notification permission is asked when you set a loan due date, never at startup. Reminders are local — they are scheduled on the device.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MAKE IT YOURS ============ -->
+  <section class="section" id="make-it-yours">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">Make it yours</span>
+        <h2>Light or dark, your font, your currency.</h2>
+        <p class="lede">
+          Tsumly bends to how you like it: <strong>light or dark</strong>,
+          your <strong>display font</strong>, and which numbers the home tab
+          shows.
+        </p>
+        <ul class="feature-list">
+          <li><strong>Theme &amp; display font</strong> — System (follows the system, the default), Dark or Light; Bricolage Grotesque (the default) or EB Garamond for headings, picked in Settings → Appearance, with each option shown in its own font. Amounts always stay in Inter, so numbers never change shape.</li>
+          <li><strong>Show or hide</strong> — available balance, net position and animated amounts can each be switched off in Settings → Customization → Dashboard; all three are on by default. Animated amounts count up from zero when a page opens.</li>
+          <li><strong>One base currency</strong> — pick from 15 currencies on first run (PKR first and pre-selected); everything is recorded in that one currency. The choice cannot be changed afterwards — except by restoring a backup from a profile that uses a different currency. Settings shows it read-only, with a note that multi-currency support is planned for a later release.</li>
+          <li><strong>Your name on the greeting</strong> — the home greeting uses the display name you set (optional, skippable during onboarding, changeable in Settings → Profile; at most 80 characters).</li>
+          <li><strong>Date &amp; time control</strong> — allow changing the date on entries (on by default) or lock them to today; allow changing the time (off by default) or let the device clock record it. These toggles apply to entry pages only — detail pages always show date and time.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BACKUP & PRIVACY ============ -->
+  <section class="section alt" id="backup-privacy">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">Backup &amp; privacy</span>
+        <h2>Your money stays yours.</h2>
+        <p class="lede">
+          <strong>Offline-first and one-device-first.</strong> Nothing leaves
+          the phone unless you turn on Drive backup — and even then, the
+          backup is <strong>encrypted</strong> and stored in the app's
+          <strong>own private Drive folder</strong>.
+        </p>
+        <ul class="feature-list">
+          <li><strong>No account, no cloud by default</strong> — your money stays on your device; there is nothing to sign up for. The first screen is "Get started", with the footnote "No account. No signup. Your money stays yours."</li>
+          <li><strong>No tracking</strong> — no analytics, no ads, nothing phoning home.</li>
+          <li><strong>Local backup file</strong> — export everything to a timestamped .moneybackup file (named like backup_2026-09-30_18-42-10.moneybackup) and restore it on any device. The file holds your accounts, categories, people, transactions, loans, repayments and settings — everything except the device's Drive sign-in details, which never travel in a portable backup.</li>
+          <li><strong>Import is checked first</strong> — a backup is fully validated before anything is written: the app reads its manifest, asks for the password if it is encrypted, validates the contents, shows a preview (backup date, currency, record counts, active loans, total balance), and only restores after you confirm. Restoring replaces everything on the device, in one step. A backup made by a newer version of the app is refused until you update the app; older backups are accepted and their records are brought up to date on import. If the local data fails its integrity check, export is refused with "Backup is not available right now."</li>
+          <li><strong>Restore on first run</strong> — a fresh install starts with a welcome screen, then offers restore as Step 1 of 4: restore from a backup file, from Google Drive, or start fresh. You can also restore any time later from Settings → Data.</li>
+          <li><strong>Encrypted backup</strong> — the optional Google Drive backup is encrypted, and stored in the app's own private Drive folder that only Tsumly can see — never in your visible Drive files.</li>
+          <li><strong>Scheduled Drive backups</strong> — hourly, daily, weekly or monthly automatic uploads to your private Drive folder, keeping the latest three. The app first checks whether your data has actually changed and skips the upload when there is nothing new; timing is best-effort (the reliable check runs when the app starts or resumes), and the first scheduled backup is due immediately. Manual is the default — scheduled backups are off until you turn them on.</li>
+          <li><strong>Password protection</strong> — an optional password of at least 8 characters protects a backup; it is typed twice, and if you forget it, the backup cannot be restored — there is no recovery. For scheduled backups, the password is kept only in the device's secure storage and never leaves the device; a password you type for a one-off export or import is never stored. If the stored password cannot be read, a scheduled backup is aborted rather than uploading unprotected. Clearing the stored password on disconnect makes existing password-protected Drive backups permanently unrestorable.</li>
+          <li><strong>Sign-in stays on the device</strong> — the Google account's email and display name are stored locally on the device only, and are excluded from portable backup files entirely; sign-in tokens are never written into backups. A restored device starts signed out.</li>
+          <li><strong>Disconnect</strong> — disconnecting your Google account stops future uploads, revokes the app's access, clears the stored account, and turns the schedule off — but it does not delete backups already on your Drive.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Same restrained reveals as the home page.
+    var els = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('in');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(function (el) {
+        io.observe(el);
+      });
+    } else {
+      els.forEach(function (el) {
+        el.classList.add('in');
+      });
+    }
+  </script>
+</TsumlyLayout>

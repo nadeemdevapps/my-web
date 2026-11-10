@@ -202,9 +202,10 @@ components:
     typography: "{typography.nav-link}"
     padding: "{spacing.md}"
     # Tsumly's own nav: Tsumu mark + TSUMLY Bricolage wordmark left;
-    # Overview / Privacy / Terms links; theme toggle right. The portfolio
-    # link lives in the About section and the footer ("Built by Nadeem"),
-    # not in the nav. Hamburger below 840px.
+    # Home / Features / Gallery / About / Privacy / Terms links; theme
+    # toggle right. The portfolio link lives in the About section and
+    # the footer ("Built by Nadeem"), not in the nav. Hamburger below
+    # 840px.
   wordmark:
     fontFamily: "Bricolage Grotesque, Inter, system-ui, sans-serif"
     fontWeight: 700
@@ -562,10 +563,10 @@ The contrast between a 16px button and a 20px card is intentional.
 
 **`nav-bar`** — Top navigation. Slim sticky bar, `{colors.surface}`
 background, 64px tall. Left: Tsumu mark + TSUMLY Bricolage wordmark.
-Centre/right: Overview / Privacy / Terms links. Right: theme toggle
-(System / Dark / Light). The portfolio link lives in the About section
-and the footer ("Built by Nadeem"), not in the nav. Condenses to a
-hamburger below 840px.
+Centre/right: Home / Features / Gallery / About / Privacy / Terms links.
+Right: theme toggle (System / Dark / Light). The portfolio link lives in
+the About section and the footer ("Built by Nadeem"), not in the nav.
+Condenses to a hamburger below 840px.
 
 **`wordmark`** — "Tsumly" in Bricolage Grotesque 700, `{colors.ink}`.
 The app's wordmark. Never set in Inter, never in a pixel webfont.
@@ -621,14 +622,16 @@ background, `{typography.title-md}` title, `{typography.body-md}` body,
 dim → "adds up." strong), and a `button-primary` + `button-secondary`
 CTA pair. Primary CTA is "Get Tsumly on GitHub" → the GitHub releases
 page (the release page, never a direct APK link); secondary CTA is "See
-how it works" → `#how-it-works`. A small note under the CTAs reads
-"Free. Android. No account needed." Tsumu sits above the headline.
+how it works" → `{base}features/#how-it-works`. A small note under the
+CTAs reads "Free. Android. No account needed." Tsumu sits above the
+headline.
 
 **`footer`** — Own footer. `{colors.canvas}` band,
 `{colors.ink-secondary}` link text at `{typography.caption}`, padding
 `{spacing.xxl}`. Brand column (mark + tagline + "Built by Nadeem" with a
-link to the portfolio home), link columns (Overview / Privacy / Terms),
-and the Machine column (llms.txt / robots.txt / sitemap.xml).
+link to the portfolio home), link columns (Home / Features / Gallery /
+About / Privacy / Terms), and the Machine column (llms.txt / robots.txt /
+sitemap.xml).
 
 **`stat-tile`** — A stat block. `{colors.surface}` background, value in
 `{typography.amount-lg}` (Inter 600 — money amounts, never the display
@@ -637,26 +640,44 @@ font), caption in `{typography.caption}`, 20px radius, 16px padding.
 ## Core Pages
 
 - **Home**: hero (Tsumu mark, Bricolage two-tone headline "Every amount
-  adds up.", primary + secondary CTA), the name section ("Why Tsumly?" —
-  inspired by Japanese *tsumu* 積む, to stack / accumulate / build up),
-  How it works (local-first ledger: lend and borrow, partial
-  repayments, running balance, settle in full), Smart repayment split
-  (one repayment across several loans, never merged), Pre-app loans
-  (older loans without moving the balance), Person profiles (per-person
-  totals, guarded archive), Everyday money (income, expenses,
-  transfers, fees & taxes, categories), Accounts (five types, opening
-  balance, balance guard), Reports & statements (monthly reports, six
-  PDF statement exports, per-person statements), Home dashboard
-  (available balance, net position, lent & borrowed, quick actions,
-  daily quote), Loan reminders (due-date 9:00 AM + overdue), Make it
-  yours (theme, display font, currency, name), Backup & privacy
-  (offline-first, encrypted Drive backup, no tracking), FAQ (six
-  questions, each answer a restatement of verified copy — drives the
-  FAQPage JSON-LD), About (Built by Nadeem — Nadeem Mazhar, solo
-  developer; the ledger-that-never-added-up origin; one link to the
-  portfolio home), and the footer.
-  Copy carries over from the main site's `/products/tsumly/` page,
-  verified against the app repo and `docs/06_DESIGN.md`.
+  adds up.", primary CTA → the GitHub releases page, secondary CTA →
+  `features/#how-it-works`), the name section ("Why Tsumly?" — inspired
+  by Japanese *tsumu* 積む, to stack / accumulate / build up), a
+  highlights teaser (four cards, each linking to a Features anchor —
+  smart repayment split, pre-app loans, person profiles, backup &
+  privacy), FAQ (six questions, each answer a restatement of verified
+  copy — drives the FAQPage JSON-LD), About (Built by Nadeem — Nadeem
+  Mazhar, solo developer; the ledger-that-never-added-up origin; one
+  link to the portfolio home), and the footer. The full feature detail
+  lives on the Features page, not here.
+- **Features**: one section per feature, in deep detail — how it works
+  (lend/borrow, partial repayments, running balance, settle in full,
+  edit rules), smart repayment split, pre-app loans, person profiles,
+  everyday money, accounts, reports & statements, home dashboard, loan
+  reminders, make it yours, backup & privacy. Every number, limit and
+  rule is verified in the app repo (`docs/06_DESIGN.md`,
+  `docs/05_PHASE_LOG.md`, `app/lib/`); nothing is invented. Copy is
+  user-facing behaviour only — no architecture names, no component or
+  library names, no encryption algorithm names or iteration counts, no
+  API/scope names. Say "encrypted backup", "private Drive folder",
+  "local database on your device" instead.
+- **Gallery**: screenshot groups (Home dashboard, Loans & repayments,
+  Person profiles, Reports & statements, Accounts) with the grid layout
+  ready — a shell for now. Real phone screenshots arrive later from the
+  user (one Drive folder per app); until then each slot is an empty
+  frame and one honest line says the screenshots are on the way. No
+  images, no fake screenshots.
+- **About**: the developer — Nadeem Mazhar, solo developer, Nadeem Dev
+  Apps. One-developer studio, no partner, no team; he plans, designs,
+  directs and reviews, with AI tools doing the heavy lifting. Builds
+  websites, Windows and Android apps, backends and cloud. Strengths:
+  exploration, working with AI, UI design, planning, brainstorming,
+  problem-solving, security analysis. Every app starts as his own
+  problem (Tsumly: a ledger that never added up). Ends with a link to
+  the portfolio home. Bio is adapted from the main site's About page —
+  no location is stated anywhere on this site for the developer ("solo
+  developer", never "in Pakistan"); the app's Pakistani-household
+  starter categories are a product fact, not developer bio, and stay.
 - **Privacy / Terms**: document pages — warm canvas, Bricolage
   headlines, generous line-height. Content carries over from the main
   site's `/products/tsumly/privacy/` and `/terms/` pages.

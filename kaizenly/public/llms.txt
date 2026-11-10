@@ -1,17 +1,23 @@
 # Kaizenly
 
 > Kaizenly is a strict, local-first focus guard for Android, built by Nadeem
-> Mazhar (Nadeem Dev Apps), a solo developer in Pakistan. Pick a duration and
+> Mazhar (Nadeem Dev Apps), a solo developer. Pick a duration and
 > a bag of distracting apps; they stay blocked until the session ends.
 > Leaving early costs parachutes. Your data never leaves your device.
 
-- [Overview](https://nadeemdevapps.github.io/my-web/products/kaizenly/): A little better, every day. Timed sessions, bags of blocked apps, routines, the Tower streak, and parachutes earned free by focusing.
+- [Home](https://nadeemdevapps.github.io/my-web/products/kaizenly/): A little better, every day. Timed sessions, bags of blocked apps, routines, the Tower streak, and parachutes earned free by focusing.
+- [Features](https://nadeemdevapps.github.io/my-web/products/kaizenly/features/): Every feature, in detail — focus sessions, routines, the Tower, parachutes, sounds, stats, widgets, settings, backup, and the free vs Premium model.
+- [Gallery](https://nadeemdevapps.github.io/my-web/products/kaizenly/gallery/): Real screens from the app. App screenshots are on the way.
+- [About](https://nadeemdevapps.github.io/my-web/products/kaizenly/about/): About Nadeem Mazhar, solo developer — builds with AI, every app starts as his own problem.
 - [Privacy Policy](https://nadeemdevapps.github.io/my-web/products/kaizenly/privacy/): Kaizenly collects almost nothing. Sessions, bags, routines, and settings live on your device; there is no account, no analytics, no tracking.
 - [Terms of Use](https://nadeemdevapps.github.io/my-web/products/kaizenly/terms/): Kaizenly is provided as-is. Sessions are designed to be hard to break: leaving early costs a parachute.
 
 ## Pages
 
-- [Overview](https://nadeemdevapps.github.io/my-web/products/kaizenly/)
+- [Home](https://nadeemdevapps.github.io/my-web/products/kaizenly/)
+- [Features](https://nadeemdevapps.github.io/my-web/products/kaizenly/features/)
+- [Gallery](https://nadeemdevapps.github.io/my-web/products/kaizenly/gallery/)
+- [About](https://nadeemdevapps.github.io/my-web/products/kaizenly/about/)
 - [Privacy Policy](https://nadeemdevapps.github.io/my-web/products/kaizenly/privacy/)
 - [Terms of Use](https://nadeemdevapps.github.io/my-web/products/kaizenly/terms/)
 
@@ -24,7 +30,7 @@
 - The Tower: 5 minutes of focus a day lays one block; 7 blocks make a floor; 3 reserve blocks are spent automatically on missed days; 10 days in a row restores one spent reserve.
 - The daily streak: 1 minute a day keeps it alive; 5 minutes on the first day; weeks run Monday to Sunday; an evening reminder at 8:30 PM.
 - Local-first: no account, no sign-up, no server, no analytics, no ads, no trackers. Backup is a local JSON file you export and import yourself.
-- Enforcement: accessibility service guards, notification shade / recents / power menu close, floating windows dismissed, a 15-second watchdog, a guardian fallback, boot restore, up to 3 × 60-second settings passes per session.
+- Enforcement: the notification shade, recents, and power menu close, floating windows are dismissed, the block comes back on its own even if the app was closed, and it survives a reboot; up to 3 × 60-second settings passes per session.
 - Sessions: presets 15 minutes, 45 minutes, 3 hours; a wheel with up to 3 of your own presets (1–720 minutes); slide to start; hold 3 seconds to extend +15 minutes (up to +60 per session).
 - Stats: Day / Month / Year. Widgets: a preset widget (up to 3 presets) and a streak widget (last 28 days).
 - Theme: Light, Automatic, Dark. A fresh install starts in Light.
@@ -36,6 +42,6 @@
 
 ## Optional
 
-- [Full site text (llms-full.txt)](https://nadeemdevapps.github.io/my-web/products/kaizenly/llms-full.txt): the full text of every page on this site in one Markdown document — Overview, Privacy Policy, and Terms of Use.
+- [Full site text (llms-full.txt)](https://nadeemdevapps.github.io/my-web/products/kaizenly/llms-full.txt): the full text of every page on this site in one Markdown document — Home, Features, Gallery, About, Privacy Policy, and Terms of Use.
 - [Design system](https://github.com/nadeemdevapps/my-web/blob/main/kaizenly/DESIGN.md)
 - [Built by Nadeem](https://nadeemdevapps.github.io/my-web/): the portfolio home of Nadeem Mazhar, solo developer.

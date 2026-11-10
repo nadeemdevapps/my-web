@@ -8,16 +8,23 @@ spirit — this folder pins the same Astro version as the main site.
 
 ## Status
 
-Complete (2026-11-10): the full site is built — Home (hero, Why Kaizenly?,
-Focus, Routines & streaks, the Tower, Stats, Widgets, Settings & backup,
-Free & Premium, How to get parachutes, FAQ, local-first band, About, footer)
-plus Privacy and Terms. Copy carries over from the main site's
+Multi-page (2026-11-10): Home is trimmed — hero, Why Kaizenly?, a
+highlights teaser (four cards linking to Features), FAQ, the local-first
+band, and the About card — plus a dedicated Features page (exhaustive:
+every feature, rule, and limit in detail, verified against `FEATURES.md`
+in the app repo), a Gallery shell (no images yet — real phone screenshots
+arrive later from the user), and an About page (Nadeem Mazhar, solo
+developer), plus Privacy and Terms. Nav: Home / Features / Gallery /
+About / Privacy / Terms. Copy carries over from the main site's
 `/products/kaizenly/` pages, verified against `FEATURES.md` in the app repo
 and updated for the free model (bags, routines, sounds, and parachutes are
-free; Premium is 12-hour sessions + silence/DND only). Motion: scroll
-reveals, the Tower building block-by-block, a ticking timer, a drifting
-floating pill, and 3D scroll tilt — all transform/opacity only, disabled
-under `prefers-reduced-motion`. SEO: `llms.txt` + `llms-full.txt`,
+free; Premium is 12-hour sessions + silence/DND only). No internal details
+anywhere in site copy: no architecture names, no component names, no
+encryption algorithm names — behaviour only. No location is stated for the
+developer anywhere on this site. Motion: scroll reveals, the Tower building
+block-by-block, a ticking timer, a drifting floating pill, and 3D scroll
+tilt — all transform/opacity only, disabled under
+`prefers-reduced-motion`. SEO: `llms.txt` + `llms-full.txt`,
 `robots.txt`, `sitemap.xml` at build time, JSON-LD
 (`SoftwareApplication` + `FAQPage`) on Home.
 

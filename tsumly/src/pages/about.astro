@@ -1,0 +1,134 @@
+---
+import TsumlyLayout from '../layouts/TsumlyLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const siteHome = 'https://nadeemdevapps.github.io/my-web/';
+
+// Bio is adapted from the main site's About page
+// (nadeemdevapps.github.io/my-web/about/) — same facts, no location:
+// Nadeem is a solo developer; where he is based is not stated here.
+const personLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Nadeem Mazhar',
+  jobTitle: 'Solo Developer',
+  description:
+    'Solo developer. Builds websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs — with AI doing the heavy lifting under his direction.',
+  url: `https://nadeemdevapps.github.io${base}about/`,
+  sameAs: ['https://github.com/nadeemdevapps'],
+};
+---
+
+<TsumlyLayout
+  title="About Nadeem Mazhar — Solo Developer"
+  description="About Nadeem Mazhar — a solo developer building websites, Windows apps, Android apps, and backends with AI doing the heavy lifting. Every app starts as his own problem."
+  jsonLd={[personLd]}
+>
+  <!-- ============ INTRO ============ -->
+  <section class="section">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">About</span>
+        <h1 class="page-h1">I'm Nadeem Mazhar.</h1>
+        <p class="lede">
+          Nadeem Dev Apps is my <strong>one-developer studio</strong>. I'm a
+          <strong>solo developer</strong> — no partner, no team — I plan,
+          design, and ship <strong>websites, Windows apps, Android apps, and
+          backends</strong>, with AI tools doing the heavy lifting under my
+          direction. Tsumly started as my own problem, and it ships only
+          when it works in daily use.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW I WORK ============ -->
+  <section class="section alt">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">How I work</span>
+        <h2>A solo developer, building for himself first.</h2>
+        <p class="lede">
+          I work the way a one-person studio should: I
+          <strong>plan</strong> the product, <strong>design</strong> the
+          interface, <strong>direct</strong> the build, and
+          <strong>review</strong> everything before it ships. AI tools do
+          the heavy lifting; the decisions are mine.
+        </p>
+        <p class="lede">
+          I'm still learning some languages, and I know the basics of
+          others — but the job was never typing syntax by hand. The job is
+          <strong>exploration, working with AI, UI design, planning,
+          brainstorming, problem-solving, and security analysis</strong> —
+          and that's where I'm strong. I ship real products by combining my
+          judgment with the best tools available.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT I BUILD ============ -->
+  <section class="section">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">What I build</span>
+        <h2>Websites, apps, backends — and cloud.</h2>
+        <p class="lede">
+          The apps on this site are <strong>local-first by design</strong> —
+          no account, no server, no ads — because that's the right call for
+          a personal tool. It's a choice, not a limitation: I also build
+          <strong>websites, Windows apps, Android apps, backends, and
+          cloud-based apps</strong> — whichever the project needs.
+        </p>
+        <ul class="feature-list">
+          <li><strong>Every app starts as my own problem.</strong> Tsumly began as a ledger that never added up; Kaizenly began as a phone that would not stay down. Each earned its place by working in daily use.</li>
+          <li><strong>One problem, solved well.</strong> Each app does a single job properly instead of ten things halfway. If it needs a second job, it becomes a second app.</li>
+          <li><strong>Private by default.</strong> No accounts, no tracking, no ads. Your data stays on your device; backups go to your own storage, when you choose.</li>
+          <li><strong>Honest copy.</strong> No fake badges, ratings, or reviews. A download button, a Play Store badge, or a rating appears only when it is real.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section alt">
+    <div class="container narrow">
+      <div class="reveal">
+        <span class="kicker">Contact</span>
+        <h2>Say hello.</h2>
+        <p class="lede">
+          Questions, feedback, or just want to say hi? Reach me at
+          <a href="mailto:nadeem.devapps@gmail.com">nadeem.devapps@gmail.com</a>,
+          or find my work on GitHub at
+          <a href="https://github.com/nadeemdevapps">github.com/nadeemdevapps</a>
+          — my only social link.
+        </p>
+        <p class="lede">
+          <a class="about-link" href={siteHome}>More from Nadeem Dev Apps →</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Same restrained reveals as the home page.
+    var els = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('in');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(function (el) {
+        io.observe(el);
+      });
+    } else {
+      els.forEach(function (el) {
+        el.classList.add('in');
+      });
+    }
+  </script>
+</TsumlyLayout>

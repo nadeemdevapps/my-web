@@ -1,11 +1,11 @@
 # Kaizenly — full site text
 
 Kaizenly is a strict, local-first focus guard for Android, built by Nadeem
-Mazhar (Nadeem Dev Apps), a solo developer in Pakistan.
+Mazhar (Nadeem Dev Apps), a solo developer.
 
 ---
 
-## Overview
+## Home
 
 ### A little better, every day.
 
@@ -26,156 +26,15 @@ Three words, one habit. Kai is change, Zen is calm, ly is daily.
 Kaizenly is Kaizen, daily — the Japanese idea that small, continuous
 improvement compounds into something real.
 
-### Focus — One session. No way out.
+### What it does — Strict where it matters.
 
-Pick a bag, pick a time, slide to start. From that moment the apps in the bag
-are blocked — and leaving early costs parachutes.
+Four things, done properly. The full detail — every rule, every limit, every
+edge case — is on the Features page.
 
-Bags: three bags, six slots each, all free. A bag is a named set of apps; the
-active bag is the one that gets blocked.
-
-Presets — and the wheel: start in one tap with 15 minutes, 45 minutes, or 3
-hours. Or spin the wheel: up to three of your own presets, from 1 to 720
-minutes. Sessions over 3 hours need at least one parachute on board — and stay
-premium-gated past the free 180 minutes.
-
-Hold to extend: hold for three seconds and the session grows by 15 minutes —
-up to +60 minutes per session. Extending needs a parachute on board (it is not
-consumed). The session can even stretch to the next routine window, capped at
-12 hours.
-
-Routine-aware sessions: a session that would end inside a routine window
-stretches to the end of that window instead — when a routine is enabled and
-you have a parachute. One focus, no gaps.
-
-The block screen: while a session runs, the block screen is the only thing
-between you and the apps. It shows the countdown, the end time, and your
-parachutes — and after three seconds of idle it rests, dimming to a quiet
-clock.
-
-- Essentials stay open — messaging, dialer, camera, alarm, keyboard, in-call.
-- Enforcement is real — shade, recents, and the power menu close; floating
-  windows are dismissed; a 15-second watchdog and a guardian fallback bring
-  the block back even if the process died.
-- Up to 3 × 60-second settings passes per session for the things you genuinely
-  need.
-
-The floating pill: a small pill floats over everything while a session runs —
-time left and parachutes at a glance. Tap it to open the app.
-
-Parachutes: emergency exits that end a block early. A break costs 1; exiting
-early costs 1 + 1 per hour left (minimum 2). Earned free by focusing — never
-bought.
-
-The 30-minute break: one parachute buys a 30-minute break, as many times as
-you need in a session. The clock freezes; the block returns when the break
-ends. Enforcement, sound, and Do Not Disturb rest during the break.
-
-Soundscapes: Rain, Waves, White Noise, and City — four sounds generated live
-on your device, never streamed, never auto-played. They fade in and out with
-the session. All four are free.
-
-Block screen, done right: the countdown, the end time, your parachutes — and a
-celebration when you finish. DONE in white tiles, SOS in green when you
-bailed. Share the card as a PNG; the done pill is the only way out.
-
-Boot restore: restart the phone mid-session and the block comes back. The
-watchdog, the guardian fallback, and boot restore mean a session ends when the
-timer ends — not when the phone does.
-
-### Routines & streaks — Set it once. Focus on schedule.
-
-Up to three routines — a bag, a time window, days of the week — and Kaizenly
-starts the block for you. Routines are free, including each routine using its
-own bag.
-
-Routines that start themselves: a routine needs at least one parachute to
-enable — the safety net for an automatic block. Overlapping routines ask
-before they both fire, and each routine can use its own bag: the bag in hand
-is restored when the routine session ends.
-
-The daily streak: one minute a day keeps the streak alive — five minutes on
-your very first day. Weeks run Monday to Sunday, and a gentle evening reminder
-at 8:30 PM nudges you if today is still empty: “Five minutes of session lay
-today's block.”
-
-### The Tower — Your streak, built.
-
-Five minutes of focus a day lays one block. Seven blocks make a floor. The
-Tower grows as you do.
-
-Life happens: three reserve blocks sit beside the Tower and are spent
-automatically on missed days. Ten days in a row restores one spent reserve, up
-to three. And if you reach day one hundred, you will find a surprise.
-
-### Stats — Proof, not promises.
-
-Day, month, and year — every session you finished, in one place. Sessions
-under five seconds are not recorded; the rest is all yours.
-
-### Widgets — Focus, from the home screen.
-
-Two widgets, no app-opening required. A preset widget (up to three of your
-presets, 1–720 minutes) and a streak widget (the last 28 days, 4 week rows).
-
-### Settings & backup — Yours, the way you like it.
-
-Theme: three cards — Light, Automatic, Dark. A fresh install starts in Light.
-Dark is the design anchor: deep green-black surfaces with the vivid green
-accent.
-
-Haptics: one global switch. Turn it off and every vibration in the app stops.
-
-Local backup: export a JSON backup and import it back with a confirm step. It
-is validated before it is written, and a live session is never carried over.
-No drive, no password, no upload.
-
-### Free & Premium — Almost everything is free.
-
-Free, for now (Rs 0):
-
-- All 3 bags with 6 slots each
-- 3 routines — each routine its own bag, free
-- All 4 soundscapes — Rain, Waves, White Noise, City
-- Parachutes earned free by the streak
-- The Tower, stats, widgets, and local backup
-- Sessions up to 3 hours
-
-Premium (Rs 1,450 one-time, arrives with Play Billing):
-
-- Sessions up to 12 hours — the custom card, 3 to 12 hours
-- Silence during sessions — Do Not Disturb while you focus
-- Everything in Free, of course
-
-### How to get parachutes — Earn them. Never buy them.
-
-Parachutes are the emergency exits of Kaizenly — and they are earned by
-focusing, never sold.
-
-The rule, in full: a qualifying day is a day with at least one session of 30
-minutes of actual focus. One qualifying day counts per calendar day, and the
-counter is the number of qualifying days in a row.
-
-The first 10 days pay double — because building a habit is the hardest part,
-so the start pays more. Day 3 earns +2, and every day after that earns +2
-until day 10, which pays +6 with its bonus. After day 10, each day earns +1,
-with a +5 bonus at day 20.
-
-A missed day resets the streak to 0. Tower reserve blocks do not save it —
-the parachute streak has no reserves. The counter is capped at 99.
-
-Reward table:
-
-- Day 3 — +2 — total 2
-- Day 6 — +2 / day — total 8
-- Day 10 — +6, bonus day — total 20
-- Day 15 — +1 / day — total 25
-- Day 20 — +6, bonus day — total 35
-- Day 30 — +1 / day — total 45
-
-Parachutes are spent on breaks (1 per 30-minute break) and on exiting early
-(1 + 1 per hour left, minimum 2). Holding to extend and starting a session
-over 3 hours need one on board — but do not consume it.
+- Focus sessions — Bags, presets, the wheel, and a block screen that does not let go — with breaks and parachutes for when life interrupts.
+- Routines — Three routines that start themselves — on schedule, on the days you choose, each with its own bag.
+- The Tower — Five minutes a day lays a block. Seven blocks make a floor. Your streak, built where you can watch it grow.
+- Parachutes, earned free — Focus for 30 minutes a day and the streak pays you in parachutes — the first 10 days pay double. Never sold.
 
 ### FAQ — Kaizenly, answered.
 
@@ -198,7 +57,8 @@ A: Parachutes are earned, never bought. Focus for at least 30 minutes of
 actual focus in a day and that day counts toward your parachute streak. The
 first 10 days pay double: day 3 earns +2, and by day 10 you have earned 20.
 After day 10 you earn +1 a day, with a +5 bonus at day 20. A missed day resets
-the streak to 0 — even if a Tower reserve saves your Tower streak.
+the streak to 0 — even if a Tower reserve saves your Tower streak. The full
+rule and table are on the Features page.
 
 Q: What happens if I miss a day?
 A: Two different streaks, two different rules. The Tower has 3 reserve blocks:
@@ -207,10 +67,9 @@ parachute streak has no reserves — a missed day resets it to 0, even if a
 Tower reserve saved the Tower.
 
 Q: What if I open a blocked app during a session?
-A: It bounces straight back. The accessibility service guards the screen: the
-notification shade closes, recents close, the power menu closes, and floating
-windows are dismissed. A 15-second watchdog and a guardian fallback bring the
-block back even if the process died, and the block survives a reboot.
+A: It bounces straight back. The notification shade closes, recents close,
+the power menu closes, and floating windows are dismissed. The block comes
+back on its own even if the app was closed, and it survives a reboot.
 
 Q: Can I take a break during a session?
 A: Yes — a 30-minute break, for 1 parachute, as many times as you need in a
@@ -254,10 +113,420 @@ No account. No sign-up. No server. No trackers. Local backup, yours to keep.
 
 ### Built by Nadeem.
 
-Kaizenly is built by Nadeem Mazhar, a solo developer in Pakistan, as Nadeem
-Dev Apps. It started as his own problem — a phone that would not stay down —
-and it is built the way he builds everything: local-first, strict where it
-matters, and honest about what it does.
+Kaizenly is built by Nadeem Mazhar, a solo developer, as Nadeem Dev Apps. It
+started as his own problem — a phone that would not stay down — and it is
+built the way he builds everything: local-first, strict where it matters, and
+honest about what it does.
+
+More from Nadeem Dev Apps: https://nadeemdevapps.github.io/my-web/
+
+---
+
+## Features
+
+### Everything Kaizenly does, in detail.
+
+Every feature, every rule, every limit — written down so nothing is left to
+guess.
+
+### Focus — One session. No way out.
+
+Pick a bag, pick a time, slide to start. From that moment the apps in the bag
+are blocked — and leaving early costs parachutes.
+
+Three bags, six slots each: a bag is a named set of distracting apps. You get
+three bags with six slots each, all free. The active bag is the one that gets
+blocked — switch bags any time you are not in a session.
+
+The app picker: tap a slot to open the picker — search your installed apps,
+see them with their real icons, and pick up to six per bag. Save, and the bag
+is ready. A slot can be cleared the same way, any time.
+
+The floating pill: a small pill floats over everything while a session runs —
+time left and parachutes at a glance. Tap it to open the app. It never gets in
+the way of the essentials.
+
+Presets — and the wheel: start in one tap with 15 minutes, 45 minutes, or 3
+hours. Or spin the wheel: up to three of your own presets, from 1 to 720
+minutes. Sessions over 3 hours need at least one parachute on board — and stay
+premium-gated past the free 180 minutes. The Custom card is Premium: it sets
+the wheel to 12 hours (720 minutes) and lets it run from 3 to 12 hours.
+Tapping a preset animates the wheel to the new value — one tick per minute
+crossed.
+
+Slide to start: the slide is deliberate on purpose — the handle has to travel
+most of the way before the session starts, so a stray touch never locks your
+phone. If the app cannot block yet, the slide opens the setup instead of
+starting.
+
+Hold to extend: hold for three seconds and the session grows by 15 minutes —
+up to +60 minutes per session. Extending needs a parachute on board (it is not
+consumed). A short tap only shows a HOLD hint and does nothing.
+
+Routine-aware sessions: a session that would end inside a routine window
+stretches to the end of that window instead — when a routine is enabled and
+you have a parachute. One focus, no gaps. The stretch is capped at 12 hours
+from now.
+
+Leaving early: slide to exit and the handle answers honestly — with no
+parachutes it is dimmed and shakes. With more than 30 minutes left, the slide
+opens a choice — a 30-minute break for 1 parachute, or end the session for
+1 + 1 per hour left (minimum 2). Tapping outside the sheet, or “Keep going”,
+keeps the session running. With 30 minutes or less left, the slide ends the
+session directly for 1 parachute.
+
+The block screen: while a session runs, the block screen is the only thing
+between you and the apps. It shows the countdown, the end time, and your
+parachutes — and after three seconds of idle it rests, dimming to a quiet
+clock. Any touch brings it back.
+
+- Essentials stay open — messaging, dialer, camera, alarm, keyboard, in-call.
+- The block holds — the notification shade, recents, and the power menu close; floating windows are dismissed; the block comes back on its own even if the app was closed, and it survives a reboot.
+- Settings passes — if the protection ever drops, Kaizenly lets you open your phone's settings to switch it back on: up to 3 × 60-second passes per session.
+- Always in view — an ongoing notification shows the time remaining and opens the app on tap; empty slots on the block screen open the app picker.
+
+Parachutes: emergency exits that end a block early. A break costs 1; exiting
+early costs 1 + 1 per hour left (minimum 2). Earned free by focusing — never
+bought.
+
+The 30-minute break: one parachute buys a 30-minute break, as many times as
+you need in a session. The clock freezes; the block returns when the break
+ends. Enforcement, sound, and Do Not Disturb rest during the break. A break
+that would run past a routine's end stops the session there instead — a
+routine window is fixed.
+
+Soundscapes: Rain, Waves, White Noise, and City — four sounds generated live
+on your device, never streamed, never auto-played. They fade in and out with
+the session. All four are free.
+
+Block screen, done right: the countdown, the end time, your parachutes — and a
+celebration when you finish. DONE in white tiles, SOS in green when you
+bailed. The celebration shows your minutes for the session and for today, plus
+the week — Monday first. Share the card as a PNG; the done pill is the only
+way out.
+
+Boot restore: restart the phone mid-session and the block comes back. A session
+ends when the timer ends — not when the phone does.
+
+Sessions under 5 seconds: a session shorter than five seconds is not recorded
+anywhere — no stats, no streak, no Tower block. Everything else counts, and
+break minutes never count toward your focus time.
+
+### Routines & streaks — Set it once. Focus on schedule.
+
+Up to three routines — a bag, a time window, days of the week — and Kaizenly
+starts the block for you. Routines are free, including each routine using its
+own bag.
+
+Routines that start themselves: a routine needs at least one parachute to
+enable — the safety net for an automatic block. Overlapping routines ask
+before they both fire, and each routine can use its own bag: the bag in hand
+is restored when the routine session ends.
+
+The daily streak: one minute a day keeps the streak alive — five minutes on
+your very first day. Weeks run Monday to Sunday, and a gentle evening reminder
+at 8:30 PM nudges you if today has less than five minutes of focus: “Five
+minutes of session lay today's block.”
+
+Built like the app — knobs, not fields: each routine has a name (rename it —
+up to 10 characters), a start time and an end time set with rotating knobs, and
+seven day faders for the days it runs. A routine's window can be anywhere from
+5 to 720 minutes long. Turning all seven days off switches the routine off.
+
+Switching a routine on: three checks, in order — at least one parachute on
+board, no unresolved overlap with another routine, and the system permission
+the app needs to start on time. If two routines overlap, Kaizenly asks —
+“Turn on anyway” or “Not now” — instead of guessing. Switching a routine off
+is always allowed, no questions asked.
+
+On schedule, every time: a routine starts itself on its chosen days, and a
+reminder arrives 5 minutes before it starts. Change a routine and its schedule
+updates within moments. While you are on a break, the Routines tab shows the
+break countdown in the header, so you always know when the block returns.
+
+### The Tower — Your streak, built.
+
+Five minutes of focus a day lays one block. Seven blocks make a floor. The
+Tower grows as you do.
+
+Life happens: three reserve blocks sit beside the Tower and are spent
+automatically on missed days. Ten days in a row restores one spent reserve, up
+to three. And if you reach day one hundred, you will find a surprise.
+
+Two counters, not one: the Tower and the daily streak are different counters.
+The streak stays alive with one minute a day (five on your very first day); a
+Tower block needs five minutes. A missed day spends a reserve block for the
+Tower — the repair happens automatically, while reserves remain.
+
+Every block tells its day: long-press any block to see its day — the date, how
+many sessions ran and for how many minutes — or “Repaired day · the tower held
+up” for a day a reserve saved. The first block carries a note of its own: this
+is where it all began. When the Tower is taller than a week, a scrubber on the
+right edge scrolls it.
+
+Your numbers, at the foot of the Tower: the Tower screen keeps four numbers —
+your best day (tap it to jump to that floor), your total focus time, your
+average minutes per day, and your tallest Tower. The streak count lives in the
+header badge — tap it any time to open the Tower.
+
+### How to get parachutes — Earn them. Never buy them.
+
+Parachutes are the emergency exits of Kaizenly — and they are earned by
+focusing, never sold.
+
+The rule, in full: a qualifying day is a day with at least one session of 30
+minutes of actual focus. One qualifying day counts per calendar day, and the
+counter is the number of qualifying days in a row.
+
+The first 10 days pay double — because building a habit is the hardest part,
+so the start pays more. Day 3 earns +2, and every day after that earns +2
+until day 10, which pays +6 with its bonus. After day 10, each day earns +1,
+with a +5 bonus at day 20.
+
+A missed day resets the streak to 0. Tower reserve blocks do not save it —
+the parachute streak has no reserves. The counter is capped at 99.
+
+Reward table:
+
+- Day 3 — +2 — total 2
+- Day 6 — +2 / day — total 8
+- Day 10 — +6, bonus day — total 20
+- Day 15 — +1 / day — total 25
+- Day 20 — +6, bonus day — total 35
+- Day 30 — +1 / day — total 45
+
+What an early exit costs: the cost grows with the time thrown away — 31–60
+minutes left costs 2 parachutes, 61–120 minutes costs 3, 3 hours costs 4, 4
+hours costs 5. With 30 minutes or less left, sliding to exit ends the session
+directly for 1 parachute.
+
+Parachutes are spent on breaks (1 per 30-minute break) and on exiting early
+(1 + 1 per hour left, minimum 2). Holding to extend and starting a session
+over 3 hours need one on board — but do not consume it. Enabling a routine
+needs one too.
+
+Where the count lives: your parachutes show in three places — the header pill
+(it pulses gently while you have any), the Bag tab, and the block screen. The
+buy tiles on the Bag tab open a “Totally free” sheet instead of a purchase —
+parachutes are never sold. The app's Profile sheet has a “How to get
+parachutes” row that opens the full explainer, with a copy button that copies
+it as plain text.
+
+### Sounds — Four sounds, made on your device.
+
+No streaming, no downloads, no account. The sounds are generated live on your
+phone, and all four are free.
+
+- Rain — Steady rain, made live on your device. Pick it on the block screen and it starts — stop it the same way.
+- Waves — Ocean waves, made live on your device. Nothing is streamed, so it works with the phone offline.
+- White Noise — Even white noise, made live on your device. It fades in with the session and out when it ends.
+- City — City ambience, made live on your device. The sound stops when the session ends — it never plays on its own.
+
+Nothing auto-plays: a sound starts only when you pick it, and the session
+fades it in and out for you.
+
+### Stats — Proof, not promises.
+
+Day, month, and year — every session you finished, in one place. Sessions
+under five seconds are not recorded; the rest is all yours.
+
+Three views, one history: Day, Month, and Year — Month is the default view.
+Step back through past days, months, and years with the chevrons or the rotary
+wheel; you can only browse into the past, never into the future. The readout
+under the chart always says the period and the total minutes.
+
+What counts, and what does not: a finished session counts its actual focus
+minutes — break minutes are excluded, and sessions shorter than five seconds
+are not recorded at all. Bars for days ahead are dimmed; the selected bar is
+highlighted in green.
+
+The Tower keeps the rest: best day, total time, average minutes per day, and
+your tallest Tower live on the Tower screen — the stats page is for the
+calendar, the Tower is for the streak.
+
+### Widgets — Focus, from the home screen.
+
+Two widgets, no app-opening required. Start a session or check the streak
+right from where your phone already is.
+
+Preset widget: up to three of your presets, 1–720 minutes. Tap a preset to
+open the app with that timer; the play button starts a session straight away.
+While a session runs, the widget becomes a countdown with the time remaining.
+Add or edit presets in the wheel editor — up to three, from 1 to 720 minutes.
+
+Streak widget: the last 28 days, 4 week rows. Twenty-eight days on the home
+screen, today ringed. After 8 PM, if today is still empty, the widget pulses
+gently — a quiet nudge, not an alarm. Tap it to open the Tower.
+
+### Settings — Yours, the way you like it.
+
+A small settings page, and every switch does exactly what it says.
+
+Theme: three cards — Light, Automatic, Dark. Dark is the design anchor: deep
+green-black surfaces with the vivid green accent. A fresh install starts in
+Light.
+
+Haptics: one global switch. Turn it off and every vibration in the app stops —
+turn it on and you feel it immediately.
+
+Streak reminders: one evening nudge at 8:30 PM, only if today has less than
+five minutes of focus and no session has run. Switch it off and the evening
+stays quiet.
+
+Each routine, its own bag: free. Each routine uses its own bag — routine 1
+uses bag 1, and so on — and the bag in hand is restored when the routine
+session ends. The same switch lives in Settings.
+
+Silence during sessions: Premium. Do Not Disturb while you focus. It needs the
+system permission for it — the app explains why, opens the right settings
+page, and switches on as soon as access is granted. If access is ever revoked,
+the switch resets itself.
+
+Go Premium · Info: two cards at the foot of Settings — one opens Premium
+(hidden once you own it), the other opens Info — the developer, the credits,
+and the app version.
+
+### Backup & privacy — Your data, yours to keep.
+
+Kaizenly has no account, no sign-up, and no server. Your data lives on your
+device — and the only way it leaves is a backup file you make yourself.
+
+Local backup: export a timestamped JSON backup and import it back with a
+confirm step. It is validated before it is written, and a live session is
+never carried over. No drive, no password, no upload.
+
+What a backup carries: sessions, bags and all their slots, all three routines,
+your streak and Tower progress, your parachutes and their streak, and your
+settings. An active session's timer state is not carried over — a backup never
+restores a session in progress.
+
+Protected, even in a file: your parachute balance is protected inside the
+backup — editing the file cannot add parachutes — a tampered balance imports
+as 0, while your sessions, bags, routines, and settings still import normally.
+
+Nothing leaves on its own: the app opts out of automatic cloud backup, so a
+fresh install starts empty and uninstalling wipes its local data. There is no
+analytics, no advertising, and no tracking — and no third-party code that
+sends data anywhere.
+
+Permissions, only for blocking: blocking needs sensitive permissions — the ones
+that let the app see which app is open, draw over the screen, and lock the
+device. They are used only for blocking, and only while you have a session or
+routine running. You grant each one yourself, and you can revoke any of them
+any time in your phone's settings; blocking may stop working, including
+sessions already in progress.
+
+No account, ever: there is no sign-in and no profile to create. The Profile
+sheet has settings, sharing, the tour, the parachute explainer, and Premium —
+but no account, because there is nothing to sign in to.
+
+### Free & Premium — Almost everything is free.
+
+Free, for now (Rs 0):
+
+- All 3 bags with 6 slots each
+- 3 routines — each routine its own bag, free
+- All 4 soundscapes — Rain, Waves, White Noise, City
+- Parachutes earned free by the streak
+- The Tower, stats, widgets, and local backup
+- Sessions up to 3 hours
+
+Premium (Rs 1,450 one-time, arrives with Play Billing):
+
+- Sessions up to 12 hours — the custom card, 3 to 12 hours
+- Silence during sessions — Do Not Disturb while you focus
+- Everything in Free, of course
+
+There is no purchase in the app today. The Premium screen also has an Add-on
+page — the big suitcase (6 apps per bag) and the sounds — both shown as
+“Included free”, with no price and nothing to unlock.
+
+### First run — Six steps, then focus.
+
+The first run is a short tour, not a form: six steps with square step numbers
+and a draggable lever. It explains the block, the bags, and the permissions
+the app needs — and you grant each one yourself. Finished the tour and want
+it again? The Profile sheet has “Take the tour again”.
+
+### Honest boundaries — What Kaizenly does not do.
+
+- No account, no server — No sign-up, no login, no developer server. There is nowhere for your data to go — and no one to send it to.
+- No analytics, no ads, no trackers — Nothing in the app watches you, and nothing is sold to advertisers. Your focus data is yours.
+- No cloud backup — Your data never leaves the phone unless you export a backup file yourself. There is no sync and no cloud copy.
+- No selling parachutes — Parachutes are earned by focusing, never bought. The buy tiles open a “Totally free” sheet — that is the whole point.
+- No purchases yet — Premium arrives with Play Billing. Until then there is nothing to buy in the app — and everything listed as free is actually free.
+- No magic — Kaizenly adds friction at the exact moment you would otherwise scroll. It cannot want focus for you — it can only make leaving cost something.
+
+---
+
+## Gallery
+
+Real screens from the app — in light and dark. App screenshots are on the
+way; this page will fill in as they arrive.
+
+Groups: Focus sessions, Routines, The Tower, Stats, Widgets, Settings &
+backup.
+
+---
+
+## About
+
+### I'm Nadeem Mazhar.
+
+Nadeem Dev Apps is my one-developer studio. I'm a solo developer — no
+partner, no team — I plan, design, and ship websites, Windows apps, Android
+apps, and backends, with AI tools doing the heavy lifting under my direction.
+Kaizenly started as my own problem — a phone that would not stay down — and it
+ships only when it works in daily use.
+
+### A solo developer, building for himself first.
+
+I work the way a one-person studio should: I plan the product, design the
+interface, direct the build, and review everything before it ships. AI tools
+do the heavy lifting; the decisions are mine.
+
+I'm still learning some languages, and I know the basics of others — but the
+job was never typing syntax by hand. The job is exploration, working with AI,
+UI design, planning, brainstorming, problem-solving, and security analysis —
+and that's where I'm strong. I ship real products by combining my judgment
+with the best tools available.
+
+### What I build — Websites, Windows, Android, backends, cloud.
+
+The apps on this site are local-first by design — no account, no server, no
+ads — because that's the right call for a personal tool. It's a choice, not a
+limitation: I also build websites, Windows apps, Android apps, backends, and
+cloud-based apps — whichever the project needs.
+
+Everything I make is free to use right now — Kaizenly's premium durations
+arrive with Play Billing.
+
+Kaizenly — A strict focus guard for Android. It started as my own problem — a
+phone that would not stay down — and it is built the way I build everything:
+local-first, strict where it matters, and honest about what it does.
+
+Tsumly — A local-first loan and ledger app that splits one repayment across
+several loans without merging them. It started the same way — a ledger that
+never added up.
+
+MsgLoop — A WhatsApp message scheduler for Android. Because it automates
+WhatsApp — which WhatsApp's terms do not allow — bulk messaging can get a
+number banned, and the app says so plainly.
+
+### What I stand for — One problem, solved well.
+
+- One problem, solved well — Each app does a single job properly instead of ten things halfway. If it needs a second job, it becomes a second app.
+- Private by default — No accounts, no tracking, no ads. Your data stays on your device; backups go to your own storage, when you choose.
+- Calm, not pushy — That is how I work and communicate: no pressure, no perfectionism, no guilt-driven productivity. I build steadily and let the work speak for itself.
+- Built for myself first — Every app starts as my own problem. Tsumly and Kaizenly earned their place by working in daily use.
+- Shipped when it works — Features land after real daily use, not after a roadmap date. What you see in Kaizenly is what is actually running on my own phone.
+- Honest copy — No fake badges, ratings, or reviews. A download button, a Play Store badge, or a rating appears only when it is real.
+
+### Say hello.
+
+Questions, feedback, or just want to say hi? Reach me at
+nadeem.devapps@gmail.com, or find my work on GitHub at
+github.com/nadeemdevapps — my only social link.
 
 More from Nadeem Dev Apps: https://nadeemdevapps.github.io/my-web/
 
