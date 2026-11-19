@@ -55,7 +55,7 @@
 
 - The site is a static Astro site. Design tokens live in DESIGN.md in the repo root.
 - The Privacy page carries the privacy-policy URL used by the Tsumly app's Google OAuth setup.
-- The brand mark is a "Stack in a pill" logo: [logo.svg](https://nadeemdevapps.github.io/my-web/logo.svg).
+- The brand mark is three ascending rounded squares (blue, purple, amber) — "Playful Steps": [logo.svg](https://nadeemdevapps.github.io/my-web/logo.svg).
 
 ## Optional
 
