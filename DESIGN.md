@@ -188,10 +188,11 @@ components:
     textColor: "{colors.ink}"
     typography: "{typography.nav-link}"
     padding: "{spacing.md}"
-    # Pill nav: a centred floating pill (Home/Work/About/Contact), links
-    # only — no wordmark, no theme toggle, no hamburger, no active-page
-    # pill. The pill stays visible at every width; links shrink slightly
-    # on small screens.
+    # Pill nav: a centred floating pill (Home/Work/About/Contact) plus a
+    # sun/moon theme toggle after a divider — no wordmark, no hamburger,
+    # no active-page pill. The toggle flips data-theme and saves the
+    # choice to localStorage (nda-theme). The pill stays visible at every
+    # width; links shrink slightly on small screens.
   button-primary:
     backgroundColor: "{colors.primary}"
     textColor: "{colors.on-primary}"
@@ -548,7 +549,7 @@ The site uses no photography — it is a content-and-type site. Card visuals are
 
 ### Navigation
 
-**`nav-bar`** — Top navigation. A floating pill bar, fixed 18px from the top and centred, `rgba` surface background with a 14px backdrop blur, hairline border, pill radius, and the soft shadow. Four plain links only (`Home / Work / About / Contact`) — no wordmark, no theme toggle, no hamburger, no active-page pill. The pill stays visible at every width; link padding shrinks slightly on small screens.
+**`nav-bar`** — Top navigation. A floating pill bar, fixed 18px from the top and centred, `rgba` surface background with a 14px backdrop blur, hairline border, pill radius, and the soft shadow. Four plain links (`Home / Work / About / Contact`) plus a sun/moon theme toggle after a divider — no wordmark, no hamburger, no active-page pill. The toggle flips `data-theme` and saves the choice to localStorage (`nda-theme`); the head script applies the saved choice before first paint. The pill stays visible at every width; link padding shrinks slightly on small screens.
 
 **`wordmark`** — The "Nadeem Dev Apps" text lockup, used with the logo mark in the nav bar and footer. Bricolage Grotesque 700, `{colors.ink}`, negative tracking −0.025em.
 

@@ -244,6 +244,32 @@ section { padding: var(--space-section) 0; }
   white-space: nowrap;
 }
 .pill-nav a:hover { background: var(--color-ink); color: var(--color-canvas); text-decoration: none; }
+.nav-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--color-hairline);
+  margin: 0 6px;
+  flex: none;
+}
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  min-height: 36px;
+  flex: none;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-ink-muted);
+  cursor: pointer;
+}
+.theme-toggle:hover { background: var(--color-ink); color: var(--color-canvas); }
+.theme-toggle:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+html[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
 
 /* Hero — drifting colour fields + oversized name, from the mockup. */
