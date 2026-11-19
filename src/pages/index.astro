@@ -30,7 +30,7 @@ const jsonLd = [
         name: 'Nadeem Mazhar',
         jobTitle: 'Solo Developer',
         description:
-          'Solo developer. Builds websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs — with AI doing the heavy lifting under his direction.',
+          'Solo developer. I plan first, then build with AI — phase by phase, tested. Six shipped products, built for real problems I had myself.',
         url: `${siteUrl}about/`,
         sameAs: ['https://github.com/nadeemdevapps'],
       },
@@ -41,201 +41,155 @@ const jsonLd = [
 
 <BaseLayout
   title="Nadeem Mazhar — Solo Developer"
-  description="Nadeem Mazhar — a solo developer building websites, Windows apps, Android apps, and backends. Selected work: Tsumly, Kaizenly, and MsgLoop."
+  description="Nadeem Mazhar — a solo developer building with AI, phase by phase, tested. Selected work: Tsumly, Kaizenly, MsgLoop, CV Creator Pro, Nydrex Suite, and Brew & Bean Cafe."
   jsonLd={jsonLd}
 >
-  <section class="hero hero-center">
-    <div class="container">
-      <h1>I'm Nadeem Mazhar —<br />I build apps and websites for <span class="accent">real life.</span></h1>
-      <p class="muted">
-        Solo developer. I plan, design, and ship websites,
-        Windows apps, Android apps, and backends — local-first or cloud,
-        whichever the project needs — with AI doing the heavy lifting under
-        my direction.
+  <header class="hero" id="top">
+    <div class="fields" aria-hidden="true">
+      <div class="field purple"></div>
+      <div class="field green"></div>
+      <div class="field amber"></div>
+      <div class="field blue"></div>
+    </div>
+    <div class="hero-inner">
+      <h1 class="display" aria-label="Nadeem Mazhar">
+        <span class="word"><span>Nadeem</span></span>
+        <span class="word"><span>Mazhar</span></span>
+      </h1>
+      <p class="hero-intro">
+        Solo developer. I plan first, then build with AI — phase by phase, tested.
+        <span class="dim">Six shipped products, built for real problems I had myself.</span>
       </p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#work">See my work</a>
-        <a class="btn btn-secondary" href={`${base}contact/`}>Get in touch</a>
+        <a class="btn btn-primary" href="#work">See the work</a>
+        <a class="btn btn-secondary" href={`${base}contact/`}>Open to internships</a>
       </div>
     </div>
-  </section>
+  </header>
 
-  <section class="stat-section">
-    <div class="container">
-      <div class="stat-grid">
-        <div class="stat-card">
-          <div class="stat-card-top">
-            <span class="stat-label">Core focus</span>
-            <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5z" /><path d="m2 17 10 5 10-5" /><path d="m2 12 10 5 10-5" /></svg>
-          </div>
-          <h3>Websites, apps &amp; backends</h3>
-          <p>Websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs.</p>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card-top">
-            <span class="stat-label">Flagship ecosystem</span>
-            <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" /><rect x="3" y="14" width="7" height="7" rx="1" /><rect x="14" y="14" width="7" height="7" rx="1" /></svg>
-          </div>
-          <h3>3 products</h3>
-          <p>Tsumly, Kaizenly, and MsgLoop — each one built to solve a problem of my own.</p>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card-top">
-            <span class="stat-label">Data thesis</span>
-            <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19a4.5 4.5 0 0 0 .42-8.98 6 6 0 0 0-11.7 1.62A4 4 0 0 0 7 19.5h10.5z" /><path d="m3 3 18 18" /></svg>
-          </div>
-          <h3>Local-first</h3>
-          <p>No accounts, no servers, no tracking, no ads — your data stays on your device.</p>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card-top">
-            <span class="stat-label">How I work</span>
-            <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z" /><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15z" /></svg>
-          </div>
-          <h3>Solo, with AI</h3>
-          <p>I plan, design, and direct; AI does the heavy lifting — every line reviewed by me.</p>
-        </div>
-      </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marqueeTrack">
+      <div class="run">AI-first building <span class="dot">●</span> Strategic planning <span class="dot">●</span> Phased implementation <span class="dot">●</span> Learning in public <span class="dot">●</span> Experiments</div>
     </div>
-  </section>
+  </div>
 
   <section id="work">
-    <div class="container">
-      <div class="flagship-head">
-        <h2>Featured Flagships</h2>
-        <a href={`${base}products/`}>All products →</a>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 class="display">Selected work</h2>
+        <p class="count">6 shipped products</p>
       </div>
-      <div class="flagship-grid">
-        <article class="flagship-card">
-          <div class="flagship-head-row">
+      <div class="works-grid">
+        <article class="project-card tsumly reveal" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">Ts</span></div>
+          <div class="body">
             <h3>Tsumly</h3>
-            <span class="flagship-pill"><span class="flagship-dot" style="background: #0d9488;"></span>Personal Money Ledger</span>
+            <span class="tag">Android · Finance</span>
+            <p>A local-first expense tracker with a smart multi-loan repayment split — the finance app I needed, built for myself.</p>
+            <ul>
+              <li>Local-first, no cloud needed</li>
+              <li>Smart multi-loan repayment split</li>
+              <li>Optional Drive backup</li>
+            </ul>
+            <a class="link" href={`${base}products/tsumly/`}>Open Tsumly's site →</a>
           </div>
-          <p class="flagship-desc">
-            A <strong>local-first money ledger</strong> — every amount adds up.
-            Track expenses and loans on your own device, with an optional
-            <strong>encrypted Google Drive backup</strong>.
-          </p>
-          <ul class="feature-list">
-            <li><strong>Smart multi-loan repayment split</strong> — one repayment spread across your loans, the fair way.</li>
-            <li><strong>Pre-app loans</strong> — record loans from before the app without moving your balance.</li>
-            <li><strong>Person profiles</strong> — every loan tied to a person, with their totals at a glance.</li>
-          </ul>
-          <p><a href={`${base}products/tsumly/`}>Learn more →</a></p>
         </article>
-        <article class="flagship-card">
-          <div class="flagship-head-row">
+
+        <article class="project-card kaizenly reveal" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">K</span></div>
+          <div class="body">
             <h3>Kaizenly</h3>
-            <span class="flagship-pill"><span class="flagship-dot" style="background: #27f24c;"></span>Focus Guard</span>
+            <span class="tag">Android · Focus</span>
+            <p>A free phone blocker that helps you stay off distracting apps — every feature free, no premium tier.</p>
+            <ul>
+              <li>Parachute streaks</li>
+              <li>Routines</li>
+              <li>Free, no premium</li>
+            </ul>
+            <a class="link" href={`${base}products/kaizenly/`}>Open Kaizenly's site →</a>
           </div>
-          <p class="flagship-desc">
-            A <strong>strict, local-first focus guard</strong> — timed sessions
-            that keep distracting apps shut when it matters.
-          </p>
-          <ul class="feature-list">
-            <li><strong>Sessions ("bags")</strong> — 15 min, 45 min, 3 h, or a custom length (3–12 h).</li>
-            <li><strong>Parachute exit cost</strong> — quitting early costs something, so it stays a deliberate choice.</li>
-            <li><strong>Streaks, routines, and stats</strong> — the progress building up, visible day by day.</li>
-          </ul>
-          <p><a href={`${base}products/kaizenly/`}>Learn more →</a></p>
         </article>
-        <article class="flagship-card flagship-card--last">
-          <div class="flagship-head-row">
+
+        <article class="project-card msgloop reveal" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">M↻</span></div>
+          <div class="body">
             <h3>MsgLoop</h3>
-            <span class="flagship-pill"><span class="flagship-dot" style="background: #16a34a;"></span>WhatsApp Scheduler</span>
+            <span class="tag">Android · Messaging</span>
+            <p>A WhatsApp scheduled multi-message loop — send a set of messages to one number, up to 2,000 sends, on schedule.</p>
+            <ul>
+              <li>Multi-message loop to one number</li>
+              <li>Scheduled tasks</li>
+              <li>Resume from Recents</li>
+            </ul>
+            <a class="link" href={`${base}products/msgloop/`}>Open MsgLoop's site →</a>
           </div>
-          <p class="flagship-desc">
-            A <strong>WhatsApp sender for Android</strong> — one message, sent
-            many times, right now or on a schedule.
-          </p>
-          <ul class="feature-list">
-            <li><strong>Schedule for later</strong> — pick a date and time; an exact alarm sends when you said it would.</li>
-            <li><strong>A queue that survives anything</strong> — tasks live on the phone, through restarts and app kills.</li>
-            <li><strong>Private by design</strong> — no account, no server, no tracking.</li>
-          </ul>
-          <p><a href={`${base}products/msgloop/`}>Learn more →</a></p>
+        </article>
+
+        <article class="project-card cv reveal" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">CV</span></div>
+          <div class="body">
+            <h3>CV Creator Pro</h3>
+            <span class="tag">Web · Tool</span>
+            <p>A one-page CV maker that runs entirely in the browser — fill it in, pick a look, download a clean A4 PDF.</p>
+            <ul>
+              <li>Pick theme and template</li>
+              <li>One-page A4 PDF download</li>
+              <li>Runs fully in the browser</li>
+            </ul>
+            <a class="link" href="https://resumemagicmaker.lovable.app/">Live site →</a>
+          </div>
+        </article>
+
+        <article class="project-card nydrex reveal" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">Nx</span></div>
+          <div class="body">
+            <h3>Nydrex Suite</h3>
+            <span class="tag">Desktop · Retail</span>
+            <p>An Electron desktop suite for retail — point of sale and inventory, with customer and supplier ledgers and reporting.</p>
+            <ul>
+              <li>Checkout and inventory</li>
+              <li>Customer and supplier ledgers</li>
+              <li>Reporting and encrypted backup</li>
+            </ul>
+            <span class="nolink">Windows desktop app</span>
+          </div>
+        </article>
+
+        <article class="project-card brew reveal" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">B&amp;B</span></div>
+          <div class="body">
+            <h3>Brew &amp; Bean Cafe</h3>
+            <span class="tag">Web · Assignment project — fully working end to end</span>
+            <p>An animated cafe site with a menu and cart — your order is sent straight to the cafe as a WhatsApp message.</p>
+            <ul>
+              <li>Menu and cart</li>
+              <li>Order sent as a WhatsApp message</li>
+              <li>Fully animated</li>
+            </ul>
+            <a class="link" href="https://brew-and-bean-cafe-nadeemassignment.lovable.app/">Live site →</a>
+          </div>
         </article>
       </div>
+      <p class="works-more"><a href={`${base}products/`}>View all 10 projects →</a></p>
     </div>
   </section>
 
-  <section class="section-alt">
-    <div class="container narrow">
-      <p class="kicker">What I do</p>
-      <h2>Planning, design, and shipping — with AI.</h2>
-      <p class="lede">
-        I explore a problem until I understand it, then plan, design, and
-        ship the answer — <strong>websites, Windows apps, Android apps, and
-        backends</strong>, local-first or cloud, whichever the project needs
-        — with <strong>AI tools doing the heavy lifting</strong> under my
-        direction. The apps I ship are <strong>local-first by design</strong>:
-        no accounts, no tracking, no ads.
+  <section>
+    <div class="container narrow" style="text-align: center;">
+      <p class="honest reveal" style="max-width: 620px; margin: 0 auto 24px;">
+        I build for myself first. If a paid feature costs nothing to run — no server — it should be free.
       </p>
-      <ul class="feature-list">
-        <li><strong>Exploration</strong> — I research what's out there, what fails, and what's missing before I build anything.</li>
-        <li><strong>AI-assisted development</strong> — I direct the build and review every step; AI writes the bulk of the code, I own the decisions.</li>
-        <li><strong>UI design</strong> — interfaces I design myself: clean, calm, and built to be used every day.</li>
-        <li><strong>Planning &amp; brainstorming</strong> — documentation and a clear plan come before the first line of code.</li>
-        <li><strong>Problem-solving</strong> — the hard part isn't the code, it's finding the right shape for the answer.</li>
-        <li><strong>Security analysis</strong> — I follow security protocols properly, with AI help, on every build.</li>
-      </ul>
+      <p class="reveal"><a href={`${base}about/`}>More about Nadeem →</a></p>
     </div>
   </section>
 
-  <section class="section-alt">
-    <div class="container">
-      <div class="attention-band">
-        <img src={`${base}attention-band.jpg`} alt="A quiet desk with a laptop, notebook, and pen" width="1200" height="655" loading="lazy" />
-        <div class="attention-band-text">
-          <h2>Software that respects human attention is an ethical obligation.</h2>
-          <p>No noise, no pressure, no guilt. Every app I build is designed to serve you, then get out of the way.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2>What I stand for</h2>
-      <p class="lede">Three rules govern everything I ship — every app, every page.</p>
-      <div class="principle-grid">
-        <div class="principle-card">
-          <div class="principle-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="5" /><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none" /></svg>
-          </div>
-          <h3>One problem, solved well</h3>
-          <p>Each app does a single job properly instead of ten things halfway. If it needs a second job, it becomes a second app.</p>
-        </div>
-        <div class="principle-card">
-          <div class="principle-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2" /><path d="M8 11V7a4 4 0 0 1 8 0v4" /></svg>
-          </div>
-          <h3>Private by default</h3>
-          <p>No accounts, no tracking, no ads. Your data stays on your device; backups go to your own storage, when you choose.</p>
-        </div>
-        <div class="principle-card">
-          <div class="principle-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" /><path d="M16 8 2 22" /><path d="M17.5 15H9" /></svg>
-          </div>
-          <h3>Calm, not pushy</h3>
-          <p>No pressure, no perfectionism, no guilt-driven productivity. I build steadily and let the work speak for itself.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="about-card">
-        <div class="about-card-text">
-          <h2>A solo developer, building for himself first.</h2>
-          <p>I'm Nadeem Mazhar, a solo developer. I build the tools I wish existed — planned, documented, reviewed, and shipped. Tsumly and Kaizenly started as personal problems: a ledger that never added up, a phone that never stayed quiet. They ship when they work in daily use, not before.</p>
-        </div>
-        <div class="about-card-cta">
-          <a class="btn btn-primary" href={`${base}about/`}>More about Nadeem →</a>
-          <a class="btn btn-secondary" href={`${base}contact/`}>Get in touch</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <script>
+    (function () {
+      var track = document.getElementById('marqueeTrack');
+      if (!track || !track.children[0]) return;
+      var clone = track.children[0].cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      track.appendChild(clone);
+    })();
+  </script>
 </BaseLayout>

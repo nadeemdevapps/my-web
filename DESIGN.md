@@ -12,15 +12,15 @@ colors:
   primary: "#0075de"          # structural accent — blue (light)
   primary-active: "#005bab"   # pressed accent
   on-primary: "#ffffff"       # text/glyph on the accent
-  canvas: "#f6f5f4"           # page background — warm paper off-white
-  surface: "#ffffff"          # card / panel / field surface
-  surface-elevated: "#ffffff" # modal / elevated surface
-  surface-highlight: "#e6e6e6" # pressed-row / soft-fill surface
-  hairline: "#e6e6e6"         # 1px borders, dividers
-  ink: "#111111"              # primary text — near-black
-  ink-secondary: "#31302e"    # secondary body copy — warm charcoal
-  ink-muted: "#615d59"        # supporting / muted copy — stone
-  ink-faint: "#a39e98"        # captions, placeholders, disabled — ash
+  canvas: "#f2efe9"           # page background — warm paper
+  surface: "#fbf9f5"          # card / panel / field surface
+  surface-elevated: "#fbf9f5" # modal / elevated surface
+  surface-highlight: "#e9e5dd" # pressed-row / soft-fill surface
+  hairline: "rgba(20,19,17,.14)" # 1px borders, dividers
+  ink: "#141311"              # primary text — near-black
+  ink-secondary: "#45413c"    # secondary body copy — warm charcoal
+  ink-muted: "#6a665e"        # supporting / muted copy — stone
+  ink-faint: "#9c978d"        # captions, placeholders, disabled — ash
   danger: "#b3261e"           # the single reserved non-monochrome color besides blue
   on-danger: "#ffffff"
   danger-container: "#f9dedc"
@@ -37,15 +37,15 @@ colors-dark:
   primary: "#0075de"          # structural accent — blue (same on dark)
   primary-active: "#005bab"   # pressed accent
   on-primary: "#ffffff"
-  canvas: "#0f0f0f"           # page background — near-black
-  surface: "#1a1a1a"          # card / panel / field surface
-  surface-elevated: "#222222" # modal / elevated surface
-  surface-highlight: "#2a2a2a" # pressed-row / soft-fill surface
-  hairline: "#333333"         # 1px borders, dividers
-  ink: "#f4f4f4"              # primary text — warm white
-  ink-secondary: "#a0a0a0"
-  ink-muted: "#6b6b6b"
-  ink-faint: "#444444"
+  canvas: "#171512"          # page background — near-black
+  surface: "#211e1a"          # card / panel / field surface
+  surface-elevated: "#26221d" # modal / elevated surface
+  surface-highlight: "#2c2822" # pressed-row / soft-fill surface
+  hairline: "rgba(242,239,233,.16)" # 1px borders, dividers
+  ink: "#f2efe9"              # primary text — warm white
+  ink-secondary: "#c9c4b8"
+  ink-muted: "#a8a294"
+  ink-faint: "#55524b"
   danger: "#cf6679"
   on-danger: "#1a0000"
   danger-container: "#3d1515"
@@ -71,8 +71,9 @@ stickers:
   green: "#1aae39"
   brown: "#523410"
 
-# Editorial type voice: a serif display face for headlines, Inter
-# for everything else. Serif display = EB Garamond (open, OFL).
+# Editorial type voice: Bricolage Grotesque display face for headlines, Inter
+# for everything else. Display = Bricolage Grotesque (open, OFL), tight
+# tracking, heavy weights at large sizes.
 # Body/UI = Inter (OFL). Ship only license-verified fonts.
 typography:
   display-xl:
@@ -156,11 +157,12 @@ typography:
 
 # Radius scale. Marketing CTAs stay fully pill-shaped;
 # utility/nav buttons use the tighter 8px;
-# cards round at 12px; inputs stay tight at 4px.
+# cards round at 24px; inputs stay tight at 4px.
 rounded:
   xs: 4px      # text fields / inputs
   sm: 8px      # utility buttons, small surfaces, skeleton placeholders
-  md: 12px     # cards, panels, dialogs, illustration frames
+  md: 12px     # panels, dialogs, illustration frames
+  card: 24px   # cards
   xl: 16px     # large containers, image wells
   pill: 9999px # marketing CTAs, switches
   full: 9999px # circular icon buttons, avatars
@@ -363,27 +365,27 @@ components:
 
 ## Overview
 
-Nadeem Dev Apps should feel calm, focused, and document-quiet — a well-organized desk in good daylight, not a dashboard. The dominant surface is a warm, paper-soft off-white (`{colors.canvas}` — #f6f5f4) that takes the clinical edge off the screen and makes long pages feel like a document rather than an app. Against that quiet chrome, exactly one thing speaks in colour: a single, dependable blue, `{colors.primary}` (#0075de), reserved almost entirely for the primary call-to-action and inline links. A playful multi-colour sticker palette carries the brand's personality in small illustrated blocks and category dots — it decorates, it never structures.
+Nadeem Dev Apps should feel calm, focused, and document-quiet — a well-organized desk in good daylight, not a dashboard. The dominant surface is a warm, paper-soft off-white (`{colors.canvas}` — #f2efe9) that takes the clinical edge off the screen and makes long pages feel like a document rather than an app. Against that quiet chrome, exactly one thing speaks in colour: a single, dependable blue, `{colors.primary}` (#0075de), reserved almost entirely for links and the nav Contact CTA. A playful multi-colour sticker palette carries the brand's personality in small illustrated blocks and category dots — it decorates, it never structures. The hero adds four slowly drifting blurred colour fields (the products' own colours) and a film-grain overlay — decoration, not structure.
 
-Type carries the personality. Headlines run a **serif display face** (EB Garamond at weight 400 with negative tracking), paired with **Inter** for body, navigation, and UI labels. The serif-display / sans-body split gives the site a literary, considered voice — closer to a long-form reading site than a SaaS landing page — while the monochrome-plus-blue palette keeps it quiet.
+Type carries the personality. Headlines run a **Bricolage Grotesque display face** (weight 700–800 with tight tracking), paired with **Inter** for body, navigation, and UI labels. The display / sans-body split gives the site a bold, considered voice — closer to a long-form reading site than a SaaS landing page — while the monochrome-plus-blue palette keeps it quiet.
 
 The site ships in **two polarities** that share every non-color token:
-1. **Light theme** — the default. Warm paper canvas (`{colors.canvas}` — #f6f5f4), near-black ink.
-2. **Dark theme** — the design anchor. Near-black canvas (`{colors.canvas}` — #0f0f0f), warm-white ink.
+1. **Light theme** — the default. Warm paper canvas (`{colors.canvas}` — #f2efe9), near-black ink.
+2. **Dark theme** — the design anchor. Near-black canvas (`{colors.canvas}` — #171512), warm-white ink.
 
 The theme follows the system by default and can be set explicitly to Dark or Light via the toggle. The light theme must read as the **same product**, not a recolor — only palette values change between the two (`colors` vs `colors-dark`).
 
-Surfaces are defined by **hairlines and the faintest layered shadows** rather than heavy elevation. Cards round at 12px (`{rounded.md}`), marketing CTAs are fully pill-shaped (`{rounded.pill}`), utility buttons round tighter at 8px (`{rounded.sm}`), and inputs stay tight at 4px (`{rounded.xs}`). Spacing follows the web grid (8px base, 1080–1300px container), not a phone rhythm.
+Surfaces are defined by **hairlines and the faintest layered shadows** rather than heavy elevation. Cards round at 24px (`{rounded.card}`), marketing CTAs are fully pill-shaped (`{rounded.pill}`), utility buttons round tighter at 8px (`{rounded.sm}`), and inputs stay tight at 4px (`{rounded.xs}`). Spacing follows the web grid (8px base, 1120px container), not a phone rhythm.
 
 **Key Characteristics:**
 - Strictly monochrome in structure — black, near-black, white, neutral grays; exactly one structural accent, blue.
-- No purple in any structural role. Purple appears only inside the decorative sticker palette. A product's in-app brand never recolours a website page.
+- No purple in any structural role. Purple appears only as decoration (hero drift fields, Tsumly's card glow) and inside the decorative sticker palette. A product's in-app brand never recolours a website page.
 - Warm paper-soft canvas over pure white, never clinical.
-- Editorial type: serif display headlines (EB Garamond, weight 400, negative tracking) paired with Inter body and UI.
+- Editorial type: Bricolage Grotesque display headlines (weight 700–800, tight tracking) paired with Inter body and UI.
 - Two shipped polarities (dark anchor + light) that share all non-color tokens; only palette values differ.
-- Fully pill-shaped marketing CTAs contrasted with flat 12px cards and tight 4px inputs.
+- Fully pill-shaped marketing CTAs contrasted with flat 24px cards and tight 4px inputs.
 - Elevation by hairline + barely-there layered shadow, never heavy drop-shadows.
-- A light hero on the warm canvas — one headline word in the blue accent (on Home, centred, no logo mark — the mark lives in the nav).
+- A portfolio hero on the warm canvas — oversized name, drifting colour fields, grain (on Home, centred, no logo mark — the mark lives in the nav).
 - Sticker palette as decoration only — small, playful, never structural.
 
 ## Colors
@@ -396,17 +398,17 @@ Surfaces are defined by **hairlines and the faintest layered shadows** rather th
 - **On-Accent** (`{colors.on-primary}` — #ffffff): text/glyph drawn on the accent fill.
 
 ### Surface
-- **Canvas** (`{colors.canvas}` — #f6f5f4 light / #0f0f0f dark): the page background — warm paper in light, near-black in dark.
-- **Surface** (`{colors.surface}` — #ffffff light / #1a1a1a dark): card, panel, nav, and form-field surfaces.
-- **Surface Elevated** (`{colors.surface-elevated}` — #ffffff light / #222222 dark): modals and dialogs.
-- **Surface Highlight** (`{colors.surface-highlight}` — #e6e6e6 light / #2a2a2a dark): pressed-row, soft-fill, and skeleton surfaces.
-- **Hairline** (`{colors.hairline}` — #e6e6e6 light / #333333 dark): 1px card borders and dividers.
+- **Canvas** (`{colors.canvas}` — #f2efe9 light / #171512 dark): the page background — warm paper in light, near-black in dark.
+- **Surface** (`{colors.surface}` — #fbf9f5 light / #211e1a dark): card, panel, nav, and form-field surfaces.
+- **Surface Elevated** (`{colors.surface-elevated}` — #fbf9f5 light / #26221d dark): modals and dialogs.
+- **Surface Highlight** (`{colors.surface-highlight}` — #e9e5dd light / #2c2822 dark): pressed-row, soft-fill, and skeleton surfaces.
+- **Hairline** (`{colors.hairline}` — rgba(20,19,17,.14) light / rgba(242,239,233,.16) dark): 1px card borders and dividers.
 
 ### Text
-- **Ink** (`{colors.ink}` — #111111 light / #f4f4f4 dark): primary headings and body — near-black on light, warm-white on dark.
-- **Ink Secondary** (`{colors.ink-secondary}` — #31302e light / #a0a0a0 dark): secondary body copy.
-- **Ink Muted** (`{colors.ink-muted}` — #615d59 light / #6b6b6b dark): supporting / muted copy, inactive nav labels.
-- **Ink Faint** (`{colors.ink-faint}` — #a39e98 light / #444444 dark): captions, placeholders, disabled text.
+- **Ink** (`{colors.ink}` — #141311 light / #f2efe9 dark): primary headings and body — near-black on light, warm-white on dark.
+- **Ink Secondary** (`{colors.ink-secondary}` — #45413c light / #c9c4b8 dark): secondary body copy.
+- **Ink Muted** (`{colors.ink-muted}` — #6a665e light / #a8a294 dark): supporting / muted copy, inactive nav labels.
+- **Ink Faint** (`{colors.ink-faint}` — #9c978d light / #55524b dark): captions, placeholders, disabled text.
 
 ### Semantic
 The only reserved non-monochrome colour besides blue is **Danger** (`{colors.danger}` — #b3261e light / #cf6679 dark), used solely for destructive actions and error states, with `{colors.on-danger}`, `{colors.danger-container}`, and `{colors.on-danger-container}` for filled/container variants. There is **no success/warning hue** — affirmative state is carried by ink weight and monochrome iconography, not colour.
@@ -424,35 +426,35 @@ A playful multi-colour palette. It appears only as illustrated blocks, app stick
 ## Typography
 
 ### Font Family
-Two families carry the system. **Serif display** — **EB Garamond** (open, OFL) — sets every display headline at weight 400 with negative tracking. **Inter** (OFL) sets titles, body, navigation, buttons, captions, and all UI labels. There is no monospace role; the site shows no code.
+Two families carry the system. **Bricolage Grotesque** (open, OFL) sets every display headline at weight 700–800 with tight tracking (−0.035em) and tight leading (0.95). **Inter** (OFL) sets titles, body, navigation, buttons, captions, and all UI labels. There is no monospace role; the site shows no code.
 
 The display/body split is editorial:
-- Serif (weight 400, negative tracking) → `display-xl` … `display-sm` (hero headlines, section headlines, big numbers).
-- Inter (weight 400–500) → titles, body, nav, buttons, captions, labels.
+- Bricolage (weight 700–800, tight tracking) → `display-xl` … `display-sm` (hero headlines, section headlines, big numbers).
+- Inter (weight 400–600) → titles, body, nav, buttons, captions, labels.
 
 ### Hierarchy
 
 | Token | Size | Weight | Line Height | Letter Spacing | Use |
 |---|---|---|---|---|---|
-| `{typography.display-xl}` | 64px | 400 | 1.05 | −1.5px | Hero headline — serif |
-| `{typography.display-lg}` | 48px | 400 | 1.1 | −1px | Section headlines — serif |
-| `{typography.display-md}` | 36px | 400 | 1.15 | −0.5px | Sub-section headlines, large stats — serif |
-| `{typography.display-sm}` | 28px | 400 | 1.2 | −0.3px | Card headlines, callouts — serif |
+| `{typography.display-xl}` | clamp(64px, 13.5vw, 180px) | 800 | 0.95 | −0.035em | Hero headline — Bricolage |
+| `{typography.display-lg}` | clamp(40px, 6vw, 64px) | 700 | 0.95 | −0.035em | Section headlines — Bricolage |
+| `{typography.display-md}` | 36px | 700 | 1.0 | −0.03em | Sub-section headlines, large stats — Bricolage |
+| `{typography.display-sm}` | 28px | 700 | 1.05 | −0.025em | Card headlines, callouts — Bricolage |
 | `{typography.title-lg}` | 22px | 500 | 1.3 | 0 | Panel titles — Inter |
 | `{typography.title-md}` | 18px | 500 | 1.4 | 0 | Card titles, dialog titles — Inter |
 | `{typography.title-sm}` | 16px | 500 | 1.4 | 0 | List labels — Inter |
-| `{typography.body-md}` | 16px | 400 | 1.55 | 0 | Default running text — Inter |
+| `{typography.body-md}` | 17px | 400 | 1.6 | 0 | Default running text — Inter |
 | `{typography.body-sm}` | 14px | 400 | 1.55 | 0 | Dense body, descriptions, fine print — Inter |
 | `{typography.caption}` | 13px | 500 | 1.4 | 0 | Captions — Inter |
 | `{typography.caption-uppercase}` | 12px | 500 | 1.4 | 1.5px | Small uppercase labels — Inter |
-| `{typography.button}` | 16px | 500 | 1.5 | 0 | Button labels — Inter |
+| `{typography.button}` | 15.5px | 600 | 1.5 | 0 | Button labels — Inter |
 | `{typography.nav-link}` | 14px | 500 | 1.4 | 0 | Nav links — Inter |
 
 ### Principles
-Display sizes use weight **400 (regular), never bold** — the serif character, not weight, carries emphasis. Negative letter-spacing (−0.3 to −1.5px) is essential; the serif without it reads off-brand. Body type stays at weight 400 for paragraphs and 500 for labels and emphasized phrases. When in doubt about emphasis, reach for a bigger serif display size before a heavier weight.
+Display sizes use weight **700–800 (bold), never regular** — the heavy Bricolage cut at tight tracking carries the emphasis. Negative letter-spacing (−0.025 to −0.035em) is essential; Bricolage without it reads off-brand. Body type stays at weight 400 for paragraphs and 500–600 for labels and emphasized phrases. When in doubt about emphasis, reach for a bigger display size before a heavier weight.
 
 ### Note on Font Substitutes
-EB Garamond is the open display face; Cormorant Garamond is the alternate if EB Garamond's texture feels too light at large sizes. Apply the negative tracking values explicitly. Inter at default tracking is the body voice — no tuned cut is needed on the web.
+Bricolage Grotesque is the open display face (variable font, opsz 12..96, wght 400–800). Apply the negative tracking values explicitly. Inter at default tracking is the body voice — no tuned cut is needed on the web.
 
 ## Layout
 
@@ -460,12 +462,12 @@ EB Garamond is the open display face; Cormorant Garamond is the alternate if EB 
 - **Base unit:** 8px.
 - **Tokens:** `{spacing.xxs}` 4 · `{spacing.xs}` 8 · `{spacing.sm}` 12 · `{spacing.md}` 16 · `{spacing.lg}` 24 · `{spacing.xl}` 28 · `{spacing.xxl}` 32.
 - **Card padding:** `{spacing.lg}` (24px) inside cards and panels.
-- **Section gaps:** `{spacing.section}` (64px desktop / 48px mobile) between major sections.
+- **Section gaps:** `{spacing.section}` (96px desktop / 72px mobile) between major sections.
 - **Screen gutters:** `{spacing.screen-h}` (24px) horizontal.
 - **Page tail:** `{spacing.content-bottom}` (32px) of breathing room at the end of a page.
 
 ### Grid & Container
-Content is centred in a wide max-width column (1080–1300px on desktop) with generous outer gutters. Feature sections alternate between full-width text blocks and 2-up / 3-up card grids; the products page uses a product-card grid. The hero sits inside the centred container, like every other section.
+Content is centred in a 1120px max-width column on desktop with generous outer gutters. Feature sections alternate between full-width text blocks and 2-up card grids; the products page uses a 2-column project-card grid. The hero sits inside the centred container, like every other section.
 
 ### Whitespace Philosophy
 Whitespace is the primary grouping device. Sections are separated by large vertical gaps rather than rules, and cards sit on the warm canvas with quiet hairlines instead of heavy frames. The effect is document-like: airy, scannable, never crowded — and calm enough to read as a portfolio rather than a busy dashboard.
@@ -476,8 +478,8 @@ Whitespace is the primary grouping device. Sections are separated by large verti
 | Name | Width | Key Changes |
 |---|---|---|
 | Wide | 1440px+ | Full multi-column grids, widest container |
-| Desktop | 1080–1300px | Standard centred container, 3-up card grids |
-| Tablet | 768–840px | Grids collapse to 2-up, nav begins condensing |
+| Desktop | 1080–1300px | Standard centred container, 2-up card grids |
+| Tablet | 768–840px | Grids stay 2-up to 760px, then 1-up; nav begins condensing |
 | Mobile | ≤600px | Single-column stacks, hamburger nav, full-width CTAs |
 
 #### Touch Targets
@@ -531,15 +533,16 @@ Small repeated icons use `line-glyph` (hand-drawn monochrome stroke glyphs), not
 |---|---|---|
 | `{rounded.xs}` | 4px | Text fields / inputs |
 | `{rounded.sm}` | 8px | Utility buttons, small surfaces, skeleton placeholders |
-| `{rounded.md}` | 12px | Cards, panels, dialogs, illustration frames |
+| `{rounded.md}` | 12px | Panels, dialogs, illustration frames |
+| `{rounded.card}` | 24px | Cards |
 | `{rounded.xl}` | 16px | Large containers, image wells |
 | `{rounded.pill}` | 9999px | Marketing CTAs, switches |
 | `{rounded.full}` | 9999px | Circular icon buttons, avatars, product icons |
 
-Marketing CTAs are deliberately **fully pill-shaped** — the contrast between a pill CTA and a 12px card is intentional. Inputs stay tight at 4px so fields never read as buttons. Utility buttons use 8px so nav and secondary actions stay compact.
+Marketing CTAs are deliberately **fully pill-shaped** — the contrast between a pill CTA and a 24px card is intentional. Inputs stay tight at 4px so fields never read as buttons. Utility buttons use 8px so nav and secondary actions stay compact.
 
 ### Imagery
-The site uses almost no photography — it is a content-and-type site. The one exception is the attention band on Home: a single grayscale photograph (vendored locally at `public/attention-band.jpg`, made for us by Google Stitch), shown under a dark gradient with a serif headline. Photography is otherwise not used as decoration.
+The site uses no photography — it is a content-and-type site. Card visuals are CSS-only colour fields with large Bricolage glyphs; no screenshots or stock imagery.
 
 ## Components
 
@@ -547,19 +550,19 @@ The site uses almost no photography — it is a content-and-type site. The one e
 
 ### Navigation
 
-**`nav-bar`** — Top navigation. Slim sticky bar, `{colors.surface}` background, 64px tall. Left wordmark (`{components.wordmark}`), centred pill nav (`Home / Products / About / Contact`) on `{colors.surface-highlight}` with the active page as a `{colors.surface}` pill, right theme toggle + a compact `button-primary` ("Get in touch"). Condenses to a hamburger below 840px (pill nav and CTA hidden; links live in the mobile menu).
+**`nav-bar`** — Top navigation. A floating pill bar, fixed 18px from the top and centred, `rgba` surface background with a 14px backdrop blur, hairline border, pill radius, and the soft shadow. Left wordmark (`{components.wordmark}`), centred pill nav (`Home / Work / About / Contact`, Contact as the accent CTA), right theme toggle. Condenses to a hamburger below 840px (pill nav hidden; links live in a dropdown panel under the pill).
 
-**`wordmark`** — The "Nadeem Dev Apps" text lockup, used with the logo mark in the nav bar and footer. EB Garamond 400, `{colors.ink}`, negative tracking −0.5px.
+**`wordmark`** — The "Nadeem Dev Apps" text lockup, used with the logo mark in the nav bar and footer. Bricolage Grotesque 700, `{colors.ink}`, negative tracking −0.025em.
 
 **`logo`** — "Stack in a pill": three stacked bars inside a rounded frame (14px corner radius). A monochrome line mark, ink-tinted and theme-reactive (currentColor), reading at 20–28px and as a favicon. No colour except the sticker palette in decorative use only. The favicon is a filled-tile variant: an ink tile with canvas bars. Files: `src/components/Logo.astro`, `public/logo.svg`, `public/favicon.svg`.
 
 ### Buttons
 
-**`button-primary`** — The primary CTA. Background `{colors.primary}` (blue), text `{colors.on-primary}`, type `{typography.button}` (Inter 16 / 500), fully pill `{rounded.pill}`, padding 12px × 24px. A loading variant swaps the label for an inline spinner in the content colour and disables input.
-- Pressed state `button-primary-pressed` darkens to `{colors.primary-active}`; marketing buttons also apply a brief `scale(0.9)` press transform.
-- Disabled state uses `{colors.surface-highlight}` fill with `{colors.ink-faint}` text.
+**`button-primary`** — The primary CTA. Background `{colors.ink}`, text `{colors.canvas}`, type `{typography.button}` (Inter 15.5 / 600), fully pill `{rounded.pill}`, padding 12px × 26px, min-height 48px. Hover lifts 2px. The blue accent is reserved for links and the nav Contact CTA, never for a solid button.
+- Pressed state applies a brief `scale(0.97)` press transform.
+- Disabled state uses 0.55 opacity.
 
-**`button-secondary`** — Pill button for secondary actions. `{colors.surface}` background, `{colors.ink}` text, 1px `{colors.hairline}` border, same pill shape and padding as primary. Hover fills `{colors.surface-highlight}` (a grey shade).
+**`button-secondary`** — Pill button for secondary actions. Transparent background, `{colors.ink}` text, 1px `{colors.hairline}` border, same pill shape and padding as primary. Hover darkens the border to `{colors.ink}`.
 
 **`button-utility`** — Nav / compact button. `{colors.surface}` background, `{colors.ink}` text, type `{typography.button}`, tighter `{rounded.sm}` (8px), padding 4px × 14px, 1px `{colors.hairline}` border. Used for compact actions where the marketing pill would be too large.
 
@@ -569,13 +572,13 @@ The site uses almost no photography — it is a content-and-type site. The one e
 
 ### Cards & Containers
 
-**`card`** — The workhorse surface. `{colors.surface}` background, 1px `{colors.hairline}` border, rounded `{rounded.md}` (12px), `0dp` elevation, interior padding `{spacing.lg}` (24px). Holds stats, list groups, and panels.
+**`card`** — The workhorse surface. `{colors.surface}` background, 1px `{colors.hairline}` border, rounded 24px, `0dp` elevation, interior padding `{spacing.lg}` (24px). Holds list groups and panels.
 
-**`feature-card-elevated`** — Same chrome as `card` with the soft Level-1 layered shadow for cards that float above the canvas (testimonials, floating product panels).
+**`feature-card-elevated`** — Same chrome as `card` with the soft Level-1 layered shadow for cards that float above the canvas (floating product panels).
 
-**`panel-section`** — A titled content panel. `{colors.surface}` surface, a `{typography.title-sm}` header, `{typography.body-md}` body, 12px radius, 24px padding.
+**`panel-section`** — A titled content panel. `{colors.surface}` surface, a `{typography.title-sm}` header, `{typography.body-md}` body, 24px radius, 24px padding.
 
-**`product-card`** — A product tile. `{colors.surface}` surface, 1px `{colors.hairline}` border, 12px radius, 24px padding. Circular product icon (`{rounded.full}`), product name in `{typography.title-md}`, one-line description in `{typography.body-sm}` `{colors.ink-muted}`, and a `button-utility` or `text-link` action. A sticker dot from `{stickers.*}` may mark the category — decoration only.
+**`product-card`** — A product tile, 2-column grid. `{colors.surface}` surface (Tsumly on lavender `#E8E1F7`, Kaizenly on pale green `#ECFBE1`, demos on `#ece8df`), 1px `{colors.hairline}` border, 24px radius, 14px padding (26px bottom). A 150px CSS colour-field visual with a large Bricolage glyph (no screenshots), then name in Bricolage 27 / 700, a muted tag line, one short description, bullet points, and an underline-draw link. Hover lifts with a glow in the card's own colour; pointer tilt (±2°) via a small script. Demo concepts carry the tag "Demo concept — not a shipped product." and no link.
 
 ### Inputs & Forms
 
@@ -593,22 +596,24 @@ The site uses almost no photography — it is a content-and-type site. The one e
 
 ### Signature Components
 
-**`hero`** — The light hero. Warm canvas, `{colors.ink}` text, `{typography.display-xl}` serif headline with one word in `{colors.primary}`, and a `button-primary` + `button-secondary` CTA pair. On Home the hero is centred (headline + intro + CTAs) with no logo mark — the mark lives in the nav.
+**`hero`** — The portfolio hero. Warm canvas with four slowly drifting blurred colour fields (Tsumly purple, Kaizenly green, amber, blue) plus a film-grain overlay. Oversized name in Bricolage 800 (clamp 64–180px) with a masked line-rise on load, then an intro line under a hairline and a `button-primary` + `button-secondary` CTA pair. Centred, no logo mark, no hero card, no eyebrow pills.
 
-**`inverted-band`** — A polarity-flipped emphasis band for mid-page moments. `{colors.primary}` fill, `{colors.on-primary}` text, `{typography.display-sm}` serif headline, 12px radius. Use sparingly.
+**`marquee`** — A scrolling strip of the working themes (AI-first building · Strategic planning · Phased implementation · Learning in public · Experiments) in Bricolage 600 with accent dots, edge-faded, pausing on hover.
+
+**`inverted-band`** — A polarity-flipped emphasis band for mid-page moments. `{colors.primary}` fill, `{colors.on-primary}` text, `{typography.display-sm}` headline, 12px radius. Use sparingly.
+
+**`cta-card`** — The internships call-to-action. A dark card (inverted in dark theme) with purple and blue glow blobs, oversized Bricolage headline, areas line, and mailto + GitHub buttons. Lives on Contact.
 
 **`footer`** — Site footer. Warm `{colors.canvas}` band, `{colors.ink-secondary}` link text at `{typography.caption}`, padding `{spacing.xxl}`. Brand column (wordmark, tagline, mailto pill with the real contact email) + four link columns — Products, Site, Machine (llms.txt / robots.txt / sitemap.xml), Legal — closing every page. Bottom row: "© 2026 Nadeem Dev Apps — Built with Astro." with GitHub + Back to top links. Five-column grid collapses to two columns (brand full-width) at ≤1080px.
 
-**`stat-tile`** — A stat block. `{colors.surface}` background, value in `{typography.display-sm}` serif, caption in `{typography.caption}`, 12px radius, 16px padding.
-
 ## Core Pages
 
-- **Home**: centred hero (serif headline with one blue word, primary + secondary CTA; fills the first screen so the stat cards appear on scroll), four stat cards, Featured Flagships (2-column grid — Tsumly + Kaizenly row 1, MsgLoop centred row 2; an odd last product always centres in its own row; name left, category pill right in each card), What I do, the attention band (photo + "Software that respects human attention is an ethical obligation." — colour on hover, black-and-white otherwise), What I stand for (three principle cards), the About black card (bright in dark theme), and the footer.
-- **Products** (index): Selected Works & Architecture — an archival split header (INDEX // 2026.03 tag, headline with "Architecture" in the accent blue, narrative; right side two stat tiles: Total Systems 07 — 3 Shipped · 4 Lab, Architectural Spec 100% — Local-First & Zero Bloat) above a hairline, then filter pills and a 3-column project grid (1 col mobile, 2 col tablet). Filter pills are standalone buttons with a count badge; the active one is the primary blue. Each card: category dot + label, 40px rounded-square icon (inline SVG), name, one short description, and a footer row — live products link to their sub-page, demo concepts carry a peach Demo pill and "Demo concept — not a shipped product." No tech tags on cards. Filters work (small page-scoped script; without JS all cards show). The 7th card centres in the middle column in the All view only. Real products use our verified short ledes; the four demo concepts (Aetheria Engine, DocuSense, Monolith CLI, PaperCraft UI) use the demo's descriptions and are labelled as demos.
-- **Product sub-pages** (`/products/tsumly`, `/products/kaizenly`): hero (display headline + one-line description), feature cards, screenshots in rounded wells, download/store links, and a link back to Products. Product sub-pages inherit this system; a product's in-app brand does not recolour the page. Each product sub-site also has its own `/privacy/` and `/terms/` pages.
-- **About**: document-style long page on the warm canvas; serif section headlines, Inter body.
-- **Contact**: "Talk to me." — a short lede (I read every message myself; what to write about), a mailto form (name, email, message — no backend), and Email + GitHub cards. Errors via `{colors.danger}`, feedback via the toast bus.
-- **Privacy / Terms**: document pages — warm canvas, serif headlines, Inter body, generous line-height.
+- **Home**: portfolio hero (oversized name, drifting colour fields, grain, intro + two CTAs), marquee strip, Selected work preview (the 6 shipped products, 2-column grid), the "I build for myself first" line with a link to About, and the footer.
+- **Products** (index): Selected work — heading + "10 projects — 6 shipped products, 4 demo concepts" count, filter pills (All 10 / Mobile & Native 3 / Web 2 / Desktop 1 / Developer Tools 4), and a 2-column project grid (1 col mobile). Each card: CSS colour-field visual with a Bricolage glyph, name, tag, one short description, bullet points, and a link — live products link to their dedicated site, demo concepts carry "Demo concept — not a shipped product." and no link. No tech tags on cards. Filters work (small page-scoped script; without JS all cards show).
+- **Product sub-pages** (`/products/tsumly`, `/products/kaizenly`, `/products/msgloop`): Tsumly and Kaizenly are independent Astro projects merged into the main build; MsgLoop is a page in this repo. Each has its own overview, features, and `/privacy/` + `/terms/` pages. Product sub-pages inherit this system; a product's in-app brand does not recolour the page.
+- **About**: the portfolio story on a centred 760px column — education (Matriculation BISE Bahawalpur, UK Level 3 Diploma in IT & Cyber Security via Qualifi / Superior International Colleges, with a compact 18-unit list), the plan-first skill, the AI-first toolkit (OpenCode primary), self-education and doubts, and why he builds — then the FAQ.
+- **Contact**: the "Open to internships" dark CTA card (areas: software house, bank, company, bookkeeping; mailto + GitHub buttons), then a mailto form (name, email, message — no backend). Errors via `{colors.danger}`, feedback via the toast bus.
+- **Privacy / Terms**: document pages — warm canvas, Bricolage headlines, Inter body, generous line-height.
 
 ## AI Readability
 

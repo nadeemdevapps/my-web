@@ -57,7 +57,7 @@ const jsonLd = [
     name: 'Nadeem Mazhar',
     jobTitle: 'Solo Developer',
     description:
-      'Solo developer. Builds websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs — with AI doing the heavy lifting under his direction.',
+      'Solo developer. I plan first, then build with AI — phase by phase, tested. Six shipped products, built for real problems I had myself.',
     url: `${siteUrl}about/`,
     sameAs: ['https://github.com/nadeemdevapps'],
   },
@@ -67,87 +67,89 @@ const jsonLd = [
 
 <BaseLayout
   title="About Nadeem Mazhar — Solo Developer"
-  description="About Nadeem Mazhar — a solo developer building websites, Windows apps, Android apps, and backends with AI doing the heavy lifting."
+  description="About Nadeem Mazhar — a solo developer building with AI, phase by phase, tested. Education, skills, and the plan-first way he works."
   jsonLd={jsonLd}
 >
-  <section>
-    <div class="container narrow">
-      <span class="kicker">About</span>
-      <h1>I'm Nadeem Mazhar.</h1>
-      <p class="lede">
-        Nadeem Dev Apps is my <strong>one-developer studio</strong>. I'm a
-        <strong>solo developer</strong> — no partner, no team —
-        I plan, design, and ship <strong>websites, Windows apps, Android apps, and
-        backends</strong>, with AI tools doing the heavy lifting under my
-        direction. Tsumly and Kaizenly started as my own problems, and they ship
-        only when they work in daily use.
-      </p>
-      <p style="margin-top: 24px;">
-        <a class="btn btn-primary" href={`${base}products/`}>See my work</a>
-      </p>
+  <section class="page-top">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h1 class="display">About</h1>
+      </div>
+      <div class="about-prose">
+        <div class="about-block reveal">
+          <h3>I learn breadth-first</h3>
+          <p><strong>Matriculation (Biology) — Board of Intermediate and Secondary Education (BISE) Bahawalpur — 1018/1200 (~84%)</strong></p>
+          <p>Biology was chosen on purpose: a little knowledge of every field makes targeted research easy when you need the detail. I've been using a laptop since <strong>grade 3</strong>.</p>
+          <p><strong>UK Level 3 Extended Diploma in IT &amp; Cyber Security — Qualifi (UK) — Superior International Colleges, Rahim Yar Khan — 3rd semester, research internship next</strong></p>
+          <p>The diploma covers 18 units across the semesters, and finishes with a research-based internship.</p>
+          <details class="units-toggle">
+            <summary>18 units — view the list (each 10 credits)</summary>
+            <ul class="units-list">
+              <li><strong>EUS309</strong> — English for University Studies</li>
+              <li><strong>CCSU310</strong> — Communication and Cultural Skills for University</li>
+              <li><strong>BM301</strong> — An Introduction to the Business Environment</li>
+              <li><strong>BM302</strong> — Business Resources</li>
+              <li><strong>BM303</strong> — An Introduction to Marketing</li>
+              <li><strong>BM304</strong> — Human Resource Management</li>
+              <li><strong>IT301</strong> — Computer Systems</li>
+              <li><strong>IT302</strong> — Coding and Website Development</li>
+              <li><strong>IT303</strong> — Networks</li>
+              <li><strong>IT304</strong> — Mobile Communications</li>
+              <li><strong>IT305</strong> — Cyber Security</li>
+              <li><strong>IT306</strong> — Social Media for Business</li>
+              <li><strong>T/617/1163</strong> — Threat and Risk: Expecting the Unexpected</li>
+              <li><strong>F/617/1165</strong> — Network Architecture: Communications and Protocols</li>
+              <li><strong>J/617/1166</strong> — Mobile Device and Data Risks</li>
+              <li><strong>R/617/1168</strong> — Investigations and Incident Response</li>
+              <li><strong>R/617/1171</strong> — Solutions: Future-proofing Your Business</li>
+              <li><strong>Y/617/1172</strong> — EU GDPR and Data Security</li>
+            </ul>
+          </details>
+        </div>
+
+        <div class="about-block reveal">
+          <h3>The plan is the skill</h3>
+          <p>Anyone can get AI to write code. The difference is the process: a PRD, a design doc, clear goals — then phases, built one by one, each one tested before the next starts.</p>
+          <p class="steps">PRD <span class="arr">→</span> Design doc <span class="arr">→</span> Goals <span class="arr">→</span> Phases <span class="arr">→</span> Tested, one by one.</p>
+          <p class="honest">I don't claim deep mastery of any one language — AI writes the code; I own the plan, the design, and the testing.</p>
+        </div>
+
+        <div class="about-block reveal">
+          <h3>AI-first, every day</h3>
+          <p>My daily toolkit spans the whole AI landscape — and <strong>OpenCode</strong> is my primary agent CLI: multi-model, and friendly to a student budget.</p>
+          <div class="tools">
+            <span>Muse</span>
+            <span>Lovable</span>
+            <span>Stitch</span>
+            <span>ChatGPT</span>
+            <span>Gemini</span>
+            <span>Claude</span>
+            <span>Kimi</span>
+            <span>Minimax</span>
+            <span>DeepSeek</span>
+            <span>Perplexity</span>
+            <span>OpenCode</span>
+          </div>
+          <p>I follow new AI launches closely and experiment with new tools and techniques as they land — currently studying and implementing through reverse-engineering existing products. Two I'm following right now: <a href="https://labs.google.com/pomelli/about/">Pomelli</a>, Google Labs' tool that generates on-brand content, and <a href="https://github.com/morluto/rea">REA — Reverse Engineer Anything</a>, an MCP that lets an agent inspect an app's behaviour down to the binary.</p>
+        </div>
+
+        <div class="about-block reveal">
+          <h3>Self-taught, doubt-free</h3>
+          <p>Most of what I know is self-education: research until a doubt is actually cleared — mine, and other people's too. I've been <strong>Class Representative since grade 3</strong>, which is mostly that: hearing questions and finding answers.</p>
+          <p>Along the way I also picked up <strong>accounting basics</strong> — assets, liabilities, debits and credits, debtors, creditors, and the accounting equation.</p>
+        </div>
+
+        <div class="about-block reveal">
+          <h3>Why I build</h3>
+          <p class="honest">I build for myself first. If a paid feature costs nothing to run — no server — it should be free.</p>
+          <p>That's why my finance app exists: the features I needed were paywalled elsewhere, so I built my own — and why Kaizenly has no premium tier at all.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="section-alt">
     <div class="container narrow">
-      <span class="kicker">The founder</span>
-      <h2>A solo developer, building for himself first.</h2>
-      <p class="lede">
-        I'm a <strong>solo developer</strong> — no partners,
-        no team. I work the way a one-person studio should: I
-        <strong>plan</strong> the product, <strong>design</strong> the
-        interface, <strong>direct</strong> the build, and
-        <strong>review</strong> everything before it ships. AI tools do the
-        heavy lifting; the decisions are mine.
-      </p>
-      <p class="lede">
-        I'm still learning some languages, and I know the basics of others —
-        but the job was never typing syntax by hand. The job is
-        <strong>exploration, working with AI, UI design, planning,
-        brainstorming, problem-solving, and security analysis</strong> — and that's where I'm
-        strong. I ship real products by combining my judgment with the best
-        tools available.
-      </p>
-      <p class="lede">
-        The apps on this site are <strong>local-first by design</strong> — no
-        account, no server, no ads — because that's the right call for a
-        personal tool. It's a choice, not a limitation: I also build
-        <strong>websites, Windows apps, Android apps, backends, and
-        cloud-based apps</strong> — whichever the project needs.
-      </p>
-      <p class="lede">
-        Everything I make is <strong>free to use right now</strong>.
-      </p>
-    </div>
-  </section>
-
-  <section>
-    <div class="container narrow">
-      <span class="kicker">What we stand for</span>
-      <h2>One problem, solved well.</h2>
-      <ul class="feature-list">
-        <li><strong>One problem, solved well</strong> — each app does a single job properly instead of ten things halfway. If it needs a second job, it becomes a second app.</li>
-        <li><strong>Private by default</strong> — no accounts, no tracking, no ads. Your data stays on your device; backups go to your own storage, when you choose.</li>
-        <li><strong>Calm, not pushy</strong> — that's how I work and communicate: no pressure, no perfectionism, no guilt-driven productivity. I build steadily and let the work speak for itself.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section-alt">
-    <div class="container narrow">
-      <span class="kicker">How we build</span>
-      <h2>Ship only what works.</h2>
-      <ul class="feature-list">
-        <li><strong>Built for myself first</strong> — every app starts as my own problem. Tsumly and Kaizenly earned their place by working in daily use.</li>
-        <li><strong>Shipped when it works</strong> — features land after real daily use, not after a roadmap date. What you see in Tsumly and Kaizenly is what is actually running on the developer's own phone.</li>
-        <li><strong>Honest copy</strong> — no fake badges, ratings, or reviews. A download button, a Play Store badge, or a rating appears only when it is real.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section-alt">
-    <div class="container narrow">
-      <span class="kicker">Questions</span>
       <h2>Questions, answered.</h2>
       {faqs.map((faq) => (
         <>
@@ -157,21 +159,6 @@ const jsonLd = [
       ))}
       <p>
         Learn more about <a href={`${base}products/tsumly/`}>Tsumly</a>, <a href={`${base}products/kaizenly/`}>Kaizenly</a>, and <a href={`${base}products/msgloop/`}>MsgLoop</a> — or <a href={`${base}contact/`}>get in touch</a>.
-      </p>
-    </div>
-  </section>
-
-  <section>
-    <div class="container narrow">
-      <span class="kicker">Contact</span>
-      <h2>Say hello.</h2>
-      <p class="lede">
-        Questions, feedback, or just want to say hi? Reach me at
-        <a href="mailto:nadeem.devapps@gmail.com">nadeem.devapps@gmail.com</a>.
-      </p>
-      <p style="margin-top: 24px;">
-        <a class="btn btn-primary" href={`${base}contact/`}>Get in touch</a>
-        <a class="btn btn-secondary" href="https://github.com/nadeemdevapps">github.com/nadeemdevapps</a>
       </p>
     </div>
   </section>

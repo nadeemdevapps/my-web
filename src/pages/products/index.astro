@@ -6,168 +6,147 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 <BaseLayout
   title="Selected Works by Nadeem Mazhar"
-  description="Selected works by Nadeem Mazhar — Tsumly, Kaizenly and MsgLoop, plus four demo concepts listed for now."
+  description="Selected works by Nadeem Mazhar — 10 projects: 6 shipped products (Tsumly, Kaizenly, MsgLoop, CV Creator Pro, Nydrex Suite, Brew & Bean Cafe) and 4 demo concepts."
 >
-  <section>
-    <div class="container">
-      <div class="works-head">
-        <div class="works-head-grid">
-          <div class="works-head-main">
-            <span class="works-index"><span class="works-index-dot"></span>Index // 2026.03</span>
-            <h1>Selected Works &amp; <span class="accent">Architecture</span></h1>
-            <p class="muted">
-              Three products I ship, and four demo concepts listed for now. The
-              live products each have their own site inside this one — pick one
-              to explore its architectural specs, offline storage layer, or
-              interactive demo.
-            </p>
-          </div>
-          <div class="works-stats">
-            <div class="works-stat">
-              <span class="works-stat-label">Total Systems</span>
-              <div class="works-stat-value">07 <span class="works-stat-active">active</span></div>
-              <span class="works-stat-sub">3 Shipped · 4 Lab</span>
-            </div>
-            <div class="works-stat">
-              <span class="works-stat-label">Architectural Spec</span>
-              <div class="works-stat-value">100%</div>
-              <span class="works-stat-sub">Local-First &amp; Zero Bloat</span>
-            </div>
-          </div>
-        </div>
-        <div class="filter-row" role="group" aria-label="Filter projects by category">
-          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true"><span>All Projects</span><span class="filter-badge">7</span></button>
-          <button class="filter-btn" type="button" data-filter="web" aria-pressed="false"><span>Web Applications</span><span class="filter-badge">1</span></button>
-          <button class="filter-btn" type="button" data-filter="mobile" aria-pressed="false"><span>Mobile &amp; Native</span><span class="filter-badge">3</span></button>
-          <button class="filter-btn" type="button" data-filter="tools" aria-pressed="false"><span>Developer Tools</span><span class="filter-badge">3</span></button>
-        </div>
+  <section class="page-top">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h1 class="display">Selected work</h1>
+        <p class="count">10 projects — 6 shipped products, 4 demo concepts</p>
       </div>
 
-      <div class="works-grid is-all">
-        <article class="project-card project-card--tsumly" data-category="mobile">
-          <div class="project-top-row">
-            <span class="project-cat"><span class="project-dot" style="background: #6c4de6;"></span>Mobile &amp; Native</span>
-          </div>
-          <div class="project-icon" aria-hidden="true">
-            <img src={`${base}products/tsumly/logo.svg`} alt="" width="44" height="44" />
-          </div>
-          <h2>Tsumly</h2>
-          <p class="project-desc">
-            A <strong>local-first money ledger</strong> — every amount adds up.
-            Track expenses and loans on your own device, with an optional
-            <strong>encrypted Google Drive backup</strong>.
-          </p>
-          <div class="project-foot">
-            <a href={`${base}products/tsumly/`}>Open Tsumly's site →</a>
+      <div class="filter-row reveal" role="group" aria-label="Filter projects by category">
+        <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true"><span>All projects</span><span class="filter-badge">10</span></button>
+        <button class="filter-btn" type="button" data-filter="mobile" aria-pressed="false"><span>Mobile &amp; Native</span><span class="filter-badge">3</span></button>
+        <button class="filter-btn" type="button" data-filter="web" aria-pressed="false"><span>Web</span><span class="filter-badge">2</span></button>
+        <button class="filter-btn" type="button" data-filter="desktop" aria-pressed="false"><span>Desktop</span><span class="filter-badge">1</span></button>
+        <button class="filter-btn" type="button" data-filter="tools" aria-pressed="false"><span>Developer Tools</span><span class="filter-badge">4</span></button>
+      </div>
+
+      <div class="works-grid">
+        <article class="project-card tsumly reveal" data-category="mobile" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">Ts</span></div>
+          <div class="body">
+            <h3>Tsumly</h3>
+            <span class="tag">Android · Finance</span>
+            <p>A local-first expense tracker with a smart multi-loan repayment split — the finance app I needed, built for myself.</p>
+            <ul>
+              <li>Local-first, no cloud needed</li>
+              <li>Smart multi-loan repayment split</li>
+              <li>Optional Drive backup</li>
+            </ul>
+            <a class="link" href={`${base}products/tsumly/`}>Open Tsumly's site →</a>
           </div>
         </article>
 
-        <article class="project-card project-card--kaizenly" data-category="mobile">
-          <div class="project-top-row">
-            <span class="project-cat"><span class="project-dot" style="background: #27f24c;"></span>Mobile &amp; Native</span>
-          </div>
-          <div class="project-icon" aria-hidden="true">
-            <img src={`${base}products/kaizenly/logo.svg`} alt="" width="44" height="44" />
-          </div>
-          <h2>Kaizenly</h2>
-          <p class="project-desc">
-            A <strong>strict, local-first focus guard</strong> — timed sessions
-            that keep distracting apps shut when it matters.
-          </p>
-          <div class="project-foot">
-            <a href={`${base}products/kaizenly/`}>Open Kaizenly's site →</a>
+        <article class="project-card kaizenly reveal" data-category="mobile" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">K</span></div>
+          <div class="body">
+            <h3>Kaizenly</h3>
+            <span class="tag">Android · Focus</span>
+            <p>A free phone blocker that helps you stay off distracting apps — every feature free, no premium tier.</p>
+            <ul>
+              <li>Parachute streaks</li>
+              <li>Routines</li>
+              <li>Free, no premium</li>
+            </ul>
+            <a class="link" href={`${base}products/kaizenly/`}>Open Kaizenly's site →</a>
           </div>
         </article>
 
-        <article class="project-card" data-category="mobile">
-          <div class="project-top-row">
-            <span class="project-cat"><span class="project-dot" style="background: #16a34a;"></span>Mobile &amp; Native</span>
-          </div>
-          <div class="project-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
-          </div>
-          <h2>MsgLoop</h2>
-          <p class="project-desc">
-            A <strong>WhatsApp sender for Android</strong> — one message, sent
-            many times, right now or on a schedule.
-          </p>
-          <div class="project-foot">
-            <a href={`${base}products/msgloop/`}>Open MsgLoop's site →</a>
+        <article class="project-card msgloop reveal" data-category="mobile" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">M↻</span></div>
+          <div class="body">
+            <h3>MsgLoop</h3>
+            <span class="tag">Android · Messaging</span>
+            <p>A WhatsApp scheduled multi-message loop — send a set of messages to one number, up to 2,000 sends, on schedule.</p>
+            <ul>
+              <li>Multi-message loop to one number</li>
+              <li>Scheduled tasks</li>
+              <li>Resume from Recents</li>
+            </ul>
+            <a class="link" href={`${base}products/msgloop/`}>Open MsgLoop's site →</a>
           </div>
         </article>
 
-        <article class="project-card" data-category="tools">
-          <div class="project-top-row">
-            <span class="project-cat"><span class="project-dot" style="background: #0284c7;"></span>Developer Tool</span>
-            <span class="demo-pill">Demo</span>
-          </div>
-          <div class="project-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="10" y="10" width="4" height="4"/><path d="M9 2.5v3M15 2.5v3M9 18.5v3M15 18.5v3M2.5 9h3M2.5 15h3M18.5 9h3M18.5 15h3"/></svg>
-          </div>
-          <h2>Aetheria Engine</h2>
-          <p class="project-desc">
-            Lightweight static site compiler and embedded semantic vector
-            indexing engine built for content vaults and technical monographs.
-          </p>
-          <div class="project-foot">
-            <span class="demo-note">Demo concept — not a shipped product.</span>
+        <article class="project-card cv reveal" data-category="web" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">CV</span></div>
+          <div class="body">
+            <h3>CV Creator Pro</h3>
+            <span class="tag">Web · Tool</span>
+            <p>A one-page CV maker that runs entirely in the browser — fill it in, pick a look, download a clean A4 PDF.</p>
+            <ul>
+              <li>Pick theme and template</li>
+              <li>One-page A4 PDF download</li>
+              <li>Runs fully in the browser</li>
+            </ul>
+            <a class="link" href="https://resumemagicmaker.lovable.app/">Live site →</a>
           </div>
         </article>
 
-        <article class="project-card" data-category="web">
-          <div class="project-top-row">
-            <span class="project-cat"><span class="project-dot" style="background: #7c3aed;"></span>Web Application</span>
-            <span class="demo-pill">Demo</span>
-          </div>
-          <div class="project-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg>
-          </div>
-          <h2>DocuSense</h2>
-          <p class="project-desc">
-            Privacy-first document intelligence with local browser-side LLM
-            inference. Ingests research PDFs without transferring byte data
-            to remote clouds.
-          </p>
-          <div class="project-foot">
-            <span class="demo-note">Demo concept — not a shipped product.</span>
+        <article class="project-card nydrex reveal" data-category="desktop" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">Nx</span></div>
+          <div class="body">
+            <h3>Nydrex Suite</h3>
+            <span class="tag">Desktop · Retail</span>
+            <p>An Electron desktop suite for retail — point of sale and inventory, with customer and supplier ledgers and reporting.</p>
+            <ul>
+              <li>Checkout and inventory</li>
+              <li>Customer and supplier ledgers</li>
+              <li>Reporting and encrypted backup</li>
+            </ul>
+            <span class="nolink">Windows desktop app</span>
           </div>
         </article>
 
-        <article class="project-card" data-category="tools">
-          <div class="project-top-row">
-            <span class="project-cat"><span class="project-dot" style="background: #d97706;"></span>Developer Tool</span>
-            <span class="demo-pill">Demo</span>
-          </div>
-          <div class="project-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3"/><path d="M12 15h5"/></svg>
-          </div>
-          <h2>Monolith CLI</h2>
-          <p class="project-desc">
-            Zero-dependency build orchestrator for unified TypeScript
-            workspaces. Eliminates recursive npm dependency trees with
-            single binary execution.
-          </p>
-          <div class="project-foot">
-            <span class="demo-note">Demo concept — not a shipped product.</span>
+        <article class="project-card brew reveal" data-category="web" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">B&amp;B</span></div>
+          <div class="body">
+            <h3>Brew &amp; Bean Cafe</h3>
+            <span class="tag">Web · Assignment project — fully working end to end</span>
+            <p>An animated cafe site with a menu and cart — your order is sent straight to the cafe as a WhatsApp message.</p>
+            <ul>
+              <li>Menu and cart</li>
+              <li>Order sent as a WhatsApp message</li>
+              <li>Fully animated</li>
+            </ul>
+            <a class="link" href="https://brew-and-bean-cafe-nadeemassignment.lovable.app/">Live site →</a>
           </div>
         </article>
 
-        <article class="project-card project-card--last" data-category="tools">
-          <div class="project-top-row">
-            <span class="project-cat"><span class="project-dot" style="background: #e11d48;"></span>Developer Tool</span>
-            <span class="demo-pill">Demo</span>
+        <article class="project-card demo reveal" data-category="tools" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">Ae</span></div>
+          <div class="body">
+            <h3>Aetheria Engine</h3>
+            <span class="tag">Demo concept — not a shipped product.</span>
+            <p>A concept demo exploring an engine-style interface.</p>
           </div>
-          <div class="project-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5z"/></svg>
+        </article>
+
+        <article class="project-card demo reveal" data-category="tools" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">Ds</span></div>
+          <div class="body">
+            <h3>DocuSense</h3>
+            <span class="tag">Demo concept — not a shipped product.</span>
+            <p>A concept demo for making sense of documents.</p>
           </div>
-          <h2>PaperCraft UI</h2>
-          <p class="project-desc">
-            Quiet, editorial design token compiler for Astro and semantic
-            web documents. Replaces bloated CSS runtimes with pure
-            typography metrics.
-          </p>
-          <div class="project-foot">
-            <span class="demo-note">Demo concept — not a shipped product.</span>
+        </article>
+
+        <article class="project-card demo reveal" data-category="tools" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">Mc</span></div>
+          <div class="body">
+            <h3>Monolith CLI</h3>
+            <span class="tag">Demo concept — not a shipped product.</span>
+            <p>A concept demo for a command-line tool.</p>
+          </div>
+        </article>
+
+        <article class="project-card demo reveal" data-category="tools" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">Pc</span></div>
+          <div class="body">
+            <h3>PaperCraft UI</h3>
+            <span class="tag">Demo concept — not a shipped product.</span>
+            <p>A concept demo for a paper-inspired interface.</p>
           </div>
         </article>
       </div>
@@ -178,7 +157,6 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     (function () {
       var buttons = document.querySelectorAll('.filter-btn');
       var cards = document.querySelectorAll('.project-card');
-      var grid = document.querySelector('.works-grid');
       buttons.forEach(function (btn) {
         btn.addEventListener('click', function () {
           buttons.forEach(function (b) {
@@ -192,7 +170,6 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
             var show = filter === 'all' || card.getAttribute('data-category') === filter;
             card.classList.toggle('is-hidden', !show);
           });
-          grid.classList.toggle('is-all', filter === 'all');
         });
       });
     })();

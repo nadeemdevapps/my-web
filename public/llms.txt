@@ -16,6 +16,9 @@
 - [Kaizenly About](https://nadeemdevapps.github.io/my-web/products/kaizenly/about/)
 - [Kaizenly Download](https://nadeemdevapps.github.io/my-web/products/kaizenly/download/)
 - [MsgLoop](https://nadeemdevapps.github.io/my-web/products/msgloop/): a WhatsApp sender for Android. Send one message many times, now or on a schedule. Local-first, no account, no server.
+- [CV Creator Pro](https://resumemagicmaker.lovable.app/): a one-page CV maker that runs entirely in the browser — fill it in, pick a look, download a clean A4 PDF.
+- Nydrex Suite: an Electron desktop suite for retail — point of sale and inventory, with customer and supplier ledgers and reporting. Windows desktop app, no live site.
+- [Brew & Bean Cafe](https://brew-and-bean-cafe-nadeemassignment.lovable.app/): an animated cafe site with a menu and cart — orders are sent to the cafe as a WhatsApp message. An assignment project, fully working end to end.
 
 ## Pages
 

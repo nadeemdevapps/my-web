@@ -4,7 +4,7 @@
 
 This file is the full-text companion to [llms.txt](https://nadeemdevapps.github.io/my-web/llms.txt). It contains the full text of every page on this site, in reading order, so an AI system can read the whole site in a single request instead of crawling page by page. The text here matches the live pages; the legal pages at the end are summarized with links to the full text.
 
-Contents: [Home](https://nadeemdevapps.github.io/my-web/) · [About](https://nadeemdevapps.github.io/my-web/about/) · [Products](https://nadeemdevapps.github.io/my-web/products/) · [Tsumly](https://nadeemdevapps.github.io/my-web/products/tsumly/) · [Kaizenly](https://nadeemdevapps.github.io/my-web/products/kaizenly/) · [MsgLoop](https://nadeemdevapps.github.io/my-web/products/msgloop/) · [Contact](https://nadeemdevapps.github.io/my-web/contact/) · [Legal pages](#legal-pages)
+Contents: [Home](https://nadeemdevapps.github.io/my-web/) · [About](https://nadeemdevapps.github.io/my-web/about/) · [Products](https://nadeemdevapps.github.io/my-web/products/) · [Tsumly](https://nadeemdevapps.github.io/my-web/products/tsumly/) · [Kaizenly](https://nadeemdevapps.github.io/my-web/products/kaizenly/) · [MsgLoop](https://nadeemdevapps.github.io/my-web/products/msgloop/) · [CV Creator Pro](https://resumemagicmaker.lovable.app/) · [Brew & Bean Cafe](https://brew-and-bean-cafe-nadeemassignment.lovable.app/) · [Contact](https://nadeemdevapps.github.io/my-web/contact/) · [Legal pages](#legal-pages)
 
 ---
 
@@ -12,16 +12,18 @@ Contents: [Home](https://nadeemdevapps.github.io/my-web/) · [About](https://nad
 
 https://nadeemdevapps.github.io/my-web/
 
-# I'm Nadeem Mazhar — I build apps and websites for real life.
+# Nadeem Mazhar
 
-Solo developer. I plan, design, and ship websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs — with AI doing the heavy lifting under my direction.
+Solo developer. I plan first, then build with AI — phase by phase, tested.
 
-- **Websites, apps & backends** — Websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs.
-- **3 products** — Tsumly, Kaizenly, and MsgLoop — each one built to solve a problem of my own.
-- **Local-first** — No accounts, no servers, no tracking, no ads — your data stays on your device.
-- **Solo, with AI** — I plan, design, and direct; AI does the heavy lifting — every line reviewed by me.
+Six shipped products, built for real problems I had myself.
 
-## Featured Flagships
+- **See the work** — [Products](https://nadeemdevapps.github.io/my-web/products/)
+- **Open to internships** — [Contact](https://nadeemdevapps.github.io/my-web/contact/)
+
+AI-first building · Strategic planning · Phased implementation · Learning in public · Experiments
+
+## Selected work
 
 ### Tsumly
 
@@ -47,32 +49,31 @@ A **WhatsApp sender for Android** — one message, sent many times, right now or
 - **A queue that survives anything** — tasks live on the phone, through restarts and app kills.
 - **Private by design** — no account, no server, no tracking.
 
-## Planning, design, and shipping — with AI.
+### CV Creator Pro
 
-I explore a problem until I understand it, then plan, design, and ship the answer — **websites, Windows apps, Android apps, and backends**, local-first or cloud, whichever the project needs — with **AI tools doing the heavy lifting** under my direction. The apps I ship are **local-first by design**: no accounts, no tracking, no ads.
+A **one-page CV maker in the browser** — fill it in, pick a look, download a clean A4 PDF. No account, no signup, no install.
 
-- **Exploration** — I research what's out there, what fails, and what's missing before I build anything.
-- **AI-assisted development** — I direct the build and review every step; AI writes the bulk of the code, I own the decisions.
-- **UI design** — interfaces I design myself: clean, calm, and built to be used every day.
-- **Planning & brainstorming** — documentation and a clear plan come before the first line of code.
-- **Problem-solving** — the hard part isn't the code, it's finding the right shape for the answer.
-- **Security analysis** — I follow security protocols properly, with AI help, on every build.
+- **In-browser, private** — your CV never leaves your device.
+- **Live preview** — see the page exactly as the PDF comes out.
+- **A4 PDF download** — clean, printable, ready to send.
 
-## Software that respects human attention is an ethical obligation.
+### Nydrex Suite
 
-No noise, no pressure, no guilt. Every app I build is designed to serve you, then get out of the way.
+An **Electron desktop suite for retail** — point of sale and inventory, with customer and supplier ledgers and reporting. Windows desktop app.
 
-## What I stand for
+- **Point of sale and inventory** — sales, stock, and suppliers in one place.
+- **Ledgers** — customer and supplier accounts, tracked properly.
+- **Reporting** — the numbers behind the shop, readable at a glance.
 
-Three rules govern everything I ship — every app, every page.
+### Brew & Bean Cafe
 
-- **One problem, solved well** — Each app does a single job properly instead of ten things halfway. If it needs a second job, it becomes a second app.
-- **Private by default** — No accounts, no tracking, no ads. Your data stays on your device; backups go to your own storage, when you choose.
-- **Calm, not pushy** — No pressure, no perfectionism, no guilt-driven productivity. I build steadily and let the work speak for itself.
+An **animated cafe site with a menu and cart** — orders are sent to the cafe as a WhatsApp message. An assignment project, fully working end to end.
 
-## A solo developer, building for himself first.
+- **Menu and cart** — browse, add, order.
+- **WhatsApp order flow** — the order lands as a message, ready to confirm.
+- **Animated and responsive** — built to feel like a real cafe site.
 
-I'm Nadeem Mazhar, a solo developer. I build the tools I wish existed — planned, documented, reviewed, and shipped. Tsumly and Kaizenly started as personal problems: a ledger that never added up, a phone that never stayed quiet. They ship when they work in daily use, not before.
+I build for myself first — the rest of the work is on the [About page](https://nadeemdevapps.github.io/my-web/about/).
 
 ---
 
@@ -80,31 +81,47 @@ I'm Nadeem Mazhar, a solo developer. I build the tools I wish existed — planne
 
 https://nadeemdevapps.github.io/my-web/about/
 
-# I'm Nadeem Mazhar.
+# About
 
-Nadeem Dev Apps is my **one-developer studio**. I'm a **solo developer** — no partner, no team — I plan, design, and ship **websites, Windows apps, Android apps, and backends**, with AI tools doing the heavy lifting under my direction. Tsumly and Kaizenly started as my own problems, and they ship only when they work in daily use.
+## I learn breadth-first
 
-## A solo developer, building for himself first.
+**Matriculation (Biology) — Board of Intermediate and Secondary Education (BISE) Bahawalpur — 1018/1200 (~84%)**
 
-I'm a **solo developer** — no partners, no team. I work the way a one-person studio should: I **plan** the product, **design** the interface, **direct** the build, and **review** everything before it ships. AI tools do the heavy lifting; the decisions are mine.
+Biology was chosen on purpose: a little knowledge of every field makes targeted research easy when you need the detail. I've been using a laptop since **grade 3**.
 
-I'm still learning some languages, and I know the basics of others — but the job was never typing syntax by hand. The job is **exploration, working with AI, UI design, planning, brainstorming, problem-solving, and security analysis** — and that's where I'm strong. I ship real products by combining my judgment with the best tools available.
+**UK Level 3 Extended Diploma in IT & Cyber Security — Qualifi (UK) — Superior International Colleges, Rahim Yar Khan — 3rd semester, research internship next**
 
-The apps on this site are **local-first by design** — no account, no server, no ads — because that's the right call for a personal tool. It's a choice, not a limitation: I also build **websites, Windows apps, Android apps, backends, and cloud-based apps** — whichever the project needs.
+The diploma covers 18 units across the semesters, and finishes with a research-based internship.
 
-Everything I make is **free to use right now**.
+18 units (each 10 credits): EUS309 English for University Studies; CCSU310 Communication and Cultural Skills for University; BM301 An Introduction to the Business Environment; BM302 Business Resources; BM303 An Introduction to Marketing; BM304 Human Resource Management; IT301 Computer Systems; IT302 Coding and Website Development; IT303 Networks; IT304 Mobile Communications; IT305 Cyber Security; IT306 Social Media for Business; T/617/1163 Threat and Risk: Expecting the Unexpected; F/617/1165 Network Architecture: Communications and Protocols; J/617/1166 Mobile Device and Data Risks; R/617/1168 Investigations and Incident Response; R/617/1171 Solutions: Future-proofing Your Business; Y/617/1172 EU GDPR and Data Security.
 
-## One problem, solved well.
+## The plan is the skill
 
-- **One problem, solved well** — each app does a single job properly instead of ten things halfway. If it needs a second job, it becomes a second app.
-- **Private by default** — no accounts, no tracking, no ads. Your data stays on your device; backups go to your own storage, when you choose.
-- **Calm, not pushy** — that's how I work and communicate: no pressure, no perfectionism, no guilt-driven productivity. I build steadily and let the work speak for itself.
+Anyone can get AI to write code. The difference is the process: a PRD, a design doc, clear goals — then phases, built one by one, each one tested before the next starts.
 
-## Ship only what works.
+PRD → Design doc → Goals → Phases → Tested, one by one.
 
-- **Built for myself first** — every app starts as my own problem. Tsumly and Kaizenly earned their place by working in daily use.
-- **Shipped when it works** — features land after real daily use, not after a roadmap date. What you see in Tsumly and Kaizenly is what is actually running on the developer's own phone.
-- **Honest copy** — no fake badges, ratings, or reviews. A download button, a Play Store badge, or a rating appears only when it is real.
+I don't claim deep mastery of any one language — AI writes the code; I own the plan, the design, and the testing.
+
+## AI-first, every day
+
+My daily toolkit spans the whole AI landscape — and **OpenCode** is my primary agent CLI: multi-model, and friendly to a student budget.
+
+Muse · Lovable · Stitch · ChatGPT · Gemini · Claude · Kimi · Minimax · DeepSeek · Perplexity · OpenCode
+
+I follow new AI launches closely and experiment with new tools and techniques as they land — currently studying and implementing through reverse-engineering existing products. Two I'm following right now: [Pomelli](https://labs.google.com/pomelli/about/), Google Labs' tool that generates on-brand content, and [REA — Reverse Engineer Anything](https://github.com/morluto/rea), an MCP that lets an agent inspect an app's behaviour down to the binary.
+
+## Self-taught, doubt-free
+
+Most of what I know is self-education: research until a doubt is actually cleared — mine, and other people's too. I've been **Class Representative since grade 3**, which is mostly that: hearing questions and finding answers.
+
+Along the way I also picked up **accounting basics** — assets, liabilities, debits and credits, debtors, creditors, and the accounting equation.
+
+## Why I build
+
+I build for myself first. If a paid feature costs nothing to run — no server — it should be free.
+
+That's why my finance app exists: the features I needed were paywalled elsewhere, so I built my own — and why Kaizenly has no premium tier at all.
 
 ## Questions, answered.
 
@@ -138,40 +155,84 @@ You can reach Nadeem at nadeem.devapps@gmail.com, or find his work on GitHub at 
 
 Learn more about [Tsumly](https://nadeemdevapps.github.io/my-web/products/tsumly/), [Kaizenly](https://nadeemdevapps.github.io/my-web/products/kaizenly/), and [MsgLoop](https://nadeemdevapps.github.io/my-web/products/msgloop/) — or [get in touch](https://nadeemdevapps.github.io/my-web/contact/).
 
-## Say hello.
-
-Questions, feedback, or just want to say hi? Reach me at nadeem.devapps@gmail.com.
-
 ---
 
 ## Products
 
 https://nadeemdevapps.github.io/my-web/products/
 
-# Selected Works & Architecture
+# Selected work
 
-Three products I ship, and four demo concepts listed for now. The live products each have their own site inside this one — pick one to explore its architectural specs, offline storage layer, or interactive demo.
+10 projects — 6 shipped products, 4 demo concepts.
 
-Total systems: 7 — 3 shipped, 4 lab. Architectural spec: 100% local-first & zero bloat.
+Filters: All projects (10) · Mobile & Native (3) · Web (2) · Desktop (1) · Developer Tools (4).
 
-### Tsumly (Mobile & Native)
+### Tsumly (Android · Finance)
 
-A **local-first money ledger** — every amount adds up. Track expenses and loans on your own device, with an optional **encrypted Google Drive backup**.
+A local-first expense tracker with a smart multi-loan repayment split — the finance app I needed, built for myself.
 
-### Kaizenly (Mobile & Native)
+- Local-first, no cloud needed
+- Smart multi-loan repayment split
+- Optional Drive backup
 
-A **strict, local-first focus guard** — timed sessions that keep distracting apps shut when it matters.
+[Open Tsumly's site](https://nadeemdevapps.github.io/my-web/products/tsumly/)
 
-### MsgLoop (Mobile & Native)
+### Kaizenly (Android · Focus)
 
-A **WhatsApp sender for Android** — one message, sent many times, right now or on a schedule.
+A free phone blocker that helps you stay off distracting apps — every feature free, no premium tier.
 
-### Demo concepts (listed for now, not shipped products)
+- Parachute streaks
+- Routines
+- Free, no premium
 
-- **Aetheria Engine** (Developer Tool) — lightweight static site compiler and embedded semantic vector indexing engine built for content vaults and technical monographs.
-- **DocuSense** (Web Application) — privacy-first document intelligence with local browser-side LLM inference. Ingests research PDFs without transferring byte data to remote clouds.
-- **Monolith CLI** (Developer Tool) — zero-dependency build orchestrator for unified TypeScript workspaces. Eliminates recursive npm dependency trees with single binary execution.
-- **PaperCraft UI** (Developer Tool) — quiet, editorial design token compiler for Astro and semantic web documents. Replaces bloated CSS runtimes with pure typography metrics.
+[Open Kaizenly's site](https://nadeemdevapps.github.io/my-web/products/kaizenly/)
+
+### MsgLoop (Android · Messaging)
+
+A WhatsApp scheduled multi-message loop — send a set of messages to one number, up to 2,000 sends, on schedule.
+
+- Multi-message loop to one number
+- Scheduled tasks
+- Resume from Recents
+
+[Open MsgLoop's site](https://nadeemdevapps.github.io/my-web/products/msgloop/)
+
+### CV Creator Pro (Web · Tool)
+
+A one-page CV maker that runs entirely in the browser — fill it in, pick a look, download a clean A4 PDF.
+
+- Pick theme and template
+- One-page A4 PDF download
+- Runs fully in the browser
+
+[Live site](https://resumemagicmaker.lovable.app/)
+
+### Nydrex Suite (Desktop · Retail)
+
+An Electron desktop suite for retail — point of sale and inventory, with customer and supplier ledgers and reporting.
+
+- Checkout and inventory
+- Customer and supplier ledgers
+- Reporting and encrypted backup
+
+Windows desktop app — no live site.
+
+### Brew & Bean Cafe (Web · Assignment project — fully working end to end)
+
+An animated cafe site with a menu and cart — your order is sent straight to the cafe as a WhatsApp message.
+
+- Menu and cart
+- Order sent as a WhatsApp message
+- Fully animated
+
+[Live site](https://brew-and-bean-cafe-nadeemassignment.lovable.app/)
+
+### Demo concepts — not shipped products
+
+- **Aetheria Engine** — a concept demo exploring an engine-style interface.
+- **DocuSense** — a concept demo for making sense of documents.
+- **Monolith CLI** — a concept demo for a command-line tool.
+- **PaperCraft UI** — a concept demo for a paper-inspired interface.
 
 ---
 
@@ -360,16 +421,22 @@ MsgLoop was built by **Nadeem Mazhar**, a solo developer, as part of Nadeem Dev 
 
 https://nadeemdevapps.github.io/my-web/contact/
 
-# Talk to me.
+# Open to internships
+
+I'm looking for an internship where I can plan, build, and learn in a real team — in tech, or in the numbers side of a business.
+
+Software house · Bank · Company · Bookkeeping
+
+- **Email** — nadeem.devapps@gmail.com
+- **GitHub** — https://github.com/nadeemdevapps
+
+## Write to me.
 
 I read every message myself. Write about an app — a bug, a feature idea, or something that didn't work the way you expected — or about a website or app you'd like built.
 
 Send a message below and it will open in your mail app, ready to send.
 
 The contact form asks for your name, your email, and a message, and sends it via email. There is no backend: the form composes a mailto link and opens your own mail app, with the message ready to send.
-
-- **Email** — For support, feedback, and everything else: nadeem.devapps@gmail.com
-- **GitHub** — The public website repo and the developer's other public work: https://github.com/nadeemdevapps
 
 ---
 
@@ -417,10 +484,10 @@ MsgLoop is a WhatsApp sender, provided as-is: it sends one message many times, n
 
 https://nadeemdevapps.github.io/my-web/privacy/
 
-This website collects no personal data: it is a static site with no analytics, no advertising, no tracking scripts, no cookies, and no accounts. A light/dark theme choice is saved in the visitor's own browser only. The site loads the EB Garamond and Inter fonts from Google Fonts — the only third-party request it makes. Emailing the contact address shares only what the sender writes, used only to reply. Questions: nadeem.devapps@gmail.com.
+This website collects no personal data: it is a static site with no analytics, no advertising, no tracking scripts, no cookies, and no accounts. A light/dark theme choice is saved in the visitor's own browser only. The site loads the Bricolage Grotesque and Inter fonts from Google Fonts — the only third-party request it makes. Emailing the contact address shares only what the sender writes, used only to reply. Questions: nadeem.devapps@gmail.com.
 
 ### Terms of Use (website)
 
 https://nadeemdevapps.github.io/my-web/terms/
 
-These terms cover the Nadeem Dev Apps website, a portfolio and product site for Tsumly, Kaizenly, and MsgLoop; the apps themselves have their own terms on their product pages. The site's text, design, and logo belong to Nadeem Dev Apps — pages may be linked to and quoted fairly, with credit. The site is provided "as is" and "as available", without warranties. Questions: nadeem.devapps@gmail.com.
+These terms cover the Nadeem Dev Apps website, a portfolio and product site for Tsumly, Kaizenly, MsgLoop, CV Creator Pro, Nydrex Suite, and Brew & Bean Cafe; the apps themselves have their own terms on their product pages. The site's text, design, and logo belong to Nadeem Dev Apps — pages may be linked to and quoted fairly, with credit. The site is provided "as is" and "as available", without warranties. Questions: nadeem.devapps@gmail.com.
