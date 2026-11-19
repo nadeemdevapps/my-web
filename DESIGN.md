@@ -294,6 +294,8 @@ components:
     padding: "{spacing.xxl}"
     # Minimal centred footer: brand line, GitHub link, "© 2026 Nadeem Dev
     # Apps". No link columns, no mail pill, no "Built with Astro" line.
+    # Below, a giant outlined "NADEEM" wordmark (Bricolage 800, ~19vw);
+    # hovering a letter turns it blue with a hatch fill + anchor points.
   toast:
     backgroundColor: "{colors.surface-elevated}"
     textColor: "{colors.ink}"
@@ -550,7 +552,7 @@ The site uses no photography — it is a content-and-type site. Card visuals are
 
 **`wordmark`** — The "Nadeem Dev Apps" text lockup, used with the logo mark in the nav bar and footer. Bricolage Grotesque 700, `{colors.ink}`, negative tracking −0.025em.
 
-**`logo`** — "Stack in a pill": three stacked bars inside a rounded frame (14px corner radius). A monochrome line mark, ink-tinted and theme-reactive (currentColor), reading at 20–28px and as a favicon. No colour except the sticker palette in decorative use only. The favicon is a filled-tile variant: an ink tile with canvas bars. Files: `src/components/Logo.astro`, `public/logo.svg`, `public/favicon.svg`. The mark appears in the favicon and structured data, not in the nav or footer.
+**`logo`** — "Playful Steps": three ascending rounded squares (blue #0075de, purple #6C4DE6, amber #F2A81D). Files: `src/components/Logo.astro`, `public/logo.svg`, `public/favicon.svg`. The favicon is a cream-tile variant (warm paper #f2efe9 tile, no black). The mark appears in the favicon and structured data, not in the nav or footer.
 
 ### Buttons
 
@@ -600,7 +602,7 @@ The site uses no photography — it is a content-and-type site. Card visuals are
 
 **`cta-card`** — The internships call-to-action. A dark card (inverted in dark theme) with purple and blue glow blobs, oversized Bricolage headline, areas line, and mailto + GitHub buttons. Lives on Contact.
 
-**`footer`** — Site footer. Minimal and centred: the brand line in Bricolage 700, a GitHub link, and "© 2026 Nadeem Dev Apps" — `{colors.ink-secondary}` link text at `{typography.caption}`, padding `{spacing.xxl}`. No link columns, no mail pill, no "Built with Astro" line.
+**`footer`** — Site footer. Minimal and centred: the brand line in Bricolage 700, a GitHub link, and "© 2026 Nadeem Dev Apps" — `{colors.ink-secondary}` link text at `{typography.caption}`, padding `{spacing.xxl}`. No link columns, no mail pill, no "Built with Astro" line. Below the minimal lines, a giant outlined "NADEEM" wordmark spans the footer (Bricolage 800, ~19vw, outlined ink at low opacity); hovering a letter turns its outline blue, fills it with a blue diagonal hatch, and shows its anchor points (OpenCode-style).
 
 ## Core Pages
 

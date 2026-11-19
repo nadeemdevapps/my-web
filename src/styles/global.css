@@ -857,6 +857,51 @@ section { padding: var(--space-section) 0; }
 .site-footer a { color: var(--color-ink-secondary); }
 .site-footer a:hover { color: var(--color-primary); }
 
+/* Footer wordmark — giant outlined NADEEM, OpenCode-style hover:
+   each letter lights up blue with a hatch fill and anchor points. */
+.foot-wordmark {
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(72px, 19vw, 280px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-top: 48px;
+  user-select: none;
+}
+.foot-letter {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--color-ink);
+  opacity: 0.28;
+  transition: opacity 0.25s ease, -webkit-text-stroke-color 0.25s ease;
+}
+.foot-letter:hover {
+  opacity: 1;
+  -webkit-text-stroke-color: var(--color-primary);
+  background: repeating-linear-gradient(45deg, rgba(0, 117, 222, 0.22) 0 1.5px, transparent 1.5px 7px);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.foot-letter .pt {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: var(--color-canvas);
+  border: 1.5px solid var(--color-primary);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.foot-letter:hover .pt { opacity: 1; }
+.foot-letter .pt.tl { top: 0; left: 0; transform: translate(-50%, -50%); }
+.foot-letter .pt.tr { top: 0; left: 100%; transform: translate(-50%, -50%); }
+.foot-letter .pt.bl { top: 100%; left: 0; transform: translate(-50%, -50%); }
+.foot-letter .pt.br { top: 100%; left: 100%; transform: translate(-50%, -50%); }
+
 /* Contact form */
 .contact-form { margin-bottom: var(--space-xxl); }
 .contact-form .field { margin-bottom: var(--space-md); }
