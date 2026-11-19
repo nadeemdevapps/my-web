@@ -551,7 +551,7 @@ The site uses no photography — it is a content-and-type site. Card visuals are
 
 ### Navigation
 
-**`nav-bar`** — Top navigation. A floating pill bar, fixed 18px from the top and centred, `rgba` surface background with a 14px backdrop blur, hairline border, pill radius, and the soft shadow. Four plain links (`Home / Work / About / Contact`) plus a sun/moon theme toggle after a divider — no wordmark, no hamburger, no active-page pill. The toggle flips `data-theme` and saves the choice to localStorage (`nda-theme`); the head script applies the saved choice before first paint. The pill stays visible at every width; link padding shrinks slightly on small screens.
+**`nav-bar`** — Top navigation. A floating pill bar, fixed 18px from the top and centred, `rgba` surface background with a 14px backdrop blur, hairline border, pill radius, and the soft shadow. Four plain links (`Home / Work / About / Contact`) plus a sun/moon theme toggle after a divider — no wordmark, no hamburger, no active-page pill. Hover on a nav link or the toggle fills the pill with the brand blue (`{colors.primary}`) and white text (user pick, 2026-11-20). The toggle flips `data-theme` and saves the choice to localStorage (`nda-theme`); the head script applies the saved choice before first paint. The pill stays visible at every width; link padding shrinks slightly on small screens.
 
 **`wordmark`** — The "Nadeem Dev Apps" text lockup, used with the logo mark in the nav bar and footer. Bricolage Grotesque 700, `{colors.ink}`, negative tracking −0.025em.
 
