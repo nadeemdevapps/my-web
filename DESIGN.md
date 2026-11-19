@@ -7,7 +7,7 @@ description: Nadeem Dev Apps' design language for the nadeemdevapps.com website 
 # Structural palette — LIGHT theme. Only color values change between themes.
 # Every other token — typography, spacing, radius, components — is identical
 # across both. Dark theme is the design anchor: design against
-# dark first; the site defaults to light with a toggle + system preference.
+# dark first; the site defaults to light and follows the system preference.
 colors:
   primary: "#0075de"          # structural accent — blue (light)
   primary-active: "#005bab"   # pressed accent
@@ -188,15 +188,10 @@ components:
     textColor: "{colors.ink}"
     typography: "{typography.nav-link}"
     padding: "{spacing.md}"
-    # Pill nav: wordmark left, centred pill (Home/Products/About/Contact)
-    # on {colors.surface-highlight} with the active page as a surface pill,
-    # theme toggle + compact primary "Get in touch" CTA right;
-    # hamburger below 840px.
-  wordmark:
-    fontFamily: "EB Garamond, serif"
-    fontWeight: 400
-    letterSpacing: -0.5px
-    textColor: "{colors.ink}"
+    # Pill nav: a centred floating pill (Home/Work/About/Contact), links
+    # only — no wordmark, no theme toggle, no hamburger, no active-page
+    # pill. The pill stays visible at every width; links shrink slightly
+    # on small screens.
   button-primary:
     backgroundColor: "{colors.primary}"
     textColor: "{colors.on-primary}"
@@ -297,6 +292,8 @@ components:
     textColor: "{colors.ink-secondary}"
     typography: "{typography.caption}"
     padding: "{spacing.xxl}"
+    # Minimal centred footer: brand line, GitHub link, "© 2026 Nadeem Dev
+    # Apps". No link columns, no mail pill, no "Built with Astro" line.
   toast:
     backgroundColor: "{colors.surface-elevated}"
     textColor: "{colors.ink}"
@@ -359,7 +356,6 @@ components:
     files: src/components/Logo.astro (inline, theme-reactive),
       public/logo.svg (standalone mark), public/favicon.svg (filled-tile
       variant: ink tile, canvas bars)
-    wordmark: "{components.wordmark}"
 ---
 
 
@@ -373,7 +369,7 @@ The site ships in **two polarities** that share every non-color token:
 1. **Light theme** — the default. Warm paper canvas (`{colors.canvas}` — #f2efe9), near-black ink.
 2. **Dark theme** — the design anchor. Near-black canvas (`{colors.canvas}` — #171512), warm-white ink.
 
-The theme follows the system by default and can be set explicitly to Dark or Light via the toggle. The light theme must read as the **same product**, not a recolor — only palette values change between the two (`colors` vs `colors-dark`).
+The theme follows the system preference. The light theme must read as the **same product**, not a recolor — only palette values change between the two (`colors` vs `colors-dark`).
 
 Surfaces are defined by **hairlines and the faintest layered shadows** rather than heavy elevation. Cards round at 24px (`{rounded.card}`), marketing CTAs are fully pill-shaped (`{rounded.pill}`), utility buttons round tighter at 8px (`{rounded.sm}`), and inputs stay tight at 4px (`{rounded.xs}`). Spacing follows the web grid (8px base, 1120px container), not a phone rhythm.
 
@@ -385,7 +381,7 @@ Surfaces are defined by **hairlines and the faintest layered shadows** rather th
 - Two shipped polarities (dark anchor + light) that share all non-color tokens; only palette values differ.
 - Fully pill-shaped marketing CTAs contrasted with flat 24px cards and tight 4px inputs.
 - Elevation by hairline + barely-there layered shadow, never heavy drop-shadows.
-- A portfolio hero on the warm canvas — oversized name, drifting colour fields, grain (on Home, centred, no logo mark — the mark lives in the nav).
+- A portfolio hero on the warm canvas — oversized name, drifting colour fields, grain (on Home, centred, no logo mark).
 - Sticker palette as decoration only — small, playful, never structural.
 
 ## Colors
@@ -479,14 +475,14 @@ Whitespace is the primary grouping device. Sections are separated by large verti
 |---|---|---|
 | Wide | 1440px+ | Full multi-column grids, widest container |
 | Desktop | 1080–1300px | Standard centred container, 2-up card grids |
-| Tablet | 768–840px | Grids stay 2-up to 760px, then 1-up; nav begins condensing |
-| Mobile | ≤600px | Single-column stacks, hamburger nav, full-width CTAs |
+| Tablet | 768–840px | Grids stay 2-up to 760px, then 1-up; nav links shrink slightly |
+| Mobile | ≤600px | Single-column stacks, pill nav stays visible, full-width CTAs |
 
 #### Touch Targets
 Pill CTAs (`button-primary`, `button-secondary`) and utility buttons (`button-utility`) carry comfortable tap padding; aim for a 44×44px minimum hit area on mobile by preserving vertical padding even as labels shrink.
 
 #### Collapsing Strategy
-The top nav condenses to a hamburger below the tablet breakpoint; multi-column card grids collapse to a single stacked column; section padding tightens but the warm-canvas rhythm is preserved.
+The pill nav stays visible at every width (link padding shrinks on small screens); multi-column card grids collapse to a single stacked column; section padding tightens but the warm-canvas rhythm is preserved.
 
 #### Image Behavior
 Product screenshots and illustration tiles sit inside rounded `{rounded.md}` / `{rounded.xl}` frames and scale fluidly within their grid cell. Sticker illustrations are small fixed-scale decorative assets that re-flow but do not crop.
@@ -550,11 +546,11 @@ The site uses no photography — it is a content-and-type site. Card visuals are
 
 ### Navigation
 
-**`nav-bar`** — Top navigation. A floating pill bar, fixed 18px from the top and centred, `rgba` surface background with a 14px backdrop blur, hairline border, pill radius, and the soft shadow. Left wordmark (`{components.wordmark}`), centred pill nav (`Home / Work / About / Contact`, Contact as the accent CTA), right theme toggle. Condenses to a hamburger below 840px (pill nav hidden; links live in a dropdown panel under the pill).
+**`nav-bar`** — Top navigation. A floating pill bar, fixed 18px from the top and centred, `rgba` surface background with a 14px backdrop blur, hairline border, pill radius, and the soft shadow. Four plain links only (`Home / Work / About / Contact`) — no wordmark, no theme toggle, no hamburger, no active-page pill. The pill stays visible at every width; link padding shrinks slightly on small screens.
 
 **`wordmark`** — The "Nadeem Dev Apps" text lockup, used with the logo mark in the nav bar and footer. Bricolage Grotesque 700, `{colors.ink}`, negative tracking −0.025em.
 
-**`logo`** — "Stack in a pill": three stacked bars inside a rounded frame (14px corner radius). A monochrome line mark, ink-tinted and theme-reactive (currentColor), reading at 20–28px and as a favicon. No colour except the sticker palette in decorative use only. The favicon is a filled-tile variant: an ink tile with canvas bars. Files: `src/components/Logo.astro`, `public/logo.svg`, `public/favicon.svg`.
+**`logo`** — "Stack in a pill": three stacked bars inside a rounded frame (14px corner radius). A monochrome line mark, ink-tinted and theme-reactive (currentColor), reading at 20–28px and as a favicon. No colour except the sticker palette in decorative use only. The favicon is a filled-tile variant: an ink tile with canvas bars. Files: `src/components/Logo.astro`, `public/logo.svg`, `public/favicon.svg`. The mark appears in the favicon and structured data, not in the nav or footer.
 
 ### Buttons
 
@@ -604,14 +600,14 @@ The site uses no photography — it is a content-and-type site. Card visuals are
 
 **`cta-card`** — The internships call-to-action. A dark card (inverted in dark theme) with purple and blue glow blobs, oversized Bricolage headline, areas line, and mailto + GitHub buttons. Lives on Contact.
 
-**`footer`** — Site footer. Warm `{colors.canvas}` band, `{colors.ink-secondary}` link text at `{typography.caption}`, padding `{spacing.xxl}`. Brand column (wordmark, tagline, mailto pill with the real contact email) + four link columns — Products, Site, Machine (llms.txt / robots.txt / sitemap.xml), Legal — closing every page. Bottom row: "© 2026 Nadeem Dev Apps — Built with Astro." with GitHub + Back to top links. Five-column grid collapses to two columns (brand full-width) at ≤1080px.
+**`footer`** — Site footer. Minimal and centred: the brand line in Bricolage 700, a GitHub link, and "© 2026 Nadeem Dev Apps" — `{colors.ink-secondary}` link text at `{typography.caption}`, padding `{spacing.xxl}`. No link columns, no mail pill, no "Built with Astro" line.
 
 ## Core Pages
 
-- **Home**: portfolio hero (oversized name, drifting colour fields, grain, intro + two CTAs), marquee strip, Selected work preview (the 6 shipped products, 2-column grid), the "I build for myself first" line with a link to About, and the footer.
-- **Products** (index): Selected work — heading + "10 projects — 6 shipped products, 4 demo concepts" count, filter pills (All 10 / Mobile & Native 3 / Web 2 / Desktop 1 / Developer Tools 4), and a 2-column project grid (1 col mobile). Each card: CSS colour-field visual with a Bricolage glyph, name, tag, one short description, bullet points, and a link — live products link to their dedicated site, demo concepts carry "Demo concept — not a shipped product." and no link. No tech tags on cards. Filters work (small page-scoped script; without JS all cards show).
+- **Home**: portfolio hero (oversized name, drifting colour fields, grain, intro + two CTAs), marquee strip, Selected work (all 10 projects — 6 shipped products + 4 demo concepts, 2-column grid), the "I build for myself first" line with a link to About, and the footer.
+- **Products** (index): Selected work — heading + "10 projects — 6 shipped products, 4 demo concepts" count, filter pills (All 10 / Mobile & Native 3 / Web 2 / Desktop 1 / Developer Tools 4), and a 2-column project grid (1 col mobile). Each card: CSS colour-field visual with a Bricolage glyph, name, tag, one short description, bullet points, and a link — live products link to their dedicated site, demo concepts carry "Demo concept — not a shipped product." and no link. No tech tags on cards. Filters work (small page-scoped script scoped to the works grid; without JS all cards show). Below the works grid, a Concepts section lists the 5 cleaned xyz concept sites (Tally Bar, Look Out Below, Stitch & Tan, ProductSite, Portfolio) as `project-card demo` tiles linking to `/concepts/<slug>/`; the filter pills do not touch them.
 - **Product sub-pages** (`/products/tsumly`, `/products/kaizenly`, `/products/msgloop`): Tsumly and Kaizenly are independent Astro projects merged into the main build; MsgLoop is a page in this repo. Each has its own overview, features, and `/privacy/` + `/terms/` pages. Product sub-pages inherit this system; a product's in-app brand does not recolour the page.
-- **About**: the portfolio story on a centred 760px column — education (Matriculation BISE Bahawalpur, UK Level 3 Diploma in IT & Cyber Security via Qualifi / Superior International Colleges, with a compact 18-unit list), the plan-first skill, the AI-first toolkit (OpenCode primary), self-education and doubts, and why he builds — then the FAQ.
+- **About**: the portfolio story on a centred 760px column — education (Matriculation BISE Bahawalpur, UK Level 3 Diploma in IT & Cyber Security via Qualifi / Superior International Colleges, with the full 18-unit list visible, each 10 credits), a "by the numbers" strip (18 units, 180 credits, 1018/1200 Matric, 6 shipped products), the plan-first skill, the AI-first toolkit (OpenCode primary; Pomelli and REA as unlinked chips), self-education and doubts, and why he builds. No FAQ, no photo, no timeline.
 - **Contact**: the "Open to internships" dark CTA card (areas: software house, bank, company, bookkeeping; mailto + GitHub buttons), then a mailto form (name, email, message — no backend). Errors via `{colors.danger}`, feedback via the toast bus.
 - **Privacy / Terms**: document pages — warm canvas, Bricolage headlines, Inter body, generous line-height.
 
@@ -636,7 +632,7 @@ The site is built for humans first and for AI agents, LLMs, and search second �
 
 - **Dark is the anchor.** Design against dark first; the light theme is the same product with palette values inverted in lightness.
 - **Only palette changes.** Spacing, type, radius, and components are identical across themes (`colors` vs `colors-dark`). Never branch layout or shape on theme.
-- **Theme source:** resolved from the toggle + system preference, defaulting to light. Every token reads the active palette, so theme flips re-colour the whole site without touching call sites.
+- **Theme source:** follows the system preference. Every token reads the active palette, so theme flips re-colour the whole site without touching call sites.
 
 ## Do's and Don'ts
 
@@ -650,7 +646,7 @@ The site is built for humans first and for AI agents, LLMs, and search second �
 - Keep marketing CTAs fully pill-shaped (`{rounded.pill}`) and cards flat at 12px (`{rounded.md}`) with a hairline border; utility buttons tighter at 8px (`{rounded.sm}`).
 - Use `{colors.danger}` only for destructive/error states; carry success/affirmative state with ink weight and iconography.
 - Use the toast bus for feedback, with specific, actionable messages.
-- Keep the hero light and quiet — one accent word, no dark bands; on Home the hero is centred with no logo mark (the mark lives in the nav).
+- Keep the hero light and quiet — one accent word, no dark bands; on Home the hero is centred with no logo mark.
 
 ### Don't
 - Don't introduce any chromatic brand colour into structure — there is no purple/coral/accent hue in layout, buttons, or borders; the structural accent is blue only, and purple lives only in the sticker palette.

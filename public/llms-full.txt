@@ -234,6 +234,16 @@ An animated cafe site with a menu and cart — your order is sent straight to th
 - **Monolith CLI** — a concept demo for a command-line tool.
 - **PaperCraft UI** — a concept demo for a paper-inspired interface.
 
+### Concepts
+
+5 concept demos — inspiration templates, cleaned and rebranded to Nadeem Dev Apps.
+
+- **Tally Bar** — a desk status display with an LED pixel screen and a focus timer. [Open the concept site](https://nadeemdevapps.github.io/my-web/concepts/tally-bar/)
+- **Look Out Below** — a tiny hand-drawn game about being small, quick and directly underneath a very clumsy sky. [Open the concept site](https://nadeemdevapps.github.io/my-web/concepts/look-out-below/)
+- **Stitch & Tan** — handmade leather pouches, cases and little things from a one-person studio, plus custom orders. [Open the concept site](https://nadeemdevapps.github.io/my-web/concepts/stitch-and-tan/)
+- **ProductSite** — a product site for a calm team workspace — plan, build and ship from one place. [Open the concept site](https://nadeemdevapps.github.io/my-web/concepts/product-site/)
+- **Portfolio** — a portfolio concept — oversized name, selected-work grid and case-study pages. [Open the concept site](https://nadeemdevapps.github.io/my-web/concepts/portfolio-concept/)
+
 ---
 
 ## Tsumly

@@ -6,16 +6,16 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 <BaseLayout
   title="Selected Works by Nadeem Mazhar"
-  description="Selected works by Nadeem Mazhar — 10 projects: 6 shipped products (Tsumly, Kaizenly, MsgLoop, CV Creator Pro, Nydrex Suite, Brew & Bean Cafe) and 4 demo concepts."
+  description="Selected works by Nadeem Mazhar — 10 projects: 6 shipped products (Tsumly, Kaizenly, MsgLoop, CV Creator Pro, Nydrex Suite, Brew & Bean Cafe) and 4 demo concepts, plus 5 concept demos."
 >
   <section class="page-top">
     <div class="wrap">
-      <div class="sec-head reveal">
+      <div class="sec-head">
         <h1 class="display">Selected work</h1>
         <p class="count">10 projects — 6 shipped products, 4 demo concepts</p>
       </div>
 
-      <div class="filter-row reveal" role="group" aria-label="Filter projects by category">
+      <div class="filter-row" role="group" aria-label="Filter projects by category">
         <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true"><span>All projects</span><span class="filter-badge">10</span></button>
         <button class="filter-btn" type="button" data-filter="mobile" aria-pressed="false"><span>Mobile &amp; Native</span><span class="filter-badge">3</span></button>
         <button class="filter-btn" type="button" data-filter="web" aria-pressed="false"><span>Web</span><span class="filter-badge">2</span></button>
@@ -23,8 +23,8 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
         <button class="filter-btn" type="button" data-filter="tools" aria-pressed="false"><span>Developer Tools</span><span class="filter-badge">4</span></button>
       </div>
 
-      <div class="works-grid">
-        <article class="project-card tsumly reveal" data-category="mobile" data-tilt>
+      <div class="works-grid" id="works-grid">
+        <article class="project-card tsumly" data-category="mobile" data-tilt>
           <div class="field-img" aria-hidden="true"><span class="glyph">Ts</span></div>
           <div class="body">
             <h3>Tsumly</h3>
@@ -39,7 +39,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
           </div>
         </article>
 
-        <article class="project-card kaizenly reveal" data-category="mobile" data-tilt>
+        <article class="project-card kaizenly" data-category="mobile" data-tilt>
           <div class="field-img" aria-hidden="true"><span class="glyph">K</span></div>
           <div class="body">
             <h3>Kaizenly</h3>
@@ -54,7 +54,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
           </div>
         </article>
 
-        <article class="project-card msgloop reveal" data-category="mobile" data-tilt>
+        <article class="project-card msgloop" data-category="mobile" data-tilt>
           <div class="field-img" aria-hidden="true"><span class="glyph">M↻</span></div>
           <div class="body">
             <h3>MsgLoop</h3>
@@ -69,7 +69,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
           </div>
         </article>
 
-        <article class="project-card cv reveal" data-category="web" data-tilt>
+        <article class="project-card cv" data-category="web" data-tilt>
           <div class="field-img" aria-hidden="true"><span class="glyph">CV</span></div>
           <div class="body">
             <h3>CV Creator Pro</h3>
@@ -84,7 +84,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
           </div>
         </article>
 
-        <article class="project-card nydrex reveal" data-category="desktop" data-tilt>
+        <article class="project-card nydrex" data-category="desktop" data-tilt>
           <div class="field-img" aria-hidden="true"><span class="glyph">Nx</span></div>
           <div class="body">
             <h3>Nydrex Suite</h3>
@@ -99,7 +99,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
           </div>
         </article>
 
-        <article class="project-card brew reveal" data-category="web" data-tilt>
+        <article class="project-card brew" data-category="web" data-tilt>
           <div class="field-img" aria-hidden="true"><span class="glyph">B&amp;B</span></div>
           <div class="body">
             <h3>Brew &amp; Bean Cafe</h3>
@@ -114,7 +114,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
           </div>
         </article>
 
-        <article class="project-card demo reveal" data-category="tools" data-tilt>
+        <article class="project-card demo" data-category="tools" data-tilt>
           <div class="field-img" aria-hidden="true"><span class="glyph">Ae</span></div>
           <div class="body">
             <h3>Aetheria Engine</h3>
@@ -123,7 +123,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
           </div>
         </article>
 
-        <article class="project-card demo reveal" data-category="tools" data-tilt>
+        <article class="project-card demo" data-category="tools" data-tilt>
           <div class="field-img" aria-hidden="true"><span class="glyph">Ds</span></div>
           <div class="body">
             <h3>DocuSense</h3>
@@ -132,7 +132,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
           </div>
         </article>
 
-        <article class="project-card demo reveal" data-category="tools" data-tilt>
+        <article class="project-card demo" data-category="tools" data-tilt>
           <div class="field-img" aria-hidden="true"><span class="glyph">Mc</span></div>
           <div class="body">
             <h3>Monolith CLI</h3>
@@ -141,12 +141,69 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
           </div>
         </article>
 
-        <article class="project-card demo reveal" data-category="tools" data-tilt>
+        <article class="project-card demo" data-category="tools" data-tilt>
           <div class="field-img" aria-hidden="true"><span class="glyph">Pc</span></div>
           <div class="body">
             <h3>PaperCraft UI</h3>
             <span class="tag">Demo concept — not a shipped product.</span>
             <p>A concept demo for a paper-inspired interface.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="sec-head concepts-head">
+        <h2 class="display">Concepts</h2>
+        <p class="count">5 concept demos — inspiration templates, cleaned and rebranded</p>
+      </div>
+
+      <div class="works-grid">
+        <article class="project-card demo" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">Tb</span></div>
+          <div class="body">
+            <h3>Tally Bar</h3>
+            <span class="tag">Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.</span>
+            <p>A desk status display with an LED pixel screen and a focus timer.</p>
+            <a class="link" href={`${base}concepts/tally-bar/`}>Open the concept site →</a>
+          </div>
+        </article>
+
+        <article class="project-card demo" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">Lo</span></div>
+          <div class="body">
+            <h3>Look Out Below</h3>
+            <span class="tag">Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.</span>
+            <p>A tiny hand-drawn game about being small, quick and directly underneath a very clumsy sky.</p>
+            <a class="link" href={`${base}concepts/look-out-below/`}>Open the concept site →</a>
+          </div>
+        </article>
+
+        <article class="project-card demo" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">St</span></div>
+          <div class="body">
+            <h3>Stitch &amp; Tan</h3>
+            <span class="tag">Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.</span>
+            <p>Handmade leather pouches, cases and little things from a one-person studio, plus custom orders.</p>
+            <a class="link" href={`${base}concepts/stitch-and-tan/`}>Open the concept site →</a>
+          </div>
+        </article>
+
+        <article class="project-card demo" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">Ps</span></div>
+          <div class="body">
+            <h3>ProductSite</h3>
+            <span class="tag">Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.</span>
+            <p>A product site for a calm team workspace — plan, build and ship from one place.</p>
+            <a class="link" href={`${base}concepts/product-site/`}>Open the concept site →</a>
+          </div>
+        </article>
+
+        <article class="project-card demo" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">Pf</span></div>
+          <div class="body">
+            <h3>Portfolio</h3>
+            <span class="tag">Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.</span>
+            <p>A portfolio concept — oversized name, selected-work grid and case-study pages.</p>
+            <a class="link" href={`${base}concepts/portfolio-concept/`}>Open the concept site →</a>
           </div>
         </article>
       </div>
@@ -156,7 +213,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   <script>
     (function () {
       var buttons = document.querySelectorAll('.filter-btn');
-      var cards = document.querySelectorAll('.project-card');
+      var cards = document.querySelectorAll('#works-grid .project-card');
       buttons.forEach(function (btn) {
         btn.addEventListener('click', function () {
           buttons.forEach(function (b) {
