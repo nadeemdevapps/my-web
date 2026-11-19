@@ -11,6 +11,7 @@ description: Nadeem Dev Apps' design language for the nadeemdevapps.com website 
 colors:
   primary: "#0075de"          # structural accent — blue (light)
   primary-active: "#005bab"   # pressed accent
+  link: "#005bab"             # link *text* blue — primary fails WCAG AA at 15px on card surfaces; link passes 4.5:1 everywhere (worst 5.36:1 on Tsumly lavender)
   on-primary: "#ffffff"       # text/glyph on the accent
   canvas: "#f2efe9"           # page background — warm paper
   surface: "#fbf9f5"          # card / panel / field surface
@@ -36,6 +37,7 @@ colors:
 colors-dark:
   primary: "#0075de"          # structural accent — blue (same on dark)
   primary-active: "#005bab"   # pressed accent
+  link: "#5ea3ec"             # link *text* blue on dark — passes 4.5:1 everywhere (worst 5.09:1 on dark Kaizenly green)
   on-primary: "#ffffff"
   canvas: "#171512"          # page background — near-black
   surface: "#211e1a"          # card / panel / field surface

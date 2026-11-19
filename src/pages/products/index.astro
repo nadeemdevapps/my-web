@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { projects } from '../../data/projects';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
@@ -24,131 +26,8 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
       </div>
 
       <div class="works-grid" id="works-grid">
-        <article class="project-card tsumly" data-category="mobile" data-tilt>
-          <div class="field-img" aria-hidden="true"><span class="glyph">Ts</span></div>
-          <div class="body">
-            <h3>Tsumly</h3>
-            <span class="tag">Android · Finance</span>
-            <p>A local-first expense tracker with a smart multi-loan repayment split — the finance app I needed, built for myself.</p>
-            <ul>
-              <li>Local-first, no cloud needed</li>
-              <li>Smart multi-loan repayment split</li>
-              <li>Optional Drive backup</li>
-            </ul>
-            <a class="link" href={`${base}products/tsumly/`}>Open Tsumly's site →</a>
-          </div>
-        </article>
-
-        <article class="project-card kaizenly" data-category="mobile" data-tilt>
-          <div class="field-img" aria-hidden="true"><span class="glyph">K</span></div>
-          <div class="body">
-            <h3>Kaizenly</h3>
-            <span class="tag">Android · Focus</span>
-            <p>A free phone blocker that helps you stay off distracting apps — every feature free, no premium tier.</p>
-            <ul>
-              <li>Parachute streaks</li>
-              <li>Routines</li>
-              <li>Free, no premium</li>
-            </ul>
-            <a class="link" href={`${base}products/kaizenly/`}>Open Kaizenly's site →</a>
-          </div>
-        </article>
-
-        <article class="project-card msgloop" data-category="mobile" data-tilt>
-          <div class="field-img" aria-hidden="true"><span class="glyph">M↻</span></div>
-          <div class="body">
-            <h3>MsgLoop</h3>
-            <span class="tag">Android · Messaging</span>
-            <p>A WhatsApp scheduled multi-message loop — send a set of messages to one number, up to 2,000 sends, on schedule.</p>
-            <ul>
-              <li>Multi-message loop to one number</li>
-              <li>Scheduled tasks</li>
-              <li>Resume from Recents</li>
-            </ul>
-            <a class="link" href={`${base}products/msgloop/`}>Open MsgLoop's site →</a>
-          </div>
-        </article>
-
-        <article class="project-card cv" data-category="web" data-tilt>
-          <div class="field-img" aria-hidden="true"><span class="glyph">CV</span></div>
-          <div class="body">
-            <h3>CV Creator Pro</h3>
-            <span class="tag">Web · Tool</span>
-            <p>A one-page CV maker that runs entirely in the browser — fill it in, pick a look, download a clean A4 PDF.</p>
-            <ul>
-              <li>Pick theme and template</li>
-              <li>One-page A4 PDF download</li>
-              <li>Runs fully in the browser</li>
-            </ul>
-            <a class="link" href="https://resumemagicmaker.lovable.app/">Live site →</a>
-          </div>
-        </article>
-
-        <article class="project-card nydrex" data-category="desktop" data-tilt>
-          <div class="field-img" aria-hidden="true"><span class="glyph">Nx</span></div>
-          <div class="body">
-            <h3>Nydrex Suite</h3>
-            <span class="tag">Desktop · Retail</span>
-            <p>An Electron desktop suite for retail — point of sale and inventory, with customer and supplier ledgers and reporting.</p>
-            <ul>
-              <li>Checkout and inventory</li>
-              <li>Customer and supplier ledgers</li>
-              <li>Reporting and encrypted backup</li>
-            </ul>
-            <span class="nolink">Windows desktop app</span>
-          </div>
-        </article>
-
-        <article class="project-card brew" data-category="web" data-tilt>
-          <div class="field-img" aria-hidden="true"><span class="glyph">B&amp;B</span></div>
-          <div class="body">
-            <h3>Brew &amp; Bean Cafe</h3>
-            <span class="tag">Web · Assignment project — fully working end to end</span>
-            <p>An animated cafe site with a menu and cart — your order is sent straight to the cafe as a WhatsApp message.</p>
-            <ul>
-              <li>Menu and cart</li>
-              <li>Order sent as a WhatsApp message</li>
-              <li>Fully animated</li>
-            </ul>
-            <a class="link" href="https://brew-and-bean-cafe-nadeemassignment.lovable.app/">Live site →</a>
-          </div>
-        </article>
-
-        <article class="project-card demo" data-category="tools" data-tilt>
-          <div class="field-img" aria-hidden="true"><span class="glyph">Ae</span></div>
-          <div class="body">
-            <h3>Aetheria Engine</h3>
-            <span class="tag">Demo concept — not a shipped product.</span>
-            <p>A concept demo exploring an engine-style interface.</p>
-          </div>
-        </article>
-
-        <article class="project-card demo" data-category="tools" data-tilt>
-          <div class="field-img" aria-hidden="true"><span class="glyph">Ds</span></div>
-          <div class="body">
-            <h3>DocuSense</h3>
-            <span class="tag">Demo concept — not a shipped product.</span>
-            <p>A concept demo for making sense of documents.</p>
-          </div>
-        </article>
-
-        <article class="project-card demo" data-category="tools" data-tilt>
-          <div class="field-img" aria-hidden="true"><span class="glyph">Mc</span></div>
-          <div class="body">
-            <h3>Monolith CLI</h3>
-            <span class="tag">Demo concept — not a shipped product.</span>
-            <p>A concept demo for a command-line tool.</p>
-          </div>
-        </article>
-
-        <article class="project-card demo" data-category="tools" data-tilt>
-          <div class="field-img" aria-hidden="true"><span class="glyph">Pc</span></div>
-          <div class="body">
-            <h3>PaperCraft UI</h3>
-            <span class="tag">Demo concept — not a shipped product.</span>
-            <p>A concept demo for a paper-inspired interface.</p>
-          </div>
-        </article>
+        {projects.map((project) => <ProjectCard project={project} withCategory />)}
+      </div>
       </div>
 
       <div class="sec-head concepts-head">

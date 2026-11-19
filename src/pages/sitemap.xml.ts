@@ -17,6 +17,7 @@ function fileToRoute(file: string): string | null {
   // file looks like './about.astro' or './products/tsumly.astro'
   let route = file.replace(/^\.\//, '').replace(/\.astro$/, '');
   if (route === '404') return null; // error page: never in a sitemap
+  if (route === 'index') return ''; // home page: '' (not 'index')
   if (route.endsWith('/index')) route = route.slice(0, -'/index'.length);
   return route; // '' for the home page, otherwise e.g. 'about', 'products/tsumly'
 }

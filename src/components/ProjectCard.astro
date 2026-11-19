@@ -1,0 +1,35 @@
+---
+import type { Project } from '../data/projects';
+
+interface Props {
+  project: Project;
+  /** Products page only: adds data-category for the filter. */
+  withCategory?: boolean;
+}
+
+const { project, withCategory = false } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const href = project.link
+  ? project.link.external
+    ? project.link.href
+    : `${base}${project.link.href}`
+  : null;
+---
+
+{/*
+  Spacing note: Astro collapses each whitespace-only text node to one
+  space in the built HTML, so the spaces between the card's parts are
+  written explicitly ({' '}) here. That keeps the built card HTML
+  byte-identical to the hand-written cards this component replaced.
+  The link label uses set:html because Astro escapes the apostrophe in
+  "Tsumly's site" to &#39; in expressions; the label is a static string
+  from our own data file, so this is safe.
+*/}
+<article class={`project-card ${project.theme}`} data-category={withCategory ? project.category : undefined} data-tilt>
+  <div class="field-img" aria-hidden="true"><span class="glyph">{project.glyph}</span></div>
+  <div class="body">
+    <h3>{project.name}</h3>
+    <span class="tag">{project.tag}</span>
+    <p>{project.description}</p>
+    {project.bullets && (<ul>{' '}{project.bullets.map((bullet, i) => (<><li>{bullet}</li>{i < project.bullets.length - 1 ? ' ' : ''}</>))}{' '}</ul>)}{project.link ? (<>{' '}<a class="link" href={href} set:html={project.link.label} />{' '}</>) : project.nolink ? (<>{' '}<span class="nolink">{project.nolink}</span>{' '}</>) : null}</div>
+</article>
