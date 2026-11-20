@@ -80,8 +80,9 @@ const links = [
   toggle?.addEventListener('click', () => {
     const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     root.setAttribute('data-theme', next);
+    root.setAttribute('data-theme-mode', next);
     try {
-      localStorage.setItem('kaizenly-theme', next);
+      localStorage.setItem('nda-theme', next);
     } catch (e) {}
   });
 

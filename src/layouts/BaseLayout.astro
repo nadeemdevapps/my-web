@@ -28,8 +28,11 @@ const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2efe9" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171512" />
+    <!-- One script-driven theme-color meta: the head theme script sets its
+         content to the effective theme before first paint, and the toggle
+         script updates it on every change. Media-driven metas cannot
+         follow a manual theme override, so they are not used. -->
+    <meta name="theme-color" content="#f2efe9" />
     <title>{title} — Nadeem Dev Apps</title>
     <meta name="description" content={description} />
     {!is404 && <link rel="canonical" href={canonical} />}
@@ -59,12 +62,32 @@ const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
       rel="stylesheet"
     />
     <script is:inline>
-      // Set the theme before first paint: saved choice, else system preference.
-      try {
-        const saved = localStorage.getItem('nda-theme');
-        const theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', theme);
-      } catch (e) {}
+      // Set the theme before first paint. The stored mode is 'light',
+      // 'dark' or 'system' under the shared key 'nda-theme' (same key as
+      // the Tsumly and Kaizenly sites); anything else falls back to
+      // system-following. data-theme is the effective theme,
+      // data-theme-mode the stored mode; the theme-color meta follows
+      // the effective theme.
+      (function () {
+        try {
+          var mq = window.matchMedia('(prefers-color-scheme: dark)');
+          var meta = document.querySelector('meta[name="theme-color"]');
+          function apply(mode) {
+            var theme =
+              mode === 'dark' ? 'dark' : mode === 'light' ? 'light' : mq.matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+            document.documentElement.setAttribute('data-theme-mode', mode);
+            if (meta) meta.setAttribute('content', theme === 'dark' ? '#171512' : '#f2efe9');
+          }
+          var saved = localStorage.getItem('nda-theme');
+          var mode =
+            saved === 'dark' || saved === 'light' || saved === 'system' ? saved : 'system';
+          apply(mode);
+          mq.addEventListener('change', function () {
+            if ((localStorage.getItem('nda-theme') || 'system') === 'system') apply('system');
+          });
+        } catch (e) {}
+      })();
     </script>
   </head>
   <body>
@@ -87,18 +110,43 @@ const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
     )}
 
     <script is:inline>
-      // Theme toggle: flip data-theme and remember the choice.
+      // Theme toggle: cycle light → dark → system and remember the choice
+      // under the shared key 'nda-theme' (same key as the Tsumly and
+      // Kaizenly sites). In system mode the effective theme follows the
+      // OS preference; the toggle icon always matches the effective theme.
       (function () {
         var btn = document.querySelector('.theme-toggle');
         if (!btn) return;
-        function label(theme) { return theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'; }
+        var order = ['light', 'dark', 'system'];
+        var meta = document.querySelector('meta[name="theme-color"]');
+        function label(mode) {
+          return mode === 'dark'
+            ? 'Switch to system theme'
+            : mode === 'system'
+              ? 'Switch to light theme'
+              : 'Switch to dark theme';
+        }
+        function apply(mode) {
+          var mq = window.matchMedia('(prefers-color-scheme: dark)');
+          var theme =
+            mode === 'dark' ? 'dark' : mode === 'light' ? 'light' : mq.matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', theme);
+          document.documentElement.setAttribute('data-theme-mode', mode);
+          if (meta) meta.setAttribute('content', theme === 'dark' ? '#171512' : '#f2efe9');
+          try {
+            localStorage.setItem('nda-theme', mode);
+          } catch (e) {}
+          btn.setAttribute('aria-label', label(mode));
+        }
         btn.addEventListener('click', function () {
-          var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-          document.documentElement.setAttribute('data-theme', next);
-          try { localStorage.setItem('nda-theme', next); } catch (e) {}
-          btn.setAttribute('aria-label', label(next));
+          var current = document.documentElement.getAttribute('data-theme-mode') || 'system';
+          var next = order[(order.indexOf(current) + 1) % order.length];
+          apply(next);
         });
-        btn.setAttribute('aria-label', label(document.documentElement.getAttribute('data-theme') || 'light'));
+        btn.setAttribute(
+          'aria-label',
+          label(document.documentElement.getAttribute('data-theme-mode') || 'system'),
+        );
       })();
     </script>
 
@@ -118,10 +166,8 @@ const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
     )}
 
     <script is:inline>
-      // Card tilt + scroll reveal — ported from the redesign mockup.
-      // Tilt runs only with a fine pointer and no reduced-motion request;
-      // reveal falls back to showing everything when IntersectionObserver
-      // is unavailable or motion is reduced.
+      // Card tilt — ported from the redesign mockup. Runs only with a fine
+      // pointer and no reduced-motion request.
       (function () {
         const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         const hoverable = window.matchMedia('(hover: hover)').matches;
@@ -139,20 +185,6 @@ const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
               card.style.transform = '';
             });
           });
-        }
-        const reveals = document.querySelectorAll('.reveal');
-        if (reduce || !('IntersectionObserver' in window)) {
-          reveals.forEach(function (el) { el.classList.add('in'); });
-        } else {
-          const io = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('in');
-                io.unobserve(entry.target);
-              }
-            });
-          }, { threshold: 0.12 });
-          reveals.forEach(function (el) { io.observe(el); });
         }
       })();
     </script>

@@ -48,12 +48,36 @@ const canonical = new URL(
     }
     <script is:inline>
       // Theme: light is the fresh-install default (like the app); the toggle
-      // stores the choice in localStorage. Dark is the design anchor.
-      try {
-        const saved = localStorage.getItem('kaizenly-theme');
-        const theme = saved === 'dark' || saved === 'light' ? saved : 'light';
-        document.documentElement.setAttribute('data-theme', theme);
-      } catch (e) {}
+      // stores the choice in localStorage under the shared key 'nda-theme'
+      // (same key as the main site and Tsumly). Dark is the design anchor.
+      // A stored 'system' choice (set on another site) follows the OS.
+      (function () {
+        try {
+          var mq = matchMedia('(prefers-color-scheme: dark)');
+          function apply(mode) {
+            var theme =
+              mode === 'dark'
+                ? 'dark'
+                : mode === 'light'
+                  ? 'light'
+                  : mq.matches
+                    ? 'dark'
+                    : 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+            document.documentElement.setAttribute('data-theme-mode', mode);
+          }
+          var saved = localStorage.getItem('nda-theme');
+          var mode =
+            saved === 'dark' || saved === 'light' || saved === 'system'
+              ? saved
+              : 'light';
+          apply(mode);
+          mq.addEventListener('change', function () {
+            if ((localStorage.getItem('nda-theme') || 'light') === 'system')
+              apply('system');
+          });
+        } catch (e) {}
+      })();
     </script>
   </head>
   <body>

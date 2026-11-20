@@ -228,7 +228,8 @@ section { padding: var(--space-section) 0; }
 .card p:last-child { margin-bottom: 0; }
 
 /* Nav — floating pill bar, from the mockup. Fixed, centred, blurred;
-   links only, no wordmark, no toggle, no hamburger. */
+   links plus a sun/moon theme toggle after a divider; no wordmark,
+   no hamburger. */
 .site-nav {
   position: fixed;
   top: 18px;
@@ -684,7 +685,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .about-prose .steps .arr { color: var(--color-primary); }
 .about-block { margin-bottom: 64px; }
 .about-block:last-child { margin-bottom: 0; }
-/* The 18-unit list — compact, two columns, inside a <details>. */
+/* The 18-unit list — compact, two columns, shown in full. */
 .units-list {
   list-style: none;
   padding: 0;
@@ -726,7 +727,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   overflow: hidden;
   background: var(--dark-card);
   color: var(--dark-card-ink);
-  border-radius: 28px;
+  border-radius: 24px;
   padding: 72px 32px;
   text-align: center;
 }
@@ -786,15 +787,6 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   justify-content: center;
 }
 
-/* Scroll reveal — applied by the port (the mockup shipped the JS but no
-   element carried the class). */
-.reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
-}
-.reveal.in { opacity: 1; transform: none; }
-
 /* Anchor target sits below the fixed floating nav. */
 #work { scroll-margin-top: 100px; }
 
@@ -829,24 +821,6 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .feature-list li { margin-bottom: 8px; }
 .feature-list li::marker { color: var(--color-ink-muted); }
 .feature-list strong { color: var(--color-ink); font-weight: 600; }
-
-/* Inverted band — one dark block per page at most (privacy, etc.).
-   Fixed dark colours so it stays a dark block in both themes. */
-.band {
-  background: #111111;
-  color: #f6f5f4;
-  border: 1px solid #333333;
-  border-radius: 12px;
-  padding: 48px;
-}
-.band h2, .band h3 { color: #f6f5f4; }
-.band p { opacity: 0.8; }
-/* White-pill CTA inside the band, legible in both themes. */
-.band .btn-secondary {
-  background: #ffffff;
-  color: #111111;
-  border-color: transparent;
-}
 
 /* 404 — centered, plain canvas */
 .not-found { padding: 96px 0; text-align: center; }
@@ -999,7 +973,6 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   h2 { font-size: 30px; }
   section { padding: var(--space-section-mobile) 0; }
   .hero { padding: 128px 0 64px; }
-  .band { padding: 24px; }
   .product-grid { flex-direction: column; }
   .product-grid > * { flex: 1 1 auto; max-width: none; }
   .units-list { grid-template-columns: 1fr; }
@@ -1047,6 +1020,5 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   }
   .hero h1 .word > span { transform: none; }
   .marquee-track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; }
-  .reveal { opacity: 1; transform: none; }
   .project-card { transform: none !important; }
 }

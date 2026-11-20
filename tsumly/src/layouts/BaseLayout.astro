@@ -65,14 +65,14 @@ const canonical = new URL(
             document.documentElement.setAttribute('data-theme', theme);
             document.documentElement.setAttribute('data-theme-mode', mode);
           }
-          var saved = localStorage.getItem('tsumly-theme');
+          var saved = localStorage.getItem('nda-theme');
           var mode =
             saved === 'dark' || saved === 'light' || saved === 'system'
               ? saved
               : 'system';
           apply(mode);
           mq.addEventListener('change', function () {
-            if ((localStorage.getItem('tsumly-theme') || 'system') === 'system')
+            if ((localStorage.getItem('nda-theme') || 'system') === 'system')
               apply('system');
           });
         } catch (e) {}

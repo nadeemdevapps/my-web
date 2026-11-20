@@ -7,7 +7,8 @@ description: Nadeem Dev Apps' design language for the nadeemdevapps.com website 
 # Structural palette — LIGHT theme. Only color values change between themes.
 # Every other token — typography, spacing, radius, components — is identical
 # across both. Dark theme is the design anchor: design against
-# dark first; the site defaults to light and follows the system preference.
+# dark first; the theme follows the system preference unless the
+# visitor picks light or dark with the nav toggle.
 colors:
   primary: "#0075de"          # structural accent — blue (light)
   primary-active: "#005bab"   # pressed accent
@@ -79,29 +80,29 @@ stickers:
 # Body/UI = Inter (OFL). Ship only license-verified fonts.
 typography:
   display-xl:
-    fontFamily: "EB Garamond, Cormorant Garamond, serif"
-    fontSize: 64px
-    fontWeight: 400
-    lineHeight: 1.05
-    letterSpacing: -1.5px
+    fontFamily: "Bricolage Grotesque, sans-serif"
+    fontSize: "clamp(64px, 13.5vw, 180px)"
+    fontWeight: 800
+    lineHeight: 0.95
+    letterSpacing: "-0.035em"
   display-lg:
-    fontFamily: "EB Garamond, Cormorant Garamond, serif"
-    fontSize: 48px
-    fontWeight: 400
-    lineHeight: 1.1
-    letterSpacing: -1px
+    fontFamily: "Bricolage Grotesque, sans-serif"
+    fontSize: "clamp(40px, 6vw, 64px)"
+    fontWeight: 700
+    lineHeight: 0.95
+    letterSpacing: "-0.035em"
   display-md:
-    fontFamily: "EB Garamond, Cormorant Garamond, serif"
+    fontFamily: "Bricolage Grotesque, sans-serif"
     fontSize: 36px
-    fontWeight: 400
-    lineHeight: 1.15
-    letterSpacing: -0.5px
+    fontWeight: 700
+    lineHeight: 1.0
+    letterSpacing: "-0.03em"
   display-sm:
-    fontFamily: "EB Garamond, Cormorant Garamond, serif"
+    fontFamily: "Bricolage Grotesque, sans-serif"
     fontSize: 28px
-    fontWeight: 400
-    lineHeight: 1.2
-    letterSpacing: -0.3px
+    fontWeight: 700
+    lineHeight: 1.05
+    letterSpacing: "-0.025em"
   title-lg:
     fontFamily: "Inter, sans-serif"
     fontSize: 22px
@@ -179,8 +180,8 @@ spacing:
   lg: 24px            # card interior padding
   xl: 28px
   xxl: 32px
-  section: 64px       # gap between major sections on desktop
-  section-mobile: 48px # gap between major sections on mobile
+  section: 96px       # gap between major sections on desktop
+  section-mobile: 72px # gap between major sections on mobile
   screen-h: 24px      # default horizontal gutter
   content-bottom: 32px # trailing space at the end of a page
 
@@ -191,20 +192,26 @@ components:
     typography: "{typography.nav-link}"
     padding: "{spacing.md}"
     # Pill nav: a centred floating pill (Home/Work/About/Contact) plus a
-    # sun/moon theme toggle after a divider — no wordmark, no hamburger,
-    # no active-page pill. The toggle flips data-theme and saves the
-    # choice to localStorage (nda-theme). The pill stays visible at every
-    # width; links shrink slightly on small screens.
+    # sun/moon theme toggle after a divider (icon matches the effective
+    # theme) — no wordmark, no hamburger, no active-page pill. Hover on a
+    # nav link or the toggle fills the pill with the brand blue
+    # ({colors.primary}) and white text. The toggle cycles light → dark →
+    # system and saves the choice to localStorage under the shared key
+    # (nda-theme, same key as the Tsumly and Kaizenly sites, so the choice
+    # carries across). data-theme is the effective theme, data-theme-mode
+    # the stored mode. The pill stays visible at every width; links shrink
+    # slightly on small screens.
   button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.on-primary}"
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.canvas}"
     typography: "{typography.button}"
     rounded: "{rounded.pill}"
     padding: 12px 24px
   button-primary-pressed:
-    backgroundColor: "{colors.primary-active}"
-    textColor: "{colors.on-primary}"
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.canvas}"
     rounded: "{rounded.pill}"
+    # Pressed state is a brief scale(0.97) transform, not a colour change.
   button-primary-disabled:
     backgroundColor: "{colors.surface-highlight}"
     textColor: "{colors.ink-faint}"
@@ -225,7 +232,7 @@ components:
     padding: 4px 14px
   text-link:
     backgroundColor: transparent
-    textColor: "{colors.primary}"
+    textColor: "{colors.link}"
     typography: "{typography.body-md}"
   text-link-quiet:
     backgroundColor: transparent
@@ -236,28 +243,28 @@ components:
     textColor: "{colors.ink}"
     borderColor: "{colors.hairline}"
     typography: "{typography.body-md}"
-    rounded: "{rounded.md}"
+    rounded: "{rounded.card}"
     padding: "{spacing.lg}"
     elevation: 0
   feature-card-elevated:
     backgroundColor: "{colors.surface}"
     textColor: "{colors.ink}"
     typography: "{typography.body-md}"
-    rounded: "{rounded.md}"
+    rounded: "{rounded.card}"
     padding: "{spacing.lg}"
     elevation: 1
   panel-section:
     backgroundColor: "{colors.surface}"
     headerTypography: "{typography.title-sm}"
     bodyTypography: "{typography.body-md}"
-    rounded: "{rounded.md}"
+    rounded: "{rounded.card}"
     padding: "{spacing.lg}"
   product-card:
     backgroundColor: "{colors.surface}"
     textColor: "{colors.ink}"
     borderColor: "{colors.hairline}"
     typography: "{typography.body-md}"
-    rounded: "{rounded.md}"
+    rounded: "{rounded.card}"
     padding: "{spacing.lg}"
     iconRounded: "{rounded.full}"
   text-input:
@@ -280,9 +287,10 @@ components:
     textColor: "{colors.ink}"
     headlineTypography: "{typography.display-xl}"
     headlineAccent: "{colors.primary}" (one word)
-    mark: none on Home (the logo mark lives in the nav); centred headline
-      + intro + CTA pair on Home; fills the first screen (min-height
-      100vh minus the nav) so the cards below appear on scroll
+    mark: none on Home (the logo mark lives in the favicon and structured
+      data, not in the nav or hero); centred headline + intro + CTA pair on
+      Home; fills the first screen (min-height 100vh minus the nav) so the
+      cards below appear on scroll
     rounded: 0
   inverted-band:
     backgroundColor: "{colors.primary}"
@@ -333,10 +341,11 @@ components:
     # Grid: 2 per row; an odd last card centres in its own row below
     # (3 → 2+1 centred, 4 → 2x2, 5 → 2+2+1 centred).
   attention-band:
-    # One photographic image (grayscale, vendored locally at
-    # public/attention-band.jpg — made for us by Google Stitch), dark
-    # gradient overlay, serif headline bottom-left. Rounded {rounded.xl}.
-    # Hover returns the photo to colour; it is black-and-white otherwise.
+    # RETIRED — no page renders this component and public/attention-band.jpg
+    # is unused. Kept here so the token is not reintroduced by mistake.
+    # (Was: one photographic image, grayscale, vendored locally at
+    # public/attention-band.jpg, dark gradient overlay, serif headline
+    # bottom-left. Rounded {rounded.xl}. Hover returned the photo to colour.)
   about-card:
     # Condensed About on a fixed dark block (#111111, hairline #333333) in
     # light theme; INVERTED in dark theme (bright #f6f5f4 card, dark text)
@@ -354,27 +363,25 @@ components:
     source: code-drawn (SVG), theme-reactive
   logo:
     status: decided
-    mark: "Stack in a pill" — three stacked bars inside a rounded frame
-      (14px corner radius); monochrome line mark, ink-tinted, theme-reactive
-      via currentColor; must read at 20–28px and as a favicon; no colour
-      except the sticker palette in decorative use only
+    mark: "Playful Steps" — three ascending rounded squares (blue #0075de,
+      purple #6C4DE6, amber #F2A81D); must read at 20–28px and as a favicon
     files: src/components/Logo.astro (inline, theme-reactive),
-      public/logo.svg (standalone mark), public/favicon.svg (filled-tile
-      variant: ink tile, canvas bars)
+      public/logo.svg (standalone mark), public/favicon.svg (cream-tile
+      variant: warm paper #f2efe9 tile, no black)
 ---
 
 
 ## Overview
 
-Nadeem Dev Apps should feel calm, focused, and document-quiet — a well-organized desk in good daylight, not a dashboard. The dominant surface is a warm, paper-soft off-white (`{colors.canvas}` — #f2efe9) that takes the clinical edge off the screen and makes long pages feel like a document rather than an app. Against that quiet chrome, exactly one thing speaks in colour: a single, dependable blue, `{colors.primary}` (#0075de), reserved almost entirely for links and the nav Contact CTA. A playful multi-colour sticker palette carries the brand's personality in small illustrated blocks and category dots — it decorates, it never structures. The hero adds four slowly drifting blurred colour fields (the products' own colours) and a film-grain overlay — decoration, not structure.
+Nadeem Dev Apps should feel calm, focused, and document-quiet — a well-organized desk in good daylight, not a dashboard. The dominant surface is a warm, paper-soft off-white (`{colors.canvas}` — #f2efe9) that takes the clinical edge off the screen and makes long pages feel like a document rather than an app. Against that quiet chrome, exactly one thing speaks in colour: a single, dependable blue, `{colors.primary}` (#0075de), reserved almost entirely for links, the nav hover pill, and the active filter pill. A playful multi-colour sticker palette carries the brand's personality in small illustrated blocks and category dots — it decorates, it never structures. The hero adds four slowly drifting blurred colour fields (the products' own colours) and a film-grain overlay — decoration, not structure.
 
 Type carries the personality. Headlines run a **Bricolage Grotesque display face** (weight 700–800 with tight tracking), paired with **Inter** for body, navigation, and UI labels. The display / sans-body split gives the site a bold, considered voice — closer to a long-form reading site than a SaaS landing page — while the monochrome-plus-blue palette keeps it quiet.
 
 The site ships in **two polarities** that share every non-color token:
-1. **Light theme** — the default. Warm paper canvas (`{colors.canvas}` — #f2efe9), near-black ink.
+1. **Light theme** — warm paper canvas (`{colors.canvas}` — #f2efe9), near-black ink.
 2. **Dark theme** — the design anchor. Near-black canvas (`{colors.canvas}` — #171512), warm-white ink.
 
-The theme follows the system preference. The light theme must read as the **same product**, not a recolor — only palette values change between the two (`colors` vs `colors-dark`).
+The theme follows the system preference unless the visitor picks light or dark with the nav toggle. The light theme must read as the **same product**, not a recolor — only palette values change between the two (`colors` vs `colors-dark`).
 
 Surfaces are defined by **hairlines and the faintest layered shadows** rather than heavy elevation. Cards round at 24px (`{rounded.card}`), marketing CTAs are fully pill-shaped (`{rounded.pill}`), utility buttons round tighter at 8px (`{rounded.sm}`), and inputs stay tight at 4px (`{rounded.xs}`). Spacing follows the web grid (8px base, 1120px container), not a phone rhythm.
 
@@ -394,8 +401,9 @@ Surfaces are defined by **hairlines and the faintest layered shadows** rather th
 > The palette is strictly monochrome in structure and ships in two polarities. Values are listed as **light / dark** where they differ. Canonical token map is `colors` (light) with `colors-dark` mirroring it.
 
 ### Brand & Accent
-- **Accent** (`{colors.primary}` — #0075de light / #0075de dark): the single structural accent — primary CTA fill, inline link colour, active-tab and focus signal. This is the only colour that ever paints an action.
-- **Pressed Accent** (`{colors.primary-active}` — #005bab): the press state of the primary CTA.
+- **Accent** (`{colors.primary}` — #0075de light / #0075de dark): the single structural accent — inline links, the nav hover pill, the active filter pill, and the focus signal. This is the only colour that ever paints an action.
+- **Pressed Accent** (`{colors.primary-active}` — #005bab): a darker accent for pressed states of blue fills; currently unused by any component.
+- **Link** (`{colors.link}` — #005bab light / #5ea3ec dark): link *text* blue — `{colors.primary}` fails WCAG AA at 15px on card surfaces; link passes 4.5:1 everywhere.
 - **On-Accent** (`{colors.on-primary}` — #ffffff): text/glyph drawn on the accent fill.
 
 ### Surface
@@ -510,7 +518,7 @@ The brand's real depth cue is **illustration**, not shadow. Feature sections lay
 Charts stay **strictly monochrome**. To tell data apart without colour, use the dedicated **6-step gray ramp** plus a track colour (`{colors.data-track}` → `{colors.data-5}`), shared by every data surface. Low steps recede toward the canvas; high steps climb toward ink — so the same ramp reads correctly in both polarities.
 
 - **Heatmap**: a month grid where each cell's intensity maps onto the ramp (`{colors.data-track}` for an empty day → `{colors.data-5}` for the busiest).
-- **Donut**: a ring of ramp-shaded segments (e.g. three groups = `{colors.ink}` / `{colors.data-3}` / `{colors.data-1}`) with a serif center number and a legend.
+- **Donut**: a ring of ramp-shaded segments (e.g. three groups = `{colors.ink}` / `{colors.data-3}` / `{colors.data-1}`) with a Bricolage center number and a legend.
 - **Comparison bar**: a this-period (ink) bar over a last-period (`{colors.data-2}`) bar on a `{colors.data-track}` track, with a signed delta.
 - **Trend chart**: an ink line over a faint `{colors.data-track}` grid, gaps where there's no data.
 
@@ -551,15 +559,15 @@ The site uses no photography — it is a content-and-type site. Card visuals are
 
 ### Navigation
 
-**`nav-bar`** — Top navigation. A floating pill bar, fixed 18px from the top and centred, `rgba` surface background with a 14px backdrop blur, hairline border, pill radius, and the soft shadow. Four plain links (`Home / Work / About / Contact`) plus a sun/moon theme toggle after a divider — no wordmark, no hamburger, no active-page pill. Hover on a nav link or the toggle fills the pill with the brand blue (`{colors.primary}`) and white text (user pick, 2026-11-20). The toggle flips `data-theme` and saves the choice to localStorage (`nda-theme`); the head script applies the saved choice before first paint. The pill stays visible at every width; link padding shrinks slightly on small screens.
+**`nav-bar`** — Top navigation. A floating pill bar, fixed 18px from the top and centred, `rgba` surface background with a 14px backdrop blur, hairline border, pill radius, and the soft shadow. Four plain links (`Home / Work / About / Contact`) plus a sun/moon theme toggle after a divider (the icon matches the effective theme) — no wordmark, no hamburger, no active-page pill. Hover on a nav link or the toggle fills the pill with the brand blue (`{colors.primary}`) and white text (user pick, 2026-11-20). The toggle cycles light → dark → system and saves the choice to localStorage under the shared key (`nda-theme`, same key as the Tsumly and Kaizenly sites, so the choice carries across). `data-theme` is the effective theme and `data-theme-mode` the stored mode; the head script applies the saved choice before first paint, and the single script-driven `theme-color` meta follows the effective theme. The pill stays visible at every width; link padding shrinks slightly on small screens.
 
-**`wordmark`** — The "Nadeem Dev Apps" text lockup, used with the logo mark in the nav bar and footer. Bricolage Grotesque 700, `{colors.ink}`, negative tracking −0.025em.
+**`wordmark`** — The "Nadeem Dev Apps" text lockup. Bricolage Grotesque 700, `{colors.ink}`, negative tracking −0.025em. Used in the footer brand line; the nav bar carries no wordmark. (The giant outlined "NADEEM" below the footer is a separate decorative wordmark — see `footer`.)
 
 **`logo`** — "Playful Steps": three ascending rounded squares (blue #0075de, purple #6C4DE6, amber #F2A81D). Files: `src/components/Logo.astro`, `public/logo.svg`, `public/favicon.svg`. The favicon is a cream-tile variant (warm paper #f2efe9 tile, no black). The mark appears in the favicon and structured data, not in the nav or footer.
 
 ### Buttons
 
-**`button-primary`** — The primary CTA. Background `{colors.ink}`, text `{colors.canvas}`, type `{typography.button}` (Inter 15.5 / 600), fully pill `{rounded.pill}`, padding 12px × 26px, min-height 48px. Hover lifts 2px. The blue accent is reserved for links and the nav Contact CTA, never for a solid button.
+**`button-primary`** — The primary CTA. Background `{colors.ink}`, text `{colors.canvas}`, type `{typography.button}` (Inter 15.5 / 600), fully pill `{rounded.pill}`, padding 12px × 26px, min-height 48px. Hover lifts 2px. The blue accent is reserved for links, the nav hover pill, and the active filter pill — never for a solid CTA button.
 - Pressed state applies a brief `scale(0.97)` press transform.
 - Disabled state uses 0.55 opacity.
 
@@ -567,7 +575,7 @@ The site uses no photography — it is a content-and-type site. Card visuals are
 
 **`button-utility`** — Nav / compact button. `{colors.surface}` background, `{colors.ink}` text, type `{typography.button}`, tighter `{rounded.sm}` (8px), padding 4px × 14px, 1px `{colors.hairline}` border. Used for compact actions where the marketing pill would be too large.
 
-**`text-link`** — Inline link, no background, `{colors.primary}` text. Used for inline links in body copy.
+**`text-link`** — Inline link, no background, `{colors.link}` text. Used for inline links in body copy.
 
 **`text-link-quiet`** — Inline text button, no background, `{colors.ink}` text. Used for low-emphasis inline actions (e.g. "Log in").
 
@@ -637,18 +645,18 @@ The site is built for humans first and for AI agents, LLMs, and search second �
 
 - **Dark is the anchor.** Design against dark first; the light theme is the same product with palette values inverted in lightness.
 - **Only palette changes.** Spacing, type, radius, and components are identical across themes (`colors` vs `colors-dark`). Never branch layout or shape on theme.
-- **Theme source:** follows the system preference. Every token reads the active palette, so theme flips re-colour the whole site without touching call sites.
+- **Theme source:** the nav toggle cycles light → dark → system (default: system, following the OS preference). The choice is saved under the shared key `nda-theme` — the same key the Tsumly and Kaizenly sites use, so it carries across all three sites. `data-theme` holds the effective theme, `data-theme-mode` the stored mode; the single script-driven `theme-color` meta follows the effective theme. Every token reads the active palette, so theme changes re-colour the whole site without touching call sites.
 
 ## Do's and Don'ts
 
 ### Do
 - Reserve `{colors.primary}` (blue) for the primary action, inline links, and the active/focus signal — nothing decorative.
 - Keep both themes strictly monochrome in structure; let the canvas/surface/ink ramp do all the figure/ground work.
-- Set headlines in the serif display face at weight 400 with negative tracking; pair with Inter 400/500 body.
+- Set headlines in the Bricolage Grotesque display face at weight 700–800 with tight negative tracking; pair with Inter 400/500 body.
 - Ship every change in both polarities — change only palette values, never spacing/type/radius/components, between dark and light.
-- Keep the page on the warm `{colors.canvas}` canvas; use pure white `{colors.surface}` for cards and fields to create gentle figure/ground.
+- Keep the page on the warm `{colors.canvas}` canvas; use warm off-white `{colors.surface}` for cards and fields to create gentle figure/ground.
 - Let the sticker palette live only in illustrations, icon tiles, and category dots.
-- Keep marketing CTAs fully pill-shaped (`{rounded.pill}`) and cards flat at 12px (`{rounded.md}`) with a hairline border; utility buttons tighter at 8px (`{rounded.sm}`).
+- Keep marketing CTAs fully pill-shaped (`{rounded.pill}`) and cards at 24px (`{rounded.card}`) with a hairline border; utility buttons tighter at 8px (`{rounded.sm}`).
 - Use `{colors.danger}` only for destructive/error states; carry success/affirmative state with ink weight and iconography.
 - Use the toast bus for feedback, with specific, actionable messages.
 - Keep the hero light and quiet — one accent word, no dark bands; on Home the hero is centred with no logo mark.
@@ -657,8 +665,8 @@ The site is built for humans first and for AI agents, LLMs, and search second �
 - Don't introduce any chromatic brand colour into structure — there is no purple/coral/accent hue in layout, buttons, or borders; the structural accent is blue only, and purple lives only in the sticker palette.
 - Don't paint a CTA or structural fill in any sticker-palette colour — those are decoration only.
 - Don't introduce a second structural accent alongside `{colors.primary}`.
-- Don't bold the serif display weight; the serif character, not weight, carries emphasis.
-- Don't use Inter for display headlines — the serif voice is the brand. (And don't use the serif for body/UI.)
+- Don't set display headlines below weight 700 — the heavy Bricolage cut at tight tracking carries the emphasis.
+- Don't use Inter for display headlines — the Bricolage voice is the brand. (And don't use Bricolage for body/UI.)
 - Don't put pill radii on form fields — inputs stay tight at `{rounded.xs}` (4px).
 - Don't drop heavy shadows; elevation is hairline + barely-there layered shadow, never a hard cast.
 - Don't branch layout, spacing, or shape on the theme — only colours change.

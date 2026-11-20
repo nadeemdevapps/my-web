@@ -6,7 +6,7 @@
 // It fails loudly if the Tsumly build or the merge fails, so a deploy
 // never silently ships without them.
 import { execSync } from 'node:child_process';
-import { cpSync, existsSync, rmSync } from 'node:fs';
+import { cpSync, existsSync, readFileSync, rmSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -32,6 +32,26 @@ cpSync(tsumlyDist, target, { recursive: true });
 for (const page of ['index.html', 'features/index.html', 'gallery/index.html', 'about/index.html', 'download/index.html', 'privacy/index.html', 'terms/index.html']) {
   if (!existsSync(join(target, page))) {
     throw new Error(`[merge-tsumly] missing ${page} in ${target} — merge failed`);
+  }
+}
+
+// Verify every local asset the merged index.html references exists in the
+// merged dist, and that no root-absolute local ref (/assets/..., /_astro/...)
+// slipped through — those would 404 under the subpath. Same check as
+// scripts/merge-concepts.mjs, adapted: product pages also link to in-page
+// anchors, so strip any #fragment (or ?query) before the existence check.
+const base = '/my-web/products/tsumly/';
+const html = readFileSync(join(target, 'index.html'), 'utf8');
+const refs = [...html.matchAll(/(?:src|href)="([^"]+)"/g)].map((m) => m[1]);
+for (const ref of refs) {
+  if (ref.startsWith('/') && !ref.startsWith('//') && !ref.startsWith(base)) {
+    throw new Error(`[merge-tsumly] index.html has root-absolute ref ${ref} — rebuild with the subpath base`);
+  }
+  if (ref.startsWith(base)) {
+    const path = ref.slice(base.length).split(/[?#]/)[0];
+    if (!existsSync(join(target, path))) {
+      throw new Error(`[merge-tsumly] index.html references ${ref} but it is missing in ${target}`);
+    }
   }
 }
 console.log('[merge-tsumly] merged Tsumly site into dist/products/tsumly/');
