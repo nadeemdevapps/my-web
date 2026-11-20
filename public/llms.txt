@@ -4,60 +4,60 @@
 > Android apps, and backends, with AI doing the heavy lifting. This site is his
 > portfolio; products live as sub-pages.
 
-- [Home](https://nadeemdevapps.github.io/nadeem/)
-- [Tsumly](https://nadeemdevapps.github.io/nadeem/products/tsumly/): local-first personal expense and loan ledger. "Every amount adds up." Smart multi-loan repayment split, optional Google Drive backup.
-- [Tsumly Features](https://nadeemdevapps.github.io/nadeem/products/tsumly/features/)
-- [Tsumly Gallery](https://nadeemdevapps.github.io/nadeem/products/tsumly/gallery/)
-- [Tsumly About](https://nadeemdevapps.github.io/nadeem/products/tsumly/about/)
-- [Tsumly Download](https://nadeemdevapps.github.io/nadeem/products/tsumly/download/)
-- [Kaizenly](https://nadeemdevapps.github.io/nadeem/products/kaizenly/): a strict, local-first focus guard, built from scratch.
-- [Kaizenly Features](https://nadeemdevapps.github.io/nadeem/products/kaizenly/features/)
-- [Kaizenly Gallery](https://nadeemdevapps.github.io/nadeem/products/kaizenly/gallery/)
-- [Kaizenly About](https://nadeemdevapps.github.io/nadeem/products/kaizenly/about/)
-- [Kaizenly Download](https://nadeemdevapps.github.io/nadeem/products/kaizenly/download/)
-- [MsgLoop](https://nadeemdevapps.github.io/nadeem/products/msgloop/): a WhatsApp sender for Android. Send one message many times, now or on a schedule. Local-first, no account, no server.
+- [Home](https://nadeemdevapps.github.io/nadeem-dev-apps/)
+- [Tsumly](https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/): local-first personal expense and loan ledger. "Every amount adds up." Smart multi-loan repayment split, optional Google Drive backup.
+- [Tsumly Features](https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/features/)
+- [Tsumly Gallery](https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/gallery/)
+- [Tsumly About](https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/about/)
+- [Tsumly Download](https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/download/)
+- [Kaizenly](https://nadeemdevapps.github.io/nadeem-dev-apps/products/kaizenly/): a strict, local-first focus guard, built from scratch.
+- [Kaizenly Features](https://nadeemdevapps.github.io/nadeem-dev-apps/products/kaizenly/features/)
+- [Kaizenly Gallery](https://nadeemdevapps.github.io/nadeem-dev-apps/products/kaizenly/gallery/)
+- [Kaizenly About](https://nadeemdevapps.github.io/nadeem-dev-apps/products/kaizenly/about/)
+- [Kaizenly Download](https://nadeemdevapps.github.io/nadeem-dev-apps/products/kaizenly/download/)
+- [MsgLoop](https://nadeemdevapps.github.io/nadeem-dev-apps/products/msgloop/): a WhatsApp sender for Android. Send one message many times, now or on a schedule. Local-first, no account, no server.
 - [CV Creator Pro](https://resumemagicmaker.lovable.app/): a one-page CV maker that runs entirely in the browser — fill it in, pick a look, download a clean A4 PDF.
 - Nydrex Suite: an Electron desktop suite for retail — point of sale and inventory, with customer and supplier ledgers and reporting. Windows desktop app, no live site.
 - [Brew & Bean Cafe](https://brew-and-bean-cafe-nadeemassignment.lovable.app/): an animated cafe site with a menu and cart — orders are sent to the cafe as a WhatsApp message. An assignment project, fully working end to end.
 
 ## Concepts
 
-- [Tally Bar](https://nadeemdevapps.github.io/nadeem/concepts/tally-bar/): a desk status display with an LED pixel screen and a focus timer. Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.
-- [Look Out Below](https://nadeemdevapps.github.io/nadeem/concepts/look-out-below/): a tiny hand-drawn game about being small, quick and directly underneath a very clumsy sky. Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.
-- [Stitch & Tan](https://nadeemdevapps.github.io/nadeem/concepts/stitch-and-tan/): handmade leather pouches, cases and little things from a one-person studio, plus custom orders. Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.
-- [ProductSite](https://nadeemdevapps.github.io/nadeem/concepts/product-site/): a product site for a calm team workspace — plan, build and ship from one place. Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.
-- [Portfolio](https://nadeemdevapps.github.io/nadeem/concepts/portfolio-concept/): a portfolio concept — oversized name, selected-work grid and case-study pages. Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.
+- [Tally Bar](https://nadeemdevapps.github.io/nadeem-dev-apps/concepts/tally-bar/): a desk status display with an LED pixel screen and a focus timer. Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.
+- [Look Out Below](https://nadeemdevapps.github.io/nadeem-dev-apps/concepts/look-out-below/): a tiny hand-drawn game about being small, quick and directly underneath a very clumsy sky. Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.
+- [Stitch & Tan](https://nadeemdevapps.github.io/nadeem-dev-apps/concepts/stitch-and-tan/): handmade leather pouches, cases and little things from a one-person studio, plus custom orders. Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.
+- [ProductSite](https://nadeemdevapps.github.io/nadeem-dev-apps/concepts/product-site/): a product site for a calm team workspace — plan, build and ship from one place. Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.
+- [Portfolio](https://nadeemdevapps.github.io/nadeem-dev-apps/concepts/portfolio-concept/): a portfolio concept — oversized name, selected-work grid and case-study pages. Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.
 
 ## Pages
 
-- [Home](https://nadeemdevapps.github.io/nadeem/)
-- [Products](https://nadeemdevapps.github.io/nadeem/products/)
-- [Tsumly](https://nadeemdevapps.github.io/nadeem/products/tsumly/)
-- [Kaizenly](https://nadeemdevapps.github.io/nadeem/products/kaizenly/)
-- [MsgLoop](https://nadeemdevapps.github.io/nadeem/products/msgloop/)
-- [Tally Bar concept](https://nadeemdevapps.github.io/nadeem/concepts/tally-bar/)
-- [Look Out Below concept](https://nadeemdevapps.github.io/nadeem/concepts/look-out-below/)
-- [Stitch & Tan concept](https://nadeemdevapps.github.io/nadeem/concepts/stitch-and-tan/)
-- [ProductSite concept](https://nadeemdevapps.github.io/nadeem/concepts/product-site/)
-- [Portfolio concept](https://nadeemdevapps.github.io/nadeem/concepts/portfolio-concept/)
-- [About](https://nadeemdevapps.github.io/nadeem/about/)
-- [Contact](https://nadeemdevapps.github.io/nadeem/contact/)
-- [Tsumly Privacy Policy](https://nadeemdevapps.github.io/nadeem/products/tsumly/privacy/)
-- [Tsumly Terms of Use](https://nadeemdevapps.github.io/nadeem/products/tsumly/terms/)
-- [Kaizenly Privacy Policy](https://nadeemdevapps.github.io/nadeem/products/kaizenly/privacy/)
-- [Kaizenly Terms of Use](https://nadeemdevapps.github.io/nadeem/products/kaizenly/terms/)
-- [MsgLoop Privacy Policy](https://nadeemdevapps.github.io/nadeem/products/msgloop/privacy/)
-- [MsgLoop Terms of Use](https://nadeemdevapps.github.io/nadeem/products/msgloop/terms/)
-- [Privacy Policy](https://nadeemdevapps.github.io/nadeem/privacy/)
-- [Terms of Use](https://nadeemdevapps.github.io/nadeem/terms/)
+- [Home](https://nadeemdevapps.github.io/nadeem-dev-apps/)
+- [Products](https://nadeemdevapps.github.io/nadeem-dev-apps/products/)
+- [Tsumly](https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/)
+- [Kaizenly](https://nadeemdevapps.github.io/nadeem-dev-apps/products/kaizenly/)
+- [MsgLoop](https://nadeemdevapps.github.io/nadeem-dev-apps/products/msgloop/)
+- [Tally Bar concept](https://nadeemdevapps.github.io/nadeem-dev-apps/concepts/tally-bar/)
+- [Look Out Below concept](https://nadeemdevapps.github.io/nadeem-dev-apps/concepts/look-out-below/)
+- [Stitch & Tan concept](https://nadeemdevapps.github.io/nadeem-dev-apps/concepts/stitch-and-tan/)
+- [ProductSite concept](https://nadeemdevapps.github.io/nadeem-dev-apps/concepts/product-site/)
+- [Portfolio concept](https://nadeemdevapps.github.io/nadeem-dev-apps/concepts/portfolio-concept/)
+- [About](https://nadeemdevapps.github.io/nadeem-dev-apps/about/)
+- [Contact](https://nadeemdevapps.github.io/nadeem-dev-apps/contact/)
+- [Tsumly Privacy Policy](https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/privacy/)
+- [Tsumly Terms of Use](https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/terms/)
+- [Kaizenly Privacy Policy](https://nadeemdevapps.github.io/nadeem-dev-apps/products/kaizenly/privacy/)
+- [Kaizenly Terms of Use](https://nadeemdevapps.github.io/nadeem-dev-apps/products/kaizenly/terms/)
+- [MsgLoop Privacy Policy](https://nadeemdevapps.github.io/nadeem-dev-apps/products/msgloop/privacy/)
+- [MsgLoop Terms of Use](https://nadeemdevapps.github.io/nadeem-dev-apps/products/msgloop/terms/)
+- [Privacy Policy](https://nadeemdevapps.github.io/nadeem-dev-apps/privacy/)
+- [Terms of Use](https://nadeemdevapps.github.io/nadeem-dev-apps/terms/)
 
 ## Notes
 
 - The site is a static Astro site. Design tokens live in DESIGN.md in the repo root.
 - The Privacy page carries the privacy-policy URL used by the Tsumly app's Google OAuth setup.
-- The brand mark is three ascending rounded squares (blue, purple, amber) — "Playful Steps": [logo.svg](https://nadeemdevapps.github.io/nadeem/logo.svg).
+- The brand mark is three ascending rounded squares (blue, purple, amber) — "Playful Steps": [logo.svg](https://nadeemdevapps.github.io/nadeem-dev-apps/logo.svg).
 
 ## Optional
 
-- [Full site text (llms-full.txt)](https://nadeemdevapps.github.io/nadeem/llms-full.txt): the full text of every page on this site in one Markdown document — Home, About, Products, Tsumly, Kaizenly, MsgLoop, Contact, and summaries of the legal pages.
-- [Design system](https://github.com/nadeemdevapps/nadeem/blob/main/DESIGN.md)
+- [Full site text (llms-full.txt)](https://nadeemdevapps.github.io/nadeem-dev-apps/llms-full.txt): the full text of every page on this site in one Markdown document — Home, About, Products, Tsumly, Kaizenly, MsgLoop, Contact, and summaries of the legal pages.
+- [Design system](https://github.com/nadeemdevapps/nadeem-dev-apps/blob/main/DESIGN.md)

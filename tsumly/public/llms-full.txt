@@ -19,7 +19,7 @@
 
 ## Home
 
-https://nadeemdevapps.github.io/nadeem/products/tsumly/
+https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/
 
 ### Every amount adds up.
 
@@ -48,16 +48,16 @@ accumulate, to build up over time.
 
 Four things that make the ledger work — the full detail lives on the Features page.
 
-- **Smart repayment split** — One repayment, split across every loan it covers — never merged, smallest first, overpayment blocked. [How the split works →](https://nadeemdevapps.github.io/nadeem/products/tsumly/features/#smart-repayment-split)
-- **Pre-app loans** — Loans from before the app still count — recorded without moving your balance, and flippable later. [How pre-app loans work →](https://nadeemdevapps.github.io/nadeem/products/tsumly/features/#pre-app-loans)
-- **Person profiles** — People, not just numbers — per-person totals, a guarded archive, and a full ledger per person. [How profiles work →](https://nadeemdevapps.github.io/nadeem/products/tsumly/features/#person-profiles)
-- **Backup & privacy** — Your money stays yours — local-first, encrypted backup, no tracking, no account. [How backup works →](https://nadeemdevapps.github.io/nadeem/products/tsumly/features/#backup-privacy)
+- **Smart repayment split** — One repayment, split across every loan it covers — never merged, smallest first, overpayment blocked. [How the split works →](https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/features/#smart-repayment-split)
+- **Pre-app loans** — Loans from before the app still count — recorded without moving your balance, and flippable later. [How pre-app loans work →](https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/features/#pre-app-loans)
+- **Person profiles** — People, not just numbers — per-person totals, a guarded archive, and a full ledger per person. [How profiles work →](https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/features/#person-profiles)
+- **Backup & privacy** — Your money stays yours — local-first, encrypted backup, no tracking, no account. [How backup works →](https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/features/#backup-privacy)
 
 ### About — Built by Nadeem.
 
 Tsumly is built by **Nadeem Mazhar**, a solo developer, as **Nadeem Dev Apps**. It started as his own problem — a ledger that never added up — and it is built the way he builds everything: local-first, and honest about what it does.
 
-More from Nadeem Dev Apps → https://nadeemdevapps.github.io/nadeem/
+More from Nadeem Dev Apps → https://nadeemdevapps.github.io/nadeem-dev-apps/
 
 ### FAQ — Questions, answered.
 
@@ -106,7 +106,7 @@ stays on your device.
 
 ## Features
 
-https://nadeemdevapps.github.io/nadeem/products/tsumly/features/
+https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/features/
 
 ### Every feature, in detail.
 
@@ -267,7 +267,7 @@ Tsumly bends to how you like it: **light or dark**, your **display font**, and w
 
 ## Gallery
 
-https://nadeemdevapps.github.io/nadeem/products/tsumly/gallery/
+https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/gallery/
 
 ### Tsumly on the phone.
 
@@ -285,7 +285,7 @@ App screenshots are on the way — this page will fill in with real screenshots 
 
 ## About
 
-https://nadeemdevapps.github.io/nadeem/products/tsumly/about/
+https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/about/
 
 ### A ledger that finally adds up.
 
@@ -319,13 +319,13 @@ Tsumly is built by **Nadeem Mazhar**, a solo developer, as **Nadeem Dev Apps**. 
 
 Questions, feedback, or just want to say hi? Reach me at nadeem.devapps@gmail.com, or find my work on GitHub at github.com/nadeemdevapps — my only social link.
 
-More from Nadeem Dev Apps → https://nadeemdevapps.github.io/nadeem/
+More from Nadeem Dev Apps → https://nadeemdevapps.github.io/nadeem-dev-apps/
 
 ---
 
 ## Download
 
-https://nadeemdevapps.github.io/nadeem/products/tsumly/download/
+https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/download/
 
 ### Download Tsumly
 
@@ -346,13 +346,13 @@ There is no Play Store listing yet — no badge, rating, or download link until 
 
 ### Questions first?
 
-See how it handles your data before you install it. Privacy: https://nadeemdevapps.github.io/nadeem/products/tsumly/privacy/ — FAQ: https://nadeemdevapps.github.io/nadeem/products/tsumly/#faq
+See how it handles your data before you install it. Privacy: https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/privacy/ — FAQ: https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/#faq
 
 ---
 
 ## Privacy Policy
 
-https://nadeemdevapps.github.io/nadeem/products/tsumly/privacy/
+https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/privacy/
 
 Tsumly collects no personal data. Everything stays on your device unless
 you choose to back it up.
@@ -435,7 +435,7 @@ Questions about privacy? Email nadeem.devapps@gmail.com.
 
 ## Terms of Use
 
-https://nadeemdevapps.github.io/nadeem/products/tsumly/terms/
+https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/terms/
 
 Tsumly is a personal finance tracker, provided as-is. Your data stays on
 your device by default.
@@ -502,4 +502,4 @@ Questions about these terms? Email nadeem.devapps@gmail.com.
 ---
 
 Built by Nadeem Mazhar, solo developer — Nadeem Dev Apps.
-https://nadeemdevapps.github.io/nadeem/
+https://nadeemdevapps.github.io/nadeem-dev-apps/

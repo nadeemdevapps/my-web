@@ -3,7 +3,7 @@
 // pattern as kaizenly/ and tsumly/ — each product folder a complete project,
 // merged into this site's dist). Each is built with the base of its subpath
 // under this site and merged into dist/concepts/<slug>/, so GitHub Pages
-// serves it at /nadeem/concepts/<slug>/. This runs as part of `npm run
+// serves it at /nadeem-dev-apps/concepts/<slug>/. This runs as part of `npm run
 // build` (root package.json), so every deploy — local or CI — carries the
 // concept sites, with no extra checkout or secret needed. It fails loudly
 // if a concept build or the merge fails, so a deploy never silently ships
@@ -22,9 +22,9 @@ import { fileURLToPath } from 'node:url';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const conceptsSrcDir = join(root, 'concepts-src');
 
-// Site base: '/nadeem' for GitHub Pages by default, '/' for Cloudflare
+// Site base: '/nadeem-dev-apps' for GitHub Pages by default, '/' for Cloudflare
 // Pages at the root (SITE_BASE env).
-const siteBase = (process.env.SITE_BASE ?? '/nadeem').replace(/\/$/, '');
+const siteBase = (process.env.SITE_BASE ?? '/nadeem-dev-apps').replace(/\/$/, '');
 
 const concepts = [
   { dir: 'tally-bar', slug: 'tally-bar' },

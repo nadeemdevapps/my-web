@@ -1,7 +1,7 @@
 // Cutover (2026-11-10): the Kaizenly independent site lives in kaizenly/ as a
 // complete Astro project. Its build output is merged into the main site's
 // dist under products/kaizenly/, so GitHub Pages serves it at
-// /nadeem/products/kaizenly/. This runs as part of `npm run build` (root
+// /nadeem-dev-apps/products/kaizenly/. This runs as part of `npm run build` (root
 // package.json), so every deploy — local or CI — carries the Kaizenly pages.
 // It fails loudly if the Kaizenly build or the merge fails, so a deploy
 // never silently ships without them.
@@ -15,9 +15,9 @@ const kaizenlyDir = join(root, 'kaizenly');
 const kaizenlyDist = join(kaizenlyDir, 'dist');
 const target = join(root, 'dist', 'products', 'kaizenly');
 
-// Site base: '/nadeem' for GitHub Pages by default, '/' for Cloudflare
+// Site base: '/nadeem-dev-apps' for GitHub Pages by default, '/' for Cloudflare
 // Pages at the root (SITE_BASE env). The Kaizenly build reads the same var.
-const siteBase = (process.env.SITE_BASE ?? '/nadeem').replace(/\/$/, '');
+const siteBase = (process.env.SITE_BASE ?? '/nadeem-dev-apps').replace(/\/$/, '');
 
 function run(cmd, cwd) {
   execSync(cmd, { cwd, stdio: 'inherit' });

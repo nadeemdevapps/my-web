@@ -25,7 +25,7 @@ function fileToRoute(file: string): string | null {
 export const prerender = true;
 
 export const GET: APIRoute = ({ site }) => {
-  const base = import.meta.env.BASE_URL.replace(/\/$/, ''); // '/nadeem/products/kaizenly'
+  const base = import.meta.env.BASE_URL.replace(/\/$/, ''); // '/nadeem-dev-apps/products/kaizenly'
   const urls = Object.keys(pageFiles)
     .map(fileToRoute)
     .filter((route): route is string => route !== null)

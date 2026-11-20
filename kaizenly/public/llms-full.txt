@@ -119,7 +119,7 @@ started as his own problem — a phone that would not stay down — and it is
 built the way he builds everything: local-first, strict where it matters, and
 honest about what it does.
 
-More from Nadeem Dev Apps: https://nadeemdevapps.github.io/nadeem/
+More from Nadeem Dev Apps: https://nadeemdevapps.github.io/nadeem-dev-apps/
 
 ---
 
@@ -513,7 +513,7 @@ Questions, feedback, or just want to say hi? Reach him at
 nadeem.devapps@gmail.com, or find his work on GitHub at
 github.com/nadeemdevapps — his only social link.
 
-More from Nadeem Dev Apps: https://nadeemdevapps.github.io/nadeem/
+More from Nadeem Dev Apps: https://nadeemdevapps.github.io/nadeem-dev-apps/
 
 ---
 
@@ -540,8 +540,8 @@ parachutes — earned free, never sold.
 ### Questions first?
 
 See how it handles your data before it launches. Privacy:
-https://nadeemdevapps.github.io/nadeem/products/kaizenly/privacy/ — FAQ:
-https://nadeemdevapps.github.io/nadeem/products/kaizenly/#faq
+https://nadeemdevapps.github.io/nadeem-dev-apps/products/kaizenly/privacy/ — FAQ:
+https://nadeemdevapps.github.io/nadeem-dev-apps/products/kaizenly/#faq
 
 ---
 

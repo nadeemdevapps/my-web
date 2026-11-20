@@ -32,4 +32,4 @@ Allow: /
 User-agent: DuckAssistBot
 Allow: /
 
-Sitemap: https://nadeemdevapps.github.io/nadeem/products/kaizenly/sitemap.xml
+Sitemap: https://nadeemdevapps.github.io/nadeem-dev-apps/products/kaizenly/sitemap.xml

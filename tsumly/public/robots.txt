@@ -32,4 +32,4 @@ Allow: /
 User-agent: DuckAssistBot
 Allow: /
 
-Sitemap: https://nadeemdevapps.github.io/nadeem/products/tsumly/sitemap.xml
+Sitemap: https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/sitemap.xml

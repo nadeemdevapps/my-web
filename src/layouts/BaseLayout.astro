@@ -12,13 +12,13 @@ interface Props {
 const { title, description = 'Nadeem Dev Apps — small, local-first apps.', jsonLd = [], noindex = false, noMainChrome = false } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 // Absolute URLs for canonical / Open Graph: Astro.site is the production
-// origin (https://nadeemdevapps.github.io); the pathname carries /nadeem.
+// origin (https://nadeemdevapps.github.io); the pathname carries /nadeem-dev-apps.
 const siteUrl = Astro.site?.href ?? 'https://nadeemdevapps.github.io/';
 // Canonical: force a trailing slash so every page matches the slashed form
-// used by the sitemap and llms.txt (Home is /nadeem/, never bare /nadeem).
+// used by the sitemap and llms.txt (Home is /nadeem-dev-apps/, never bare /nadeem-dev-apps).
 const pathname = Astro.url.pathname.replace(/\/?$/, '/');
 const canonical = new URL(pathname, siteUrl).href;
-// The 404 page has no canonical: /nadeem/404/ is a dead URL (returns 404).
+// The 404 page has no canonical: /nadeem-dev-apps/404/ is a dead URL (returns 404).
 const is404 = Astro.url.pathname.replace(/\/$/, '').endsWith('/404');
 const ogImage = new URL(`${base}og-image.png?v=2`, siteUrl).href;
 ---

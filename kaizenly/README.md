@@ -36,7 +36,7 @@ tilt — all transform/opacity only, disabled under
 ```sh
 cd kaizenly
 npm install   # once
-npm run dev   # http://localhost:4321/nadeem/products/kaizenly/
+npm run dev   # http://localhost:4321/nadeem-dev-apps/products/kaizenly/
 npm run build # outputs dist/
 npm run preview
 ```
