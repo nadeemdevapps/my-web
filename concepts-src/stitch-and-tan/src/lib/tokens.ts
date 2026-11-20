@@ -1,8 +1,8 @@
 // Mirrors src/styles.css for the style guide. Keep the two in step.
 export const colours = [
   { name: 'page', hex: '#ffffff', use: 'Page background' },
-  { name: 'paper', hex: '#faf9f4', use: 'Nav pill, raised surfaces' },
-  { name: 'cream', hex: '#f6f1e2', use: 'Doodle cards' },
+  { name: 'paper', hex: '#faf8f2', use: 'Nav pill, raised surfaces' },
+  { name: 'cream', hex: '#f7f2e4', use: 'Doodle cards' },
   { name: 'cream-deep', hex: '#ece4cc', use: 'Chips on cream, borders' },
   { name: 'line', hex: '#ebe7dc', use: 'Hairlines' },
   { name: 'line-strong', hex: '#d6cfbd', use: 'Field borders, underlines' },

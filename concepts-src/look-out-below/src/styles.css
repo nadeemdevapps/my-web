@@ -11,16 +11,16 @@
   --font-sans: 'Nunito', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   --color-page: #ffffff;
-  --color-paper: #f3f2ee;
-  --color-paper-2: #e9e7e1;
-  --color-card: #fbfaf7;
+  --color-paper: #eff1f0;
+  --color-paper-2: #e5e8e7;
+  --color-card: #fafbf9;
   --color-ink: #111111;
   --color-ink-2: #2b2a28;
   --color-graphite: #5f5e5a;
   --color-pencil: #8d8b85;
-  --color-smudge: #d6d4ce;
-  --color-shadow: #c9c7c0;
-  --color-butter: #f1e7a6;
+  --color-smudge: #d2d5d3;
+  --color-shadow: #c4c8c6;
+  --color-butter: #eedc8f;
   --color-alert: #a3261b;
   --color-ok: #2f6b34;
 

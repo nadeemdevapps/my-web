@@ -276,7 +276,7 @@ export function GameStage({ character, best, autostart }: { character: Character
           )}
           {phase === 'countdown' && (
             <div aria-hidden="true" className="pointer-events-none absolute inset-0 grid place-items-center">
-              <span key={count} className="animate-pop font-display text-[6rem] leading-none font-black drop-shadow-[0_4px_0_#f3f2ee]">
+              <span key={count} className="animate-pop font-display text-[6rem] leading-none font-black drop-shadow-[0_4px_0_#eff1f0]">
                 {count > 0 ? count : 'go'}
               </span>
             </div>

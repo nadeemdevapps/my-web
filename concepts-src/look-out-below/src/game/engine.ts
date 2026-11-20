@@ -212,7 +212,7 @@ export class Game {
   draw(ctx: CanvasRenderingContext2D, scale: number) {
     const { w, h, ground } = WORLD
     ctx.setTransform(scale, 0, 0, scale, 0, 0)
-    ctx.fillStyle = '#f3f2ee'
+    ctx.fillStyle = '#eff1f0'
     ctx.fillRect(0, 0, w, h)
     if (this.shake > 0) ctx.translate((Math.sin(this.hud.time * 90) * 6 * this.shake) | 0, 0)
     const j = this.opts.reducedMotion ? 0 : this.boilSeed
@@ -289,7 +289,7 @@ export class Game {
         ctx.rotate(it.spin * (1 - prog))
       }
       ctx.scale(s, s)
-      this.shape(ctx, FALLERS[it.kind], it.kind === 'coin' ? '#f1e7a6' : '#ffffff', 3.4 / s / 1.1, j)
+      this.shape(ctx, FALLERS[it.kind], it.kind === 'coin' ? '#eedc8f' : '#ffffff', 3.4 / s / 1.1, j)
       ctx.restore()
       if (it.kind === 'coin' && it.landed === 0) {
         ctx.strokeStyle = '#111'
@@ -375,7 +375,7 @@ export class Game {
     ctx.font = '700 13px Nunito, sans-serif'
     const w = ctx.measureText(text).width + 16
     const bx = Math.max(4, Math.min(WORLD.w - w - 4, x - w / 2))
-    ctx.fillStyle = '#fbfaf7'
+    ctx.fillStyle = '#fafbf9'
     ctx.strokeStyle = '#111'
     ctx.lineWidth = 2
     ctx.beginPath()

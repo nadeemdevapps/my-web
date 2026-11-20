@@ -73,7 +73,7 @@ export function Doodler({ hat = 'none', accessory = 'none', tint = 'paper', size
 
 /** One falling object drawn the same way the game draws it. */
 export function Faller({ kind, size = 64, className, label, boil }: { kind: FallerKind; size?: number; className?: string; label?: string; boil?: boolean }) {
-  const fill = kind === 'coin' ? '#f1e7a6' : '#ffffff'
+  const fill = kind === 'coin' ? '#eedc8f' : '#ffffff'
   return (
     <svg viewBox="-54 -54 108 108" width={size} height={size} className={cx('overflow-visible text-ink', boil ? 'boil' : 'rough', className)} role={label ? 'img' : undefined} aria-label={label} aria-hidden={label ? undefined : true}>
       <ShapePaths shape={FALLERS[kind]} fill={fill} width={3.2} />

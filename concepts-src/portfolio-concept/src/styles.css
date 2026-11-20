@@ -6,15 +6,15 @@
   --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-display: 'Bricolage Grotesque Variable', 'Inter Variable', ui-sans-serif, sans-serif;
 
-  --color-bg: #f2efe9;
-  --color-surface: #f8f6f1;
-  --color-surface-2: #e9e5dd;
-  --color-line: #ddd8ce;
-  --color-line-strong: #c9c3b7;
+  --color-bg: #efe7d6;
+  --color-surface: #f7f1e6;
+  --color-surface-2: #e6dccb;
+  --color-line: #d8cfba;
+  --color-line-strong: #c6bda6;
   --color-fg: #141311;
   --color-muted: #6a665e;
   --color-faint: #9c978d;
-  --color-accent: #2f3bff;
+  --color-accent: #2e32e6;
 
   --radius-control: 14px;
   --radius-card: 24px;

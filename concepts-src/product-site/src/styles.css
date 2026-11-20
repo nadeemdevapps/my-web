@@ -8,16 +8,16 @@
 @theme {
   --font-sans: 'Google Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
 
-  --color-bg: #0b0908;
-  --color-surface: #121010;
-  --color-surface-2: #191514;
-  --color-raised: #211b19;
+  --color-bg: #0d0809;
+  --color-surface: #141010;
+  --color-surface-2: #1b1413;
+  --color-raised: #231a18;
   --color-line: rgb(255 236 224 / 0.08);
   --color-line-strong: rgb(255 236 224 / 0.14);
   --color-fg: #f3ede8;
   --color-muted: #a89e97;
   --color-faint: #746a64;
-  --color-accent: #ff7a45;
+  --color-accent: #ff6a3d;
   --color-accent-2: #ffb547;
   --color-accent-3: #ff4d6d;
 
@@ -106,7 +106,7 @@
     overflow-x: clip;
   }
   ::selection {
-    background: rgb(255 122 69 / 0.35);
+    background: rgb(255 106 61 / 0.35);
     color: #fff;
   }
   button,
@@ -117,7 +117,7 @@
     color: inherit;
   }
   :focus-visible {
-    outline: 2px solid rgb(255 122 69 / 0.7);
+    outline: 2px solid rgb(255 106 61 / 0.7);
     outline-offset: 2px;
   }
   @media (prefers-reduced-motion: reduce) {

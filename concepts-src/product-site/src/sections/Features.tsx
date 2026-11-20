@@ -90,7 +90,7 @@ function CollabVisual() {
 }
 
 const flow = [
-  { label: 'When an issue is closed', color: '#ff7a45' },
+  { label: 'When an issue is closed', color: '#ff6a3d' },
   { label: 'Post to #shipped', color: '#ff4d6d' },
   { label: 'Add to the changelog', color: '#ffb547' },
 ]

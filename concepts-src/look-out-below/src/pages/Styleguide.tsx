@@ -16,16 +16,16 @@ import { CharacterCard } from './Characters'
 
 const SWATCHES = [
   ['page', '#ffffff', 'Page behind the frame'],
-  ['paper', '#f3f2ee', 'Frame and sketch background'],
-  ['paper-2', '#e9e7e1', 'Hover fill'],
-  ['card', '#fbfaf7', 'Cards, bubbles, inputs'],
+  ['paper', '#eff1f0', 'Frame and sketch background'],
+  ['paper-2', '#e5e8e7', 'Hover fill'],
+  ['card', '#fafbf9', 'Cards, bubbles, inputs'],
   ['ink', '#111111', 'Lines, text, primary buttons'],
   ['ink-2', '#2b2a28', 'Body text'],
   ['graphite', '#5f5e5a', 'Secondary text (AA on paper)'],
   ['pencil', '#8d8b85', 'Placeholders, dashed lines (non-text)'],
-  ['smudge', '#d6d4ce', 'Grey fill'],
-  ['shadow', '#c9c7c0', 'Ground shadows'],
-  ['butter', '#f1e7a6', 'The one yellow: fills only'],
+  ['smudge', '#d2d5d3', 'Grey fill'],
+  ['shadow', '#c4c8c6', 'Ground shadows'],
+  ['butter', '#eedc8f', 'The one yellow: fills only'],
   ['alert', '#a3261b', 'Errors'],
 ] as const
 

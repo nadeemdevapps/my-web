@@ -182,11 +182,11 @@ function Chart() {
     <svg viewBox={`0 0 ${w} ${h}`} className="mt-3 h-auto max-h-[180px] w-full flex-1" preserveAspectRatio="none">
       <defs>
         <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#ff7a45" stopOpacity="0.35" />
-          <stop offset="1" stopColor="#ff7a45" stopOpacity="0" />
+          <stop offset="0" stopColor="#ff6a3d" stopOpacity="0.35" />
+          <stop offset="1" stopColor="#ff6a3d" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0" stopColor="#ff7a45" />
+          <stop offset="0" stopColor="#ff6a3d" />
           <stop offset="1" stopColor="#ffb547" />
         </linearGradient>
       </defs>

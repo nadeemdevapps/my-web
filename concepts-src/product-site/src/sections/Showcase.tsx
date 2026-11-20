@@ -144,7 +144,7 @@ function BoardPanel() {
 
 function ReportPanel() {
   const series = [
-    { label: 'Velocity', values: [40, 48, 44, 56, 62, 58, 70], color: '#ff7a45' },
+    { label: 'Velocity', values: [40, 48, 44, 56, 62, 58, 70], color: '#ff6a3d' },
     { label: 'Cycle time', values: [70, 64, 66, 58, 52, 50, 44], color: '#ffb547' },
   ]
   const w = 600
