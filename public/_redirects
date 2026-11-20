@@ -1,21 +1,18 @@
-# DIAGNOSTIC (2026-11-21): the SPA rules below did not take effect on the
-# live site after deploy 9d35ed3, so this static rule tests whether the
-# _redirects file is parsed at all. Remove it once the diagnosis is done.
-/__redirect-test / 302
-
-# DIAGNOSTIC 2: does a 200 rewrite work at all in this project, and does
-# one to the SPA index resolve? Remove once the diagnosis is done.
-/__proxy-root /index.html 200
-/__proxy-spa /concepts/tally-bar/index.html 200
-
 # SPA fallback for the vendored concept sites (2026-11-21): each concept
 # is a client-side-routed SPA, so a direct load / refresh / bookmark of a
 # sub-route (e.g. /concepts/tally-bar/shop) must serve the SPA's index.html
 # with a 200, not the main site's 404 page. Cloudflare Pages serves an
 # existing static file before applying these rules, so real assets under
 # /concepts/<slug>/assets/ are unaffected.
+#
+# The destination MUST be the directory URL (with trailing slash), NOT
+# the index.html file: Pages 308-redirects any request for */index.html
+# to its directory, so a rewrite to index.html can never serve the SPA —
+# a static rule 308s, and a splat rule whose destination matches its own
+# source 404s. The directory form serves the SPA's index with a 200.
+# (Verified live 2026-11-21: /concepts/tally-bar/shop -> 200 SPA HTML.)
 /concepts/tally-bar/*  /concepts/tally-bar/  200
-/concepts/look-out-below/*  /concepts/look-out-below/index.html  200
-/concepts/stitch-and-tan/*  /concepts/stitch-and-tan/index.html  200
-/concepts/product-site/*  /concepts/product-site/index.html  200
-/concepts/portfolio-concept/*  /concepts/portfolio-concept/index.html  200
+/concepts/look-out-below/*  /concepts/look-out-below/  200
+/concepts/stitch-and-tan/*  /concepts/stitch-and-tan/  200
+/concepts/product-site/*  /concepts/product-site/  200
+/concepts/portfolio-concept/*  /concepts/portfolio-concept/  200
