@@ -26,7 +26,7 @@ const href = project.link
   from our own data file, so this is safe.
 */}
 <article class={`project-card ${project.theme}`} data-category={withCategory ? project.category : undefined} data-tilt>
-  <div class="field-img" aria-hidden="true"><span class="glyph">{project.glyph}</span></div>
+  <div class="field-img" aria-hidden="true">{project.icon ? <img class="card-icon" src={`${base}${project.icon}`} alt="" width="96" height="96" /> : <span class="glyph">{project.glyph}</span>}</div>
   <div class="body">
     <h3>{project.name}</h3>
     <span class="tag">{project.tag}</span>

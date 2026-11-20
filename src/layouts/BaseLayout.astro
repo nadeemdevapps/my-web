@@ -20,7 +20,7 @@ const pathname = Astro.url.pathname.replace(/\/?$/, '/');
 const canonical = new URL(pathname, siteUrl).href;
 // The 404 page has no canonical: /my-web/404/ is a dead URL (returns 404).
 const is404 = Astro.url.pathname.replace(/\/$/, '').endsWith('/404');
-const ogImage = new URL(`${base}og-image.png`, siteUrl).href;
+const ogImage = new URL(`${base}og-image.png?v=2`, siteUrl).href;
 ---
 
 <!doctype html>

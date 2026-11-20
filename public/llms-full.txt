@@ -163,9 +163,9 @@ https://nadeemdevapps.github.io/my-web/products/
 
 # Selected work
 
-10 projects — 6 shipped products, 4 demo concepts.
+6 shipped products.
 
-Filters: All projects (10) · Mobile & Native (3) · Web (2) · Desktop (1) · Developer Tools (4).
+Filters: All projects (6) · Mobile & Native (3) · Web (2) · Desktop (1).
 
 ### Tsumly (Android · Finance)
 
@@ -226,13 +226,6 @@ An animated cafe site with a menu and cart — your order is sent straight to th
 - Fully animated
 
 [Live site](https://brew-and-bean-cafe-nadeemassignment.lovable.app/)
-
-### Demo concepts — not shipped products
-
-- **Aetheria Engine** — a concept demo exploring an engine-style interface.
-- **DocuSense** — a concept demo for making sense of documents.
-- **Monolith CLI** — a concept demo for a command-line tool.
-- **PaperCraft UI** — a concept demo for a paper-inspired interface.
 
 ### Concepts
 

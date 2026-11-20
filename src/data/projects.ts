@@ -1,9 +1,9 @@
-// The 10 projects shown on Home ("Selected work") and the Products page.
+// The 6 products shown on Home ("Selected work") and the Products page.
 // Single source of truth — both pages render from this list via
 // ProjectCard.astro. The Products page adds data-category (for the
 // filter); Home renders without it.
 
-export type ProjectCategory = 'mobile' | 'web' | 'desktop' | 'tools';
+export type ProjectCategory = 'mobile' | 'web' | 'desktop';
 
 export interface ProjectLink {
   /** Internal path (no leading slash, no base) or a full external URL. */
@@ -13,9 +13,11 @@ export interface ProjectLink {
 }
 
 export interface Project {
-  /** Card theme class: tsumly, kaizenly, msgloop, cv, nydrex, brew, demo. */
+  /** Card theme class: tsumly, kaizenly, msgloop, cv, nydrex, brew. */
   theme: string;
   glyph: string;
+  /** Real product mark (path relative to the site base), rendered instead of the glyph. */
+  icon?: string;
   name: string;
   tag: string;
   description: string;
@@ -30,6 +32,7 @@ export const projects: Project[] = [
   {
     theme: 'tsumly',
     glyph: 'Ts',
+    icon: 'icons/tsumly.svg',
     name: 'Tsumly',
     tag: 'Android · Finance',
     description:
@@ -41,6 +44,7 @@ export const projects: Project[] = [
   {
     theme: 'kaizenly',
     glyph: 'K',
+    icon: 'icons/kaizenly.svg',
     name: 'Kaizenly',
     tag: 'Android · Focus',
     description:
@@ -92,37 +96,5 @@ export const projects: Project[] = [
     bullets: ['Menu and cart', 'Order sent as a WhatsApp message', 'Fully animated'],
     link: { href: 'https://brew-and-bean-cafe-nadeemassignment.lovable.app/', label: 'Live site →', external: true },
     category: 'web',
-  },
-  {
-    theme: 'demo',
-    glyph: 'Ae',
-    name: 'Aetheria Engine',
-    tag: 'Demo concept — not a shipped product.',
-    description: 'A concept demo exploring an engine-style interface.',
-    category: 'tools',
-  },
-  {
-    theme: 'demo',
-    glyph: 'Ds',
-    name: 'DocuSense',
-    tag: 'Demo concept — not a shipped product.',
-    description: 'A concept demo for making sense of documents.',
-    category: 'tools',
-  },
-  {
-    theme: 'demo',
-    glyph: 'Mc',
-    name: 'Monolith CLI',
-    tag: 'Demo concept — not a shipped product.',
-    description: 'A concept demo for a command-line tool.',
-    category: 'tools',
-  },
-  {
-    theme: 'demo',
-    glyph: 'Pc',
-    name: 'PaperCraft UI',
-    tag: 'Demo concept — not a shipped product.',
-    description: 'A concept demo for a paper-inspired interface.',
-    category: 'tools',
   },
 ];

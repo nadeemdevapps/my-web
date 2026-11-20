@@ -524,6 +524,16 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   letter-spacing: -0.04em;
   opacity: 0.85;
 }
+/* Real product mark (Tsumly, Kaizenly) — same centred spot as the glyph.
+   color: ink so the mark's currentColor parts follow the theme. */
+.card-icon {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 96px;
+  height: 96px;
+  color: var(--color-ink);
+}
 .project-card .body {
   padding: 0 12px;
   display: flex;
