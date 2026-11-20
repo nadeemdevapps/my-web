@@ -8,7 +8,8 @@
 // add or remove a page and the next build picks it up automatically.
 // The integration's sitemap-index.xml keeps working alongside it; it
 // lists only the main-site pages, while this plain sitemap additionally
-// lists the merged Tsumly/Kaizenly product pages below.
+// lists the merged Tsumly/Kaizenly product pages and the merged concept
+// site roots below.
 //
 // The product pages cannot be globbed here: the Tsumly/Kaizenly sites
 // are independent Astro projects merged into dist/ AFTER this build
@@ -41,6 +42,17 @@ const productRoutes = [
   'products/kaizenly/terms',
 ];
 
+// Merged concept sites (see scripts/merge-concepts.mjs): one entry per
+// concept root — the concepts are SPAs, so only their roots are listed;
+// their sub-routes are client-side and must not appear in the sitemap.
+const conceptRoutes = [
+  'concepts/tally-bar',
+  'concepts/look-out-below',
+  'concepts/stitch-and-tan',
+  'concepts/product-site',
+  'concepts/portfolio-concept',
+];
+
 function fileToRoute(file: string): string | null {
   // file looks like './about.astro' or './products/tsumly.astro'
   let route = file.replace(/^\.\//, '').replace(/\.astro$/, '');
@@ -58,6 +70,7 @@ export const GET: APIRoute = ({ site }) => {
     .map(fileToRoute)
     .filter((route): route is string => route !== null)
     .concat(productRoutes)
+    .concat(conceptRoutes)
     .sort();
   const urls = routes.map((route) => {
       // Trailing-slash form, matching what @astrojs/sitemap emits.
