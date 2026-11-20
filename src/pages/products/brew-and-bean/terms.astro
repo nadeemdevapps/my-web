@@ -1,0 +1,52 @@
+---
+import ProductLayout from '../../../layouts/ProductLayout.astro';
+import LegalDoc from '../../../components/LegalDoc.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<ProductLayout
+  title="Brew & Bean Cafe Terms of Use"
+  description="Terms of use for Brew & Bean Cafe — an assignment project and demonstration site, not a real cafe. Provided as-is."
+  productName="Brew & Bean Cafe"
+  productBase={`${base}products/brew-and-bean/`}
+>
+  <LegalDoc
+    title="Brew & Bean Cafe Terms of Use"
+    intro="Brew & Bean Cafe is a demonstration site built as an assignment project. It is not a real cafe. Provided as-is."
+    sections={[
+      {
+        heading: 'Acceptance',
+        body: 'By using this site or the live Brew & Bean Cafe site, you agree to these terms. If you do not agree with any part of them, please do not use the site.',
+      },
+      {
+        heading: 'What Brew & Bean Cafe is',
+        body: 'Brew & Bean Cafe is an animated cafe marketing and ordering site built as an assignment project. It is not a real cafe business, it was not built for a real client, and there is no real cafe, kitchen, or food behind it.',
+      },
+      {
+        heading: 'Ordering',
+        body: 'The ordering flow is a working demonstration: browse the menu, add dishes to a cart, and send the order as a WhatsApp message. It is not a way to buy food from a real cafe, and no order placed through the site will be fulfilled as a real order.',
+      },
+      {
+        heading: 'Your responsibility',
+        body: 'Use the site only for lawful purposes. Do not send spam, harassment, or anything illegal through the ordering flow, and do not present the site as a real cafe.',
+      },
+      {
+        heading: 'Provided as-is',
+        body: 'Brew & Bean Cafe is provided "as is" and "as available", without warranties of any kind, express or implied, including any implied warranty of fitness for a particular purpose. To the extent permitted by law, the developer is not liable for any loss or damage arising from your use of the site.',
+      },
+      {
+        heading: 'Stopping use',
+        body: 'You can stop using the site at any time. There is no account to close and no data held by Nadeem Dev Apps to delete.',
+      },
+      {
+        heading: 'Changes to these terms',
+        body: 'These terms may be updated from time to time. The version on this page is always the current one.',
+      },
+      {
+        heading: 'Contact',
+        body: 'Questions about these terms? Email nadeem.devapps@gmail.com.',
+      },
+    ]}
+  />
+</ProductLayout>

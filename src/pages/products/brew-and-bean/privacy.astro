@@ -1,0 +1,44 @@
+---
+import ProductLayout from '../../../layouts/ProductLayout.astro';
+import LegalDoc from '../../../components/LegalDoc.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<ProductLayout
+  title="Brew & Bean Cafe Privacy Policy"
+  description="Privacy policy for Brew & Bean Cafe — this page asks for nothing, and orders on the live site go to the cafe as a WhatsApp message."
+  productName="Brew & Bean Cafe"
+  productBase={`${base}products/brew-and-bean/`}
+>
+  <LegalDoc
+    title="Brew & Bean Cafe Privacy Policy"
+    intro="This page asks for nothing. Ordering on the live site happens over WhatsApp."
+    sections={[
+      {
+        heading: 'The short version',
+        body: 'Brew & Bean Cafe collects no personal data on this page. There is no account, no sign-up, and no form to fill in here. When you order on the live site, your order is sent as a WhatsApp message to the cafe — WhatsApp handles that message under its own terms, and Nadeem Dev Apps does not receive or store your order.',
+      },
+      {
+        heading: 'What this page asks for',
+        body: 'Nothing. You can read about the project and follow the link to the live site without giving any information. This page has no account system, no login, and no form that sends your details anywhere.',
+      },
+      {
+        heading: 'Ordering on the live site',
+        body: 'The live site is a cafe ordering site: you build an order in a cart and send it as a WhatsApp message. That message — what you ordered and anything you typed with it — goes to the cafe through WhatsApp, on your phone, under WhatsApp’s own terms. Nadeem Dev Apps runs no server that receives, stores, or reads your order.',
+      },
+      {
+        heading: 'Your choices',
+        body: 'You can leave this page or the live site at any time. Nothing you did here is stored by Nadeem Dev Apps, so there is nothing to delete. Anything you sent over WhatsApp is handled by WhatsApp and the cafe, not by us.',
+      },
+      {
+        heading: 'Changes to this policy',
+        body: 'This policy may be updated from time to time; the version on this page is always the current one. If the site ever starts handling data in a new way, the policy will say so.',
+      },
+      {
+        heading: 'Contact',
+        body: 'Questions about privacy? Email nadeem.devapps@gmail.com.',
+      },
+    ]}
+  />
+</ProductLayout>

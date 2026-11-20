@@ -72,7 +72,7 @@ export const projects: Project[] = [
     description:
       'A one-page CV maker that runs entirely in the browser — fill it in, pick a look, download a clean A4 PDF.',
     bullets: ['Pick theme and template', 'One-page A4 PDF download', 'Runs fully in the browser'],
-    link: { href: 'https://resumemagicmaker.lovable.app/', label: 'Live site →', external: true },
+    link: { href: 'products/cv-creator-pro/', label: "Open CV Creator Pro's site →" },
     category: 'web',
   },
   {
@@ -94,7 +94,7 @@ export const projects: Project[] = [
     description:
       'An animated cafe site with a menu and cart — your order is sent straight to the cafe as a WhatsApp message.',
     bullets: ['Menu and cart', 'Order sent as a WhatsApp message', 'Fully animated'],
-    link: { href: 'https://brew-and-bean-cafe-nadeemassignment.lovable.app/', label: 'Live site →', external: true },
+    link: { href: 'products/brew-and-bean/', label: "Open Brew & Bean's site →" },
     category: 'web',
   },
 ];

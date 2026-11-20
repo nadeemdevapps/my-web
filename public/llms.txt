@@ -16,9 +16,13 @@
 - [Kaizenly About](https://nadeemdevapps.github.io/nadeem-dev-apps/products/kaizenly/about/)
 - [Kaizenly Download](https://nadeemdevapps.github.io/nadeem-dev-apps/products/kaizenly/download/)
 - [MsgLoop](https://nadeemdevapps.github.io/nadeem-dev-apps/products/msgloop/): a WhatsApp sender for Android. Send one message many times, now or on a schedule. Local-first, no account, no server.
-- [CV Creator Pro](https://resumemagicmaker.lovable.app/): a one-page CV maker that runs entirely in the browser — fill it in, pick a look, download a clean A4 PDF.
+- [CV Creator Pro](https://nadeemdevapps.github.io/nadeem-dev-apps/products/cv-creator-pro/): a one-page CV maker that runs entirely in the browser — fill it in, pick a look, download a clean A4 PDF.
+- [CV Creator Pro Features](https://nadeemdevapps.github.io/nadeem-dev-apps/products/cv-creator-pro/features/)
+- [CV Creator Pro About](https://nadeemdevapps.github.io/nadeem-dev-apps/products/cv-creator-pro/about/)
 - Nydrex Suite: an Electron desktop suite for retail — point of sale and inventory, with customer and supplier ledgers and reporting. Windows desktop app, no live site.
-- [Brew & Bean Cafe](https://brew-and-bean-cafe-nadeemassignment.lovable.app/): an animated cafe site with a menu and cart — orders are sent to the cafe as a WhatsApp message. An assignment project, fully working end to end.
+- [Brew & Bean Cafe](https://nadeemdevapps.github.io/nadeem-dev-apps/products/brew-and-bean/): an animated cafe site with a menu and cart — orders are sent to the cafe as a WhatsApp message. An assignment project, fully working end to end.
+- [Brew & Bean Cafe Features](https://nadeemdevapps.github.io/nadeem-dev-apps/products/brew-and-bean/features/)
+- [Brew & Bean Cafe About](https://nadeemdevapps.github.io/nadeem-dev-apps/products/brew-and-bean/about/)
 
 ## Concepts
 
@@ -35,6 +39,8 @@
 - [Tsumly](https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/)
 - [Kaizenly](https://nadeemdevapps.github.io/nadeem-dev-apps/products/kaizenly/)
 - [MsgLoop](https://nadeemdevapps.github.io/nadeem-dev-apps/products/msgloop/)
+- [CV Creator Pro](https://nadeemdevapps.github.io/nadeem-dev-apps/products/cv-creator-pro/)
+- [Brew & Bean Cafe](https://nadeemdevapps.github.io/nadeem-dev-apps/products/brew-and-bean/)
 - [Tally Bar concept](https://nadeemdevapps.github.io/nadeem-dev-apps/concepts/tally-bar/)
 - [Look Out Below concept](https://nadeemdevapps.github.io/nadeem-dev-apps/concepts/look-out-below/)
 - [Stitch & Tan concept](https://nadeemdevapps.github.io/nadeem-dev-apps/concepts/stitch-and-tan/)
@@ -48,6 +54,9 @@
 - [Kaizenly Terms of Use](https://nadeemdevapps.github.io/nadeem-dev-apps/products/kaizenly/terms/)
 - [MsgLoop Privacy Policy](https://nadeemdevapps.github.io/nadeem-dev-apps/products/msgloop/privacy/)
 - [MsgLoop Terms of Use](https://nadeemdevapps.github.io/nadeem-dev-apps/products/msgloop/terms/)
+- [CV Creator Pro Privacy Policy](https://nadeemdevapps.github.io/nadeem-dev-apps/products/cv-creator-pro/privacy/)
+- [Brew & Bean Cafe Privacy Policy](https://nadeemdevapps.github.io/nadeem-dev-apps/products/brew-and-bean/privacy/)
+- [Brew & Bean Cafe Terms of Use](https://nadeemdevapps.github.io/nadeem-dev-apps/products/brew-and-bean/terms/)
 - [Privacy Policy](https://nadeemdevapps.github.io/nadeem-dev-apps/privacy/)
 - [Terms of Use](https://nadeemdevapps.github.io/nadeem-dev-apps/terms/)
 

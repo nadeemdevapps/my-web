@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CvCreatorNav from '../../../components/CvCreatorNav.astro';
+import CvCreatorFooter from '../../../components/CvCreatorFooter.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const appUrl = 'https://resumemagicmaker.lovable.app/';
+const description =
+  'Every CV Creator Pro feature in detail — your details, six themes, five templates, the one-page A4 PDF, and what stays in your browser.';
+---
+
+<BaseLayout
+  title="CV Creator Pro — Features"
+  description={description}
+  noMainChrome
+>
+  <CvCreatorNav productBase={`${base}products/cv-creator-pro/`} />
+
+  <section>
+    <div class="container narrow">
+      <span class="kicker">Features</span>
+      <h1>Every feature, in detail.</h1>
+      <p class="lede">
+        This is the full tour: what you fill in, how the themes and
+        templates work, how the PDF is made, and what stays in your browser.
+        If you have a question about the app, the answer is on this page.
+      </p>
+      <p class="cta-row">
+        <a class="btn btn-primary" href={appUrl} target="_blank" rel="noopener">Open the app →</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container narrow">
+      <span class="kicker">Your details</span>
+      <h2>Everything a CV needs, in one form.</h2>
+      <ul class="feature-list">
+        <li><strong>Name, job title, photo, and contact info</strong> — the top of the page, filled in once.</li>
+        <li><strong>About me, Passion, and Interests</strong> — short sections that say who you are, not just what you did.</li>
+        <li><strong>Experience and Education</strong> — jobs and schooling with a short note each.</li>
+        <li><strong>Skills and Languages</strong> — rated on a 1–5 scale, so the level is visible at a glance.</li>
+        <li><strong>“Fill sample”</strong> loads example data so you can see how the CV looks before you type a word; <strong>“Clear”</strong> resets the form.</li>
+        <li><strong>“Copy AI prompt”</strong> copies a ready-made interview prompt — paste it into ChatGPT, Claude, Gemini, or any LLM, let it interview you step by step, then copy its answers back into the form. There is no AI backend; the interview happens outside the app.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container narrow">
+      <span class="kicker">Themes</span>
+      <h2>Six colour sets.</h2>
+      <p class="lede">
+        Pick a look for the whole CV: <strong>Paper &amp; Ink, Navy &amp; Sun,
+        Soft Sky, Forest, Terracotta, and Slate.</strong> The theme recolours
+        the CV — background, ink, accent, and highlights — in one step.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container narrow">
+      <span class="kicker">Templates</span>
+      <h2>Five designs.</h2>
+      <p class="lede">
+        Five layouts to choose from: <strong>Editorial, Sidebar, Elegant,
+        Brutalist, and Classic.</strong> Every template works with every
+        theme, so the same CV can look six different ways in each of five
+        designs.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container narrow">
+      <span class="kicker">One-page A4 PDF</span>
+      <h2>A clean PDF, exactly one page.</h2>
+      <ul class="feature-list">
+        <li><strong>Single A4 page</strong> — the finished CV downloads as one A4 page (210 × 297 mm), never two.</li>
+        <li><strong>Limits keep it on the page</strong> — word limits on About me, Passion, and each job description, and entry limits on Experience, Education, Skills, Languages, and Interests, so the CV cannot grow past one page.</li>
+        <li><strong>Measured before download</strong> — the download step measures the rendered page and warns you if content would be clipped, so a long unbroken word never silently disappears.</li>
+        <li><strong>An honest caveat</strong> — the PDF is a raster image: it looks exactly like the preview, but the text is not selectable and ATS parsers will not read it. If you need machine-readable text, use your browser’s own Save as PDF from the preview, or paste the text into a plain-text CV.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container narrow">
+      <span class="kicker">Saved in your browser</span>
+      <h2>Close the tab. Come back. It is still there.</h2>
+      <ul class="feature-list">
+        <li><strong>Every edit is saved</strong> in the browser’s own storage on your device, and restored when you reload the page.</li>
+        <li><strong>Validated on load</strong> — saved data is checked before it is used, and anything unknown or out of range falls back to a safe default instead of breaking the page.</li>
+        <li><strong>A hard escape hatch</strong> — if saved data ever misbehaves, the error page offers a “Reset saved data” button that clears it and starts fresh.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container narrow">
+      <span class="kicker">Private by design</span>
+      <h2>No server. No account. No upload.</h2>
+      <ul class="feature-list">
+        <li><strong>Nothing leaves your machine</strong> — there is no backend, no analytics on your CV data, and no tracking.</li>
+        <li><strong>Your photo stays local</strong> — it is downscaled and stored in the browser, never uploaded.</li>
+        <li><strong>One third-party request</strong> — the page loads fonts from Google Fonts. Nothing else leaves your machine.</li>
+      </ul>
+      <p>
+        The full picture is on the <a href={`${base}products/cv-creator-pro/privacy/`}>Privacy Policy</a>.
+      </p>
+    </div>
+  </section>
+
+  <CvCreatorFooter productBase={`${base}products/cv-creator-pro/`} />
+</BaseLayout>
+
+<style>
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .cta-row a { text-decoration: none; }
+</style>

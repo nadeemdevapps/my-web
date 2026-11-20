@@ -1,0 +1,89 @@
+---
+import ProductLayout from '../../../layouts/ProductLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const siteUrl = Astro.site?.href ?? 'https://nadeemdevapps.github.io/';
+const liveUrl = 'https://brew-and-bean-cafe-nadeemassignment.lovable.app/';
+const description =
+  'About Brew & Bean Cafe — an animated cafe ordering site built as an assignment project, not for a real client or a real cafe. Fully working end to end.';
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Brew & Bean Cafe',
+    applicationCategory: 'Food',
+    operatingSystem: 'Web',
+    url: new URL(`${base}products/brew-and-bean/about/`, siteUrl).href,
+    description,
+    author: { '@type': 'Organization', name: 'Nadeem Dev Apps' },
+  },
+];
+---
+
+<ProductLayout
+  title="About Brew & Bean Cafe"
+  description={description}
+  productName="Brew & Bean Cafe"
+  productBase={`${base}products/brew-and-bean/`}
+  jsonLd={jsonLd}
+  developerSection
+>
+  <section>
+    <div class="container narrow">
+      <h1>An assignment, built honestly.</h1>
+      <p class="lede">
+        Brew &amp; Bean Cafe was built as an <strong>assignment project</strong>.
+        It is not a real cafe, and it was not built for a real client. It is a
+        demonstration of a full ordering flow — a menu, a cart, and an order
+        sent on WhatsApp — working end to end.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container narrow">
+      <span class="kicker">What it is</span>
+      <h2>A complete ordering flow, as a demo</h2>
+      <p>
+        The site shows what a small cafe's website can do: present a menu with
+        prices in PKR, let a visitor build an order in a cart, and send that
+        order straight to the cafe as a WhatsApp message — no account, no
+        checkout form, no app to install. The whole site is animated, so
+        browsing it is part of the experience.
+      </p>
+      <p>
+        It was built to learn and to demonstrate that loop, and the loop
+        works. That is the whole point of the project.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container narrow">
+      <span class="kicker">What it is not</span>
+      <h2>Not a real cafe</h2>
+      <p>
+        There is no real cafe behind this site, no real kitchen, and no food
+        to buy. Do not treat it as a way to order food from a real business —
+        the ordering flow is a working demonstration, nothing more.
+      </p>
+      <p>
+        The live site is hosted on Lovable for now. Moving it to a dedicated
+        URL of its own is planned for later.
+      </p>
+      <p class="cta-row">
+        <a class="btn btn-primary" href={liveUrl} target="_blank" rel="noopener">Visit the live site →</a>
+        <a class="btn btn-secondary" href={`${base}products/brew-and-bean/features/`}>See features →</a>
+      </p>
+    </div>
+  </section>
+</ProductLayout>
+
+<style>
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+  }
+</style>

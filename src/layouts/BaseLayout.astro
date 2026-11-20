@@ -12,7 +12,8 @@ interface Props {
 const { title, description = 'Nadeem Dev Apps — small, local-first apps.', jsonLd = [], noindex = false, noMainChrome = false } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 // Absolute URLs for canonical / Open Graph: Astro.site is the production
-// origin (https://nadeemdevapps.github.io); the pathname carries /nadeem-dev-apps.
+// origin (SITE_URL — the GitHub Pages URL by default, the Cloudflare
+// Pages URL on Cloudflare); the pathname carries the site base.
 const siteUrl = Astro.site?.href ?? 'https://nadeemdevapps.github.io/';
 // Canonical: force a trailing slash so every page matches the slashed form
 // used by the sitemap and llms.txt (Home is /nadeem-dev-apps/, never bare /nadeem-dev-apps).

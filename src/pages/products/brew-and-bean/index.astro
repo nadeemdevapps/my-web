@@ -1,0 +1,107 @@
+---
+import ProductLayout from '../../../layouts/ProductLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const siteUrl = Astro.site?.href ?? 'https://nadeemdevapps.github.io/';
+const liveUrl = 'https://brew-and-bean-cafe-nadeemassignment.lovable.app/';
+const description =
+  'Brew & Bean Cafe is an animated cafe marketing and ordering site — a menu with prices in PKR, a cart, and orders sent straight to the cafe as a WhatsApp message. An assignment project, fully working end to end.';
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Brew & Bean Cafe',
+    applicationCategory: 'Food',
+    operatingSystem: 'Web',
+    url: new URL(`${base}products/brew-and-bean/`, siteUrl).href,
+    description,
+    author: { '@type': 'Organization', name: 'Nadeem Dev Apps' },
+  },
+];
+---
+
+<ProductLayout
+  title="Brew & Bean Cafe — Animated Cafe Site"
+  description={description}
+  productName="Brew & Bean Cafe"
+  productBase={`${base}products/brew-and-bean/`}
+  jsonLd={jsonLd}
+  developerSection
+>
+  <section>
+    <div class="container narrow">
+      <h1>A cafe site that takes your order — over WhatsApp.</h1>
+      <p class="lede">
+        Brew &amp; Bean Cafe is an <strong>animated cafe marketing and ordering site</strong>.
+        Browse the menu, add dishes to a cart, and send the order straight to the cafe
+        as a WhatsApp message. It is an <strong>assignment project</strong> — built to
+        demonstrate a full ordering flow, working end to end.
+      </p>
+      <p class="cta-row">
+        <a class="btn btn-primary" href={liveUrl} target="_blank" rel="noopener">Visit the live site →</a>
+        <a class="btn btn-secondary" href={`${base}products/brew-and-bean/features/`}>See features →</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <span class="kicker">What it does</span>
+      <h2>Menu, cart, order — in the browser</h2>
+      <div class="product-grid">
+        <article class="card">
+          <h3>A menu with prices in PKR</h3>
+          <p>Browse the cafe menu with prices in Pakistani rupees, and pick what you want.</p>
+        </article>
+        <article class="card">
+          <h3>A cart that holds your order</h3>
+          <p>Add dishes to a cart and review the order before you send it.</p>
+        </article>
+        <article class="card">
+          <h3>Orders by WhatsApp</h3>
+          <p>Your order goes straight to the cafe as a WhatsApp message — no account, no checkout form.</p>
+        </article>
+        <article class="card">
+          <h3>Fully animated</h3>
+          <p>The whole site is animated — browsing the menu is part of the experience, not just a list.</p>
+        </article>
+      </div>
+      <p class="more-links">
+        <a href={`${base}products/brew-and-bean/features/`}>All features →</a>
+        <a href={`${base}products/brew-and-bean/about/`}>About this project →</a>
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container narrow">
+      <span class="kicker">Honestly</span>
+      <h2>An assignment, not a real cafe</h2>
+      <p class="lede">
+        Brew &amp; Bean Cafe was built as an assignment project, not for a real client
+        or a real cafe. The ordering flow works end to end as a demonstration —
+        it is not a way to buy food from a real cafe.
+      </p>
+      <p>
+        <a href={`${base}products/brew-and-bean/about/`}>Read the full story →</a>
+      </p>
+    </div>
+  </section>
+</ProductLayout>
+
+<style>
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .more-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 0;
+  }
+</style>

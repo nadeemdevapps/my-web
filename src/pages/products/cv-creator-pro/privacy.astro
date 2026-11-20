@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CvCreatorNav from '../../../components/CvCreatorNav.astro';
+import CvCreatorFooter from '../../../components/CvCreatorFooter.astro';
+import LegalDoc from '../../../components/LegalDoc.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<BaseLayout
+  title="CV Creator Pro Privacy Policy"
+  description="Privacy policy for CV Creator Pro, the one-page CV maker — your CV stays in your browser, with no account, no upload, and no tracking."
+  noMainChrome
+>
+  <CvCreatorNav productBase={`${base}products/cv-creator-pro/`} />
+  <LegalDoc
+    title="CV Creator Pro Privacy Policy"
+    intro="CV Creator Pro collects nothing. Your CV stays in your browser."
+    sections={[
+      {
+        heading: 'The short version',
+        body: 'CV Creator Pro is private by design. It does not collect, track, profile, or upload personal data. No account or signup is required, and there are no analytics on your CV data, no advertising, and no tracking SDKs. Your details, your photo, and your choices stay in your browser. The page loads fonts from Google Fonts, and nothing else leaves your machine.',
+      },
+      {
+        heading: 'What stays in your browser',
+        body: 'Your CV details, your theme and template choices, and your photo are saved in the browser’s own storage on your device (localStorage), and restored when you come back. Your photo is downscaled and stored as a JPEG data URL in that same storage — it is never uploaded. Clearing the site’s data in your browser removes everything.',
+      },
+      {
+        heading: 'Google Fonts',
+        body: 'The page loads fonts from Google Fonts, which is a third-party request to Google’s servers. Your CV data is not sent to Google — only the font files are fetched.',
+      },
+      {
+        heading: 'No account, no tracking',
+        body: 'There is no CV Creator Pro account and no sign-up, and no server receives your data. There are no analytics on your CV data, no advertising, and no tracking SDKs.',
+      },
+      {
+        heading: 'Your choices',
+        body: 'Your data is yours. You can clear the form in the app, use the “Reset saved data” button if saved data ever misbehaves, or clear the site’s data in your browser at any time to remove everything.',
+      },
+      {
+        heading: 'Changes to this policy',
+        body: 'This policy may be updated from time to time; the version on this page is always the current one. If the app ever starts handling data in a new way, the policy will say so.',
+      },
+      {
+        heading: 'Contact',
+        body: 'Questions about privacy? Email nadeem.devapps@gmail.com.',
+      },
+    ]}
+  />
+  <CvCreatorFooter productBase={`${base}products/cv-creator-pro/`} />
+</BaseLayout>

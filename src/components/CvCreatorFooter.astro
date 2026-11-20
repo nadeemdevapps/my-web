@@ -1,0 +1,73 @@
+---
+// CV Creator Pro footer: mirrors the ProductLayout product footer,
+// with the four real CV pages (no Terms page exists for this product).
+interface Props {
+  productBase: string; // e.g. `${base}products/cv-creator-pro/`
+}
+
+const { productBase } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<footer class="product-footer">
+  <div class="container">
+    <div class="product-footer-brand">
+      <span class="product-footer-name">CV Creator Pro</span>
+      <span class="product-footer-built">Built by Nadeem Dev Apps</span>
+    </div>
+    <nav aria-label="CV Creator Pro footer">
+      <a href={productBase}>Overview</a>
+      <a href={`${productBase}features/`}>Features</a>
+      <a href={`${productBase}about/`}>About</a>
+      <a href={`${productBase}privacy/`}>Privacy</a>
+      <a href={base}>Back to main website →</a>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  .product-footer {
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-hairline);
+    padding: 32px 0;
+  }
+  .product-footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .product-footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .product-footer-name {
+    font-family: var(--font-display);
+    font-size: 18px;
+    color: var(--color-ink);
+  }
+  .product-footer-built {
+    color: var(--color-ink-muted);
+    font-size: 14px;
+  }
+  .product-footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+  }
+  .product-footer nav a {
+    color: var(--color-ink);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .product-footer nav a:hover { color: var(--color-primary); text-decoration: none; }
+  @media (max-width: 840px) {
+    .product-footer .container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  }
+</style>

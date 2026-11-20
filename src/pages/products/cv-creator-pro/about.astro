@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CvCreatorNav from '../../../components/CvCreatorNav.astro';
+import CvCreatorFooter from '../../../components/CvCreatorFooter.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const siteUrl = Astro.site?.href ?? 'https://nadeemdevapps.github.io/';
+const appUrl = 'https://resumemagicmaker.lovable.app/';
+
+// Short Person JSON-LD for SEO/AEO — no location stated.
+const personLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Nadeem Mazhar',
+  jobTitle: 'Solo Developer',
+  description:
+    'Solo developer. Builds websites, Windows apps, Android apps, and backends — local-first or cloud, whichever the project needs — with AI doing the heavy lifting under his direction.',
+  url: new URL(`${base}about/`, siteUrl).href,
+  sameAs: ['https://github.com/nadeemdevapps'],
+};
+---
+
+<BaseLayout
+  title="About CV Creator Pro — A CV Without Handing Over Your Details"
+  description="Why CV Creator Pro exists: a one-page CV should not cost you an account, an upload, or your data. The story, and what makes it different."
+  jsonLd={[personLd]}
+  noMainChrome
+>
+  <CvCreatorNav productBase={`${base}products/cv-creator-pro/`} />
+
+  <section>
+    <div class="container narrow">
+      <span class="kicker">About</span>
+      <h1>A CV without handing over your details.</h1>
+      <p class="lede">
+        Most CV makers ask for the same trade: create an account, upload
+        your details, and hope the website keeps them safe. CV Creator Pro
+        refuses the trade. It is a one-page CV maker that runs entirely in
+        your browser — fill it in, pick a look, download a clean A4 PDF —
+        and <strong>no account, no upload, no server</strong>.
+      </p>
+      <p class="lede">
+        Your details, your photo, and your choices are saved in the
+        browser’s own storage on your device. Nothing is sent anywhere.
+        The page loads fonts from Google Fonts, and that is the only thing
+        that leaves your machine.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container narrow">
+      <span class="kicker">Why a browser tool</span>
+      <h2>Your CV is yours.</h2>
+      <p class="lede">
+        A CV is personal: your name, your photo, your work history, your
+        contact details. A tool that asks you to upload all of that to
+        somebody else’s server is asking for a lot of trust. CV Creator Pro
+        is built so it never has to ask — the work happens where the data
+        already is, in your browser, and the PDF is made there too.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container narrow">
+      <span class="kicker">The developer</span>
+      <h2>Built by Nadeem.</h2>
+      <p class="lede">
+        CV Creator Pro was built by <strong>Nadeem Mazhar</strong>, a solo
+        developer, as part of Nadeem Dev Apps — the same way he builds
+        everything: plan first, then build with AI, phase by phase, tested.
+      </p>
+      <p>
+        <a href={base}>Visit the portfolio →</a>
+      </p>
+      <p class="cta-row">
+        <a class="btn btn-primary" href={appUrl} target="_blank" rel="noopener">Open the app →</a>
+        <a class="btn btn-secondary" href={`${base}products/cv-creator-pro/features/`}>See the features</a>
+      </p>
+    </div>
+  </section>
+
+  <CvCreatorFooter productBase={`${base}products/cv-creator-pro/`} />
+</BaseLayout>
+
+<style>
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .cta-row a { text-decoration: none; }
+</style>

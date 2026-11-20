@@ -1,0 +1,153 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CvCreatorNav from '../../../components/CvCreatorNav.astro';
+import CvCreatorFooter from '../../../components/CvCreatorFooter.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const siteUrl = Astro.site?.href ?? 'https://nadeemdevapps.github.io/';
+const appUrl = 'https://resumemagicmaker.lovable.app/';
+const description =
+  'CV Creator Pro is a one-page CV maker that runs entirely in your browser — fill it in, pick a look, download a clean A4 PDF. No account, no upload, nothing leaves your machine.';
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'CV Creator Pro',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any',
+    browserRequirements: 'Requires a modern web browser',
+    url: new URL(`${base}products/cv-creator-pro/`, siteUrl).href,
+    description,
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+    author: { '@type': 'Organization', name: 'Nadeem Dev Apps' },
+  },
+];
+const faqs = [
+  {
+    question: 'Does CV Creator Pro upload my CV anywhere?',
+    answer:
+      'No. Everything runs in your browser: your details, your photo, and your choices are saved in the browser’s own storage on your device and restored when you come back. There is no account and no server. The page loads fonts from Google Fonts, and nothing else leaves your machine.',
+  },
+  {
+    question: 'Will my CV work with applicant tracking systems (ATS)?',
+    answer:
+      'The downloaded PDF is a raster image — it looks exactly like the preview, but the text is not selectable and ATS parsers will not read it. If you need machine-readable text, use your browser’s own Save as PDF from the preview, or paste the text into a plain-text CV.',
+  },
+  {
+    question: 'Stuck on what to write?',
+    answer:
+      '“Copy AI prompt” copies a ready-made interview prompt. Paste it into ChatGPT, Claude, Gemini, or any LLM, let it interview you step by step, then copy its answers back into the form. There is no AI backend — the interview happens outside the app, and everything still stays in your browser.',
+  },
+];
+---
+
+<BaseLayout
+  title="CV Creator Pro — One-Page CV Maker"
+  description={description}
+  jsonLd={jsonLd}
+  noMainChrome
+>
+  <CvCreatorNav productBase={`${base}products/cv-creator-pro/`} />
+
+  <section>
+    <div class="container narrow">
+      <h1>A one-page CV, made in your browser.</h1>
+      <p class="lede">
+        CV Creator Pro is a <strong>one-page CV maker</strong> that runs
+        entirely in your browser. Fill in your details, pick a colour theme
+        and a template, and download a clean A4 PDF.
+        <strong>No account, no upload</strong> — nothing leaves your machine.
+      </p>
+      <p class="cta-row">
+        <a class="btn btn-primary" href={appUrl} target="_blank" rel="noopener">Open the app →</a>
+        <a class="btn btn-secondary" href={`${base}products/cv-creator-pro/features/`}>See the features</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container narrow">
+      <span class="kicker">What it does</span>
+      <h2>A full CV, on one A4 page.</h2>
+      <ul class="feature-list">
+        <li><strong>Your details</strong> — name, job title, photo, contact info, About me, Passion, Interests, Experience, Education, Skills, and Languages.</li>
+        <li><strong>Six colour themes</strong> — Paper &amp; Ink, Navy &amp; Sun, Soft Sky, Forest, Terracotta, and Slate.</li>
+        <li><strong>Five templates</strong> — Editorial, Sidebar, Elegant, Brutalist, and Classic. Every template works with every theme.</li>
+        <li><strong>One-page A4 PDF</strong> — download the finished CV as a single A4 page.</li>
+        <li><strong>Saved in your browser</strong> — every edit is saved and restored when you come back.</li>
+        <li><strong>No account, no upload</strong> — your CV never leaves your machine.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container narrow">
+      <span class="kicker">How it works</span>
+      <h2>Four steps, then download.</h2>
+      <ol>
+        <li>
+          <strong>Fill in your details.</strong> Enter your name, job title,
+          contact info, experience, education, skills, and languages.
+          “Fill sample” loads example data so you can see how it looks;
+          “Clear” resets the form.
+        </li>
+        <li>
+          <strong>Pick a theme and a template.</strong> Six colour sets and
+          five designs — mix any theme with any template.
+        </li>
+        <li>
+          <strong>Check the fit.</strong> Word and entry limits keep the CV
+          on a single A4 page, and the download step measures the page and
+          warns you if anything would be clipped.
+        </li>
+        <li>
+          <strong>Download the PDF.</strong> A clean one-page A4 PDF of the
+          finished CV.
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container narrow">
+      <span class="kicker">Questions</span>
+      <h2>Frequently asked questions</h2>
+      {faqs.map((faq) => (
+        <>
+          <h3>{faq.question}</h3>
+          <p>{faq.answer}</p>
+        </>
+      ))}
+    </div>
+  </section>
+
+  <section>
+    <div class="container narrow">
+      <span class="kicker">The developer</span>
+      <h2>Built by Nadeem.</h2>
+      <p class="lede">
+        CV Creator Pro was built by <strong>Nadeem Mazhar</strong>, a solo
+        developer, as part of Nadeem Dev Apps.
+      </p>
+      <p>
+        <a href={base}>Visit the portfolio →</a>
+      </p>
+    </div>
+  </section>
+
+  <CvCreatorFooter productBase={`${base}products/cv-creator-pro/`} />
+</BaseLayout>
+
+<style>
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .cta-row a { text-decoration: none; }
+</style>

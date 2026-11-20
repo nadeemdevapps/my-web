@@ -4,7 +4,7 @@
 
 This file is the full-text companion to [llms.txt](https://nadeemdevapps.github.io/nadeem-dev-apps/llms.txt). It contains the full text of every page on this site, in reading order, so an AI system can read the whole site in a single request instead of crawling page by page. The text here matches the live pages; the legal pages at the end are summarized with links to the full text.
 
-Contents: [Home](https://nadeemdevapps.github.io/nadeem-dev-apps/) · [About](https://nadeemdevapps.github.io/nadeem-dev-apps/about/) · [Products](https://nadeemdevapps.github.io/nadeem-dev-apps/products/) · [Tsumly](https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/) · [Kaizenly](https://nadeemdevapps.github.io/nadeem-dev-apps/products/kaizenly/) · [MsgLoop](https://nadeemdevapps.github.io/nadeem-dev-apps/products/msgloop/) · [CV Creator Pro](https://resumemagicmaker.lovable.app/) · [Brew & Bean Cafe](https://brew-and-bean-cafe-nadeemassignment.lovable.app/) · [Contact](https://nadeemdevapps.github.io/nadeem-dev-apps/contact/) · [Legal pages](#legal-pages)
+Contents: [Home](https://nadeemdevapps.github.io/nadeem-dev-apps/) · [About](https://nadeemdevapps.github.io/nadeem-dev-apps/about/) · [Products](https://nadeemdevapps.github.io/nadeem-dev-apps/products/) · [Tsumly](https://nadeemdevapps.github.io/nadeem-dev-apps/products/tsumly/) · [Kaizenly](https://nadeemdevapps.github.io/nadeem-dev-apps/products/kaizenly/) · [MsgLoop](https://nadeemdevapps.github.io/nadeem-dev-apps/products/msgloop/) · [CV Creator Pro](https://nadeemdevapps.github.io/nadeem-dev-apps/products/cv-creator-pro/) · [Brew & Bean Cafe](https://nadeemdevapps.github.io/nadeem-dev-apps/products/brew-and-bean/) · [Contact](https://nadeemdevapps.github.io/nadeem-dev-apps/contact/) · [Legal pages](#legal-pages)
 
 ---
 
@@ -205,7 +205,9 @@ A one-page CV maker that runs entirely in the browser — fill it in, pick a loo
 - One-page A4 PDF download
 - Runs fully in the browser
 
-[Live site](https://resumemagicmaker.lovable.app/)
+[Open CV Creator Pro's site](https://nadeemdevapps.github.io/nadeem-dev-apps/products/cv-creator-pro/)
+
+The app itself runs at https://resumemagicmaker.lovable.app/ (Lovable-hosted for now; a dedicated URL comes later).
 
 ### Nydrex Suite (Desktop · Retail)
 
@@ -225,7 +227,9 @@ An animated cafe site with a menu and cart — your order is sent straight to th
 - Order sent as a WhatsApp message
 - Fully animated
 
-[Live site](https://brew-and-bean-cafe-nadeemassignment.lovable.app/)
+[Open Brew & Bean Cafe's site](https://nadeemdevapps.github.io/nadeem-dev-apps/products/brew-and-bean/)
+
+The live site runs at https://brew-and-bean-cafe-nadeemassignment.lovable.app/ (Lovable-hosted for now; a dedicated URL comes later).
 
 ### Concepts
 

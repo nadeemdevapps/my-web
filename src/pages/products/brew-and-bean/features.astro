@@ -1,0 +1,109 @@
+---
+import ProductLayout from '../../../layouts/ProductLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const siteUrl = Astro.site?.href ?? 'https://nadeemdevapps.github.io/';
+const liveUrl = 'https://brew-and-bean-cafe-nadeemassignment.lovable.app/';
+const description =
+  'Brew & Bean Cafe features — a menu with prices in PKR, a cart, and orders sent straight to the cafe as a WhatsApp message, on a fully animated site.';
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Brew & Bean Cafe',
+    applicationCategory: 'Food',
+    operatingSystem: 'Web',
+    url: new URL(`${base}products/brew-and-bean/features/`, siteUrl).href,
+    description,
+    author: { '@type': 'Organization', name: 'Nadeem Dev Apps' },
+  },
+];
+---
+
+<ProductLayout
+  title="Brew & Bean Cafe Features"
+  description={description}
+  productName="Brew & Bean Cafe"
+  productBase={`${base}products/brew-and-bean/`}
+  jsonLd={jsonLd}
+  developerSection
+>
+  <section>
+    <div class="container narrow">
+      <h1>What the site does.</h1>
+      <p class="lede">
+        Everything on Brew &amp; Bean Cafe is built around one flow: find
+        something you like, add it to the cart, and send the order to the
+        cafe on WhatsApp. The site is fully animated, and the whole flow
+        works end to end.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <span class="kicker">Features</span>
+      <h2>The ordering flow, piece by piece</h2>
+      <div class="product-grid">
+        <article class="card">
+          <h3>A menu with prices in PKR</h3>
+          <p>The cafe menu is listed with prices in Pakistani rupees, so what you see is what the order will cost.</p>
+        </article>
+        <article class="card">
+          <h3>A cart that holds your order</h3>
+          <p>Add dishes to a cart as you browse, and review the full order — dishes and total — before you send it.</p>
+        </article>
+        <article class="card">
+          <h3>Orders by WhatsApp</h3>
+          <p>There is no checkout form and no account. Your order is sent straight to the cafe as a WhatsApp message.</p>
+        </article>
+        <article class="card">
+          <h3>Fully animated</h3>
+          <p>The site is animated throughout — the menu, the cart, and the ordering steps move as you use them.</p>
+        </article>
+        <article class="card">
+          <h3>A site, not an app</h3>
+          <p>It runs in the browser. There is nothing to install — open the live site and the menu is there.</p>
+        </article>
+        <article class="card">
+          <h3>Works end to end</h3>
+          <p>The flow is complete: browse, add to cart, and send the order. It was built to demonstrate that full loop, and it works.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container narrow">
+      <span class="kicker">How it works</span>
+      <h2>Three steps to an order</h2>
+      <ol>
+        <li>
+          <strong>Browse the menu.</strong> Look through the dishes with
+          their prices in PKR.
+        </li>
+        <li>
+          <strong>Add to the cart.</strong> Add what you want and check the
+          order before sending.
+        </li>
+        <li>
+          <strong>Send it on WhatsApp.</strong> The order goes to the cafe as
+          a WhatsApp message — that is the whole checkout.
+        </li>
+      </ol>
+      <p class="cta-row">
+        <a class="btn btn-primary" href={liveUrl} target="_blank" rel="noopener">Visit the live site →</a>
+        <a class="btn btn-secondary" href={`${base}products/brew-and-bean/about/`}>About this project →</a>
+      </p>
+    </div>
+  </section>
+</ProductLayout>
+
+<style>
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+  }
+</style>
