@@ -2,8 +2,8 @@
 // concepts-src/ (copies of the nadeemdevapps/xyz repo's projects, same
 // pattern as kaizenly/ and tsumly/ — each product folder a complete project,
 // merged into this site's dist). Each is built with the base of its subpath
-// under this site and merged into dist/concepts/<slug>/, so GitHub Pages
-// serves it at /nadeem-dev-apps/concepts/<slug>/. This runs as part of `npm run
+// under this site and merged into dist/concepts/<slug>/, so Cloudflare Pages
+// serves it at /concepts/<slug>/. This runs as part of `npm run
 // build` (root package.json), so every deploy — local or CI — carries the
 // concept sites, with no extra checkout or secret needed. It fails loudly
 // if a concept build or the merge fails, so a deploy never silently ships
@@ -22,9 +22,8 @@ import { fileURLToPath } from 'node:url';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const conceptsSrcDir = join(root, 'concepts-src');
 
-// Site base: '/nadeem-dev-apps' for GitHub Pages by default, '/' for Cloudflare
-// Pages at the root (SITE_BASE env).
-const siteBase = (process.env.SITE_BASE ?? '/nadeem-dev-apps').replace(/\/$/, '');
+// Site base is always '/' — the site lives at the root of
+// nadeem-dev-apps.pages.dev, so each concept's base is /concepts/<slug>/.
 
 const concepts = [
   { dir: 'tally-bar', slug: 'tally-bar' },
@@ -46,7 +45,7 @@ if (!existsSync(conceptsSrcDir)) {
 
 for (const { dir, slug } of concepts) {
   const projectDir = join(conceptsSrcDir, dir);
-  const base = `${siteBase}/concepts/${slug}/`;
+  const base = `/concepts/${slug}/`;
   const target = join(root, 'dist', 'concepts', slug);
 
   console.log(`[merge-concepts] building ${slug} (base ${base})…`);
@@ -66,12 +65,13 @@ for (const { dir, slug } of concepts) {
 
   // Verify every local asset the built index.html references exists in the
   // merged dist, and that no root-absolute local ref (/assets/..., /images/...,
-  // /favicon.svg) slipped through — those would 404 under the subpath.
+  // /favicon.svg) slipped through — those would 404, since assets live
+  // under /concepts/<slug>/.
   const html = readFileSync(join(target, 'index.html'), 'utf8');
   const refs = [...html.matchAll(/(?:src|href)="([^"]+)"/g)].map((m) => m[1]);
   for (const ref of refs) {
     if (ref.startsWith('/') && !ref.startsWith('//') && !ref.startsWith(base)) {
-      throw new Error(`[merge-concepts] ${slug}: index.html has root-absolute ref ${ref} — rebuild with the subpath base`);
+      throw new Error(`[merge-concepts] ${slug}: index.html has root-absolute ref ${ref} — rebuild with the root base`);
     }
     if (ref.startsWith(base) && !existsSync(join(target, ref.slice(base.length)))) {
       throw new Error(`[merge-concepts] ${slug}: index.html references ${ref} but it is missing in ${target}`);

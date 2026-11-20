@@ -909,15 +909,23 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   color: transparent;
   -webkit-text-stroke: 1.5px var(--color-ink);
   opacity: 0.28;
+  cursor: pointer;
   transition: opacity 0.25s ease, -webkit-text-stroke-color 0.25s ease;
 }
-.foot-letter:hover {
+/* One lit state, three ways in: hover (mouse), :focus-visible
+   (keyboard), .is-lit (tap — toggled by the script in BaseLayout). */
+.foot-letter:hover,
+.foot-letter:focus-visible,
+.foot-letter.is-lit {
   opacity: 1;
   -webkit-text-stroke-color: var(--color-primary);
   background: repeating-linear-gradient(45deg, rgba(0, 117, 222, 0.22) 0 1.5px, transparent 1.5px 7px);
   -webkit-background-clip: text;
   background-clip: text;
 }
+/* The lit state itself is the focus indicator (full opacity + blue
+   stroke + hatch), so the default outline is suppressed. */
+.foot-letter:focus-visible { outline: none; }
 .foot-letter .pt {
   position: absolute;
   width: 7px;
@@ -928,7 +936,9 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   pointer-events: none;
   transition: opacity 0.2s ease;
 }
-.foot-letter:hover .pt { opacity: 1; }
+.foot-letter:hover .pt,
+.foot-letter:focus-visible .pt,
+.foot-letter.is-lit .pt { opacity: 1; }
 .foot-letter .pt.tl { top: 0; left: 0; transform: translate(-50%, -50%); }
 .foot-letter .pt.tr { top: 0; left: 100%; transform: translate(-50%, -50%); }
 .foot-letter .pt.bl { top: 100%; left: 0; transform: translate(-50%, -50%); }

@@ -11,7 +11,7 @@ const { title, description, jsonLd } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const canonical = new URL(
   Astro.url.pathname,
-  Astro.site ?? 'https://nadeemdevapps.github.io',
+  Astro.site ?? 'https://nadeem-dev-apps.pages.dev',
 ).toString();
 ---
 
@@ -29,7 +29,7 @@ const canonical = new URL(
     <meta property="og:url" content={canonical} />
     <meta
       property="og:image"
-      content={`${Astro.site ?? 'https://nadeemdevapps.github.io'}${base}logo.svg`}
+      content={`${Astro.site ?? 'https://nadeem-dev-apps.pages.dev'}${base}logo.svg`}
     />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={title} />

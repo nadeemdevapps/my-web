@@ -1,7 +1,7 @@
 // Cutover (2026-11-10): the Kaizenly independent site lives in kaizenly/ as a
 // complete Astro project. Its build output is merged into the main site's
-// dist under products/kaizenly/, so GitHub Pages serves it at
-// /nadeem-dev-apps/products/kaizenly/. This runs as part of `npm run build` (root
+// dist under products/kaizenly/, so Cloudflare Pages serves it at
+// /products/kaizenly/. This runs as part of `npm run build` (root
 // package.json), so every deploy — local or CI — carries the Kaizenly pages.
 // It fails loudly if the Kaizenly build or the merge fails, so a deploy
 // never silently ships without them.
@@ -15,9 +15,9 @@ const kaizenlyDir = join(root, 'kaizenly');
 const kaizenlyDist = join(kaizenlyDir, 'dist');
 const target = join(root, 'dist', 'products', 'kaizenly');
 
-// Site base: '/nadeem-dev-apps' for GitHub Pages by default, '/' for Cloudflare
-// Pages at the root (SITE_BASE env). The Kaizenly build reads the same var.
-const siteBase = (process.env.SITE_BASE ?? '/nadeem-dev-apps').replace(/\/$/, '');
+// Site base is always '/' — the site lives at the root of
+// nadeem-dev-apps.pages.dev, so the Kaizenly base is /products/kaizenly/.
+const base = '/products/kaizenly/';
 
 function run(cmd, cwd) {
   execSync(cmd, { cwd, stdio: 'inherit' });
@@ -41,15 +41,15 @@ for (const page of ['index.html', 'features/index.html', 'gallery/index.html', '
 
 // Verify every local asset the merged index.html references exists in the
 // merged dist, and that no root-absolute local ref (/assets/..., /_astro/...)
-// slipped through — those would 404 under the subpath. Same check as
-// scripts/merge-concepts.mjs, adapted: product pages also link to in-page
-// anchors, so strip any #fragment (or ?query) before the existence check.
-const base = `${siteBase}/products/kaizenly/`;
+// slipped through — those would 404, since assets live under
+// /products/kaizenly/. Same check as scripts/merge-concepts.mjs, adapted:
+// product pages also link to in-page anchors, so strip any #fragment (or
+// ?query) before the existence check.
 const html = readFileSync(join(target, 'index.html'), 'utf8');
 const refs = [...html.matchAll(/(?:src|href)="([^"]+)"/g)].map((m) => m[1]);
 for (const ref of refs) {
   if (ref.startsWith('/') && !ref.startsWith('//') && !ref.startsWith(base)) {
-    throw new Error(`[merge-kaizenly] index.html has root-absolute ref ${ref} — rebuild with the subpath base`);
+    throw new Error(`[merge-kaizenly] index.html has root-absolute ref ${ref} — rebuild with the root base`);
   }
   if (ref.startsWith(base)) {
     const path = ref.slice(base.length).split(/[?#]/)[0];

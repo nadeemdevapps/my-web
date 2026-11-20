@@ -2,14 +2,14 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
-// Kaizenly's independent site. It builds on its own; at cutover its dist is
-// copied into the main site's dist under /products/kaizenly/ (see README.md).
-// Base follows SITE_BASE (default '/nadeem-dev-apps' for GitHub Pages, '/' for
-// Cloudflare Pages at the root); if this folder is ever extracted to its
-// own repo, change `site` to the new domain and remove `base`.
-const siteBase = (process.env.SITE_BASE ?? '/nadeem-dev-apps').replace(/\/$/, '');
+// Kaizenly's independent site. It builds on its own; the root build merges
+// its dist into the main site's dist under /products/kaizenly/ via
+// scripts/merge-kaizenly.mjs (see README.md). The site is served at the
+// root of nadeem-dev-apps.pages.dev, so the base is the product subpath
+// under '/'. If this folder is ever extracted to its own repo, change
+// `site` to the new domain and remove `base`.
 export default defineConfig({
-  site: process.env.SITE_URL ?? 'https://nadeemdevapps.github.io',
-  base: `${siteBase}/products/kaizenly`,
+  site: 'https://nadeem-dev-apps.pages.dev/',
+  base: '/products/kaizenly',
   integrations: [sitemap()],
 });

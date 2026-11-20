@@ -53,7 +53,7 @@ function fileToRoute(file: string): string | null {
 export const prerender = true;
 
 export const GET: APIRoute = ({ site }) => {
-  const base = import.meta.env.BASE_URL.replace(/\/$/, ''); // '/nadeem-dev-apps' by default, '' when SITE_BASE is '/'
+  const base = import.meta.env.BASE_URL.replace(/\/?$/, ''); // '' — the site lives at the root, so BASE_URL is '/'
   const routes = Object.keys(pageFiles)
     .map(fileToRoute)
     .filter((route): route is string => route !== null)
