@@ -14,7 +14,7 @@
 # with a 200, not the main site's 404 page. Cloudflare Pages serves an
 # existing static file before applying these rules, so real assets under
 # /concepts/<slug>/assets/ are unaffected.
-/concepts/tally-bar/*  /concepts/tally-bar/index.html  200
+/concepts/tally-bar/*  /concepts/tally-bar/  200
 /concepts/look-out-below/*  /concepts/look-out-below/index.html  200
 /concepts/stitch-and-tan/*  /concepts/stitch-and-tan/index.html  200
 /concepts/product-site/*  /concepts/product-site/index.html  200
