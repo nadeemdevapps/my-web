@@ -2,15 +2,15 @@
 
 > Nadeem Mazhar is a solo developer building websites, Windows apps, Android apps, and backends, with AI doing the heavy lifting under his direction.
 
-This file is the full-text companion to [llms.txt](https://nadeemdevapps.github.io/my-web/llms.txt). It contains the full text of every page on this site, in reading order, so an AI system can read the whole site in a single request instead of crawling page by page. The text here matches the live pages; the legal pages at the end are summarized with links to the full text.
+This file is the full-text companion to [llms.txt](https://nadeemdevapps.github.io/nadeem/llms.txt). It contains the full text of every page on this site, in reading order, so an AI system can read the whole site in a single request instead of crawling page by page. The text here matches the live pages; the legal pages at the end are summarized with links to the full text.
 
-Contents: [Home](https://nadeemdevapps.github.io/my-web/) · [About](https://nadeemdevapps.github.io/my-web/about/) · [Products](https://nadeemdevapps.github.io/my-web/products/) · [Tsumly](https://nadeemdevapps.github.io/my-web/products/tsumly/) · [Kaizenly](https://nadeemdevapps.github.io/my-web/products/kaizenly/) · [MsgLoop](https://nadeemdevapps.github.io/my-web/products/msgloop/) · [CV Creator Pro](https://resumemagicmaker.lovable.app/) · [Brew & Bean Cafe](https://brew-and-bean-cafe-nadeemassignment.lovable.app/) · [Contact](https://nadeemdevapps.github.io/my-web/contact/) · [Legal pages](#legal-pages)
+Contents: [Home](https://nadeemdevapps.github.io/nadeem/) · [About](https://nadeemdevapps.github.io/nadeem/about/) · [Products](https://nadeemdevapps.github.io/nadeem/products/) · [Tsumly](https://nadeemdevapps.github.io/nadeem/products/tsumly/) · [Kaizenly](https://nadeemdevapps.github.io/nadeem/products/kaizenly/) · [MsgLoop](https://nadeemdevapps.github.io/nadeem/products/msgloop/) · [CV Creator Pro](https://resumemagicmaker.lovable.app/) · [Brew & Bean Cafe](https://brew-and-bean-cafe-nadeemassignment.lovable.app/) · [Contact](https://nadeemdevapps.github.io/nadeem/contact/) · [Legal pages](#legal-pages)
 
 ---
 
 ## Home
 
-https://nadeemdevapps.github.io/my-web/
+https://nadeemdevapps.github.io/nadeem/
 
 # Nadeem Mazhar
 
@@ -18,8 +18,8 @@ Solo developer. I plan first, then build with AI — phase by phase, tested.
 
 Six shipped products, built for real problems I had myself.
 
-- **See the work** — [Products](https://nadeemdevapps.github.io/my-web/products/)
-- **Open to internships** — [Contact](https://nadeemdevapps.github.io/my-web/contact/)
+- **See the work** — [Products](https://nadeemdevapps.github.io/nadeem/products/)
+- **Open to internships** — [Contact](https://nadeemdevapps.github.io/nadeem/contact/)
 
 AI-first building · Strategic planning · Phased implementation · Learning in public · Experiments
 
@@ -73,13 +73,13 @@ An **animated cafe site with a menu and cart** — orders are sent to the cafe a
 - **WhatsApp order flow** — the order lands as a message, ready to confirm.
 - **Animated and responsive** — built to feel like a real cafe site.
 
-I build for myself first — the rest of the work is on the [About page](https://nadeemdevapps.github.io/my-web/about/).
+I build for myself first — the rest of the work is on the [About page](https://nadeemdevapps.github.io/nadeem/about/).
 
 ---
 
 ## About
 
-https://nadeemdevapps.github.io/my-web/about/
+https://nadeemdevapps.github.io/nadeem/about/
 
 # About
 
@@ -153,13 +153,13 @@ Tsumly is a local-first loan and ledger app that splits one repayment across sev
 
 You can reach Nadeem at nadeem.devapps@gmail.com, or find his work on GitHub at github.com/nadeemdevapps, his only social link. The contact page also has a form that opens a pre-addressed email in your own mail app.
 
-Learn more about [Tsumly](https://nadeemdevapps.github.io/my-web/products/tsumly/), [Kaizenly](https://nadeemdevapps.github.io/my-web/products/kaizenly/), and [MsgLoop](https://nadeemdevapps.github.io/my-web/products/msgloop/) — or [get in touch](https://nadeemdevapps.github.io/my-web/contact/).
+Learn more about [Tsumly](https://nadeemdevapps.github.io/nadeem/products/tsumly/), [Kaizenly](https://nadeemdevapps.github.io/nadeem/products/kaizenly/), and [MsgLoop](https://nadeemdevapps.github.io/nadeem/products/msgloop/) — or [get in touch](https://nadeemdevapps.github.io/nadeem/contact/).
 
 ---
 
 ## Products
 
-https://nadeemdevapps.github.io/my-web/products/
+https://nadeemdevapps.github.io/nadeem/products/
 
 # Selected work
 
@@ -175,7 +175,7 @@ A local-first expense tracker with a smart multi-loan repayment split — the fi
 - Smart multi-loan repayment split
 - Optional Drive backup
 
-[Open Tsumly's site](https://nadeemdevapps.github.io/my-web/products/tsumly/)
+[Open Tsumly's site](https://nadeemdevapps.github.io/nadeem/products/tsumly/)
 
 ### Kaizenly (Android · Focus)
 
@@ -185,7 +185,7 @@ A free phone blocker that helps you stay off distracting apps — every feature 
 - Routines
 - Free, no premium
 
-[Open Kaizenly's site](https://nadeemdevapps.github.io/my-web/products/kaizenly/)
+[Open Kaizenly's site](https://nadeemdevapps.github.io/nadeem/products/kaizenly/)
 
 ### MsgLoop (Android · Messaging)
 
@@ -195,7 +195,7 @@ A WhatsApp scheduled multi-message loop — send a set of messages to one number
 - Scheduled tasks
 - Resume from Recents
 
-[Open MsgLoop's site](https://nadeemdevapps.github.io/my-web/products/msgloop/)
+[Open MsgLoop's site](https://nadeemdevapps.github.io/nadeem/products/msgloop/)
 
 ### CV Creator Pro (Web · Tool)
 
@@ -231,17 +231,17 @@ An animated cafe site with a menu and cart — your order is sent straight to th
 
 5 concept demos — inspiration templates, cleaned and rebranded to Nadeem Dev Apps.
 
-- **Tally Bar** — a desk status display with an LED pixel screen and a focus timer. [Open the concept site](https://nadeemdevapps.github.io/my-web/concepts/tally-bar/)
-- **Look Out Below** — a tiny hand-drawn game about being small, quick and directly underneath a very clumsy sky. [Open the concept site](https://nadeemdevapps.github.io/my-web/concepts/look-out-below/)
-- **Stitch & Tan** — handmade leather pouches, cases and little things from a one-person studio, plus custom orders. [Open the concept site](https://nadeemdevapps.github.io/my-web/concepts/stitch-and-tan/)
-- **ProductSite** — a product site for a calm team workspace — plan, build and ship from one place. [Open the concept site](https://nadeemdevapps.github.io/my-web/concepts/product-site/)
-- **Portfolio** — a portfolio concept — oversized name, selected-work grid and case-study pages. [Open the concept site](https://nadeemdevapps.github.io/my-web/concepts/portfolio-concept/)
+- **Tally Bar** — a desk status display with an LED pixel screen and a focus timer. [Open the concept site](https://nadeemdevapps.github.io/nadeem/concepts/tally-bar/)
+- **Look Out Below** — a tiny hand-drawn game about being small, quick and directly underneath a very clumsy sky. [Open the concept site](https://nadeemdevapps.github.io/nadeem/concepts/look-out-below/)
+- **Stitch & Tan** — handmade leather pouches, cases and little things from a one-person studio, plus custom orders. [Open the concept site](https://nadeemdevapps.github.io/nadeem/concepts/stitch-and-tan/)
+- **ProductSite** — a product site for a calm team workspace — plan, build and ship from one place. [Open the concept site](https://nadeemdevapps.github.io/nadeem/concepts/product-site/)
+- **Portfolio** — a portfolio concept — oversized name, selected-work grid and case-study pages. [Open the concept site](https://nadeemdevapps.github.io/nadeem/concepts/portfolio-concept/)
 
 ---
 
 ## Tsumly
 
-https://nadeemdevapps.github.io/my-web/products/tsumly/
+https://nadeemdevapps.github.io/nadeem/products/tsumly/
 
 # Every amount adds up.
 
@@ -266,16 +266,16 @@ The full detail lives on the Features page.
 
 Tsumly is built by **Nadeem Mazhar**, a solo developer, as **Nadeem Dev Apps**. It started as his own problem — a ledger that never added up — and it is built the way he builds everything: local-first, and honest about what it does.
 
-More from Nadeem Dev Apps → https://nadeemdevapps.github.io/my-web/
+More from Nadeem Dev Apps → https://nadeemdevapps.github.io/nadeem/
 
-Tsumly pages: [Home](https://nadeemdevapps.github.io/my-web/products/tsumly/) · [Features](https://nadeemdevapps.github.io/my-web/products/tsumly/features/) · [Gallery](https://nadeemdevapps.github.io/my-web/products/tsumly/gallery/) · [About](https://nadeemdevapps.github.io/my-web/products/tsumly/about/) · [Download](https://nadeemdevapps.github.io/my-web/products/tsumly/download/) · [Privacy](https://nadeemdevapps.github.io/my-web/products/tsumly/privacy/) · [Terms](https://nadeemdevapps.github.io/my-web/products/tsumly/terms/) — full text: [llms-full.txt](https://nadeemdevapps.github.io/my-web/products/tsumly/llms-full.txt)
+Tsumly pages: [Home](https://nadeemdevapps.github.io/nadeem/products/tsumly/) · [Features](https://nadeemdevapps.github.io/nadeem/products/tsumly/features/) · [Gallery](https://nadeemdevapps.github.io/nadeem/products/tsumly/gallery/) · [About](https://nadeemdevapps.github.io/nadeem/products/tsumly/about/) · [Download](https://nadeemdevapps.github.io/nadeem/products/tsumly/download/) · [Privacy](https://nadeemdevapps.github.io/nadeem/products/tsumly/privacy/) · [Terms](https://nadeemdevapps.github.io/nadeem/products/tsumly/terms/) — full text: [llms-full.txt](https://nadeemdevapps.github.io/nadeem/products/tsumly/llms-full.txt)
 
 
 ---
 
 ## Kaizenly
 
-https://nadeemdevapps.github.io/my-web/products/kaizenly/
+https://nadeemdevapps.github.io/nadeem/products/kaizenly/
 
 # A little better, every day.
 
@@ -300,16 +300,16 @@ Everything is free. A custom card, 720-minute sessions, and silence / Do Not Dis
 
 Kaizenly is built by **Nadeem Mazhar**, a solo developer, as **Nadeem Dev Apps**. It started as his own problem — a phone that would not stay down — and it is built the way he builds everything: local-first, strict where it matters, and honest about what it does.
 
-More from Nadeem Dev Apps → https://nadeemdevapps.github.io/my-web/
+More from Nadeem Dev Apps → https://nadeemdevapps.github.io/nadeem/
 
-Kaizenly pages: [Home](https://nadeemdevapps.github.io/my-web/products/kaizenly/) · [Features](https://nadeemdevapps.github.io/my-web/products/kaizenly/features/) · [Gallery](https://nadeemdevapps.github.io/my-web/products/kaizenly/gallery/) · [About](https://nadeemdevapps.github.io/my-web/products/kaizenly/about/) · [Download](https://nadeemdevapps.github.io/my-web/products/kaizenly/download/) · [Privacy](https://nadeemdevapps.github.io/my-web/products/kaizenly/privacy/) · [Terms](https://nadeemdevapps.github.io/my-web/products/kaizenly/terms/) — full text: [llms-full.txt](https://nadeemdevapps.github.io/my-web/products/kaizenly/llms-full.txt)
+Kaizenly pages: [Home](https://nadeemdevapps.github.io/nadeem/products/kaizenly/) · [Features](https://nadeemdevapps.github.io/nadeem/products/kaizenly/features/) · [Gallery](https://nadeemdevapps.github.io/nadeem/products/kaizenly/gallery/) · [About](https://nadeemdevapps.github.io/nadeem/products/kaizenly/about/) · [Download](https://nadeemdevapps.github.io/nadeem/products/kaizenly/download/) · [Privacy](https://nadeemdevapps.github.io/nadeem/products/kaizenly/privacy/) · [Terms](https://nadeemdevapps.github.io/nadeem/products/kaizenly/terms/) — full text: [llms-full.txt](https://nadeemdevapps.github.io/nadeem/products/kaizenly/llms-full.txt)
 
 
 ---
 
 ## MsgLoop
 
-https://nadeemdevapps.github.io/my-web/products/msgloop/
+https://nadeemdevapps.github.io/nadeem/products/msgloop/
 
 # Send the same message, up to 500 times — on schedule.
 
@@ -422,7 +422,7 @@ MsgLoop was built by **Nadeem Mazhar**, a solo developer, as part of Nadeem Dev 
 
 ## Contact
 
-https://nadeemdevapps.github.io/my-web/contact/
+https://nadeemdevapps.github.io/nadeem/contact/
 
 # Open to internships
 
@@ -449,48 +449,48 @@ The legal pages are summarized here. Read the full text at the linked page.
 
 ### Tsumly Privacy Policy
 
-https://nadeemdevapps.github.io/my-web/products/tsumly/privacy/
+https://nadeemdevapps.github.io/nadeem/products/tsumly/privacy/
 
 Tsumly collects no personal data: there is no account, no signup, and no analytics, advertising, or tracking. Accounts, transactions, loans, repayments, people, categories, and settings stay in the local database on the phone, and Android automatic backup is disabled. Google Drive backup is optional and off by default, uploading only to the app's own hidden appDataFolder, and backups can be protected with a password. Questions: nadeem.devapps@gmail.com.
 
 ### Tsumly Terms of Use
 
-https://nadeemdevapps.github.io/my-web/products/tsumly/terms/
+https://nadeemdevapps.github.io/nadeem/products/tsumly/terms/
 
 Tsumly is a personal finance record-keeping tool, provided as-is: it is not financial advice, and it is not a bank or payment service. Everything is stored locally with no Tsumly account and no server; the user owns their data and is responsible for keeping backups, since uninstalling the app wipes its local data. Use is for lawful personal finance tracking only. Questions: nadeem.devapps@gmail.com.
 
 ### Kaizenly Privacy Policy
 
-https://nadeemdevapps.github.io/my-web/products/kaizenly/privacy/
+https://nadeemdevapps.github.io/nadeem/products/kaizenly/privacy/
 
 Kaizenly collects no personal data: there is no account, no signup, and no analytics, advertising, or tracking. Sessions, bags, routines, and stats stay on the device, and the permissions blocking needs (usage access, accessibility, device admin, overlay, notifications, alarms) all work locally and never send information anywhere. There are no premium purchases in Kaizenly — the app has no purchases of any kind, so no payment information is ever collected or handled. Questions: nadeem.devapps@gmail.com.
 
 ### Kaizenly Terms of Use
 
-https://nadeemdevapps.github.io/my-web/products/kaizenly/terms/
+https://nadeemdevapps.github.io/nadeem/products/kaizenly/terms/
 
 Kaizenly is a strict focus guard, provided as-is, and its strictness is the point: sessions block a named set of apps until the timer ends, leaving early costs a parachute, and a 30-minute break is available during longer sessions. Data stays local with no account and no server. There are no premium features in Kaizenly. Everything the app does is free, and there is nothing to buy in the app — no purchase, no subscription. Questions: nadeem.devapps@gmail.com.
 
 ### MsgLoop Privacy Policy
 
-https://nadeemdevapps.github.io/my-web/products/msgloop/privacy/
+https://nadeemdevapps.github.io/nadeem/products/msgloop/privacy/
 
 MsgLoop collects no personal data: there is no account, no signup, and no analytics, advertising, or tracking. Scheduled tasks, history, and the WhatsApp Web login session stay on the phone, and Android automatic backup is disabled. You log in by scanning a QR code; MsgLoop never asks for or sees your WhatsApp password. The only network use is WhatsApp Web itself. Questions: nadeem.devapps@gmail.com.
 
 ### MsgLoop Terms of Use
 
-https://nadeemdevapps.github.io/my-web/products/msgloop/terms/
+https://nadeemdevapps.github.io/nadeem/products/msgloop/terms/
 
 MsgLoop is a WhatsApp sender, provided as-is: it sends one message many times, now or on a schedule, through WhatsApp Web inside the app, with no official WhatsApp API. Automating WhatsApp Web violates WhatsApp's Terms of Service, and repetitive bulk messaging can get a number temporarily or permanently banned, so use it at your own risk and only on numbers you own or have permission to message. Data stays local with no account and no server. Questions: nadeem.devapps@gmail.com.
 
 ### Privacy Policy (website)
 
-https://nadeemdevapps.github.io/my-web/privacy/
+https://nadeemdevapps.github.io/nadeem/privacy/
 
 This website collects no personal data: it is a static site with no analytics, no advertising, no tracking scripts, no cookies, and no accounts. A light/dark theme choice is saved in the visitor's own browser only. The site loads the Bricolage Grotesque and Inter fonts from Google Fonts — the only third-party request it makes. Emailing the contact address shares only what the sender writes, used only to reply. Questions: nadeem.devapps@gmail.com.
 
 ### Terms of Use (website)
 
-https://nadeemdevapps.github.io/my-web/terms/
+https://nadeemdevapps.github.io/nadeem/terms/
 
 These terms cover the Nadeem Dev Apps website, a portfolio and product site for Tsumly, Kaizenly, MsgLoop, CV Creator Pro, Nydrex Suite, and Brew & Bean Cafe; the apps themselves have their own terms on their product pages. The site's text, design, and logo belong to Nadeem Dev Apps — pages may be linked to and quoted fairly, with credit. The site is provided "as is" and "as available", without warranties. Questions: nadeem.devapps@gmail.com.

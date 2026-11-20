@@ -1,7 +1,7 @@
 // Cutover (2026-11-10): the Tsumly independent site lives in tsumly/ as a
 // complete Astro project. Its build output is merged into the main site's
 // dist under products/tsumly/, so GitHub Pages serves it at
-// /my-web/products/tsumly/. This runs as part of `npm run build` (root
+// /nadeem/products/tsumly/. This runs as part of `npm run build` (root
 // package.json), so every deploy — local or CI — carries the Tsumly pages.
 // It fails loudly if the Tsumly build or the merge fails, so a deploy
 // never silently ships without them.
@@ -15,9 +15,9 @@ const tsumlyDir = join(root, 'tsumly');
 const tsumlyDist = join(tsumlyDir, 'dist');
 const target = join(root, 'dist', 'products', 'tsumly');
 
-// Site base: '/my-web' for GitHub Pages by default, '/' for Cloudflare
+// Site base: '/nadeem' for GitHub Pages by default, '/' for Cloudflare
 // Pages at the root (SITE_BASE env). The Tsumly build reads the same var.
-const siteBase = (process.env.SITE_BASE ?? '/my-web').replace(/\/$/, '');
+const siteBase = (process.env.SITE_BASE ?? '/nadeem').replace(/\/$/, '');
 
 function run(cmd, cwd) {
   execSync(cmd, { cwd, stdio: 'inherit' });

@@ -1,4 +1,4 @@
-# my-web — nadeemdevapps.com
+# nadeem — nadeemdevapps.com
 
 Nadeem Dev Apps' website: portfolio, marketing, and product pages
 (Tsumly, Kaizenly) as sub-pages.
@@ -13,7 +13,7 @@ Nadeem Dev Apps' website: portfolio, marketing, and product pages
 
 ```sh
 npm install
-npm run dev      # local preview at http://localhost:4321/my-web
+npm run dev      # local preview at http://localhost:4321/nadeem
 npm run build    # static output in dist/
 ```
 

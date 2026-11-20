@@ -29,7 +29,7 @@ behaviour only — no architecture, library, algorithm or API names.
 ```sh
 cd tsumly
 npm install   # once
-npm run dev   # http://localhost:4321/my-web/products/tsumly/
+npm run dev   # http://localhost:4321/nadeem/products/tsumly/
 npm run build # outputs dist/
 npm run preview
 ```

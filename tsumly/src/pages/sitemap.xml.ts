@@ -25,7 +25,7 @@ function fileToRoute(file: string): string | null {
 export const prerender = true;
 
 export const GET: APIRoute = ({ site }) => {
-  const base = import.meta.env.BASE_URL.replace(/\/$/, ''); // '/my-web/products/tsumly'
+  const base = import.meta.env.BASE_URL.replace(/\/$/, ''); // '/nadeem/products/tsumly'
   const urls = Object.keys(pageFiles)
     .map(fileToRoute)
     .filter((route): route is string => route !== null)
