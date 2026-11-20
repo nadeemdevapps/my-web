@@ -3,6 +3,11 @@
 # _redirects file is parsed at all. Remove it once the diagnosis is done.
 /__redirect-test / 302
 
+# DIAGNOSTIC 2: does a 200 rewrite work at all in this project, and does
+# one to the SPA index resolve? Remove once the diagnosis is done.
+/__proxy-root /index.html 200
+/__proxy-spa /concepts/tally-bar/index.html 200
+
 # SPA fallback for the vendored concept sites (2026-11-21): each concept
 # is a client-side-routed SPA, so a direct load / refresh / bookmark of a
 # sub-route (e.g. /concepts/tally-bar/shop) must serve the SPA's index.html
