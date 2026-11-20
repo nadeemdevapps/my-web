@@ -22,6 +22,10 @@ import { fileURLToPath } from 'node:url';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const conceptsSrcDir = join(root, 'concepts-src');
 
+// Site base: '/my-web' for GitHub Pages by default, '/' for Cloudflare
+// Pages at the root (SITE_BASE env).
+const siteBase = (process.env.SITE_BASE ?? '/my-web').replace(/\/$/, '');
+
 const concepts = [
   { dir: 'tally-bar', slug: 'tally-bar' },
   { dir: 'look-out-below', slug: 'look-out-below' },
@@ -42,7 +46,7 @@ if (!existsSync(conceptsSrcDir)) {
 
 for (const { dir, slug } of concepts) {
   const projectDir = join(conceptsSrcDir, dir);
-  const base = `/my-web/concepts/${slug}/`;
+  const base = `${siteBase}/concepts/${slug}/`;
   const target = join(root, 'dist', 'concepts', slug);
 
   console.log(`[merge-concepts] building ${slug} (base ${base})…`);

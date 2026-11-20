@@ -15,6 +15,10 @@ const tsumlyDir = join(root, 'tsumly');
 const tsumlyDist = join(tsumlyDir, 'dist');
 const target = join(root, 'dist', 'products', 'tsumly');
 
+// Site base: '/my-web' for GitHub Pages by default, '/' for Cloudflare
+// Pages at the root (SITE_BASE env). The Tsumly build reads the same var.
+const siteBase = (process.env.SITE_BASE ?? '/my-web').replace(/\/$/, '');
+
 function run(cmd, cwd) {
   execSync(cmd, { cwd, stdio: 'inherit' });
 }
@@ -40,7 +44,7 @@ for (const page of ['index.html', 'features/index.html', 'gallery/index.html', '
 // slipped through — those would 404 under the subpath. Same check as
 // scripts/merge-concepts.mjs, adapted: product pages also link to in-page
 // anchors, so strip any #fragment (or ?query) before the existence check.
-const base = '/my-web/products/tsumly/';
+const base = `${siteBase}/products/tsumly/`;
 const html = readFileSync(join(target, 'index.html'), 'utf8');
 const refs = [...html.matchAll(/(?:src|href)="([^"]+)"/g)].map((m) => m[1]);
 for (const ref of refs) {
