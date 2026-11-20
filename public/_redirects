@@ -1,3 +1,8 @@
+# DIAGNOSTIC (2026-11-21): the SPA rules below did not take effect on the
+# live site after deploy 9d35ed3, so this static rule tests whether the
+# _redirects file is parsed at all. Remove it once the diagnosis is done.
+/__redirect-test / 302
+
 # SPA fallback for the vendored concept sites (2026-11-21): each concept
 # is a client-side-routed SPA, so a direct load / refresh / bookmark of a
 # sub-route (e.g. /concepts/tally-bar/shop) must serve the SPA's index.html
