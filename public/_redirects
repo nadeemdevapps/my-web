@@ -1,0 +1,50 @@
+# SPA fallback for the vendored concept sites (2026-11-21): each concept
+# is a client-side-routed SPA, so a direct load / refresh / bookmark of a
+# sub-route must serve the SPA's index with a 200, not the main site's
+# 404 page.
+#
+# WHY LITERAL RULES (do not "simplify" these back to a splat):
+# - A splat rule (/concepts/<slug>/*) also matches the SPA's own asset
+#   files (/concepts/<slug>/assets/*.js), because Cloudflare Pages
+#   applies _redirects even when a static file exists — the bundles
+#   then come back as HTML and the SPA cannot boot. (Verified live
+#   2026-11-21: directory-destination splat rules fixed deep links but
+#   returned HTML for every concept JS bundle; reverted in 86d2a34.)
+# - A rewrite to an index.html file can never work either: Pages
+#   308-redirects any request for */index.html to its directory, so a
+#   static 200 rule 308s and a splat rule whose destination matches its
+#   own source 404s. The destination here is therefore the directory
+#   URL (trailing slash), which serves the SPA's index with a 200.
+#
+# MAINTENANCE: every rule below names one real route from the concept's
+# router (see each concept's src/App.tsx — tally-bar, look-out-below,
+# stitch-and-tan, portfolio-concept). If a concept gains a route, add
+# its literal rule here; anything not listed keeps the main site's 404.
+# product-site has no router, so it has no rules.
+#
+# tally-bar (routes: shop, specs, apps, cart, checkout, orders/:id, support, styleguide)
+/concepts/tally-bar/shop  /concepts/tally-bar/  200
+/concepts/tally-bar/specs  /concepts/tally-bar/  200
+/concepts/tally-bar/apps  /concepts/tally-bar/  200
+/concepts/tally-bar/cart  /concepts/tally-bar/  200
+/concepts/tally-bar/checkout  /concepts/tally-bar/  200
+/concepts/tally-bar/orders/:id  /concepts/tally-bar/  200
+/concepts/tally-bar/support  /concepts/tally-bar/  200
+/concepts/tally-bar/styleguide  /concepts/tally-bar/  200
+# look-out-below (routes: play, tutorial, characters, press, devlog, devlog/:slug, styleguide)
+/concepts/look-out-below/play  /concepts/look-out-below/  200
+/concepts/look-out-below/tutorial  /concepts/look-out-below/  200
+/concepts/look-out-below/characters  /concepts/look-out-below/  200
+/concepts/look-out-below/press  /concepts/look-out-below/  200
+/concepts/look-out-below/devlog  /concepts/look-out-below/  200
+/concepts/look-out-below/devlog/:slug  /concepts/look-out-below/  200
+/concepts/look-out-below/styleguide  /concepts/look-out-below/  200
+# stitch-and-tan (routes: shop, shop/:slug, custom, story, styleguide)
+/concepts/stitch-and-tan/shop  /concepts/stitch-and-tan/  200
+/concepts/stitch-and-tan/shop/:slug  /concepts/stitch-and-tan/  200
+/concepts/stitch-and-tan/custom  /concepts/stitch-and-tan/  200
+/concepts/stitch-and-tan/story  /concepts/stitch-and-tan/  200
+/concepts/stitch-and-tan/styleguide  /concepts/stitch-and-tan/  200
+# portfolio-concept (routes: work/:slug, about)
+/concepts/portfolio-concept/work/:slug  /concepts/portfolio-concept/  200
+/concepts/portfolio-concept/about  /concepts/portfolio-concept/  200
