@@ -15,12 +15,12 @@
 - [Kaizenly Gallery](https://nadeem-dev-apps.pages.dev/products/kaizenly/gallery/)
 - [Kaizenly About](https://nadeem-dev-apps.pages.dev/products/kaizenly/about/)
 - [Kaizenly Download](https://nadeem-dev-apps.pages.dev/products/kaizenly/download/)
-- [MsgLoop](https://nadeem-dev-apps.pages.dev/products/msgloop/): a WhatsApp sender for Android. Send one message many times, now or on a schedule. Local-first, no account, no server.
-- [CV Creator Pro](https://nadeem-dev-apps.pages.dev/products/cv-creator-pro/): a one-page CV maker that runs entirely in the browser — fill it in, pick a look, download a clean A4 PDF.
+- [MsgLoop](https://nadeem-dev-apps.pages.dev/products/msgloop/): a WhatsApp sender for Android. Send one message many times, now or on a schedule. Local-first, no account, no server. Android app only — no separate live site.
+- [CV Creator Pro](https://nadeem-dev-apps.pages.dev/products/cv-creator-pro/): a one-page CV maker that runs entirely in the browser — fill it in, pick a look, download a clean A4 PDF. Live app: https://cv-creator-pro.nadeem-devapps.workers.dev/
 - [CV Creator Pro Features](https://nadeem-dev-apps.pages.dev/products/cv-creator-pro/features/)
 - [CV Creator Pro About](https://nadeem-dev-apps.pages.dev/products/cv-creator-pro/about/)
 - Nydrex Suite: an Electron desktop suite for retail — point of sale and inventory, with customer and supplier ledgers and reporting. Windows desktop app, no live site.
-- [Brew & Bean Cafe](https://nadeem-dev-apps.pages.dev/products/brew-and-bean/): an animated cafe site with a menu and cart — orders are sent to the cafe as a WhatsApp message. An assignment project, fully working end to end.
+- [Brew & Bean Cafe](https://nadeem-dev-apps.pages.dev/products/brew-and-bean/): an animated cafe site with a menu and cart — orders are sent to the cafe as a WhatsApp message. An assignment project, fully working end to end. Live site: https://brew-and-bean.nadeem-devapps.workers.dev/
 - [Brew & Bean Cafe Features](https://nadeem-dev-apps.pages.dev/products/brew-and-bean/features/)
 - [Brew & Bean Cafe About](https://nadeem-dev-apps.pages.dev/products/brew-and-bean/about/)
 
@@ -70,3 +70,16 @@
 
 - [Full site text (llms-full.txt)](https://nadeem-dev-apps.pages.dev/llms-full.txt): the full text of every page on this site in one Markdown document — Home, About, Products, Tsumly, Kaizenly, MsgLoop, Contact, and summaries of the legal pages.
 - [Design system](https://github.com/nadeemdevapps/nadeem-dev-apps/blob/main/DESIGN.md)
+
+## Markdown versions
+
+Shorter Markdown files, one per topic — for agents that want one page, not the whole site:
+
+- [Home](https://nadeem-dev-apps.pages.dev/llms/home.md)
+- [About](https://nadeem-dev-apps.pages.dev/llms/about.md)
+- [Tsumly](https://nadeem-dev-apps.pages.dev/llms/tsumly.md)
+- [Kaizenly](https://nadeem-dev-apps.pages.dev/llms/kaizenly.md)
+- [MsgLoop](https://nadeem-dev-apps.pages.dev/llms/msgloop.md)
+- [CV Creator Pro](https://nadeem-dev-apps.pages.dev/llms/cv-creator-pro.md)
+- [Nydrex Suite](https://nadeem-dev-apps.pages.dev/llms/nydrex-suite.md)
+- [Brew & Bean Cafe](https://nadeem-dev-apps.pages.dev/llms/brew-and-bean.md)

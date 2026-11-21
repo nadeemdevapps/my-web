@@ -2,7 +2,7 @@
 
 > Nadeem Mazhar is a solo developer building websites, Windows apps, Android apps, and backends, with AI doing the heavy lifting under his direction.
 
-This file is the full-text companion to [llms.txt](https://nadeem-dev-apps.pages.dev/llms.txt). It contains the full text of every page on this site, in reading order, so an AI system can read the whole site in a single request instead of crawling page by page. The text here matches the live pages; the legal pages at the end are summarized with links to the full text.
+This file is the full-text companion to [llms.txt](https://nadeem-dev-apps.pages.dev/llms.txt). It contains the full text of every page on this site, in reading order, so an AI system can read the whole site in a single request instead of crawling page by page. The text here matches the live pages; the legal pages at the end are summarized with links to the full text. Shorter per-product Markdown files are listed in [llms.txt](https://nadeem-dev-apps.pages.dev/llms.txt).
 
 Contents: [Home](https://nadeem-dev-apps.pages.dev/) · [About](https://nadeem-dev-apps.pages.dev/about/) · [Products](https://nadeem-dev-apps.pages.dev/products/) · [Tsumly](https://nadeem-dev-apps.pages.dev/products/tsumly/) · [Kaizenly](https://nadeem-dev-apps.pages.dev/products/kaizenly/) · [MsgLoop](https://nadeem-dev-apps.pages.dev/products/msgloop/) · [CV Creator Pro](https://nadeem-dev-apps.pages.dev/products/cv-creator-pro/) · [Brew & Bean Cafe](https://nadeem-dev-apps.pages.dev/products/brew-and-bean/) · [Contact](https://nadeem-dev-apps.pages.dev/contact/) · [Legal pages](#legal-pages)
 
@@ -207,7 +207,7 @@ A one-page CV maker that runs entirely in the browser — fill it in, pick a loo
 
 [Open CV Creator Pro's site](https://nadeem-dev-apps.pages.dev/products/cv-creator-pro/)
 
-The app itself runs at https://resumemagicmaker.lovable.app/ (Lovable-hosted for now; a dedicated URL comes later).
+The app itself runs at https://cv-creator-pro.nadeem-devapps.workers.dev/.
 
 ### Nydrex Suite (Desktop · Retail)
 
@@ -229,7 +229,7 @@ An animated cafe site with a menu and cart — your order is sent straight to th
 
 [Open Brew & Bean Cafe's site](https://nadeem-dev-apps.pages.dev/products/brew-and-bean/)
 
-The live site runs at https://brew-and-bean-cafe-nadeemassignment.lovable.app/ (Lovable-hosted for now; a dedicated URL comes later).
+The live site runs at https://brew-and-bean.nadeem-devapps.workers.dev/.
 
 ### Concepts
 
