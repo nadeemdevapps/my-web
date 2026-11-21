@@ -8,6 +8,8 @@ Nydrex Suite is an **Electron desktop suite for retail** — point of sale and i
 
 Windows desktop app — v2.2.0 — no live site.
 
+Download v2.2.0: Setup https://github.com/nadeemdevapps/downloads/releases/download/nydrex-v2.2.0/Nydrex-Suite-Setup-2.2.0.exe · Portable https://github.com/nadeemdevapps/downloads/releases/download/nydrex-v2.2.0/Nydrex-Suite-Portable-2.2.0.exe
+
 ## What it does
 
 - **Point of sale and inventory** — sales, stock, and suppliers in one place.

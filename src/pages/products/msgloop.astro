@@ -92,7 +92,10 @@ const jsonLd = [
         <li><strong>Price:</strong> Free</li>
         <li><strong>Latest release:</strong> r68</li>
       </ul>
-      <p class="get-app">Want the app? It's available on request — <a href={`${base}contact/`}>write to me</a>.</p>
+      <p class="cta-row">
+        <a class="btn btn-primary" href="https://github.com/nadeemdevapps/downloads/releases/download/msgloop-v1.0.0-r68/MsgLoop-v1.0.0.apk">Download MsgLoop APK</a>
+      </p>
+      <p class="get-app">After downloading, tap the file and allow install from your browser if your phone asks.</p>
     </div>
   </section>
 
@@ -237,5 +240,11 @@ const jsonLd = [
   .facts li { margin-bottom: 4px; }
   .facts li:last-child { margin-bottom: 0; }
   .facts strong { color: var(--color-ink); }
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+  }
   .get-app { margin-top: 16px; }
 </style>

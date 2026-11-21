@@ -4,7 +4,7 @@ import ProductLayout from '../../../layouts/ProductLayout.astro';
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const siteUrl = Astro.site?.href ?? 'https://nadeem-dev-apps.pages.dev/';
 const description =
-  'Nydrex Suite is an Electron desktop suite for retail — point of sale and inventory, with customer and supplier ledgers and reporting. Windows desktop app, v2.2.0 — no live site, no download yet.';
+  'Nydrex Suite is an Electron desktop suite for retail — point of sale and inventory, with customer and supplier ledgers and reporting. Windows desktop app, v2.2.0 — no live site. Download the Setup installer or the Portable build.';
 const jsonLd = [
   {
     '@context': 'https://schema.org',
@@ -44,8 +44,11 @@ const jsonLd = [
         <li>No live site</li>
       </ul>
       <p class="cta-row">
+        <a class="btn btn-primary" href="https://github.com/nadeemdevapps/downloads/releases/download/nydrex-v2.2.0/Nydrex-Suite-Setup-2.2.0.exe">Download Setup (.exe)</a>
+        <a class="btn btn-secondary" href="https://github.com/nadeemdevapps/downloads/releases/download/nydrex-v2.2.0/Nydrex-Suite-Portable-2.2.0.exe">Download Portable (.exe)</a>
         <a class="btn btn-secondary" href={`${base}contact/`}>Questions? Write to me →</a>
       </p>
+      <p>Setup installs it; Portable runs without installing.</p>
     </div>
   </section>
 
@@ -76,7 +79,8 @@ const jsonLd = [
       <h2>A desktop app, no live site</h2>
       <p class="lede">
         Nydrex Suite is a Windows desktop app — there is no live site to try
-        it on, and no download yet. The latest release is v2.2.0.
+        it on. Download the latest release (v2.2.0) above — the Setup
+        installer, or the Portable build that runs without installing.
       </p>
       <p>
         <a href={`${base}contact/`}>Write to me about Nydrex Suite →</a>

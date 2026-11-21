@@ -8,6 +8,8 @@ MsgLoop is a **local-first WhatsApp message scheduler** for Android. Log in once
 
 Android app only — no separate live site.
 
+Download the app (r68): https://github.com/nadeemdevapps/downloads/releases/download/msgloop-v1.0.0-r68/MsgLoop-v1.0.0.apk
+
 ## A warning before you use it
 
 MsgLoop automates WhatsApp Web, which WhatsApp's Terms of Service do not allow — bulk messaging can get a number temporarily or permanently banned. Use it only on numbers you own or have permission to message. Keep the delay conservative for large counts, and prefer smaller batches.
