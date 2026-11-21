@@ -19,7 +19,7 @@
 - [CV Creator Pro](https://nadeem-dev-apps.pages.dev/products/cv-creator-pro/): a one-page CV maker that runs entirely in the browser — fill it in, pick a look, download a clean A4 PDF. Live app: https://cv-creator-pro.nadeem-devapps.workers.dev/
 - [CV Creator Pro Features](https://nadeem-dev-apps.pages.dev/products/cv-creator-pro/features/)
 - [CV Creator Pro About](https://nadeem-dev-apps.pages.dev/products/cv-creator-pro/about/)
-- [Nydrex Suite](https://nadeem-dev-apps.pages.dev/products/nydrex-suite/): an Electron desktop suite for retail — point of sale and inventory, with customer and supplier ledgers and reporting. Windows desktop app, no live site.
+- [Nydrex Suite](https://nadeem-dev-apps.pages.dev/products/nydrex-suite/): an Electron desktop suite for retail — point of sale and inventory, with customer and supplier ledgers and reporting. Windows desktop app, no live site. Two free 5-day trials: Medical Suite for medical stores, Solar Suite for solar businesses.
 - [Brew & Bean Cafe](https://nadeem-dev-apps.pages.dev/products/brew-and-bean/): an animated cafe site with a menu and cart — orders are sent to the cafe as a WhatsApp message. An assignment project, fully working end to end. Live site: https://brew-and-bean.nadeem-devapps.workers.dev/
 - [Brew & Bean Cafe Features](https://nadeem-dev-apps.pages.dev/products/brew-and-bean/features/)
 - [Brew & Bean Cafe About](https://nadeem-dev-apps.pages.dev/products/brew-and-bean/about/)
