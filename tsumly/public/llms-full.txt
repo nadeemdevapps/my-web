@@ -329,16 +329,18 @@ https://nadeem-dev-apps.pages.dev/products/tsumly/download/
 
 ### Download Tsumly
 
-Tsumly is **free for Android** — a local-first ledger for the money you lend and borrow. No account, no sign-up, no tracking. Get the latest release from GitHub: https://github.com/nadeemdevapps/tsumly/releases
+Tsumly is **free for Android** — a local-first ledger for the money you lend and borrow. No account, no sign-up, no tracking. Download the latest release directly: https://github.com/nadeemdevapps/downloads/releases/download/tsumly-v1.0.0-r9/tsumly-release.apk
 
 Free · Android · No account needed.
+
+After downloading, tap the file and allow install from your browser if your phone asks.
 
 There is no Play Store listing yet — no badge, rating, or download link until it is real.
 
 ### What to expect
 
 - **Free** — no account, no subscription, no ads.
-- **Android** — installs from the GitHub release.
+- **Android** — installs straight from the downloaded APK.
 - **No account needed** — nothing to sign up for.
 - **Local-first** — your money stays on your device, and the app works offline.
 - **No tracking** — no analytics, no ads, nothing phoning home.

@@ -9,7 +9,7 @@
 - [Features](https://nadeem-dev-apps.pages.dev/products/tsumly/features/): Every feature in detail — how it works, what it allows, what it refuses, and where the edges are.
 - [Gallery](https://nadeem-dev-apps.pages.dev/products/tsumly/gallery/): Screenshots from the app, as they look on a real phone.
 - [About](https://nadeem-dev-apps.pages.dev/products/tsumly/about/): About Tsumly — why it exists, why the name, what makes it different, and how comparing against other ledger apps shaped it.
-- [Download](https://nadeem-dev-apps.pages.dev/products/tsumly/download/): Download Tsumly free for Android — get the latest release on GitHub. No account needed, no Play Store listing yet.
+- [Download](https://nadeem-dev-apps.pages.dev/products/tsumly/download/): Download Tsumly free for Android — download the latest release directly. No account needed, no Play Store listing yet.
 - [Privacy Policy](https://nadeem-dev-apps.pages.dev/products/tsumly/privacy/): Tsumly collects no personal data. Everything stays on your device unless you choose to back it up.
 - [Terms of Use](https://nadeem-dev-apps.pages.dev/products/tsumly/terms/): Tsumly is a personal finance tracker, provided as-is. Your data stays on your device by default.
 

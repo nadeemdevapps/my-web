@@ -2,12 +2,12 @@
 import TsumlyLayout from '../layouts/TsumlyLayout.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
-const releasesUrl = 'https://github.com/nadeemdevapps/tsumly/releases';
+const apkUrl = 'https://github.com/nadeemdevapps/downloads/releases/download/tsumly-v1.0.0-r9/tsumly-release.apk';
 ---
 
 <TsumlyLayout
   title="Download Tsumly — Free Android Ledger App"
-  description="Download Tsumly free for Android — a local-first expense and loan ledger. No account needed, no tracking. Get the latest release on GitHub."
+  description="Download Tsumly free for Android — a local-first expense and loan ledger. No account needed, no tracking. Download the latest release directly."
 >
   <!-- ============ DOWNLOAD ============ -->
   <section class="section">
@@ -18,13 +18,17 @@ const releasesUrl = 'https://github.com/nadeemdevapps/tsumly/releases';
         <p class="lede">
           Tsumly is <strong>free for Android</strong> — a local-first ledger
           for the money you lend and borrow. No account, no sign-up, no
-          tracking. Get the latest release from GitHub.
+          tracking. Download the latest release directly.
         </p>
         <div class="hero-ctas">
-          <a class="btn btn-primary" href={releasesUrl}>Get Tsumly on GitHub</a>
+          <a class="btn btn-primary" href={apkUrl}>Download Tsumly APK</a>
           <a class="btn btn-secondary" href={`${base}features/`}>Explore features</a>
         </div>
         <p class="hero-note">Free · Android · No account needed.</p>
+        <p>
+          After downloading, tap the file and allow install from your browser
+          if your phone asks.
+        </p>
         <p>
           There is no Play Store listing yet — no badge, rating, or
           download link until it is real.
@@ -41,7 +45,7 @@ const releasesUrl = 'https://github.com/nadeemdevapps/tsumly/releases';
           <h2>What to expect</h2>
           <ul class="feature-list" style="margin-top: 10px">
             <li><strong>Free</strong> — no account, no subscription, no ads.</li>
-            <li><strong>Android</strong> — installs from the GitHub release.</li>
+            <li><strong>Android</strong> — installs straight from the downloaded APK.</li>
             <li><strong>No account needed</strong> — nothing to sign up for.</li>
             <li><strong>Local-first</strong> — your money stays on your device, and the app works offline.</li>
             <li><strong>No tracking</strong> — no analytics, no ads, nothing phoning home.</li>
