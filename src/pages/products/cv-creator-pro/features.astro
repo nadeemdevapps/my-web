@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import CvCreatorNav from '../../../components/CvCreatorNav.astro';
+import ProductNav from '../../../components/ProductNav.astro';
 import CvCreatorFooter from '../../../components/CvCreatorFooter.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
@@ -14,7 +14,7 @@ const description =
   description={description}
   noMainChrome
 >
-  <CvCreatorNav productBase={`${base}products/cv-creator-pro/`} />
+  <ProductNav productName="CV Creator Pro" productBase={`${base}products/cv-creator-pro/`} showTerms={false} showMainSite={false} extraLinks={[{ label: 'Features', href: `${base}products/cv-creator-pro/features/` }, { label: 'About', href: `${base}products/cv-creator-pro/about/` }]} appLink={{ label: 'Open the app →', href: appUrl }} />
 
   <section>
     <div class="container narrow">

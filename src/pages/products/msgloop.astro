@@ -86,6 +86,13 @@ const jsonLd = [
         <strong>no account, no server, no tracking</strong>, and no data
         leaves the device except through WhatsApp itself.
       </p>
+      <ul class="facts">
+        <li><strong>Built with:</strong> Kotlin · Android</li>
+        <li><strong>Runs on:</strong> Android</li>
+        <li><strong>Price:</strong> Free</li>
+        <li><strong>Latest release:</strong> r68</li>
+      </ul>
+      <p class="get-app">Want the app? It's available on request — <a href={`${base}contact/`}>write to me</a>.</p>
     </div>
   </section>
 
@@ -218,3 +225,17 @@ const jsonLd = [
     </div>
   </section>
 </ProductLayout>
+
+<style>
+  .facts {
+    list-style: disc;
+    margin: 24px 0 0;
+    padding-left: 20px;
+    color: var(--color-ink-muted);
+    font-size: 15px;
+  }
+  .facts li { margin-bottom: 4px; }
+  .facts li:last-child { margin-bottom: 0; }
+  .facts strong { color: var(--color-ink); }
+  .get-app { margin-top: 16px; }
+</style>

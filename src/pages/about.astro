@@ -65,6 +65,8 @@ const jsonLd = [
           <div><strong>6</strong><span>shipped products</span></div>
         </div>
 
+        <p class="now-line">Now: 3rd semester of the diploma; building with AI daily; open to internships.</p>
+
         <div class="about-block">
           <h3>The plan is the skill</h3>
           <p>Anyone can get AI to write code. The difference is the process: a PRD, a design doc, clear goals — then phases, built one by one, each one tested before the next starts.</p>
@@ -75,20 +77,35 @@ const jsonLd = [
         <div class="about-block">
           <h3>AI-first, every day</h3>
           <p>My daily toolkit spans the whole AI landscape — and <strong>OpenCode</strong> is my primary agent CLI: multi-model, and friendly to a student budget.</p>
-          <div class="tools">
-            <span>Muse</span>
-            <span>Lovable</span>
-            <span>Stitch</span>
-            <span>ChatGPT</span>
-            <span>Gemini</span>
-            <span>Claude</span>
-            <span>Kimi</span>
-            <span>Minimax</span>
-            <span>DeepSeek</span>
-            <span>Perplexity</span>
-            <span>OpenCode</span>
-            <span>Pomelli</span>
-            <span>REA</span>
+          <div class="tool-groups">
+            <div class="tool-group">
+              <span class="tool-group-label">Agent CLIs</span>
+              <div class="tools">
+                <span>OpenCode</span>
+                <span>Muse</span>
+                <span>REA</span>
+              </div>
+            </div>
+            <div class="tool-group">
+              <span class="tool-group-label">Chat &amp; research</span>
+              <div class="tools">
+                <span>ChatGPT</span>
+                <span>Gemini</span>
+                <span>Claude</span>
+                <span>Kimi</span>
+                <span>Minimax</span>
+                <span>DeepSeek</span>
+                <span>Perplexity</span>
+              </div>
+            </div>
+            <div class="tool-group">
+              <span class="tool-group-label">Builders</span>
+              <div class="tools">
+                <span>Lovable</span>
+                <span>Stitch</span>
+                <span>Pomelli</span>
+              </div>
+            </div>
           </div>
           <p>I follow new AI launches closely and experiment with new tools and techniques as they land — currently studying and implementing through reverse-engineering existing products. Two I'm following right now: Pomelli, Google Labs' tool that generates on-brand content, and REA — Reverse Engineer Anything, an MCP that lets an agent inspect an app's behaviour down to the binary.</p>
         </div>
@@ -100,6 +117,17 @@ const jsonLd = [
         </div>
 
         <div class="about-block">
+          <h3>What I bring to an internship</h3>
+          <p>Open to internships in a software house, a bank, a company, or bookkeeping — and this is what I bring:</p>
+          <ul>
+            <li><strong>Planning and phased delivery</strong> — PRD → design doc → goals → phases, each one tested before the next starts.</li>
+            <li><strong>AI-assisted building across the stack</strong> — a daily toolkit of 13 AI tools, with OpenCode as my primary agent CLI.</li>
+            <li><strong>Testing and verification</strong> — fixes proved live or by screenshot, never counted from a trigger signal. When MsgLoop reported 55 sends but only 11 had actually arrived, the fix was proved by the messages arriving — not by the trigger firing.</li>
+            <li><strong>Numbers side</strong> — accounting basics for the numbers side of a business: assets, liabilities, debits and credits, debtors, creditors, and the accounting equation.</li>
+          </ul>
+        </div>
+
+        <div class="about-block">
           <h3>Why I build</h3>
           <p class="honest">“I build for myself first. If a paid feature costs nothing to run — no server — it should be free.”</p>
           <p>That's why my finance app exists: the features I needed were paywalled elsewhere, so I built my own — and why Kaizenly has no premium tier at all.</p>
@@ -108,3 +136,23 @@ const jsonLd = [
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .now-line {
+    text-align: center;
+    font-size: 15px;
+    color: var(--color-ink-muted);
+    margin: -40px 0 64px;
+  }
+  .tool-group { margin-bottom: 20px; }
+  .tool-group:last-child { margin-bottom: 0; }
+  .tool-group .tools { margin-bottom: 0; }
+  .tool-group-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--color-ink-muted);
+    margin-bottom: 8px;
+  }
+</style>

@@ -266,6 +266,9 @@ section { padding: var(--space-section) 0; }
   text-decoration: none;
   white-space: nowrap;
 }
+/* Current page (D6): ink instead of muted — no pill, no layout change.
+   Placed before :hover (equal specificity) so the hover state still wins. */
+.pill-nav a[aria-current="page"] { color: var(--color-ink); }
 .pill-nav a:hover { background: var(--color-primary); color: var(--color-on-primary); text-decoration: none; }
 .nav-divider {
   width: 1px;
@@ -293,6 +296,13 @@ section { padding: var(--space-section) 0; }
 .theme-toggle:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
 html[data-theme="light"] .theme-toggle .icon-sun { display: none; }
 html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+/* System mode (D11): a distinct third icon — half-sun/monitor glyph —
+   replaces the sun/moon, which only reflect the effective theme. These
+   rules come after the two above so they win at equal specificity. */
+.theme-toggle .icon-system { display: none; }
+html[data-theme-mode="system"] .theme-toggle .icon-system { display: inline; }
+html[data-theme-mode="system"] .theme-toggle .icon-sun,
+html[data-theme-mode="system"] .theme-toggle .icon-moon { display: none; }
 
 
 /* Hero — drifting colour fields + oversized name, from the mockup. */
@@ -439,7 +449,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .sec-head.concepts-head { margin-top: 96px; }
 .sec-head h1,
 .sec-head h2 {
-  font-size: clamp(40px, 6vw, 64px);
+  font-size: clamp(36px, 6vw, 64px);
   font-weight: 700;
   letter-spacing: -0.035em;
   line-height: 0.95;
@@ -457,6 +467,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 /* Project cards — tilt / lift / glow, from the mockup. */
 .project-card {
   --glow: #0075de;
+  position: relative;
   display: flex;
   flex-direction: column;
   background: var(--color-surface);
@@ -551,13 +562,13 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   display: inline-block;
   font-size: 12.5px;
   font-weight: 600;
-  color: var(--color-ink-muted);
+  color: var(--color-ink-secondary);
   margin-bottom: 10px;
 }
 .project-card p {
   font-size: 15.5px;
   line-height: 1.55;
-  color: var(--color-ink-muted);
+  color: var(--color-ink-secondary);
   margin: 0 0 14px;
 }
 .project-card ul {
@@ -584,19 +595,30 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .project-card .link {
   display: inline-flex;
   align-self: flex-start;
+  align-items: center;
   margin-top: auto;
   padding: 6px 0;
-  min-height: 32px;
+  min-height: 44px;
   font-size: 15px;
   font-weight: 600;
   color: var(--color-link);
   background-image: linear-gradient(currentColor, currentColor);
   background-repeat: no-repeat;
   background-size: 0% 2px;
-  background-position: 0 100%;
+  /* Underline sits just under the centred text, not at the bottom
+     edge of the taller tap area. */
+  background-position: 0 calc(100% - 8px);
   transition: background-size 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .project-card .link:hover { background-size: 100% 2px; text-decoration: none; }
+/* Stretched link (P1-4): the whole card is clickable via the single
+   card link — the ::after overlay covers the card, so the visible
+   link text and its underline-draw stay exactly as-is. */
+.project-card .link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
 .project-card .nolink {
   margin-top: auto;
   font-size: 14px;
@@ -629,7 +651,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   cursor: pointer;
   transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
 }
-.filter-btn:hover { color: var(--color-ink); border-color: #c9c9c9; }
+.filter-btn:hover { color: var(--color-ink); border-color: color-mix(in srgb, var(--color-ink) 22%, transparent); }
 .filter-badge {
   padding: 2px 8px;
   font-size: 11px;
@@ -646,11 +668,11 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 }
 .filter-btn.is-active:hover { color: #ffffff; }
 .filter-btn.is-active .filter-badge {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.28);
   color: #ffffff;
   font-weight: 600;
 }
-[data-theme="dark"] .filter-btn:hover { border-color: #4a4a4a; }
+[data-theme="dark"] .filter-btn:hover { border-color: color-mix(in srgb, var(--color-ink) 32%, transparent); }
 
 /* About prose — 760px centred column, from the mockup. */
 .about-prose { max-width: 760px; margin: 0 auto; text-align: center; }
@@ -897,7 +919,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   text-align: center;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(72px, 19vw, 280px);
+  font-size: clamp(64px, 19vw, 280px);
   line-height: 1;
   letter-spacing: -0.02em;
   margin-top: 48px;
@@ -961,7 +983,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   color: var(--color-ink);
   background: var(--color-surface);
   border: 1px solid var(--color-hairline);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-xs);
   padding: 12px 14px;
 }
 .contact-form input:focus,
@@ -1025,7 +1047,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 @media (max-width: 400px) {
   .site-nav { padding: 4px; }
   .pill-nav { gap: 2px; }
-  .pill-nav a { padding: 13px 8px; font-size: 13px; }
+  .pill-nav a { padding: 13px 7px; font-size: 13px; }
   .nav-divider { margin: 0 4px; }
 }
 

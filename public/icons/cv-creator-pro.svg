@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- CV Creator Pro mark — adapted from the app's own favicon.png
+       (cream document, amber folded corner, two dark text lines).
+       The page is a fixed cream so it reads on any card field; the
+       outline uses currentColor so it follows the theme. -->
+  <path d="M24,20 A8,8 0 0 1 32,12 L60,12 L76,28 L76,80 A8,8 0 0 1 68,88 L32,88 A8,8 0 0 1 24,80 Z" fill="#f6f1e7" stroke="currentColor" stroke-opacity="0.3" stroke-width="1.5" stroke-linejoin="round" />
+  <path d="M60,12 L76,12 L76,28 Z" fill="#f2a81d" />
+  <rect x="35" y="52" width="30" height="5.5" rx="2.75" fill="#232323" />
+  <rect x="38" y="66" width="24" height="5.5" rx="2.75" fill="#232323" />
+</svg>

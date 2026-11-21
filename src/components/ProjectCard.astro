@@ -30,6 +30,21 @@ const href = project.link
   <div class="body">
     <h3>{project.name}</h3>
     <span class="tag">{project.tag}</span>
+    {project.status && (<span class="status">{project.status}</span>)}
+    {project.stack && (<span class="stack">{project.stack}</span>)}
     <p>{project.description}</p>
     {project.bullets && (<ul>{' '}{project.bullets.map((bullet, i) => (<><li>{bullet}</li>{i < project.bullets.length - 1 ? ' ' : ''}</>))}{' '}</ul>)}{project.link ? (<>{' '}<a class="link" href={href} set:html={project.link.label} />{' '}</>) : project.nolink ? (<>{' '}<span class="nolink">{project.nolink}</span>{' '}</>) : null}</div>
 </article>
+
+<style>
+  /* Status + stack lines: plain muted text, same size/weight/colour as
+     .tag, stacked under it — never pills or chips. */
+  .project-card .status,
+  .project-card .stack {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--color-ink-secondary);
+  }
+  .project-card .stack { margin-bottom: 10px; }
+</style>

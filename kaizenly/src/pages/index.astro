@@ -116,6 +116,11 @@ const highlights = [
           the session ends. <strong>Leaving early costs parachutes</strong> —
           and there is no easy way out. That strictness is the point.
         </p>
+        <ul class="facts">
+          <li><strong>Built with:</strong> Kotlin · Android</li>
+          <li><strong>Runs on:</strong> Android</li>
+          <li><strong>Price:</strong> Free</li>
+        </ul>
         <div class="hero-ctas">
           <a class="btn btn-primary" href={`${base}features/#focus`}>See how it works</a>
           <a class="btn btn-secondary" href={`${base}features/#parachutes`}>How to get parachutes</a>
@@ -273,6 +278,20 @@ const highlights = [
       </div>
     </div>
   </section>
+
+  <style>
+    .facts {
+      list-style: disc;
+      margin: 20px 0 0;
+      padding-left: 20px;
+      font-size: 15px;
+      color: var(--muted);
+      text-align: left;
+    }
+    .facts li { margin-bottom: 4px; }
+    .facts li:last-child { margin-bottom: 0; }
+    .facts strong { color: var(--ink); }
+  </style>
 
   <!-- ============ MOTION SCRIPT ============ -->
   <script>

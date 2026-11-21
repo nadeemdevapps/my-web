@@ -37,6 +37,11 @@ const jsonLd = [
         as a WhatsApp message. It is an <strong>assignment project</strong> — built to
         demonstrate a full ordering flow, working end to end.
       </p>
+      <ul class="facts">
+        <li><strong>Built with:</strong> TanStack Start · React</li>
+        <li><strong>Runs on:</strong> Web (Cloudflare Workers)</li>
+        <li>Assignment project</li>
+      </ul>
       <p class="cta-row">
         <a class="btn btn-primary" href={liveUrl} target="_blank" rel="noopener">Visit the live site →</a>
         <a class="btn btn-secondary" href={`${base}products/brew-and-bean/features/`}>See features →</a>
@@ -51,7 +56,7 @@ const jsonLd = [
       <div class="product-grid">
         <article class="card">
           <h3>A menu with prices in PKR</h3>
-          <p>Browse the cafe menu with prices in Pakistani rupees, and pick what you want.</p>
+          <p>Browse the cafe menu with prices in PKR, and pick what you want.</p>
         </article>
         <article class="card">
           <h3>A cart that holds your order</h3>
@@ -90,6 +95,16 @@ const jsonLd = [
 </ProductLayout>
 
 <style>
+  .facts {
+    list-style: disc;
+    margin: 24px 0 0;
+    padding-left: 20px;
+    color: var(--color-ink-muted);
+    font-size: 15px;
+  }
+  .facts li { margin-bottom: 4px; }
+  .facts li:last-child { margin-bottom: 0; }
+  .facts strong { color: var(--color-ink); }
   .cta-row {
     display: flex;
     flex-wrap: wrap;

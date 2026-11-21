@@ -289,8 +289,8 @@ components:
     headlineAccent: "{colors.primary}" (one word)
     mark: none on Home (the logo mark lives in the favicon and structured
       data, not in the nav or hero); centred headline + intro + CTA pair on
-      Home; fills the first screen (min-height 100vh minus the nav) so the
-      cards below appear on scroll
+      Home; sized by its content (padding, no min-height) so the first
+      product cards peek above the fold
     rounded: 0
   inverted-band:
     backgroundColor: "{colors.primary}"
@@ -605,7 +605,7 @@ The site uses no photography — it is a content-and-type site. Card visuals are
 
 ### Signature Components
 
-**`hero`** — The portfolio hero. Warm canvas with four slowly drifting blurred colour fields (Tsumly purple, Kaizenly green, amber, blue) plus a film-grain overlay. Oversized name in Bricolage 800 (clamp 64–180px) with a masked line-rise on load, then an intro line under a hairline and a `button-primary` + `button-secondary` CTA pair. Centred, no logo mark, no hero card, no eyebrow pills.
+**`hero`** — The portfolio hero. Warm canvas with four slowly drifting blurred colour fields (Tsumly purple, Kaizenly green, amber, blue) plus a film-grain overlay. Oversized name in Bricolage 800 (clamp 64–180px) with a masked line-rise on load, then an intro line under a hairline and a `button-primary` + `button-secondary` CTA pair. Sized by its content (padding, no min-height) — the first product cards peek above the fold. Centred, no logo mark, no hero card, no eyebrow pills.
 
 **`marquee`** — A scrolling strip of the working themes (AI-first building · Strategic planning · Phased implementation · Learning in public · Experiments) in Bricolage 600 with accent dots, edge-faded, pausing on hover.
 
@@ -617,8 +617,8 @@ The site uses no photography — it is a content-and-type site. Card visuals are
 
 ## Core Pages
 
-- **Home**: portfolio hero (oversized name, drifting colour fields, grain, intro + two CTAs), marquee strip, Selected work (all 6 shipped products, 2-column grid), the "I build for myself first" line with a link to About, and the footer.
-- **Products** (index): Selected work — heading + "6 shipped products" count, filter pills (All 6 / Mobile & Native 3 / Web 2 / Desktop 1), and a 2-column project grid (1 col mobile). Each card: CSS colour-field visual with a Bricolage glyph (Tsumly and Kaizenly show their real product marks), name, tag, one short description, bullet points, and a link — products link to their dedicated site or live site, Nydrex carries "Windows desktop app" instead of a link. No tech tags on cards. Filters work (small page-scoped script scoped to the works grid; without JS all cards show). Below the works grid, a Concepts section lists the 5 cleaned xyz concept sites (Tally Bar, Look Out Below, Stitch & Tan, ProductSite, Portfolio) as `project-card demo` tiles linking to `/concepts/<slug>/`; the filter pills do not touch them.
+- **Home**: portfolio hero (oversized name, drifting colour fields, grain, intro + two CTAs — sized by content, so the first product cards peek above the fold), marquee strip, Selected work (all 6 shipped products, 2-column grid, plus a Concepts teaser card after the six), a "How I work" strip (the five steps as plain text with blue → separators, the "Anyone can get AI to write code. The difference is the process." line, and a link to About), the "I build for myself first" line with a link to About, and the footer.
+- **Products** (index): Selected work — heading + "6 shipped products" count, filter pills (All 6 / Mobile & Native 3 / Web 2 / Desktop 1), and a 2-column project grid (1 col mobile). Each card: CSS colour-field visual with a Bricolage glyph (all six products now show their real marks), name, tag, status line, stack as plain muted text under the tag line (never pills or chips), one short description, bullet points, and a link — products link to their dedicated site, live site, or product page (Nydrex links to its product page in this repo). Filters work (small page-scoped script scoped to the works grid; without JS all cards show). Below the works grid, outside it so the filter never touches it, a "More on GitHub" tile links to the public profile — it is not a product and the "6 shipped products" count stays 6. Below that, a Concepts section lists the 5 cleaned xyz concept sites (Tally Bar, Look Out Below, Stitch & Tan, ProductSite, Portfolio) as `project-card demo` tiles linking to `/concepts/<slug>/`, rendered from `src/data/concepts.ts`; the filter pills do not touch them.
 - **Product sub-pages** (`/products/tsumly`, `/products/kaizenly`, `/products/msgloop`): Tsumly and Kaizenly are independent Astro projects merged into the main build; MsgLoop is a page in this repo. Each has its own overview, features, and `/privacy/` + `/terms/` pages. Product sub-pages inherit this system; a product's in-app brand does not recolour the page.
 - **About**: the portfolio story on a centred 760px column — education (Matriculation BISE Bahawalpur, UK Level 3 Diploma in IT & Cyber Security via Qualifi / Superior International Colleges, with the full 18-unit list visible, each 10 credits), a "by the numbers" strip (18 units, 180 credits, 1018/1200 Matric, 6 shipped products), the plan-first skill, the AI-first toolkit (OpenCode primary; Pomelli and REA as unlinked chips), self-education and doubts, and why he builds. No FAQ, no photo, no timeline.
 - **Contact**: the "Open to internships" dark CTA card (areas: software house, bank, company, bookkeeping; mailto + GitHub buttons), then a mailto form (name, email, message — no backend). Errors via `{colors.danger}`, feedback via the toast bus.

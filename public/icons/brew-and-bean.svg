@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Brew &amp; Bean Cafe mark — the app's own favicon.svg, unchanged:
+       dark-brown square, cream coffee cup with steam. -->
+  <rect width="64" height="64" rx="14" fill="#2C1810"/>
+  <g fill="none" stroke="#F5F0E8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Cup body -->
+    <path d="M18 28h18a5 5 0 0 1 0 10h-4"/>
+    <path d="M12 28h26v12a5 5 0 0 1-5 5H17a5 5 0 0 1-5-5Z"/>
+    <!-- Steam -->
+    <path d="M18 18v5"/>
+    <path d="M25 16v7"/>
+    <path d="M32 18v5"/>
+  </g>
+</svg>

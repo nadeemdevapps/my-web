@@ -3,12 +3,31 @@
 // an independent site — this header (with its own theme toggle) replaces
 // the main site header on product pages. Keeps the product's pages together
 // and links back to the full product list and to the main website.
+//
+// Optional links: most products link Overview / Privacy / Terms / Main
+// website. Products without a page hide that link instead of linking to
+// a page that does not exist — CV Creator Pro has no Terms page and no
+// separate "Main website" link (its footer already links back), and shows
+// Features / About plus an "Open the app" link instead.
 interface Props {
   productName: string;
   productBase: string; // e.g. `${base}products/tsumly/`
+  showPrivacy?: boolean; // default true
+  showTerms?: boolean; // default true
+  showMainSite?: boolean; // default true
+  extraLinks?: { label: string; href: string }[]; // shown after Overview, e.g. Features / About
+  appLink?: { label: string; href: string }; // external app link, e.g. { label: 'Open the app →', href: appUrl }
 }
 
-const { productName, productBase } = Astro.props;
+const {
+  productName,
+  productBase,
+  showPrivacy = true,
+  showTerms = true,
+  showMainSite = true,
+  extraLinks = [],
+  appLink,
+} = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 
@@ -19,9 +38,13 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
       <span class="product-nav-name">{productName}</span>
       <nav aria-label={`${productName} pages`}>
         <a href={productBase}>Overview</a>
-        <a href={`${productBase}privacy/`}>Privacy</a>
-        <a href={`${productBase}terms/`}>Terms</a>
-        <a href={base}>Main website</a>
+        {extraLinks.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+        {showPrivacy && <a href={`${productBase}privacy/`}>Privacy</a>}
+        {showTerms && <a href={`${productBase}terms/`}>Terms</a>}
+        {appLink && <a href={appLink.href} target="_blank" rel="noopener">{appLink.label}</a>}
+        {showMainSite && <a href={base}>Main website</a>}
       </nav>
     </div>
     <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">

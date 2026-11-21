@@ -6,7 +6,7 @@
 
 Nydrex Suite is an **Electron desktop suite for retail** — point of sale and inventory, with customer and supplier ledgers and reporting.
 
-Windows desktop app — no live site.
+Windows desktop app — v2.2.0 — no live site.
 
 ## What it does
 
@@ -16,6 +16,7 @@ Windows desktop app — no live site.
 
 ## Pages
 
-- [Products](https://nadeem-dev-apps.pages.dev/products/) — Nydrex Suite is listed there; it has no product page of its own yet.
+- [Nydrex Suite](https://nadeem-dev-apps.pages.dev/products/nydrex-suite/) — the product page.
+- [Products](https://nadeem-dev-apps.pages.dev/products/) — Nydrex Suite is listed there.
 
 More from Nadeem Dev Apps → https://nadeem-dev-apps.pages.dev/

@@ -9,14 +9,18 @@ interface Props {
   productBase: string;
   jsonLd?: Record<string, unknown>[];
   developerSection?: boolean;
+  // Products with a single page (no Privacy/Terms pages) hide those links
+  // in the nav and footer instead of linking to pages that do not exist.
+  showPrivacy?: boolean; // default true
+  showTerms?: boolean; // default true
 }
 
-const { title, description, productName, productBase, jsonLd, developerSection = false } = Astro.props;
+const { title, description, productName, productBase, jsonLd, developerSection = false, showPrivacy = true, showTerms = true } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 
 <BaseLayout title={title} description={description} jsonLd={jsonLd} noMainChrome>
-  <ProductNav productName={productName} productBase={productBase} />
+  <ProductNav productName={productName} productBase={productBase} showPrivacy={showPrivacy} showTerms={showTerms} />
   <slot />
   {developerSection && (
     <section class="developer-section">
@@ -41,8 +45,8 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
       </div>
       <nav aria-label={`${productName} footer`}>
         <a href={productBase}>Overview</a>
-        <a href={`${productBase}privacy/`}>Privacy</a>
-        <a href={`${productBase}terms/`}>Terms</a>
+        {showPrivacy && <a href={`${productBase}privacy/`}>Privacy</a>}
+        {showTerms && <a href={`${productBase}terms/`}>Terms</a>}
         <a href={base}>Back to main website →</a>
       </nav>
     </div>

@@ -1,0 +1,105 @@
+---
+import ProductLayout from '../../../layouts/ProductLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const siteUrl = Astro.site?.href ?? 'https://nadeem-dev-apps.pages.dev/';
+const description =
+  'Nydrex Suite is an Electron desktop suite for retail — point of sale and inventory, with customer and supplier ledgers and reporting. Windows desktop app, v2.2.0 — no live site, no download yet.';
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Nydrex Suite',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Windows',
+    url: new URL(`${base}products/nydrex-suite/`, siteUrl).href,
+    description,
+    author: { '@type': 'Organization', name: 'Nadeem Dev Apps' },
+  },
+];
+---
+
+<ProductLayout
+  title="Nydrex Suite — Retail Point of Sale & Inventory"
+  description={description}
+  productName="Nydrex Suite"
+  productBase={`${base}products/nydrex-suite/`}
+  jsonLd={jsonLd}
+  showPrivacy={false}
+  showTerms={false}
+  developerSection
+>
+  <section>
+    <div class="container narrow">
+      <h1>Point of sale, inventory, and ledgers — on Windows.</h1>
+      <p class="lede">
+        Nydrex Suite is an <strong>Electron desktop suite for retail</strong> —
+        point of sale and inventory, with customer and supplier ledgers and
+        reporting. It runs on Windows, on the shop's own machine.
+      </p>
+      <ul class="facts">
+        <li><strong>Built with:</strong> Electron · React · SQLite</li>
+        <li><strong>Runs on:</strong> Windows desktop</li>
+        <li><strong>Latest release:</strong> v2.2.0</li>
+        <li>No live site</li>
+      </ul>
+      <p class="cta-row">
+        <a class="btn btn-secondary" href={`${base}contact/`}>Questions? Write to me →</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <span class="kicker">What it does</span>
+      <h2>Sales, stock, and suppliers — in one place</h2>
+      <div class="product-grid">
+        <article class="card">
+          <h3>Point of sale and inventory</h3>
+          <p>Sales, stock, and suppliers in one place — the day-to-day running of the shop.</p>
+        </article>
+        <article class="card">
+          <h3>Customer and supplier ledgers</h3>
+          <p>Customer and supplier accounts, tracked properly — who owes what, and what is owed to whom.</p>
+        </article>
+        <article class="card">
+          <h3>Reporting</h3>
+          <p>The numbers behind the shop, readable at a glance.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container narrow">
+      <span class="kicker">Honestly</span>
+      <h2>A desktop app, no live site</h2>
+      <p class="lede">
+        Nydrex Suite is a Windows desktop app — there is no live site to try
+        it on, and no download yet. The latest release is v2.2.0.
+      </p>
+      <p>
+        <a href={`${base}contact/`}>Write to me about Nydrex Suite →</a>
+      </p>
+    </div>
+  </section>
+</ProductLayout>
+
+<style>
+  .facts {
+    list-style: disc;
+    margin: 24px 0 0;
+    padding-left: 20px;
+    color: var(--color-ink-muted);
+    font-size: 15px;
+  }
+  .facts li { margin-bottom: 4px; }
+  .facts li:last-child { margin-bottom: 0; }
+  .facts strong { color: var(--color-ink); }
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+  }
+</style>

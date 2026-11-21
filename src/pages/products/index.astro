@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
 import { projects } from '../../data/projects';
+import { concepts } from '../../data/concepts';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
@@ -27,63 +28,37 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
       <div class="works-grid" id="works-grid">
         {projects.map((project) => <ProjectCard project={project} withCategory />)}
       </div>
+
+      <div class="works-grid">
+        <article class="project-card" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">Gh</span></div>
+          <div class="body">
+            <h3>More on GitHub</h3>
+            <span class="tag">github.com/nadeemdevapps</span>
+            <p>The public repos — including this site — live on GitHub.</p>
+            <a class="link" href="https://github.com/nadeemdevapps">Visit GitHub →</a>
+          </div>
+        </article>
+      </div>
       </div>
 
-      <div class="sec-head concepts-head">
+      <div class="sec-head concepts-head" id="concepts">
         <h2 class="display">Concepts</h2>
         <p class="count">5 concept demos — inspiration templates, cleaned and rebranded</p>
       </div>
 
       <div class="works-grid">
-        <article class="project-card demo" data-tilt>
-          <div class="field-img" aria-hidden="true"><span class="glyph">Tb</span></div>
-          <div class="body">
-            <h3>Tally Bar</h3>
-            <span class="tag">Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.</span>
-            <p>A desk status display with an LED pixel screen and a focus timer.</p>
-            <a class="link" href={`${base}concepts/tally-bar/`}>Open the concept site →</a>
-          </div>
-        </article>
-
-        <article class="project-card demo" data-tilt>
-          <div class="field-img" aria-hidden="true"><span class="glyph">Lo</span></div>
-          <div class="body">
-            <h3>Look Out Below</h3>
-            <span class="tag">Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.</span>
-            <p>A tiny hand-drawn game about being small, quick and directly underneath a very clumsy sky.</p>
-            <a class="link" href={`${base}concepts/look-out-below/`}>Open the concept site →</a>
-          </div>
-        </article>
-
-        <article class="project-card demo" data-tilt>
-          <div class="field-img" aria-hidden="true"><span class="glyph">St</span></div>
-          <div class="body">
-            <h3>Stitch &amp; Tan</h3>
-            <span class="tag">Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.</span>
-            <p>Handmade leather pouches, cases and little things from a one-person studio, plus custom orders.</p>
-            <a class="link" href={`${base}concepts/stitch-and-tan/`}>Open the concept site →</a>
-          </div>
-        </article>
-
-        <article class="project-card demo" data-tilt>
-          <div class="field-img" aria-hidden="true"><span class="glyph">Ps</span></div>
-          <div class="body">
-            <h3>ProductSite</h3>
-            <span class="tag">Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.</span>
-            <p>A product site for a calm team workspace — plan, build and ship from one place.</p>
-            <a class="link" href={`${base}concepts/product-site/`}>Open the concept site →</a>
-          </div>
-        </article>
-
-        <article class="project-card demo" data-tilt>
-          <div class="field-img" aria-hidden="true"><span class="glyph">Pf</span></div>
-          <div class="body">
-            <h3>Portfolio</h3>
-            <span class="tag">Concept demo — an inspiration template, cleaned and rebranded to Nadeem Dev Apps.</span>
-            <p>A portfolio concept — oversized name, selected-work grid and case-study pages.</p>
-            <a class="link" href={`${base}concepts/portfolio-concept/`}>Open the concept site →</a>
-          </div>
-        </article>
+        {concepts.map((concept) => (
+          <article class="project-card demo" data-tilt>
+            <div class="field-img" aria-hidden="true"><span class="glyph">{concept.glyph}</span></div>
+            <div class="body">
+              <h3>{concept.name}</h3>
+              <span class="tag">{concept.tag}</span>
+              <p>{concept.description}</p>
+              <a class="link" href={`${base}${concept.href}`}>{concept.label}</a>
+            </div>
+          </article>
+        ))}
       </div>
     </div>
   </section>

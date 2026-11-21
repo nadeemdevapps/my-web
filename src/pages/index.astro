@@ -83,8 +83,25 @@ const jsonLd = [
       </div>
       <div class="works-grid">
         {projects.map((project) => <ProjectCard project={project} />)}
+        <article class="project-card demo" data-tilt>
+          <div class="field-img" aria-hidden="true"><span class="glyph">Co</span></div>
+          <div class="body">
+            <h3>Concepts</h3>
+            <span class="tag">5 concept demos</span>
+            <p>Inspiration templates I cleaned and rebranded — a desk gadget, a tiny hand-drawn game, a leather shop, a product site, and a portfolio concept.</p>
+            <a class="link" href={`${base}products/#concepts`}>Browse the concepts →</a>
+          </div>
+        </article>
       </div>
       </div>
+    </div>
+  </section>
+
+  <section class="how-strip">
+    <div class="container narrow" style="text-align: center;">
+      <p class="steps">PRD <span class="arr">→</span> Design doc <span class="arr">→</span> Goals <span class="arr">→</span> Phases <span class="arr">→</span> Tested, one by one.</p>
+      <p class="honest" style="max-width: 620px; margin: 0 auto 24px;">Anyone can get AI to write code. The difference is the process.</p>
+      <p><a href={`${base}about/`}>How I work →</a></p>
     </div>
   </section>
 
@@ -96,6 +113,13 @@ const jsonLd = [
       <p><a href={`${base}about/`}>More about Nadeem →</a></p>
     </div>
   </section>
+
+  <style>
+    /* How I work strip — same .steps treatment as About
+       (global .steps rules live under .about-prose). */
+    .how-strip .steps { font-size: 15.5px; font-weight: 600; margin: 0 0 16px; }
+    .how-strip .steps .arr { color: var(--color-primary); }
+  </style>
 
   <script>
     (function () {
